@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 100% 99%;
+  --foreground: 214 49% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 214 49% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 214 49% 20%;
+  --primary: 214 71% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 73% 95%;
+  --secondary-foreground: 214 49% 20%;
+  --muted: 211 61% 96%;
+  --muted-foreground: 215 23% 41%;
+  --accent: 208 81% 92%;
+  --accent-foreground: 214 49% 20%;
+  --border: 213 53% 86%;
+  --input: 213 53% 86%;
+  --ring: 214 71% 35%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(21, 86, 168, 0.12), transparent 32%),
+    radial-gradient(circle at 85% 10%, rgba(15, 63, 121, 0.1), transparent 30%),
+    linear-gradient(to bottom, #f8fbff, #f5f9ff);
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+button,
+input,
+select {
+  touch-action: manipulation;
+}

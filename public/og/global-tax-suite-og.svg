@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2F8FF" />
+      <stop offset="1" stop-color="#E2EEFF" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A4F90" />
+      <stop offset="1" stop-color="#2A6CC0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1030" cy="110" r="180" fill="#CFE3FF" fill-opacity="0.5" />
+  <circle cx="140" cy="520" r="200" fill="#C8DEFF" fill-opacity="0.35" />
+  <rect x="70" y="70" width="1060" height="490" rx="24" fill="white" stroke="#C6DCF7" stroke-width="2" />
+
+  <text x="120" y="170" fill="#1A4F90" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="600">
+    2026 Global Mobility and Tax Suite
+  </text>
+
+  <text x="120" y="245" fill="#11345E" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700">
+    Nigeria and UK
+  </text>
+  <text x="120" y="315" fill="#11345E" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700">
+    Tax Compliance Tools
+  </text>
+
+  <text x="120" y="385" fill="#35577F" font-family="'Segoe UI', Arial, sans-serif" font-size="28">
+    Transparent methodology. Structured validation. Exportable reports.
+  </text>
+
+  <rect x="120" y="430" width="320" height="56" rx="12" fill="url(#line)" />
+  <text x="156" y="466" fill="white" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600">
+    Global Mobility and Tax
+  </text>
+</svg>

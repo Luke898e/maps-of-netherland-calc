@@ -1,0 +1,59 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+const hasFundingChoicesScript = Boolean(process.env.NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL);
+const hasAdsenseClient = Boolean(process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT);
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy policy for the 2026 Global Mobility & Tax Suite."
+};
+
+export default function PrivacyPolicyPage(): React.JSX.Element {
+  return (
+    <div className="mx-auto max-w-4xl space-y-8">
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Privacy Policy</h1>
+        <p className="leading-7 text-[#203754]">
+          This platform is built to support privacy-first tax tooling and ad policy readiness. For users in the EEA,
+          UK, and Switzerland, consent messaging should be served through a Google-certified CMP configured in Google
+          Privacy & Messaging.
+        </p>
+      </section>
+
+      <section id="consent-settings" className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">TCF / CMP Status</h2>
+        <ul className="list-disc space-y-2 pl-5 text-[#203754]">
+          <li>
+            Funding Choices script configured: <span className="font-semibold">{hasFundingChoicesScript ? "Yes" : "No"}</span>
+          </li>
+          <li>
+            AdSense client script configured: <span className="font-semibold">{hasAdsenseClient ? "Yes" : "No"}</span>
+          </li>
+          <li>Consent controls are exposed via the global footer through the Manage Consent action.</li>
+        </ul>
+        <p className="leading-7 text-[#203754]">
+          If either status above is No, configure environment variables in deployment and reload the site. The project
+          includes setup keys in <code>.env.example</code>.
+        </p>
+      </section>
+
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Data Handling Summary</h2>
+        <p className="leading-7 text-[#203754]">
+          The calculators process user inputs client-side for immediate output and PDF generation. Do not enter
+          sensitive personal identifiers unless your organization has approved the workflow under its own governance
+          controls.
+        </p>
+        <p className="leading-7 text-[#203754]">
+          Product issues and data requests can be submitted through the
+          <span> </span>
+          <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+            Support Page
+          </Link>
+          .
+        </p>
+      </section>
+    </div>
+  );
+}
