@@ -17,18 +17,6 @@ const nextConfig: NextConfig = {
         ],
         destination: "https://map-of-netherlands.co.uk/:path*",
         permanent: true
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "header",
-            key: "x-forwarded-proto",
-            value: "http"
-          }
-        ],
-        destination: "https://map-of-netherlands.co.uk/:path*",
-        permanent: true
       }
     ];
   }
