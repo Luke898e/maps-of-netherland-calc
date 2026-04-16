@@ -46,6 +46,7 @@ export default function NigeriaZeroTaxAuditorPage(): React.JSX.Element {
     "Validate annual turnover, asset value, assessable profit, and sector using Zod before any calculation runs.",
     "Apply the zero-CIT gate: turnover must be less than or equal to NGN 100,000,000 and sector must not be Professional Services.",
     "If the gate fails and turnover is above NGN 100,000,000, compute Development Levy using the assessable profit entered by the user.",
+    "Include asset value in the output report for audit traceability; it is not a branch trigger in this version of the screening model.",
     "Return a deterministic result card and generate a PDF report with full inputs and outcomes for audit documentation.",
     "Display a compliance note that this output is a screening layer and should be confirmed with filing-ready working papers."
   ] as const;
@@ -80,7 +81,7 @@ export default function NigeriaZeroTaxAuditorPage(): React.JSX.Element {
       <AuthorBioCard title="Who Built This Tool" />
 
       <DocumentationArticle
-        heading="2026 NRS Technical Documentation and Filing Notes"
+        heading="2026 FIRS Technical Documentation and Filing Notes"
         intro={nigeriaGuideIntro}
         sections={nigeriaGuideSections}
         latexTables={nigeriaLatexTables}

@@ -41,9 +41,6 @@ export function SiteFooter(): React.JSX.Element {
           <Link href="/status" className="text-[#17467f] hover:text-[#0f3364]">
             Status
           </Link>
-          <Link href="/adsense-readiness" className="text-[#17467f] hover:text-[#0f3364]">
-            Readiness
-          </Link>
           <ConsentPreferencesButton />
         </div>
       </div>

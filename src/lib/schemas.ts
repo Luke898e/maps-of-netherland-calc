@@ -30,8 +30,31 @@ export const ukFigEligibilitySchema = z.object({
   arrivalDate: z
     .string()
     .min(1, "Arrival date is required.")
-    .refine((value) => !Number.isNaN(new Date(value).getTime()), "Enter a valid arrival date."),
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Enter a valid arrival date."),
+  // Re-parse date parts in UTC to avoid local timezone drift for tax-date boundaries.
   residencyHistory: ukResidencyHistorySchema
+}).superRefine((value, context) => {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.arrivalDate);
+  if (!match) {
+    return;
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  const isValid =
+    parsed.getUTCFullYear() === year &&
+    parsed.getUTCMonth() === month - 1 &&
+    parsed.getUTCDate() === day;
+
+  if (!isValid) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["arrivalDate"],
+      message: "Enter a valid arrival date."
+    });
+  }
 });
 
 export type NigeriaZeroTaxInput = z.infer<typeof nigeriaZeroTaxSchema>;

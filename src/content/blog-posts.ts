@@ -342,13 +342,13 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         heading: "4-year foreign income and gains regime: how the clock is calculated",
         paragraphs: [
-          "The four-year period starts from the arrival date recorded in the case file. Here, expiry is calculated by adding four calendar years to that date. Presenting an exact end date gives payroll and advisory teams a practical control point.",
-          "Example one: arrival on 1 September 2026 gives an end date of 1 September 2030. Example two: arrival on 6 April 2027 gives an end date of 6 April 2031. The point is operational clarity, not abstract labeling.",
+          "The four-year period starts from the arrival date recorded in the case file. In this tool, expiry is calculated as arrival date plus four calendar years, minus one day. Presenting an exact end date gives payroll and advisory teams a practical control point.",
+          "Example one: arrival on 1 September 2026 gives an end date of 31 August 2030. Example two: arrival on 6 April 2027 gives an end date of 5 April 2031. The point is operational clarity, not abstract labeling.",
           "If major compensation, disposal, or remittance activity sits close to that boundary, bring in specialist review before commitments are final."
         ],
         bullets: [
           "Clock start is the recorded arrival date.",
-          "Clock end is four years after arrival in this tool.",
+          "Clock end is four years after arrival minus one day in this tool.",
           "Events near the boundary should be reviewed early."
         ]
       },
@@ -420,7 +420,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         heading: "Worked examples: UK FIG regime 2026 HMRC screening outcomes",
         paragraphs: [
-          "Case A: arrival date 10 October 2026, with all ten prior years supported as non-resident. Result: the relief branch activates and the end date is 10 October 2030. Even simple files still need source references.",
+          "Case A: arrival date 10 October 2026, with all ten prior years supported as non-resident. Result: the relief branch activates and the end date is 9 October 2030. Even simple files still need source references.",
           "Case B: arrival date 1 July 2026, with nine years clear and one year disputed. Result: do not force approval. Mark the case pending and escalate on the disputed year.",
           "Case C: timeline qualifies, but a major compensation event is close to relief expiry. Result: eligibility alone is not enough; schedule pre-event advisory checks."
         ]
@@ -471,12 +471,12 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         question: "What is the 4-year foreign income and gains regime?",
         answer:
-          "It is the relief period for eligible arrivals. In this tool, expiry is calculated as arrival date plus four years."
+          "It is the relief period for eligible arrivals. In this tool, expiry is calculated as arrival date plus four years minus one day."
       },
       {
         question: "Foreign income and gains (FIG regime): when does relief end?",
         answer:
-          "In this implementation, relief ends exactly four years after the recorded UK arrival date used in the case file."
+          "In this implementation, relief ends at the day before the same calendar date four years after arrival."
       },
       {
         question: "FIG regime HMRC: what evidence should be kept?",

@@ -15,7 +15,6 @@ const navItems = [
   { href: "/updates", label: "Updates" },
   { href: "/status", label: "Status" },
   { href: "/support", label: "Support" },
-  { href: "/adsense-readiness", label: "Readiness" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy-policy", label: "Privacy" },

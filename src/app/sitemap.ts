@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/support",
     "/updates",
     "/status",
-    "/adsense-readiness",
     "/editorial-policy",
     "/terms-of-use",
     "/tools/nigeria-zero-tax-auditor",

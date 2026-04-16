@@ -26,7 +26,14 @@ function isHttpsUrl(value: string | undefined): value is string {
 async function forwardToWebhook(payload: FeedbackPayload): Promise<void> {
   const webhookUrl = process.env.SUPPORT_WEBHOOK_URL;
   if (!isHttpsUrl(webhookUrl)) {
-    console.info("Support feedback received (webhook not configured).", payload);
+    const sanitizedLog = {
+      ticketId: payload.ticketId,
+      submittedAtIso: payload.submittedAtIso,
+      type: payload.type,
+      tool: payload.tool,
+      pagePath: payload.pagePath
+    };
+    console.info("Support feedback received (webhook not configured).", sanitizedLog);
     return;
   }
 

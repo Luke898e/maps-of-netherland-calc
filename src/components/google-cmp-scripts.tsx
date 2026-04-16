@@ -13,7 +13,7 @@ export function GoogleCmpScripts(): React.JSX.Element | null {
 
   return (
     <>
-      <Script id="googlefc-init" strategy="beforeInteractive">
+      <Script id="googlefc-init" strategy="afterInteractive">
         {`window.googlefc = window.googlefc || {}; window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];`}
       </Script>
       <Script id="google-funding-choices" src={fundingChoicesScriptUrl} strategy="afterInteractive" />

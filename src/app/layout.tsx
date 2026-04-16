@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     "development levy calculator",
     "cross border tax planning"
   ],
-  authors: [{ name: "Global Mobility Tax Suite Team" }],
-  creator: "Global Mobility Tax Suite Team",
-  publisher: "Global Mobility Tax Suite",
+  authors: [{ name: authorProfile.name }],
+  creator: authorProfile.name,
+  publisher: siteConfig.siteName,
   openGraph: {
     title: "2026 Global Mobility & Tax Suite",
     description:

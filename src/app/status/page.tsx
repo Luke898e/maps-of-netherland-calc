@@ -41,19 +41,19 @@ export default function StatusPage(): React.JSX.Element {
         <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">System Status</p>
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Operational Overview</h1>
         <p className="leading-7 text-[#203754]">
-          This page provides a quick trust snapshot for reviewers and users: release cadence, support-loop status, and
-          current readiness controls as of <span className="font-semibold">{todayIso}</span>.
+          This page provides a quick trust snapshot for users: release cadence, support-loop status, and current quality
+          controls as of <span className="font-semibold">{todayIso}</span>.
         </p>
       </section>
 
       <div className="grid gap-4 md:grid-cols-3">
         <Card className="border-[#d4e3f8]">
           <CardHeader>
-            <CardTitle className="text-lg text-[#0f3364]">Runtime</CardTitle>
+            <CardTitle className="text-lg text-[#0f3364]">Published Status</CardTitle>
           </CardHeader>
           <CardContent className="space-y-1 text-[#203754]">
-            <p className="font-semibold text-[#1d5a2b]">Operational</p>
-            <p className="text-sm">Core pages and calculators are currently available.</p>
+            <p className="font-semibold text-[#12447d]">No active incident in latest release notes</p>
+            <p className="text-sm">This page reflects published updates, not live synthetic monitoring.</p>
           </CardContent>
         </Card>
 
@@ -80,19 +80,19 @@ export default function StatusPage(): React.JSX.Element {
 
       <Card className="border-[#d4e3f8]">
         <CardHeader>
-          <CardTitle className="text-xl text-[#0f3364]">Readiness Snapshot</CardTitle>
+          <CardTitle className="text-xl text-[#0f3364]">Quality Control Snapshot</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-3 sm:grid-cols-3">
           <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
-            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Pass</p>
+            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Verified</p>
             <p className="text-2xl font-semibold text-[#0f3364]">{readiness.pass}</p>
           </div>
           <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
-            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Fix Applied</p>
+            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Improvements Applied</p>
             <p className="text-2xl font-semibold text-[#0f3364]">{readiness.fixed}</p>
           </div>
           <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
-            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Pending Config</p>
+            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Operational Follow-ups</p>
             <p className="text-2xl font-semibold text-[#0f3364]">{readiness.pending}</p>
           </div>
         </CardContent>

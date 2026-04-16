@@ -63,7 +63,7 @@ const homepageFaqs: ReadonlyArray<HomeFaqItem> = [
   {
     question: "How is the UK 4-year FIG relief end date calculated?",
     answer:
-      "The tool computes an exact date from the user-entered arrival date by applying a four-year window and returning a concrete expiry boundary. This supports payroll planning and timeline-sensitive compensation decisions."
+      "The tool computes an exact date from the user-entered arrival date by adding four years and subtracting one day. This supports payroll planning and timeline-sensitive compensation decisions."
   },
   {
     question: "Does this site replace legal or tax advice?",

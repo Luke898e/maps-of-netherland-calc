@@ -58,7 +58,7 @@ export const homeKnowledgeSections: ReadonlyArray<HomeKnowledgeSection> = [
     paragraphs: [
       "For UK FIG cases, reliability starts with timeline discipline. The tool asks for an exact UK arrival date and a year-by-year residency history covering the prior ten years. In this implementation, all ten years must be non-resident for the relief branch to activate. That strictness is deliberate. It prevents accidental overstatement and keeps screening consistent across users.",
       "The second benefit of timeline discipline is communication. A clear date-based result can be shared with payroll, mobility, and advisory teams without rewriting the same explanation in different formats. This is especially useful for compensation events that depend on timing, such as vesting schedules, bonuses, and cross-border income recognition. A vague statement like \"likely eligible\" is hard to operationalize; a dated result is much easier to plan around.",
-      "The tool also calculates a concrete four-year end date once eligibility is triggered. That gives teams a calendar anchor for planning the period after relief ends. It does not replace professional advice for complex cases, but it does reduce confusion early in the process. When the timeline is clear, advisory time can focus on genuine edge cases instead of basic chronology disputes."
+      "The tool also calculates a concrete four-year end date once eligibility is triggered, using arrival date plus four years minus one day. That gives teams a calendar anchor for planning the period after relief ends. It does not replace professional advice for complex cases, but it does reduce confusion early in the process. When the timeline is clear, advisory time can focus on genuine edge cases instead of basic chronology disputes."
     ],
     bullets: [
       "Start with a verified arrival date, not an estimate.",
@@ -197,7 +197,7 @@ export const intentPlaybook: ReadonlyArray<IntentPlaybookItem> = [
 
 export const entityDirectory: ReadonlyArray<EntityDirectoryItem> = [
   {
-    entity: "Nigeria Revenue Service (NRS) / Federal Inland Revenue Service (FIRS)",
+    entity: "Federal Inland Revenue Service (FIRS)",
     role: "Primary authority context referenced in the Nigeria screening framework used on this site.",
     whyItMatters: "Authority interpretation influences threshold and classification decisions."
   },

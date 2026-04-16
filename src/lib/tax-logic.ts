@@ -1,7 +1,7 @@
 import type { NigeriaZeroTaxInput, UkFigEligibilityInput } from "@/lib/schemas";
 
 const NIGERIA_ZERO_CIT_THRESHOLD = 100_000_000;
-const UK_FIG_TRANSITION_START = new Date("2026-04-06T00:00:00.000Z");
+const UK_FIG_TRANSITION_START = new Date(Date.UTC(2026, 3, 6));
 
 export interface NigeriaAuditResult {
   status: "eligible" | "levy-applicable" | "ineligible-no-levy";
@@ -56,33 +56,69 @@ export function calculateNigeriaZeroTaxAudit(input: NigeriaZeroTaxInput): Nigeri
 export interface UkFigResult {
   status: "eligible" | "ineligible";
   message: string;
-  arrivalDateIso: string;
-  qualifyingEndDateIso: string | null;
+  arrivalDate: string;
+  qualifyingEndDate: string | null;
   nonResidentYearsCount: number;
   isPostAbolitionArrival: boolean;
 }
 
-function addYears(date: Date, years: number): Date {
+function parseDateOnly(value: string): Date | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) {
+    return null;
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  const isValid =
+    parsed.getUTCFullYear() === year &&
+    parsed.getUTCMonth() === month - 1 &&
+    parsed.getUTCDate() === day;
+
+  return isValid ? parsed : null;
+}
+
+function formatDateOnly(date: Date): string {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function addUtcYears(date: Date, years: number): Date {
   const cloned = new Date(date);
-  cloned.setFullYear(cloned.getFullYear() + years);
+  cloned.setUTCFullYear(cloned.getUTCFullYear() + years);
   return cloned;
 }
 
 export function calculateUkFigEligibility(input: UkFigEligibilityInput): UkFigResult {
-  const arrivalDate = new Date(input.arrivalDate);
+  const arrivalDate = parseDateOnly(input.arrivalDate);
+  if (!arrivalDate) {
+    return {
+      status: "ineligible",
+      message: "Relief not granted. Enter a valid arrival date.",
+      arrivalDate: input.arrivalDate,
+      qualifyingEndDate: null,
+      nonResidentYearsCount: 0,
+      isPostAbolitionArrival: false
+    };
+  }
+
   const isPostAbolitionArrival = arrivalDate >= UK_FIG_TRANSITION_START;
   const wasNonResidentForTenYears = input.residencyHistory.every((entry) => entry === false);
   const nonResidentYearsCount = input.residencyHistory.filter((entry) => entry === false).length;
 
   if (isPostAbolitionArrival && wasNonResidentForTenYears) {
-    const expiry = addYears(arrivalDate, 4);
-    expiry.setDate(expiry.getDate() - 1);
+    const expiry = addUtcYears(arrivalDate, 4);
+    expiry.setUTCDate(expiry.getUTCDate() - 1);
 
     return {
       status: "eligible",
       message: "4-Year FIG Relief granted.",
-      arrivalDateIso: arrivalDate.toISOString(),
-      qualifyingEndDateIso: expiry.toISOString(),
+      arrivalDate: formatDateOnly(arrivalDate),
+      qualifyingEndDate: formatDateOnly(expiry),
       nonResidentYearsCount,
       isPostAbolitionArrival
     };
@@ -92,8 +128,8 @@ export function calculateUkFigEligibility(input: UkFigEligibilityInput): UkFigRe
     status: "ineligible",
     message:
       "Relief not granted. The tool requires a post-6 April 2026 arrival and 10 consecutive non-resident years before arrival.",
-    arrivalDateIso: arrivalDate.toISOString(),
-    qualifyingEndDateIso: null,
+    arrivalDate: formatDateOnly(arrivalDate),
+    qualifyingEndDate: null,
     nonResidentYearsCount,
     isPostAbolitionArrival
   };
@@ -107,10 +143,26 @@ export function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
-export function formatDateForDisplay(dateIso: string): string {
+export function formatDateForDisplay(dateInput: string): string {
+  const dateOnly = parseDateOnly(dateInput);
+  if (dateOnly) {
+    return new Intl.DateTimeFormat("en-GB", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC"
+    }).format(dateOnly);
+  }
+
+  const parsed = new Date(dateInput);
+  if (Number.isNaN(parsed.getTime())) {
+    return dateInput;
+  }
+
   return new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "long",
-    day: "numeric"
-  }).format(new Date(dateIso));
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(parsed);
 }

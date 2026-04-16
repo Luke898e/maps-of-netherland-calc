@@ -7,6 +7,17 @@ export interface ChangelogEntry {
 
 export const changelogEntries: ReadonlyArray<ChangelogEntry> = [
   {
+    date: "April 16, 2026",
+    version: "v1.12.0",
+    title: "Consistency and Trust Hardening Pass",
+    details: [
+      "Unified UK FIG end-date logic and editorial examples to the same rule: arrival date plus four years minus one day.",
+      "Hardened UK date parsing and display to avoid timezone drift on date-only inputs.",
+      "Standardized Nigeria authority naming to Federal Inland Revenue Service (FIRS), removed readiness links from primary navigation, and noindexed the internal readiness page.",
+      "Improved contact actionability, sanitized support API logs, and restored build-time lint enforcement."
+    ]
+  },
+  {
     date: "April 15, 2026",
     version: "v1.11.0",
     title: "UK FIG Deep-Dive Rewrite",

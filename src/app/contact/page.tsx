@@ -21,7 +21,13 @@ export default function ContactPage(): React.JSX.Element {
           This site is maintained as an educational tax resource by <span className="font-semibold">{authorProfile.name}</span>.
           For partnerships, corrections, and compliance workflow questions, email
           <span> </span>
-          <span className="font-semibold">{siteConfig.contactEmail}</span>.
+          <Link
+            href={`mailto:${siteConfig.contactEmail}`}
+            className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            {siteConfig.contactEmail}
+          </Link>
+          .
         </p>
       </section>
 
@@ -39,6 +45,20 @@ export default function ContactPage(): React.JSX.Element {
           </li>
           <li>
             Jurisdiction focus: UK and Nigeria tax education and screening tools.
+          </li>
+          <li>
+            Publisher domain: <span className="font-semibold">{siteConfig.siteUrl}</span>
+          </li>
+          <li>
+            Public maintainer profile:{" "}
+            <Link
+              href={siteConfig.githubProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+            >
+              {siteConfig.githubProfile}
+            </Link>
           </li>
         </ul>
       </section>

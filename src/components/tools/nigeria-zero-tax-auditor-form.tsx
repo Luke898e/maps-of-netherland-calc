@@ -129,6 +129,9 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
               aria-invalid={Boolean(errors.assetValue)}
               aria-describedby={errors.assetValue ? "assetValue-error" : undefined}
             />
+            <p className="text-xs text-[#5a7394]">
+              Asset value is captured for audit context and reporting documentation in this version.
+            </p>
             {errors.assetValue ? (
               <p id="assetValue-error" className="text-sm text-[#b54747]">
                 {errors.assetValue}
@@ -218,6 +221,10 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
               <li>
                 <span className="font-medium">Compliance Note:</span> Levy is applied at 4% only when turnover exceeds
                 NGN 100,000,000.
+              </li>
+              <li>
+                <span className="font-medium">Asset Value Note:</span> Asset value is retained in the report for audit
+                context and does not change branch decisions in this model.
               </li>
               {result.status === "ineligible-no-levy" ? (
                 <li>

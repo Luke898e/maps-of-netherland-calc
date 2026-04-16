@@ -14,7 +14,8 @@ import { calculateUkFigEligibility, formatDateForDisplay, type UkFigResult } fro
 const TRANSITION_START_DISPLAY = "6 April 2026";
 
 function buildTimelineYears(arrivalDate: string): number[] {
-  const anchorYear = arrivalDate ? new Date(arrivalDate).getFullYear() : 2026;
+  const match = /^(\d{4})-\d{2}-\d{2}$/.exec(arrivalDate);
+  const anchorYear = match ? Number(match[1]) : 2026;
   return Array.from({ length: 10 }, (_, index) => anchorYear - 10 + index);
 }
 
@@ -70,10 +71,10 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
       "2026 UK FIG Regime Eligibility Tool",
       "-----------------------------------------",
       `Result: ${result.message}`,
-      `Arrival Date: ${formatDateForDisplay(result.arrivalDateIso)}`,
+      `Arrival Date: ${formatDateForDisplay(result.arrivalDate)}`,
       `Post-Abolition Arrival (>= 6 April 2026): ${result.isPostAbolitionArrival ? "Yes" : "No"}`,
       `Non-Resident Years in Timeline: ${result.nonResidentYearsCount}/10`,
-      `FIG Relief Expiry: ${result.qualifyingEndDateIso ? formatDateForDisplay(result.qualifyingEndDateIso) : "N/A"}`,
+      `FIG Relief Expiry: ${result.qualifyingEndDate ? formatDateForDisplay(result.qualifyingEndDate) : "N/A"}`,
       "Reminder: Confirm HMRC treatment and treaty interactions with a qualified adviser."
     ];
 
@@ -180,7 +181,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
             <p className="mt-2 text-xl font-semibold text-[#102e59]">{result.message}</p>
             <ul className="mt-4 space-y-2 text-sm text-[#1f3654]">
               <li>
-                <span className="font-medium">Arrival Date:</span> {formatDateForDisplay(result.arrivalDateIso)}
+                <span className="font-medium">Arrival Date:</span> {formatDateForDisplay(result.arrivalDate)}
               </li>
               <li>
                 <span className="font-medium">Arrival on/after 6 April 2026:</span>{" "}
@@ -191,7 +192,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
               </li>
               <li>
                 <span className="font-medium">4-Year FIG Relief Ends:</span>{" "}
-                {result.qualifyingEndDateIso ? formatDateForDisplay(result.qualifyingEndDateIso) : "Not applicable"}
+                {result.qualifyingEndDate ? formatDateForDisplay(result.qualifyingEndDate) : "Not applicable"}
               </li>
             </ul>
           </div>
