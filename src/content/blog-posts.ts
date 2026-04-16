@@ -18,6 +18,10 @@ export interface BlogPost {
   readingTime: string;
   category: string;
   tags: ReadonlyArray<string>;
+  featuredImage?: {
+    src: string;
+    alt: string;
+  };
   sections: ReadonlyArray<BlogSection>;
   faqs?: ReadonlyArray<BlogFaq>;
   references?: ReadonlyArray<{
@@ -44,6 +48,10 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "Minimum corporate income tax Nigeria",
       "Nigeria tax law 2026 PDF"
     ],
+    featuredImage: {
+      src: "/blog/nigeria-zero-cit-featured.png",
+      alt: "Nigeria 0% CIT featured graphic"
+    },
     sections: [
       {
         heading: "Nigeria 0% CIT Threshold 2026: what this guide answers",
@@ -292,6 +300,10 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "4-year foreign income and gains regime",
       "Foreign income and gains regime UK"
     ],
+    featuredImage: {
+      src: "/blog/uk-fig-regime-featured.png",
+      alt: "UK FIG Regime featured graphic"
+    },
     sections: [
       {
         heading: "UK FIG regime 2026 explained: the date that changes everything",
@@ -515,63 +527,6 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         label: "HMRC Residence, Domicile and Remittance Basis Manual",
         url: "https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis"
-      }
-    ]
-  },
-  {
-    slug: "adsense-readiness-for-tax-tools-trust-checklist",
-    title: "AdSense Readiness for Tax Tools: Trust-First Technical Checklist",
-    description:
-      "How to structure trust signals for educational tax tools: support loop, consent controls, legal pages, and cross-device parity.",
-    publishedDate: "2026-04-15",
-    updatedDate: "2026-04-15",
-    readingTime: "7 min read",
-    category: "Product Quality",
-    tags: ["AdSense", "Trust Signals", "CMP", "Site Quality"],
-    sections: [
-      {
-        heading: "Why thin calculator pages fail review",
-        paragraphs: [
-          "A tool page without context is hard to trust. Review systems and human evaluators both look for signals that the site is maintained, accountable, and useful beyond a single click interaction.",
-          "That is why this project includes long-form documentation, methodology notes, named authorship, and publicly visible update history. These elements show editorial intent and maintenance continuity."
-        ]
-      },
-      {
-        heading: "Trust signals that materially improve readiness",
-        paragraphs: [
-          "The strongest signals are not cosmetic. They are operational: users can report bugs, view version history, manage consent, and locate policy boundaries without hunting through the interface.",
-          "Crawlability also matters. Robots, sitemap, canonical URLs, structured data, and ads.txt should all be present and consistent with production configuration."
-        ],
-        bullets: [
-          "Persistent support loop: bug report plus changelog.",
-          "Authentic About and methodology pages with verifiable profile links.",
-          "TCF-oriented consent controls and transparent privacy status.",
-          "Cross-device functional parity for all primary actions."
-        ]
-      },
-      {
-        heading: "Implementation discipline matters more than volume",
-        paragraphs: [
-          "Adding many pages quickly is not enough if they are disconnected. The critical step is wiring them into global navigation, footer links, and sitemap coverage so each trust surface is discoverable by users and crawlers.",
-          "Consistency in metadata and structured data improves interpretation quality across search, social previews, and review processes."
-        ]
-      },
-      {
-        heading: "Operational recommendation",
-        paragraphs: [
-          "Treat readiness as a release process, not a one-time checklist. Track open items publicly, close them with dated releases, and keep documentation synchronized with tool logic.",
-          "That continuous posture is what separates a disposable calculator clone from a durable educational resource."
-        ]
-      }
-    ],
-    references: [
-      {
-        label: "Google AdSense policy center",
-        url: "https://support.google.com/adsense"
-      },
-      {
-        label: "IAB Europe Transparency and Consent Framework",
-        url: "https://iabeurope.eu/transparency-consent-framework/"
       }
     ]
   }

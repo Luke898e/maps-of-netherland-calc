@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 import { AdSenseScript } from "@/components/adsense-script";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -39,7 +40,8 @@ export default function BlogPage(): React.JSX.Element {
       description: post.description,
       datePublished: post.publishedDate,
       dateModified: post.updatedDate,
-      url: `${siteConfig.siteUrl}/blog/${post.slug}`
+      url: `${siteConfig.siteUrl}/blog/${post.slug}`,
+      image: post.featuredImage ? `${siteConfig.siteUrl}${post.featuredImage.src}` : undefined
     }))
   };
 
@@ -67,6 +69,11 @@ export default function BlogPage(): React.JSX.Element {
       <section className="grid gap-6">
         {posts.map((post) => (
           <Card key={post.slug} className="border-[#d4e3f8]">
+            {post.featuredImage ? (
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border-b border-[#d4e3f8]">
+                <Image src={post.featuredImage.src} alt={post.featuredImage.alt} fill className="object-cover" sizes="(min-width: 768px) 768px, 100vw" />
+              </div>
+            ) : null}
             <CardHeader>
               <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.08em] text-[#4b6890]">
                 <span>{post.category}</span>

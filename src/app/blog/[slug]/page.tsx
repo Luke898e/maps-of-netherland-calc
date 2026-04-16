@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -38,6 +39,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const featureImageUrl = post.featuredImage ? `${siteConfig.siteUrl}${post.featuredImage.src}` : undefined;
+
   return {
     title: post.title,
     description: post.description,
@@ -50,12 +53,21 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: "article",
       publishedTime: post.publishedDate,
       modifiedTime: post.updatedDate,
-      url: `${siteConfig.siteUrl}/blog/${post.slug}`
+      url: `${siteConfig.siteUrl}/blog/${post.slug}`,
+      images: featureImageUrl
+        ? [
+            {
+              url: featureImageUrl,
+              alt: post.featuredImage?.alt
+            }
+          ]
+        : undefined
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.description
+      description: post.description,
+      images: featureImageUrl ? [featureImageUrl] : undefined
     }
   };
 }
@@ -85,7 +97,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
     mainEntityOfPage: `${siteConfig.siteUrl}/blog/${post.slug}`,
     articleSection: post.category,
     keywords: post.tags.join(", "),
-    citation: post.references?.map((reference) => reference.url) ?? []
+    citation: post.references?.map((reference) => reference.url) ?? [],
+    image: post.featuredImage ? `${siteConfig.siteUrl}${post.featuredImage.src}` : undefined
   };
 
   const faqStructuredData =
@@ -126,6 +139,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">{post.category}</p>
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">{post.title}</h1>
         <p className="leading-7 text-[#203754]">{post.description}</p>
+        {post.featuredImage ? (
+          <div className="relative mt-2 aspect-[16/9] w-full overflow-hidden rounded-lg border border-[#d4e3f8]">
+            <Image
+              src={post.featuredImage.src}
+              alt={post.featuredImage.alt}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 900px, 100vw"
+            />
+          </div>
+        ) : null}
         <div className="flex flex-wrap items-center gap-2 text-sm text-[#486789]">
           <span>By {authorProfile.name}</span>
           <span aria-hidden="true">|</span>
