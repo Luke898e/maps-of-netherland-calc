@@ -13,11 +13,15 @@ import {
   sourceIntegrityChecklist
 } from "@/content/home-eeat-guide";
 import { externalReferences } from "@/content/references";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "2026 Global Mobility & Tax Suite homepage with access to the Nigeria Zero-Tax Auditor and UK FIG Regime Eligibility Tool."
+    "2026 Global Mobility & Tax Suite homepage with access to the Nigeria Zero-Tax Auditor and UK FIG Regime Eligibility Tool.",
+  alternates: {
+    canonical: siteConfig.siteUrl
+  }
 };
 
 const toolCards = [

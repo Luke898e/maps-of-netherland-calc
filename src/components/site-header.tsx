@@ -13,7 +13,9 @@ const navItems = [
   { href: "/tools/nigeria-zero-tax-auditor", label: "Nigeria Tool" },
   { href: "/tools/uk-fig-regime-eligibility", label: "UK FIG Tool" },
   { href: "/updates", label: "Updates" },
+  { href: "/status", label: "Status" },
   { href: "/support", label: "Support" },
+  { href: "/adsense-readiness", label: "Readiness" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy-policy", label: "Privacy" }

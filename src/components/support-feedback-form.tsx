@@ -53,10 +53,11 @@ export function SupportFeedbackForm(): React.JSX.Element {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [successMessage, setSuccessMessage] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const previewSubject = useMemo(() => `[${supportTypeLabel[state.type]}] ${state.title || "Untitled"}`, [state]);
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     const parsed = feedbackSchema.safeParse(state);
     if (!parsed.success) {
@@ -74,6 +75,29 @@ export function SupportFeedbackForm(): React.JSX.Element {
     }
 
     setErrors({});
+    setSuccessMessage("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/support-feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(parsed.data)
+      });
+
+      if (response.ok) {
+        const payload = (await response.json()) as { ticketId?: string };
+        const ticketSuffix = payload.ticketId ? ` Ticket ID: ${payload.ticketId}.` : "";
+        setSuccessMessage(`Report received successfully.${ticketSuffix}`);
+        return;
+      }
+    } catch {
+      // Fallback below opens a prefilled email draft.
+    } finally {
+      setIsSubmitting(false);
+    }
 
     const bodyLines = [
       `Type: ${supportTypeLabel[parsed.data.type]}`,
@@ -88,8 +112,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
     const subject = encodeURIComponent(`[${supportTypeLabel[parsed.data.type]}] ${parsed.data.title}`);
     const body = encodeURIComponent(bodyLines.join("\n"));
     window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
-
-    setSuccessMessage("Your email draft has been prepared. Send it to complete the report.");
+    setSuccessMessage("Support endpoint is unavailable. A prefilled email draft was opened as fallback.");
   };
 
   return (
@@ -97,8 +120,8 @@ export function SupportFeedbackForm(): React.JSX.Element {
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">Submit Bug or Feature Feedback</CardTitle>
         <CardDescription>
-          Use this form to report issues and request improvements. Your report opens a prefilled email draft with full
-          context for faster triage.
+          Use this form to report issues and request improvements. Reports are submitted to the support endpoint, with
+          automatic email fallback if the endpoint is unavailable.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -182,8 +205,12 @@ export function SupportFeedbackForm(): React.JSX.Element {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button type="submit" className="w-full justify-center bg-[#12447d] text-white hover:bg-[#0f3968] sm:w-auto">
-              Open Prefilled Email
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full justify-center bg-[#12447d] text-white hover:bg-[#0f3968] sm:w-auto"
+            >
+              {isSubmitting ? "Submitting..." : "Submit Report"}
             </Button>
             <Button
               type="button"

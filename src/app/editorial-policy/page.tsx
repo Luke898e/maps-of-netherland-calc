@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { changelogEntries } from "@/content/changelog";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Editorial Policy",
-  description: "Editorial and quality control policy for tax content and tool logic."
+  description: "Editorial and quality control policy for tax content and tool logic.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/editorial-policy`
+  }
 };
 
 export default function EditorialPolicyPage(): React.JSX.Element {

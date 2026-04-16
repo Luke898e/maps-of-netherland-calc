@@ -15,6 +15,10 @@ export const externalReferences = {
       url: "https://www.firs.gov.ng/"
     },
     {
+      label: "FIRS Companies Income Tax (CIT) page",
+      url: "https://www.firs.gov.ng/tax-types/companies-income-tax-cit/"
+    },
+    {
       label: "PwC Nigeria tax summary (reference dataset used for cross-checking rates and thresholds)",
       url: "https://taxsummaries.pwc.com/nigeria/corporate/taxes-on-corporate-income"
     }

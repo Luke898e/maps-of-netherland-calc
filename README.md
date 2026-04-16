@@ -31,8 +31,8 @@ Open: `http://localhost:3001`
 3. Restart the dev server.
 
 Production note:
-- `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_GITHUB_PROFILE`, `NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL`, and `NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT` are fail-fast required in production builds.
-- The build will throw if these are missing or invalid to avoid accidental publish with placeholder identity/canonical data.
+- The app now has production-safe fallbacks for `NEXT_PUBLIC_SITE_URL`, contact, and profile identity so deployment does not fail.
+- For AdSense approval, you should still set all production values (`NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_GITHUB_PROFILE`, `NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL`, `NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT`) before requesting review.
 
 ## CMP / TCF v2.3 verification
 

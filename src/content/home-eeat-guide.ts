@@ -197,8 +197,8 @@ export const intentPlaybook: ReadonlyArray<IntentPlaybookItem> = [
 
 export const entityDirectory: ReadonlyArray<EntityDirectoryItem> = [
   {
-    entity: "Nigeria Revenue Service (NRS)",
-    role: "Primary authority referenced in the Nigeria screening framework used on this site.",
+    entity: "Nigeria Revenue Service (NRS) / Federal Inland Revenue Service (FIRS)",
+    role: "Primary authority context referenced in the Nigeria screening framework used on this site.",
     whyItMatters: "Authority interpretation influences threshold and classification decisions."
   },
   {

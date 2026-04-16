@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { AdSenseScript } from "@/components/adsense-script";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/content/blog-posts";
+import { authorProfile } from "@/content/author-profile";
 import { siteConfig } from "@/lib/site-config";
 
 interface BlogPostPageProps {
@@ -83,7 +84,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
     },
     mainEntityOfPage: `${siteConfig.siteUrl}/blog/${post.slug}`,
     articleSection: post.category,
-    keywords: post.tags.join(", ")
+    keywords: post.tags.join(", "),
+    citation: post.references?.map((reference) => reference.url) ?? []
   };
 
   const faqStructuredData =
@@ -125,6 +127,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">{post.title}</h1>
         <p className="leading-7 text-[#203754]">{post.description}</p>
         <div className="flex flex-wrap items-center gap-2 text-sm text-[#486789]">
+          <span>By {authorProfile.name}</span>
+          <span aria-hidden="true">|</span>
           <span>Published: {formatDate(post.publishedDate)}</span>
           <span aria-hidden="true">|</span>
           <span>Updated: {formatDate(post.updatedDate)}</span>
@@ -166,6 +170,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
               </div>
             ))}
           </div>
+        </section>
+      ) : null}
+
+      {post.references && post.references.length > 0 ? (
+        <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
+          <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Sources and References</h2>
+          <ul className="space-y-2">
+            {post.references.map((reference) => (
+              <li key={reference.url}>
+                <Link
+                  href={reference.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+                >
+                  {reference.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
       ) : null}
 

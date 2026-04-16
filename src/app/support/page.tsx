@@ -4,11 +4,15 @@ import { Suspense } from "react";
 
 import { SupportFeedbackForm } from "@/components/support-feedback-form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Report bugs, request features, and contact the maintainer for the 2026 Global Mobility & Tax Suite."
+    "Report bugs, request features, and contact the maintainer for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/support`
+  }
 };
 
 export default function SupportPage(): React.JSX.Element {

@@ -13,7 +13,10 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "UK FIG Regime Eligibility Tool",
   description:
-    "Evaluate 2026 UK Foreign Income and Gains regime eligibility, 10-year non-residency history, and exact relief expiry dates."
+    "Evaluate 2026 UK Foreign Income and Gains regime eligibility, 10-year non-residency history, and exact relief expiry dates.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/tools/uk-fig-regime-eligibility`
+  }
 };
 
 const ukFigJsonLd = {

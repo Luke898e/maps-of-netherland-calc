@@ -8,7 +8,10 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Technical tax guidance and implementation notes for the 2026 Global Mobility & Tax Suite."
+  description: "Technical tax guidance and implementation notes for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/blog`
+  }
 };
 
 function formatDate(dateInput: string): string {

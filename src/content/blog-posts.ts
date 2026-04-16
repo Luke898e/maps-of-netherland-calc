@@ -20,6 +20,10 @@ export interface BlogPost {
   tags: ReadonlyArray<string>;
   sections: ReadonlyArray<BlogSection>;
   faqs?: ReadonlyArray<BlogFaq>;
+  references?: ReadonlyArray<{
+    label: string;
+    url: string;
+  }>;
 }
 
 export const blogPosts: ReadonlyArray<BlogPost> = [
@@ -256,6 +260,20 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer:
           "Update turnover and profit schedules monthly, rerun the calculator quarterly or after material changes, and maintain a dated decision log with assumptions and owners."
       }
+    ],
+    references: [
+      {
+        label: "Federal Inland Revenue Service (FIRS) official portal",
+        url: "https://www.firs.gov.ng/"
+      },
+      {
+        label: "Nigeria Companies Income Tax overview",
+        url: "https://www.firs.gov.ng/tax-types/companies-income-tax-cit/"
+      },
+      {
+        label: "PwC Nigeria corporate tax summary",
+        url: "https://taxsummaries.pwc.com/nigeria/corporate/taxes-on-corporate-income"
+      }
     ]
   },
   {
@@ -488,6 +506,16 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer:
           "Using unverified summary statements instead of a documented, year-by-year evidence trail for the ten-year look-back."
       }
+    ],
+    references: [
+      {
+        label: "UK Government policy paper on non-UK domiciled individuals",
+        url: "https://www.gov.uk/government/publications/changes-to-the-taxation-of-non-uk-domiciled-individuals"
+      },
+      {
+        label: "HMRC Residence, Domicile and Remittance Basis Manual",
+        url: "https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis"
+      }
     ]
   },
   {
@@ -534,6 +562,16 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
           "Treat readiness as a release process, not a one-time checklist. Track open items publicly, close them with dated releases, and keep documentation synchronized with tool logic.",
           "That continuous posture is what separates a disposable calculator clone from a durable educational resource."
         ]
+      }
+    ],
+    references: [
+      {
+        label: "Google AdSense policy center",
+        url: "https://support.google.com/adsense"
+      },
+      {
+        label: "IAB Europe Transparency and Consent Framework",
+        url: "https://iabeurope.eu/transparency-consent-framework/"
       }
     ]
   }

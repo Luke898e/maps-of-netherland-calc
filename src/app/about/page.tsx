@@ -5,11 +5,15 @@ import { AuthorBioCard } from "@/components/author-bio-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { changelogEntries } from "@/content/changelog";
 import { externalReferences } from "@/content/references";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Author profile, editorial methodology, and source policy for the 2026 Global Mobility & Tax Suite."
+    "Author profile, editorial methodology, and source policy for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/about`
+  }
 };
 
 export default function AboutPage(): React.JSX.Element {

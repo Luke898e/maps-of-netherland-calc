@@ -4,7 +4,7 @@ const NIGERIA_ZERO_CIT_THRESHOLD = 100_000_000;
 const UK_FIG_TRANSITION_START = new Date("2026-04-06T00:00:00.000Z");
 
 export interface NigeriaAuditResult {
-  status: "eligible" | "levy-applicable";
+  status: "eligible" | "levy-applicable" | "ineligible-no-levy";
   message: string;
   turnover: number;
   assetValue: number;
@@ -21,6 +21,18 @@ export function calculateNigeriaZeroTaxAudit(input: NigeriaZeroTaxInput): Nigeri
     return {
       status: "eligible",
       message: "ELIGIBLE FOR 0% CIT",
+      turnover: input.annualTurnover,
+      assetValue: input.assetValue,
+      developmentLevy: 0,
+      assessableProfit: input.assessableProfit
+    };
+  }
+
+  const isLevyApplicable = input.annualTurnover > NIGERIA_ZERO_CIT_THRESHOLD;
+  if (!isLevyApplicable) {
+    return {
+      status: "ineligible-no-levy",
+      message: "Not eligible for 0% CIT under this model (sector test failed).",
       turnover: input.annualTurnover,
       assetValue: input.assetValue,
       developmentLevy: 0,

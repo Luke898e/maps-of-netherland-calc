@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { siteConfig } from "@/lib/site-config";
+
 export const metadata: Metadata = {
   title: "Disclaimer",
   description:
-    "Educational-use disclaimer and liability boundary for the 2026 Global Mobility & Tax Suite."
+    "Educational-use disclaimer and liability boundary for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/disclaimer`
+  }
 };
 
 export default function DisclaimerPage(): React.JSX.Element {

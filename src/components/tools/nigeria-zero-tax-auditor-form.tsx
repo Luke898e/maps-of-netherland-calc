@@ -72,7 +72,7 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
       `Assessable Profit: ${formatCurrency(result.assessableProfit)}`,
       `Business Sector: ${formState.sector}`,
       `Development Levy: ${formatCurrency(result.developmentLevy)}`,
-      "Levy Rule: 4% is applied only where annual turnover exceeds NGN 100,000,000.",
+      "Levy Rule: 4% applies only where annual turnover exceeds NGN 100,000,000.",
       "Use qualified tax advice before filing."
     ];
 
@@ -219,6 +219,12 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
                 <span className="font-medium">Compliance Note:</span> Levy is applied at 4% only when turnover exceeds
                 NGN 100,000,000.
               </li>
+              {result.status === "ineligible-no-levy" ? (
+                <li>
+                  <span className="font-medium">Sector Note:</span> Turnover is within threshold, but this sector does
+                  not pass the 0% CIT screening test in this model.
+                </li>
+              ) : null}
             </ul>
           </div>
         ) : null}

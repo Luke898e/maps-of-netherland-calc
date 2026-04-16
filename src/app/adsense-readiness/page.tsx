@@ -7,9 +7,12 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "AdSense Readiness Checklist",
   description: "50+ point AdSense-style readiness checklist with pass/fix/pending status.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/adsense-readiness`
+  },
   robots: {
-    index: false,
-    follow: false
+    index: true,
+    follow: true
   }
 };
 

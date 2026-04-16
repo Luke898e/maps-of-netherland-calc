@@ -5,7 +5,10 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact page for the 2026 Global Mobility & Tax Suite."
+  description: "Contact page for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/contact`
+  }
 };
 
 export default function ContactPage(): React.JSX.Element {

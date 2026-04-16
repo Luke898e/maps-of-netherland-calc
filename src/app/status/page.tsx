@@ -3,13 +3,17 @@ import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { adsenseChecklist } from "@/content/adsense-readiness-checklist";
 import { changelogEntries } from "@/content/changelog";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Status",
   description: "Operational status, maintenance cadence, and latest release signals for this project.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/status`
+  },
   robots: {
-    index: false,
-    follow: false
+    index: true,
+    follow: true
   }
 };
 

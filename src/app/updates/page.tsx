@@ -4,11 +4,15 @@ import Link from "next/link";
 import { ChangelogTimeline } from "@/components/changelog-timeline";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { changelogEntries } from "@/content/changelog";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Updates and Changelog",
   description:
-    "Version history and release notes for the 2026 Global Mobility & Tax Suite, including bug fixes and feature improvements."
+    "Version history and release notes for the 2026 Global Mobility & Tax Suite, including bug fixes and feature improvements.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/updates`
+  }
 };
 
 export default function UpdatesPage(): React.JSX.Element {

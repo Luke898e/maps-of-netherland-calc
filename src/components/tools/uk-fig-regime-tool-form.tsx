@@ -20,7 +20,7 @@ function buildTimelineYears(arrivalDate: string): number[] {
 
 export function UkFigRegimeToolForm(): React.JSX.Element {
   const [arrivalDate, setArrivalDate] = useState<string>("");
-  const [residencyHistory, setResidencyHistory] = useState<boolean[]>(Array.from({ length: 10 }, () => false));
+  const [residencyHistory, setResidencyHistory] = useState<Array<boolean | null>>(Array.from({ length: 10 }, () => null));
   const [error, setError] = useState<string>("");
   const [result, setResult] = useState<UkFigResult | null>(null);
 
@@ -37,9 +37,17 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
+    if (residencyHistory.some((entry) => entry === null)) {
+      setError("Complete all 10 years in the residency timeline before evaluating.");
+      setResult(null);
+      return;
+    }
+
+    const normalizedResidencyHistory = residencyHistory.map((entry) => entry === true);
+
     const parsed = ukFigEligibilitySchema.safeParse({
       arrivalDate,
-      residencyHistory
+      residencyHistory: normalizedResidencyHistory
     });
 
     if (!parsed.success) {
@@ -105,11 +113,13 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
           <fieldset className="space-y-3">
             <legend className="text-sm font-medium text-foreground">Previous 10-Year UK Residency Timeline</legend>
             <p className="text-sm text-muted-foreground">
-              Mark each year as Resident or Non-Resident. Relief requires 10 consecutive Non-Resident years.
+              Mark each year as Resident or Non-Resident. Relief requires 10 consecutive Non-Resident years, and each
+              year must be explicitly selected.
             </p>
             <div className="space-y-2">
               {timelineYears.map((year, index) => {
-                const isResident = residencyHistory[index];
+                const isResident = residencyHistory[index] === true;
+                const isNonResident = residencyHistory[index] === false;
                 return (
                   <div
                     key={year}
@@ -129,8 +139,8 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
                       <Button
                         type="button"
                         size="sm"
-                        variant={!isResident ? "default" : "outline"}
-                        className={`${!isResident ? "bg-[#1f6dc8] text-white hover:bg-[#1a5daf]" : ""} w-full justify-center`}
+                        variant={isNonResident ? "default" : "outline"}
+                        className={`${isNonResident ? "bg-[#1f6dc8] text-white hover:bg-[#1a5daf]" : ""} w-full justify-center`}
                         onClick={() => handleResidencyChange(index, false)}
                       >
                         Non-Resident

@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { siteConfig } from "@/lib/site-config";
+
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms of use for the 2026 Global Mobility & Tax Suite."
+  description: "Terms of use for the 2026 Global Mobility & Tax Suite.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/terms-of-use`
+  }
 };
 
 export default function TermsOfUsePage(): React.JSX.Element {

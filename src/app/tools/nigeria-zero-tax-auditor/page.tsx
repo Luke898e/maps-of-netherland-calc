@@ -13,7 +13,10 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Nigeria Zero-Tax Auditor",
   description:
-    "Run 2026 Nigeria 0% CIT screening and development levy estimates with structured logic, PDF export, and technical compliance documentation."
+    "Run 2026 Nigeria 0% CIT screening and development levy estimates with structured logic, PDF export, and technical compliance documentation.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/tools/nigeria-zero-tax-auditor`
+  }
 };
 
 const nigeriaJsonLd = {
