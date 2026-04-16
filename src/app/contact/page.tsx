@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { authorProfile } from "@/content/author-profile";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact page for the 2026 Global Mobility & Tax Suite.",
+  description: "Contact and publisher identity page for the 2026 Global Mobility & Tax Suite.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/contact`
   }
@@ -13,25 +14,56 @@ export const metadata: Metadata = {
 
 export default function ContactPage(): React.JSX.Element {
   return (
-    <section className="mx-auto max-w-3xl space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
-      <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Contact</h1>
-      <p className="leading-7 text-[#203754]">
-        For advisory partnerships, implementation support, or compliance workflow questions, contact the platform team
-        at <span className="font-semibold">{siteConfig.contactEmail}</span>.
-      </p>
-      <p className="leading-7 text-[#203754]">
-        For product feedback, use the dedicated support workflow so reports are tracked:
-        <span> </span>
-        <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
-          Support Page
-        </Link>
-        <span> </span>and
-        <span> </span>
-        <Link href="/updates" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
-          Updates Changelog
-        </Link>
-        .
-      </p>
-    </section>
+    <div className="mx-auto max-w-4xl space-y-8">
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Contact</h1>
+        <p className="leading-7 text-[#203754]">
+          This site is maintained as an educational tax resource by <span className="font-semibold">{authorProfile.name}</span>.
+          For partnerships, corrections, and compliance workflow questions, email
+          <span> </span>
+          <span className="font-semibold">{siteConfig.contactEmail}</span>.
+        </p>
+      </section>
+
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Publisher Identity</h2>
+        <ul className="list-disc space-y-2 pl-5 text-[#203754]">
+          <li>
+            Maintainer: <span className="font-semibold">{authorProfile.name}</span>
+          </li>
+          <li>
+            Role: <span className="font-semibold">{authorProfile.role}</span>
+          </li>
+          <li>
+            Operating location: <span className="font-semibold">{authorProfile.location}</span>
+          </li>
+          <li>
+            Jurisdiction focus: UK and Nigeria tax education and screening tools.
+          </li>
+        </ul>
+      </section>
+
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Response-Time Commitment</h2>
+        <ul className="list-disc space-y-2 pl-5 text-[#203754]">
+          <li>Bug reports: initial response target within 1 business day.</li>
+          <li>Content correction requests: response target within 2 business days.</li>
+          <li>General inquiries: response target within 3 business days.</li>
+        </ul>
+        <p className="leading-7 text-[#203754]">
+          For tracked bug reports and feature requests, use the
+          <span> </span>
+          <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+            Support Page
+          </Link>
+          . Released fixes are recorded on
+          <span> </span>
+          <Link href="/updates" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+            Updates Changelog
+          </Link>
+          .
+        </p>
+      </section>
+    </div>
   );
 }

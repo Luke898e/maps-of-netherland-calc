@@ -17,12 +17,18 @@ export const metadata: Metadata = {
 };
 
 type ChecklistItem = (typeof adsenseChecklist)[number];
-type ChecklistByCategory = Record<string, ChecklistItem[]>;
+type ChecklistStatus = ChecklistItem["status"];
+
+interface ResolvedChecklistItem extends ChecklistItem {
+  resolvedStatus: ChecklistStatus;
+}
+
+type ChecklistByCategory = Record<string, ResolvedChecklistItem[]>;
 
 const statusLabel = {
   pass: "Pass",
   fixed: "Fix Applied",
-  pending: "Pending Config"
+  pending: "Action Required"
 } as const;
 
 const statusClasses = {
@@ -31,8 +37,54 @@ const statusClasses = {
   pending: "bg-[#fff3e2] text-[#8d5b16]"
 } as const;
 
+function isLikelyHttpsUrl(value: string | undefined): value is string {
+  return Boolean(value && value.startsWith("https://"));
+}
+
+function resolveChecklistStatus(item: ChecklistItem): ChecklistStatus {
+  const hasCmpScriptConfigured = isLikelyHttpsUrl(process.env.NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL);
+  const hasAdsenseClientConfigured = Boolean(
+    process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT?.startsWith("ca-pub-")
+  );
+  const hasLiveConsentCampaign = process.env.NEXT_PUBLIC_CONSENT_CAMPAIGN_LIVE === "true";
+  const hasAdsenseAccountPolicySetup = process.env.NEXT_PUBLIC_ADSENSE_ACCOUNT_READY === "true";
+  const hasFinalProductionQa = process.env.NEXT_PUBLIC_PRODUCTION_QA_COMPLETE === "true";
+  const isProductionSiteUrl =
+    siteConfig.siteUrl.startsWith("https://") && !siteConfig.siteUrl.includes("localhost");
+
+  switch (item.id) {
+    case "cp-04":
+      return hasCmpScriptConfigured ? "fixed" : "pending";
+    case "cp-05":
+      return hasAdsenseClientConfigured ? "fixed" : "pending";
+    case "cp-06":
+      return hasLiveConsentCampaign ? "fixed" : "pending";
+    case "cr-04":
+      return isProductionSiteUrl ? "fixed" : "pending";
+    case "cr-08":
+      return hasAdsenseClientConfigured ? "fixed" : "pending";
+    case "ms-04":
+      return hasAdsenseAccountPolicySetup ? "fixed" : "pending";
+    case "ms-05":
+      return hasAdsenseClientConfigured ? "fixed" : "pending";
+    case "ms-06":
+      return hasFinalProductionQa ? "fixed" : "pending";
+    default:
+      return item.status;
+  }
+}
+
 export default function AdsenseReadinessPage(): React.JSX.Element {
-  const grouped = adsenseChecklist.reduce<ChecklistByCategory>((accumulator, item) => {
+  const isAuditMode = process.env.NEXT_PUBLIC_READINESS_AUDIT_MODE === "true";
+  const resolvedChecklist: ReadonlyArray<ResolvedChecklistItem> = adsenseChecklist.map((item) => ({
+    ...item,
+    resolvedStatus: resolveChecklistStatus(item)
+  }));
+  const visibleChecklist = isAuditMode
+    ? resolvedChecklist
+    : resolvedChecklist.filter((item) => item.resolvedStatus !== "pending");
+
+  const grouped = visibleChecklist.reduce<ChecklistByCategory>((accumulator, item) => {
     if (!accumulator[item.category]) {
       accumulator[item.category] = [];
     }
@@ -40,12 +92,12 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
     return accumulator;
   }, {});
   const counts = {
-    pass: adsenseChecklist.filter((item) => item.status === "pass").length,
-    fixed: adsenseChecklist.filter((item) => item.status === "fixed").length,
-    pending: adsenseChecklist.filter((item) => item.status === "pending").length
+    pass: visibleChecklist.filter((item) => item.resolvedStatus === "pass").length,
+    fixed: visibleChecklist.filter((item) => item.resolvedStatus === "fixed").length,
+    pending: visibleChecklist.filter((item) => item.resolvedStatus === "pending").length
   };
 
-  const pendingItems = adsenseChecklist.filter((item) => item.status === "pending");
+  const pendingItems = resolvedChecklist.filter((item) => item.resolvedStatus === "pending");
 
   return (
     <div className="mx-auto max-w-5xl space-y-8">
@@ -67,10 +119,17 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
             <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Fix Applied</p>
             <p className="text-2xl font-semibold text-[#0f3364]">{counts.fixed}</p>
           </div>
-          <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
-            <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Pending Config</p>
-            <p className="text-2xl font-semibold text-[#0f3364]">{counts.pending}</p>
-          </div>
+          {isAuditMode ? (
+            <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
+              <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Action Required</p>
+              <p className="text-2xl font-semibold text-[#0f3364]">{pendingItems.length}</p>
+            </div>
+          ) : (
+            <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
+              <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Public View</p>
+              <p className="text-sm text-[#203754]">Unresolved internal checks are hidden in public mode.</p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -85,9 +144,9 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <p className="font-medium text-[#153f77]">{item.check}</p>
                   <span
-                    className={`inline-flex rounded-full px-2 py-1 text-xs font-semibold ${statusClasses[item.status]}`}
+                    className={`inline-flex rounded-full px-2 py-1 text-xs font-semibold ${statusClasses[item.resolvedStatus]}`}
                   >
-                    {statusLabel[item.status]}
+                    {statusLabel[item.resolvedStatus]}
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-[#466184]">{item.note}</p>
@@ -97,21 +156,23 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
         </Card>
       ))}
 
-      <Card className="border-[#d4e3f8]">
-        <CardHeader>
-          <CardTitle className="text-xl text-[#0f3364]">Pending Before Submission</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          {pendingItems.map((item) => (
-            <p key={item.id} className="text-sm text-[#203754]">
-              <span className="font-semibold">{item.check}</span>: {item.note}
+      {isAuditMode ? (
+        <Card className="border-[#d4e3f8]">
+          <CardHeader>
+            <CardTitle className="text-xl text-[#0f3364]">Action Required Before Submission</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            {pendingItems.map((item) => (
+              <p key={item.id} className="text-sm text-[#203754]">
+                <span className="font-semibold">{item.check}</span>: {item.note}
+              </p>
+            ))}
+            <p className="pt-2 text-sm text-[#203754]">
+              Current site URL configuration: <span className="font-semibold">{siteConfig.siteUrl}</span>
             </p>
-          ))}
-          <p className="pt-2 text-sm text-[#203754]">
-            Current site URL configuration: <span className="font-semibold">{siteConfig.siteUrl}</span>
-          </p>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      ) : null}
     </div>
   );
 }

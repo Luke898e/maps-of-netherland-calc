@@ -17,6 +17,9 @@ export function SiteFooter(): React.JSX.Element {
           <Link href="/privacy-policy" className="text-[#17467f] hover:text-[#0f3364]">
             Privacy Policy
           </Link>
+          <Link href="/cookie-policy" className="text-[#17467f] hover:text-[#0f3364]">
+            Cookie Policy
+          </Link>
           <Link href="/blog" className="text-[#17467f] hover:text-[#0f3364]">
             Blog
           </Link>

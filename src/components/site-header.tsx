@@ -18,7 +18,8 @@ const navItems = [
   { href: "/adsense-readiness", label: "Readiness" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy-policy", label: "Privacy" }
+  { href: "/privacy-policy", label: "Privacy" },
+  { href: "/cookie-policy", label: "Cookies" }
 ];
 
 export function SiteHeader(): React.JSX.Element {

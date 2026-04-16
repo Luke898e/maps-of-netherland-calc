@@ -100,6 +100,14 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
       <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Policy Updates</h2>
         <p className="leading-7 text-[#203754]">
+          Cookie-specific controls and categories are documented in the
+          <span> </span>
+          <Link href="/cookie-policy" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+            Cookie Policy
+          </Link>
+          .
+        </p>
+        <p className="leading-7 text-[#203754]">
           This policy is updated when legal requirements, advertising controls, or product data flows change. Material
           changes are reflected in the public
           <span> </span>
