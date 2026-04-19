@@ -1409,6 +1409,54 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
           "Unresolved issues can escalate into audits, penalties, interest exposure, and operational disruption."
       }
     ]
+  },
+  {
+    slug: "nigeria-sme-tax-compliance-checklist-2026",
+    title: "Nigeria SME Tax Compliance Checklist (Complete 2026 Guide for Zero-Tax Eligibility and Audit Safety)",
+    description:
+      "A complete 2026 checklist for Nigeria SME tax compliance covering registration, records, CIT, VAT, PAYE, filing consistency, threshold monitoring, and audit readiness.",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Nigeria SME tax compliance checklist 2026",
+      "Zero tax eligibility Nigeria",
+      "Nigeria audit readiness checklist",
+      "CIT VAT PAYE compliance Nigeria",
+      "FIRS compliance for SMEs"
+    ],
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Tax compliance for small and medium-sized enterprises in Nigeria is often approached in a fragmented way. Business owners focus on isolated tasks such as filing returns or paying specific taxes without understanding how these actions fit into a complete compliance system.",
+          "This guide presents a complete tax compliance checklist for SMEs in Nigeria, covering registration, reporting, documentation, tax obligations, and audit readiness."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the most important part of tax compliance?",
+        answer: "Consistency in filing and accurate record keeping."
+      },
+      {
+        question: "Can a checklist prevent audits?",
+        answer: "No, but it reduces audit risk significantly."
+      },
+      {
+        question: "Do SMEs need full compliance systems?",
+        answer: "Yes. Scale does not remove compliance obligations."
+      },
+      {
+        question: "How often should compliance be reviewed?",
+        answer: "At least quarterly."
+      },
+      {
+        question: "What happens if compliance gaps are ignored?",
+        answer: "They can lead to audits, penalties, and financial instability."
+      }
+    ]
   }
 ] as const;
 
