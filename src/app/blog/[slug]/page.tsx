@@ -197,6 +197,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         </section>
       ) : null}
 
+      {post.internalLinks && post.internalLinks.length > 0 ? (
+        <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
+          <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Related Internal Links</h2>
+          <ul className="space-y-2">
+            {post.internalLinks.map((resource) => (
+              <li key={resource.url}>
+                <Link
+                  href={resource.url}
+                  className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+                >
+                  {resource.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {post.references && post.references.length > 0 ? (
         <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
           <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Sources and References</h2>

@@ -19,7 +19,8 @@ const feedbackSchema = z.object({
   pagePath: z.string().min(1, "Please provide the page path."),
   title: z.string().min(5, "Title should be at least 5 characters."),
   email: z.string().email("Please enter a valid email address."),
-  details: z.string().min(30, "Please provide at least 30 characters of detail.")
+  details: z.string().min(30, "Please provide at least 30 characters of detail."),
+  website: z.string().max(0, "Invalid request.").optional().default("")
 });
 
 interface FeedbackState {
@@ -29,6 +30,7 @@ interface FeedbackState {
   title: string;
   email: string;
   details: string;
+  website?: string;
 }
 
 const supportTypeLabel: Record<SupportType, string> = {
@@ -49,10 +51,12 @@ export function SupportFeedbackForm(): React.JSX.Element {
     pagePath: initialPath ?? "/",
     title: "",
     email: "",
-    details: ""
+    details: "",
+    website: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [successMessage, setSuccessMessage] = useState<string>("");
+  const [submitError, setSubmitError] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const previewSubject = useMemo(() => `[${supportTypeLabel[state.type]}] ${state.title || "Untitled"}`, [state]);
@@ -71,11 +75,13 @@ export function SupportFeedbackForm(): React.JSX.Element {
         details: fieldErrors.details?.[0] ?? ""
       });
       setSuccessMessage("");
+      setSubmitError("");
       return;
     }
 
     setErrors({});
     setSuccessMessage("");
+    setSubmitError("");
     setIsSubmitting(true);
 
     try {
@@ -87,12 +93,23 @@ export function SupportFeedbackForm(): React.JSX.Element {
         body: JSON.stringify(parsed.data)
       });
 
+      const payload = (await response.json().catch(() => null)) as { ticketId?: string; message?: string } | null;
       if (response.ok) {
-        const payload = (await response.json()) as { ticketId?: string };
-        const ticketSuffix = payload.ticketId ? ` Ticket ID: ${payload.ticketId}.` : "";
+        const ticketSuffix = payload?.ticketId ? ` Ticket ID: ${payload.ticketId}.` : "";
         setSuccessMessage(`Report received successfully.${ticketSuffix}`);
+        setSubmitError("");
         return;
       }
+
+      if (response.status === 400 || response.status === 403 || response.status === 429 || response.status === 503) {
+        setSubmitError(payload?.message ?? "Unable to submit right now. Please retry shortly.");
+        return;
+      }
+
+      setSubmitError(
+        payload?.message ?? `Unable to submit right now (HTTP ${response.status}). Please retry shortly.`
+      );
+      return;
     } catch {
       // Fallback below opens a prefilled email draft.
     } finally {
@@ -113,6 +130,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
     const body = encodeURIComponent(bodyLines.join("\n"));
     window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
     setSuccessMessage("Support endpoint is unavailable. A prefilled email draft was opened as fallback.");
+    setSubmitError("");
   };
 
   return (
@@ -121,7 +139,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
         <CardTitle className="text-2xl text-[#0f3364]">Submit Bug or Feature Feedback</CardTitle>
         <CardDescription>
           Use this form to report issues and request improvements. Reports are submitted to the support endpoint, with
-          automatic email fallback if the endpoint is unavailable.
+          automatic email fallback only when a network failure blocks API submission.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -199,6 +217,18 @@ export function SupportFeedbackForm(): React.JSX.Element {
             {errors.details ? <p className="text-sm text-[#b54747]">{errors.details}</p> : null}
           </div>
 
+          <div className="hidden" aria-hidden>
+            <Label htmlFor="website">Website</Label>
+            <Input
+              id="website"
+              name="website"
+              autoComplete="off"
+              tabIndex={-1}
+              value={state.website ?? ""}
+              onChange={(event) => setState((prev) => ({ ...prev, website: event.target.value }))}
+            />
+          </div>
+
           <div className="rounded-md border border-[#dbe7f8] bg-[#f6f9ff] p-3 text-sm text-[#203754]">
             <p className="font-semibold text-[#17467f]">Email subject preview</p>
             <p className="mt-1">{previewSubject}</p>
@@ -216,21 +246,25 @@ export function SupportFeedbackForm(): React.JSX.Element {
               type="button"
               variant="outline"
               className="w-full justify-center sm:w-auto"
-              onClick={() =>
+              onClick={() => {
                 setState({
                   type: "bug",
                   tool: "Global Mobility & Tax Suite",
                   pagePath: "/",
                   title: "",
                   email: "",
-                  details: ""
-                })
-              }
+                  details: "",
+                  website: ""
+                });
+                setSubmitError("");
+                setSuccessMessage("");
+              }}
             >
               Reset Form
             </Button>
           </div>
 
+          {submitError ? <p className="text-sm text-[#b54747]">{submitError}</p> : null}
           {successMessage ? <p className="text-sm text-[#1d5a2b]">{successMessage}</p> : null}
         </form>
       </CardContent>

@@ -34,6 +34,22 @@ Production note:
 - The app now has production-safe fallbacks for `NEXT_PUBLIC_SITE_URL`, contact, and profile identity so deployment does not fail.
 - For AdSense approval, you should still set all production values (`NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_GITHUB_PROFILE`, `NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL`, `NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT`) before requesting review.
 
+## Support API Protection
+
+The support endpoint (`/api/support-feedback`) includes validation, origin checks, honeypot protection, and rate limiting.
+
+Configure rate-limit behavior with:
+
+- `SUPPORT_RATE_LIMIT_MODE=auto` (default): uses Upstash when credentials exist, otherwise local in-memory limiting.
+- `SUPPORT_RATE_LIMIT_MODE=memory`: force local limiter (not shared across multiple instances).
+- `SUPPORT_RATE_LIMIT_MODE=upstash`: prefer global Upstash limiter; falls back to memory if Upstash errors.
+- `SUPPORT_RATE_LIMIT_MODE=strict-global`: require global Upstash limiter and fail closed (`503`) if unavailable.
+
+For distributed protection on multi-instance hosting, set:
+
+- `UPSTASH_REDIS_REST_URL`
+- `UPSTASH_REDIS_REST_TOKEN`
+
 ## CMP / TCF v2.3 verification
 
 - Consent status is visible at `/privacy-policy` under **TCF / CMP Status**.

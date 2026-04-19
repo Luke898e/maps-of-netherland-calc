@@ -8,6 +8,18 @@ export interface ChangelogEntry {
 export const changelogEntries: ReadonlyArray<ChangelogEntry> = [
   {
     date: "April 16, 2026",
+    version: "v1.13.0",
+    title: "Reliability and Security Hardening",
+    details: [
+      "Prevented UK FIG residency-year remapping errors by storing timeline choices by tax year key instead of array index.",
+      "Hardened service worker cache logic to avoid persisting non-OK navigation and asset responses.",
+      "Added support endpoint anti-abuse controls (rate limiting + honeypot field).",
+      "Added baseline security headers and refreshed freshness signals for About and sitemap metadata.",
+      "Enforced strict production env validation for public site identity configuration."
+    ]
+  },
+  {
+    date: "April 16, 2026",
     version: "v1.12.0",
     title: "Consistency and Trust Hardening Pass",
     details: [

@@ -21,30 +21,29 @@ function buildTimelineYears(arrivalDate: string): number[] {
 
 export function UkFigRegimeToolForm(): React.JSX.Element {
   const [arrivalDate, setArrivalDate] = useState<string>("");
-  const [residencyHistory, setResidencyHistory] = useState<Array<boolean | null>>(Array.from({ length: 10 }, () => null));
+  const [residencyByYear, setResidencyByYear] = useState<Record<number, boolean | null>>({});
   const [error, setError] = useState<string>("");
   const [result, setResult] = useState<UkFigResult | null>(null);
 
   const timelineYears = useMemo(() => buildTimelineYears(arrivalDate), [arrivalDate]);
 
-  const handleResidencyChange = (index: number, wasResident: boolean): void => {
-    setResidencyHistory((previous) => {
-      const next = [...previous];
-      next[index] = wasResident;
-      return next;
-    });
+  const handleResidencyChange = (year: number, wasResident: boolean): void => {
+    setResidencyByYear((previous) => ({
+      ...previous,
+      [year]: wasResident
+    }));
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
-    if (residencyHistory.some((entry) => entry === null)) {
+    if (timelineYears.some((year) => residencyByYear[year] === null || residencyByYear[year] === undefined)) {
       setError("Complete all 10 years in the residency timeline before evaluating.");
       setResult(null);
       return;
     }
 
-    const normalizedResidencyHistory = residencyHistory.map((entry) => entry === true);
+    const normalizedResidencyHistory = timelineYears.map((year) => residencyByYear[year] === true);
 
     const parsed = ukFigEligibilitySchema.safeParse({
       arrivalDate,
@@ -115,12 +114,13 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
             <legend className="text-sm font-medium text-foreground">Previous 10-Year UK Residency Timeline</legend>
             <p className="text-sm text-muted-foreground">
               Mark each year as Resident or Non-Resident. Relief requires 10 consecutive Non-Resident years, and each
-              year must be explicitly selected.
+              year must be explicitly selected. If arrival date changes, confirm the timeline again before submitting.
             </p>
             <div className="space-y-2">
-              {timelineYears.map((year, index) => {
-                const isResident = residencyHistory[index] === true;
-                const isNonResident = residencyHistory[index] === false;
+              {timelineYears.map((year) => {
+                const selection = residencyByYear[year] ?? null;
+                const isResident = selection === true;
+                const isNonResident = selection === false;
                 return (
                   <div
                     key={year}
@@ -133,7 +133,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
                         size="sm"
                         variant={isResident ? "default" : "outline"}
                         className={`${isResident ? "bg-[#12447d] text-white hover:bg-[#0f3968]" : ""} w-full justify-center`}
-                        onClick={() => handleResidencyChange(index, true)}
+                        onClick={() => handleResidencyChange(year, true)}
                       >
                         Resident
                       </Button>
@@ -142,7 +142,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
                         size="sm"
                         variant={isNonResident ? "default" : "outline"}
                         className={`${isNonResident ? "bg-[#1f6dc8] text-white hover:bg-[#1a5daf]" : ""} w-full justify-center`}
-                        onClick={() => handleResidencyChange(index, false)}
+                        onClick={() => handleResidencyChange(year, false)}
                       >
                         Non-Resident
                       </Button>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getAllBlogPosts } from "@/content/blog-posts";
+import { changelogEntries } from "@/content/changelog";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,7 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPostRoutes
   ];
 
-  const staticPageLastModified = new Date("2026-04-16T00:00:00.000Z");
+  const latestReleaseDate = changelogEntries[0]?.date;
+  const staticPageLastModified = latestReleaseDate ? new Date(latestReleaseDate) : new Date();
   const blogLastModifiedMap = new Map(
     blogPosts.map((post) => [`/blog/${post.slug}`, new Date(`${post.updatedDate}T00:00:00.000Z`)])
   );

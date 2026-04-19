@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v2";
 const NAV_CACHE = `global-tax-suite-nav-${CACHE_VERSION}`;
 const ASSET_CACHE = `global-tax-suite-assets-${CACHE_VERSION}`;
 
@@ -54,8 +54,10 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          const responseClone = response.clone();
-          caches.open(NAV_CACHE).then((cache) => cache.put(request, responseClone));
+          if (response.ok) {
+            const responseClone = response.clone();
+            caches.open(NAV_CACHE).then((cache) => cache.put(request, responseClone));
+          }
           return response;
         })
         .catch(async () => {
@@ -76,8 +78,10 @@ self.addEventListener("fetch", (event) => {
           return cached;
         }
         return fetch(request).then((response) => {
-          const responseClone = response.clone();
-          caches.open(ASSET_CACHE).then((cache) => cache.put(request, responseClone));
+          if (response.ok) {
+            const responseClone = response.clone();
+            caches.open(ASSET_CACHE).then((cache) => cache.put(request, responseClone));
+          }
           return response;
         });
       })

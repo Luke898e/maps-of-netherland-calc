@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage(): React.JSX.Element {
-  const lastUpdated = "14 April 2026";
+  const lastUpdated = changelogEntries[0]?.date ?? "Not available";
 
   return (
     <div className="mx-auto max-w-4xl space-y-8">
