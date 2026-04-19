@@ -71,3 +71,14 @@ If preview fails or you see stale `500` errors:
 ```bash
 npm run dev -- --port 3001 --hostname 0.0.0.0
 ```
+
+## Blog authoring rules (persistent)
+
+For markdown-style articles in `src/content/blog-markdown-overrides.ts`, use these conventions:
+
+- `# Title` is the article title only (rendered once in the page header, not repeated in body).
+- `##` and `###` are rendered as section/subsection headings.
+- `* item` is rendered as a bullet item.
+- `**text**` is rendered as bold text.
+- `[label](/internal-path)` and `[label](https://external-site)` are rendered as links.
+- Internal and external links should be placed naturally inside the article body (not appended after the article).

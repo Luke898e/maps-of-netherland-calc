@@ -16,6 +16,9 @@ interface BlogPostPageProps {
 }
 
 function renderTextWithLinks(text: string): React.ReactNode {
+  // Markdown authoring rules for blog overrides:
+  // - [label](url) => link
+  // - **text** => bold text
   const inlinePattern = /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^\s)]+)\)|\*\*([^*]+)\*\*/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
