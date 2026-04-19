@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 import { AdSenseScript } from "@/components/adsense-script";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/content/blog-posts";
+import { blogMarkdownOverrides } from "@/content/blog-markdown-overrides";
 import { authorProfile } from "@/content/author-profile";
 import { siteConfig } from "@/lib/site-config";
 
@@ -14,18 +15,18 @@ interface BlogPostPageProps {
   }>;
 }
 
-function renderParagraphWithInternalLinks(paragraph: string): React.ReactNode {
+function renderTextWithLinks(text: string): React.ReactNode {
   const linkPattern = /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^\s)]+)\)/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
-  while ((match = linkPattern.exec(paragraph)) !== null) {
+  while ((match = linkPattern.exec(text)) !== null) {
     const [fullMatch, label, href] = match;
     const matchStart = match.index;
 
     if (matchStart > lastIndex) {
-      parts.push(paragraph.slice(lastIndex, matchStart));
+      parts.push(text.slice(lastIndex, matchStart));
     }
 
     const isExternal = href.startsWith("http://") || href.startsWith("https://");
@@ -55,15 +56,107 @@ function renderParagraphWithInternalLinks(paragraph: string): React.ReactNode {
     lastIndex = matchStart + fullMatch.length;
   }
 
-  if (lastIndex < paragraph.length) {
-    parts.push(paragraph.slice(lastIndex));
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
   }
 
   if (parts.length === 0) {
-    return paragraph;
+    return text;
   }
 
   return <>{parts}</>;
+}
+
+function renderMarkdownBody(markdown: string): React.ReactNode {
+  const lines = markdown.split(/\r?\n/);
+  const blocks: React.ReactNode[] = [];
+  let bulletItems: string[] = [];
+
+  const flushBullets = (): void => {
+    if (bulletItems.length === 0) {
+      return;
+    }
+
+    blocks.push(
+      <ul key={`bullets-${blocks.length}`} className="list-disc space-y-2 pl-5 text-[#203754]">
+        {bulletItems.map((item, index) => (
+          <li key={`bullet-${blocks.length}-${index}`}>{renderTextWithLinks(item)}</li>
+        ))}
+      </ul>
+    );
+
+    bulletItems = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (line.length === 0) {
+      flushBullets();
+      continue;
+    }
+
+    if (line.startsWith("* ")) {
+      bulletItems.push(line.slice(2));
+      continue;
+    }
+
+    flushBullets();
+
+    if (line === "---") {
+      blocks.push(<hr key={`rule-${blocks.length}`} className="my-3 border-[#dce8f9]" />);
+      continue;
+    }
+
+    if (line.startsWith("# ")) {
+      blocks.push(
+        <h1 key={`h1-${blocks.length}`} className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">
+          {renderTextWithLinks(line.slice(2))}
+        </h1>
+      );
+      continue;
+    }
+
+    if (line.startsWith("## ")) {
+      blocks.push(
+        <h2 key={`h2-${blocks.length}`} className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+          {renderTextWithLinks(line.slice(3))}
+        </h2>
+      );
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      blocks.push(
+        <h3 key={`h3-${blocks.length}`} className="font-[var(--font-heading)] text-xl font-semibold text-[#0f3364]">
+          {renderTextWithLinks(line.slice(4))}
+        </h3>
+      );
+      continue;
+    }
+
+    if (line.startsWith("> ")) {
+      blocks.push(
+        <blockquote
+          key={`quote-${blocks.length}`}
+          className="border-l-4 border-[#c8dbf4] bg-[#f7fbff] px-4 py-3 italic text-[#1f3b61]"
+        >
+          {renderTextWithLinks(line.slice(2))}
+        </blockquote>
+      );
+      continue;
+    }
+
+    blocks.push(
+      <p key={`p-${blocks.length}`} className="leading-7 text-[#203754]">
+        {renderTextWithLinks(line)}
+      </p>
+    );
+  }
+
+  flushBullets();
+
+  return <div className="space-y-4">{blocks}</div>;
 }
 
 function formatDate(dateInput: string): string {
@@ -131,6 +224,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
   if (!post) {
     notFound();
   }
+
+  const markdownOverride = blogMarkdownOverrides[post.slug];
+  const hasMarkdownOverride = typeof markdownOverride === "string" && markdownOverride.trim().length > 0;
 
   const postStructuredData = {
     "@context": "https://schema.org",
@@ -214,28 +310,32 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
       </header>
 
       <div className="space-y-8 rounded-xl border border-[#d4e3f8] bg-white p-8">
-        {post.sections.map((section, sectionIndex) => (
-          <section key={`${section.heading}-${sectionIndex}`} className="space-y-4">
-            {section.heading.trim().length > 0 ? (
-              <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.heading}</h2>
-            ) : null}
-            {section.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)} className="leading-7 text-[#203754]">
-                {renderParagraphWithInternalLinks(paragraph)}
-              </p>
-            ))}
-            {section.bullets ? (
-              <ul className="list-disc space-y-2 pl-5 text-[#203754]">
-                {section.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
+        {hasMarkdownOverride
+          ? renderMarkdownBody(markdownOverride)
+          : post.sections.map((section, sectionIndex) => (
+              <section key={`${section.heading}-${sectionIndex}`} className="space-y-4">
+                {section.heading.trim().length > 0 ? (
+                  <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+                    {section.heading}
+                  </h2>
+                ) : null}
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)} className="leading-7 text-[#203754]">
+                    {renderTextWithLinks(paragraph)}
+                  </p>
                 ))}
-              </ul>
-            ) : null}
-          </section>
-        ))}
+                {section.bullets ? (
+                  <ul className="list-disc space-y-2 pl-5 text-[#203754]">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ))}
       </div>
 
-      {post.faqs && post.faqs.length > 0 ? (
+      {!hasMarkdownOverride && post.faqs && post.faqs.length > 0 ? (
         <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
           <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
             People Also Ask
@@ -251,7 +351,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         </section>
       ) : null}
 
-      {post.references && post.references.length > 0 ? (
+      {!hasMarkdownOverride && post.references && post.references.length > 0 ? (
         <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
           <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Sources and References</h2>
           <ul className="space-y-2">

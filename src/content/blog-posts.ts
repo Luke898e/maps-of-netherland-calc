@@ -536,7 +536,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
   },
   {
     slug: "how-to-pay-zero-tax-in-nigeria-legally-2026",
-    title: "How to Pay Zero Tax in Nigeria Legally (2026 Complete Guide for SMEs and Founders)",
+    title: "How to Pay Zero Tax in Nigeria Legally (2026 Complete Guide for SMEs & Founders)",
     description:
       "A practical 2026 guide for SMEs and founders on legal 0% Company Income Tax eligibility in Nigeria, filing duties, audit safety, and the taxes that still apply.",
     publishedDate: "2026-04-19",
