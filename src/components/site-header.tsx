@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -23,9 +23,25 @@ const navItems = [
 
 export function SiteHeader(): React.JSX.Element {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const onScroll = (): void => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#d9e5f7] bg-white/95 backdrop-blur">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-[#d9e5f7] bg-white/95 backdrop-blur transition-shadow",
+        isScrolled ? "shadow-[0_6px_24px_rgba(11,45,90,0.10)]" : "shadow-none"
+      )}
+    >
       <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <SiteLogo />

@@ -4,6 +4,8 @@ export const authorProfile = {
   name: "Lukmon Isiaq",
   role: "Software Architect and Tax Tooling Maintainer",
   location: "Lagos, Nigeria",
+  photoSrc: "/authors/lukmon-isiaq.jpg",
+  photoAlt: "Portrait of Lukmon Isiaq, maintainer of the Global Tax Suite",
   mission:
     "I build practical tax-compliance products that convert dense policy language into transparent, testable decision tools for founders, finance teams, and cross-border professionals.",
   bioParagraphs: [

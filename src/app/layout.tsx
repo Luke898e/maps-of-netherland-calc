@@ -47,6 +47,7 @@ const personStructuredData = {
   "@id": `${siteConfig.siteUrl}#author`,
   name: authorProfile.name,
   jobTitle: authorProfile.role,
+  image: `${siteConfig.siteUrl}${authorProfile.photoSrc}`,
   worksFor: {
     "@id": `${siteConfig.siteUrl}#organization`
   },
