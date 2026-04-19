@@ -2085,6 +2085,8 @@ A structured compliance checklist provides a comprehensive framework that ensure
 
 This guide presents a complete tax compliance checklist for SMEs in Nigeria, covering registration, reporting, documentation, tax obligations, and audit readiness. It is designed not just as a list, but as a system that supports long-term compliance and legal tax optimization.
 
+For official administration guidance, see [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/).
+
 ---
 
 ## What a Tax Compliance Checklist Actually Represents
@@ -2141,6 +2143,8 @@ Without proper registration:
 * compliance status remains incomplete
 
 Registration is the foundation upon which all other compliance activities depend.
+
+For practical registration context, review [How to Pay Zero Tax in Nigeria Legally](/blog/how-to-pay-zero-tax-in-nigeria-legally-2026).
 
 ---
 
@@ -2204,6 +2208,8 @@ Failure to file:
 
 CIT compliance is both a legal requirement and a verification mechanism.
 
+For first-pass eligibility checks, use the [Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor).
+
 ---
 
 ## Core Section 4: Value Added Tax (VAT) Compliance
@@ -2227,6 +2233,8 @@ VAT obligations operate independently from Company Income Tax.
 
 VAT is closely monitored and frequently used to detect compliance gaps.
 
+Reference: [FIRS Value Added Tax (VAT)](https://www.firs.gov.ng/tax-types/value-added-tax-vat/).
+
 ---
 
 ## Core Section 5: PAYE (Employee Tax) Compliance
@@ -2249,6 +2257,8 @@ Failure to comply:
 * affects employee relations
 
 PAYE compliance is a critical component of overall tax responsibility.
+
+Reference: [FIRS Personal Income Tax (PIT)](https://www.firs.gov.ng/tax-types/personal-income-tax-pit/).
 
 ---
 
@@ -2315,6 +2325,8 @@ Compliance is incomplete without audit preparedness.
 ### Why This Matters:
 
 Audit readiness determines how smoothly an audit is resolved.
+
+Related reading: [Tax Audit Triggers in Nigeria for SMEs](/blog/tax-audit-triggers-in-nigeria-for-smes-2026), [How to Prepare for a Tax Audit in Nigeria](/blog/how-to-prepare-for-a-tax-audit-in-nigeria-2026), and [Desk Audit vs Field Audit in Nigeria](/blog/desk-audit-vs-field-audit-in-nigeria-2026).
 
 ---
 

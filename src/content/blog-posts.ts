@@ -1426,6 +1426,10 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "CIT VAT PAYE compliance Nigeria",
       "FIRS compliance for SMEs"
     ],
+    featuredImage: {
+      src: "/blog/nigeria-sme-tax-compliance-checklist-2026.png",
+      alt: "Nigeria SME Tax Compliance Checklist featured image"
+    },
     sections: [
       {
         heading: "",
