@@ -71,6 +71,7 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
   const lines = markdown.split(/\r?\n/);
   const blocks: React.ReactNode[] = [];
   let bulletItems: string[] = [];
+  let skippedPrimaryH1 = false;
 
   const flushBullets = (): void => {
     if (bulletItems.length === 0) {
@@ -109,6 +110,11 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
     }
 
     if (line.startsWith("# ")) {
+      if (!skippedPrimaryH1) {
+        skippedPrimaryH1 = true;
+        continue;
+      }
+
       blocks.push(
         <h1 key={`h1-${blocks.length}`} className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">
           {renderTextWithLinks(line.slice(2))}
