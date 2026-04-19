@@ -38,7 +38,7 @@ export function SiteHeader(): React.JSX.Element {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-[#d9e5f7] bg-white/95 backdrop-blur transition-shadow",
+        "fixed inset-x-0 top-0 z-[1000] border-b border-[#d9e5f7] bg-white/95 backdrop-blur transition-shadow",
         isScrolled ? "shadow-[0_6px_24px_rgba(11,45,90,0.10)]" : "shadow-none"
       )}
     >

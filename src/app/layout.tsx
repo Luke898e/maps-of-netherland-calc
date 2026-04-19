@@ -160,7 +160,8 @@ export default function RootLayout({
         />
         <GoogleCmpScripts />
         <SiteHeader />
-        <main id="main-content" className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div aria-hidden="true" className="h-[88px] lg:h-[134px]" />
+        <main id="main-content" className="mx-auto w-full max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:px-8">
           {children}
         </main>
         <SiteFooter />
