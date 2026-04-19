@@ -105,7 +105,6 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
     flushBullets();
 
     if (line === "---") {
-      blocks.push(<hr key={`rule-${blocks.length}`} className="my-3 border-[#dce8f9]" />);
       continue;
     }
 
