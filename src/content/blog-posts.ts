@@ -1618,6 +1618,59 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Possible, but requires structural correction and consistency."
       }
     ]
+  },
+  {
+    slug: "how-to-check-if-you-qualify-for-the-uk-fig-regime-2026",
+    title:
+      "How to Check If You Qualify for the UK FIG Regime (Step-by-Step Evaluation Guide for Founders and Global Earners)",
+    description:
+      "A step-by-step UK FIG eligibility evaluation framework covering residency, income mapping, structure, documentation, and consistency risk for founders and global earners.",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
+    readingTime: "17 min read",
+    category: "UK Tax",
+    tags: [
+      "How to check UK FIG eligibility",
+      "UK foreign income and gains evaluation",
+      "HMRC FIG compliance",
+      "UK residency and foreign income",
+      "Global earners UK tax"
+    ],
+    featuredImage: {
+      src: "/blog/how-to-check-uk-fig-eligibility-2026.png",
+      alt: "Who is a qualifying new resident visual for UK FIG eligibility"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Most people searching for UK foreign income rules are trying to answer a practical question: do they qualify and can they rely on it without risk.",
+          "This guide provides a structured, step-by-step system for UK FIG eligibility evaluation."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I qualify if I split time between countries?",
+        answer: "Yes, but residency classification becomes more complex and must be clearly defined."
+      },
+      {
+        question: "What if my income source changes during the year?",
+        answer: "Each period may need separate evaluation."
+      },
+      {
+        question: "Can I correct my structure after realizing issues?",
+        answer: "Yes, but corrections must be consistent and properly documented."
+      },
+      {
+        question: "Is eligibility reviewed every year?",
+        answer: "Yes. Each tax year is assessed independently, but patterns are also considered."
+      },
+      {
+        question: "Can eligibility be challenged retroactively?",
+        answer: "Yes, especially if inconsistencies are identified."
+      }
+    ]
   }
 ] as const;
 

@@ -3890,5 +3890,439 @@ It is the result of:
 
 Understanding this system allows individuals and founders to move from guesswork to informed decision-making.
 
-And in a system this complex, that difference determines whether you benefit—or face unexpected tax consequences.`
+And in a system this complex, that difference determines whether you benefit—or face unexpected tax consequences.`,
+  "how-to-check-if-you-qualify-for-the-uk-fig-regime-2026": `# How to Check If You Qualify for the UK FIG Regime (Step-by-Step Evaluation Guide for Founders and Global Earners)
+
+Most people searching for UK foreign income rules are not looking for theory. They are trying to answer a practical question:
+
+> “Do I actually qualify—and can I rely on it without risk?”
+
+The problem is that most guides explain concepts but do not provide a **clear evaluation framework**. As a result, individuals rely on assumptions, which often leads to incorrect conclusions.
+
+This guide is designed to solve that problem.
+
+It provides a **structured, step-by-step system** to determine whether you qualify for favorable treatment of foreign income and gains under UK tax rules, while also identifying risks that could invalidate your position.
+
+For official baseline references, see [HMRC: Tax on foreign income](https://www.gov.uk/tax-foreign-income) and [HMRC Statutory Residence Test (RDR3)](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt).
+
+---
+
+## Why “Checking Eligibility” Is More Complex Than It Appears
+
+At a surface level, eligibility seems simple:
+
+* you earn income abroad
+* you are connected to the UK
+
+However, in practice, eligibility depends on:
+
+* how residency is determined
+* how income is classified
+* how your business or earnings are structured
+* how consistently you report your position
+
+### What most people miss:
+
+Eligibility is not a checkbox—it is a **multi-layer validation system**.
+
+You are not just asking:
+
+* “Do I qualify?”
+
+You are asking:
+
+* “Can I prove I qualify under scrutiny?”
+
+Related reading: [Who Qualifies for the UK FIG Regime?](/blog/who-qualifies-for-the-uk-fig-regime-2026).
+
+---
+
+## The 5-Layer FIG Eligibility Evaluation System
+
+To accurately assess eligibility, you must evaluate five interconnected layers:
+
+1. Residency Status
+2. Income Source Classification
+3. Structural Positioning
+4. Reporting and Documentation
+5. Risk and Consistency Profile
+
+Failure in any one layer can override the others.
+
+---
+
+## Step 1: Determine Your Residency Position Precisely
+
+Residency is the entry point into the entire system.
+
+### What you need to evaluate:
+
+* number of days spent in the UK
+* availability of accommodation
+* work presence
+* personal and economic ties
+
+### Advanced insight:
+
+Residency is not binary in practice. Even when classified as a UK resident, your **level of connection** influences how your financial activity is interpreted.
+
+### Common mistake:
+
+Assuming:
+
+* “I am not fully based in the UK, so I am not affected”
+
+In reality:
+
+* partial presence can still trigger full residency classification
+
+### Defensibility check:
+
+You should be able to clearly demonstrate:
+
+* where you spend time
+* where your economic activity is centered
+
+Cross-border context: [Nigeria vs UK Tax Residency Rules](/blog/nigeria-vs-uk-tax-residency-rules-2026).
+
+---
+
+## Step 2: Map and Classify All Income Sources
+
+Before determining eligibility, you must map every income stream.
+
+### Required classification:
+
+* UK-sourced income
+* foreign-sourced income
+
+### Key rule:
+
+Each income stream must be classified independently.
+
+### What most people get wrong:
+
+They treat all income as:
+
+* either fully foreign
+  or
+* fully domestic
+
+In reality:
+
+* mixed classification is common
+
+---
+
+### Advanced Insight: “Economic Activity vs Payment Location”
+
+Many assume that:
+
+* if money comes from abroad, it is foreign income
+
+However, classification depends on:
+
+* where the value is created
+* where decisions are made
+* where services are performed
+
+This distinction is critical.
+
+---
+
+## Step 3: Evaluate Your Structural Position
+
+Structure determines how income flows and how it is interpreted.
+
+### Key areas to review:
+
+* where your business is incorporated
+* where management decisions occur
+* how you receive income (salary, dividends, distributions)
+* how funds move between accounts
+
+### Expert-level insight:
+
+Two individuals with identical income sources can have different outcomes due to structure alone.
+
+---
+
+### Hidden Risk: Management and Control
+
+If:
+
+* your business is foreign
+  but
+* you manage it primarily from the UK
+
+This can influence:
+
+* how income is treated
+* how authorities interpret your position
+
+Related structuring guide: [How to Structure Your Business to Legally Reduce Tax in Nigeria](/blog/how-to-structure-your-business-to-legally-reduce-tax-in-nigeria-2026).
+
+---
+
+## Step 4: Assess Documentation and Reporting Strength
+
+Even if you qualify structurally, poor documentation can invalidate your position.
+
+### Required documentation includes:
+
+* contracts showing foreign engagement
+* invoices and payment records
+* bank transaction trails
+* financial statements
+
+### Reporting requirements:
+
+* accurate declaration of all income
+* consistent classification across filings
+
+---
+
+### Critical Insight:
+
+> Tax treatment depends less on what you claim—and more on what you can prove.
+
+From an audit perspective:
+
+* undocumented claims are treated as unreliable
+
+For filing references, review [HMRC Self Assessment tax returns](https://www.gov.uk/self-assessment-tax-returns) and [HMRC: Tax on foreign income](https://www.gov.uk/tax-foreign-income).
+
+---
+
+## Step 5: Evaluate Risk Signals and Consistency
+
+Eligibility is not assessed in isolation. It is evaluated over time.
+
+### Key risk indicators:
+
+* fluctuating residency patterns
+* inconsistent income classification
+* sudden structural changes
+* incomplete records
+
+### What this means:
+
+Even if you qualify today, inconsistent behavior can lead to:
+
+* reclassification
+* reassessment
+* loss of favorable treatment
+
+---
+
+## Putting It All Together: The Practical Evaluation Flow
+
+To determine your eligibility, you must align all five layers:
+
+1. Residency must be clearly defined
+2. Income must be accurately classified
+3. Structure must support classification
+4. Documentation must support claims
+5. Behavior must remain consistent over time
+
+If one layer fails, the entire position weakens.
+
+Use the [UK FIG Regime Eligibility Tool](/tools/uk-fig-regime-eligibility) as a practical workflow aid.
+
+---
+
+## Real-World Evaluation Scenarios
+
+### Scenario 1: Strong Eligibility Case
+
+* consistent UK residency status
+* clearly defined foreign income
+* structured business operations
+* complete documentation
+* stable reporting history
+
+Outcome:
+
+* high confidence in eligibility
+* strong defensibility
+
+---
+
+### Scenario 2: Apparent Eligibility but High Risk
+
+* foreign clients
+* UK-based work activity
+* mixed income classification
+* incomplete records
+
+Outcome:
+
+* eligibility may exist in theory
+* high risk of challenge
+
+---
+
+### Scenario 3: Weak Eligibility Case
+
+* unclear residency
+* mixed financial structure
+* inconsistent reporting
+
+Outcome:
+
+* likely full taxation on review
+
+---
+
+## What Most Guides Do Not Tell You
+
+### 1. Eligibility Can Be Lost Without Notice
+
+You may:
+
+* qualify initially
+* lose eligibility due to inconsistency
+
+---
+
+### 2. Partial Qualification Is Common
+
+Different income streams may receive different treatment.
+
+---
+
+### 3. Movement of Money Matters
+
+Transferring funds:
+
+* at the wrong time
+* in the wrong structure
+
+can affect tax outcomes.
+
+---
+
+### 4. Audit Focus Is on Patterns
+
+Authorities assess:
+
+* long-term consistency
+* not just individual claims
+
+---
+
+## Decision Framework: Can You Reliably Rely on FIG Treatment?
+
+Ask yourself:
+
+* Can I clearly define my residency status?
+* Can I prove the source of every income stream?
+* Does my structure align with my claims?
+* Are my records complete and consistent?
+* Would my position make sense under review?
+
+If any answer is uncertain:
+
+* your eligibility is not fully secure
+
+---
+
+## Strategic Insight for Founders and Global Earners
+
+Eligibility is not just about compliance—it is about **control**.
+
+Those who understand this system can:
+
+* structure income intentionally
+* reduce uncertainty
+* maintain long-term efficiency
+
+Those who rely on assumptions often face:
+
+* unexpected tax exposure
+* retroactive reassessments
+
+---
+
+## Frequently Asked Advanced Questions
+
+### Can I qualify if I split time between countries?
+
+Yes, but residency classification becomes more complex and must be clearly defined.
+
+---
+
+### What if my income source changes during the year?
+
+Each period may need separate evaluation.
+
+---
+
+### Can I correct my structure after realizing issues?
+
+Yes, but corrections must be consistent and properly documented.
+
+---
+
+### Is eligibility reviewed every year?
+
+Yes. Each tax year is assessed independently, but patterns are also considered.
+
+---
+
+### Can eligibility be challenged retroactively?
+
+Yes, especially if inconsistencies are identified.
+
+---
+
+## Final Insight: Eligibility vs Confidence
+
+There is a difference between:
+
+* technically qualifying
+  and
+* confidently relying on that qualification
+
+The goal is not just to qualify, but to reach a position where:
+
+* your structure is clear
+* your documentation is complete
+* your reporting is consistent
+
+At that point, your eligibility becomes **defensible**, not just theoretical.
+
+---
+
+## Next Step: Use a Structured Eligibility Check
+
+Manual evaluation can be complex and prone to error.
+
+A structured system allows you to:
+
+* assess all five layers simultaneously
+* identify weaknesses
+* understand your true position
+
+This is where a dedicated eligibility tool becomes valuable, as it applies a consistent evaluation framework to your specific situation.
+
+For full context, pair this with [UK FIG Regime 2026 Explained](/blog/uk-fig-regime-timeline-design-for-2026).
+
+---
+
+## Conclusion
+
+Checking whether you qualify for the UK FIG framework is not a simple yes-or-no exercise.
+
+It is a structured evaluation of:
+
+* residency
+* income classification
+* business structure
+* documentation
+* behavioral consistency
+
+By applying a systematic approach, you move from assumption to clarity.
+
+And in a system where small details determine major outcomes, that clarity is essential.`
 } as const;
