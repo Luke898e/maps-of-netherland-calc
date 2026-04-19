@@ -38,7 +38,7 @@ const organizationStructuredData = {
   url: siteConfig.siteUrl,
   email: siteConfig.contactEmail,
   sameAs: [siteConfig.githubProfile],
-  logo: `${siteConfig.siteUrl}/icons/icon-512.svg`
+  logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`
 };
 
 const personStructuredData = {
@@ -98,11 +98,12 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
       { url: "/icons/icon-192.svg", type: "image/svg+xml", sizes: "192x192" },
       { url: "/icons/icon-512.svg", type: "image/svg+xml", sizes: "512x512" }
     ],
     apple: [{ url: "/icons/apple-touch-icon.svg", type: "image/svg+xml", sizes: "180x180" }],
-    shortcut: ["/icons/icon-192.svg"]
+    shortcut: ["/favicon.svg"]
   },
   robots: {
     index: true,

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="320" viewBox="0 0 1240 320" fill="none">
+  <defs>
+    <linearGradient id="word_bg" x1="24" y1="22" x2="298" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2D5A" />
+      <stop offset="0.55" stop-color="#124D99" />
+      <stop offset="1" stop-color="#1E76D7" />
+    </linearGradient>
+    <linearGradient id="word_shield" x1="168" y1="132" x2="232" y2="242" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFEFF" />
+      <stop offset="1" stop-color="#E8F3FF" />
+    </linearGradient>
+  </defs>
+
+  <rect x="22" y="22" width="278" height="278" rx="62" fill="url(#word_bg)" />
+  <rect x="34" y="34" width="254" height="254" rx="52" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.8" />
+
+  <circle cx="138" cy="168" r="76" stroke="#E9F3FF" stroke-width="12" />
+  <ellipse cx="138" cy="168" rx="34" ry="76" stroke="#D8E9FF" stroke-width="8" />
+  <path d="M62 168H214" stroke="#D8E9FF" stroke-width="8" stroke-linecap="round" />
+  <path d="M76 140C112 156 164 156 200 140" stroke="#D8E9FF" stroke-width="7" stroke-linecap="round" />
+  <path d="M76 196C112 180 164 180 200 196" stroke="#D8E9FF" stroke-width="7" stroke-linecap="round" />
+
+  <path d="M170 130H232V166C232 208 208 232 210 232C212 232 188 208 188 166V130Z" fill="url(#word_shield)" stroke="#A8C8F2" stroke-width="2.4" />
+  <path d="M182 177L192 187L208 164" stroke="#0F4EA3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="82" cy="82" r="9" fill="#F4B446" />
+  <path d="M77 82H87" stroke="#0C2D5A" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M82 77V87" stroke="#0C2D5A" stroke-width="2.2" stroke-linecap="round" />
+
+  <text x="340" y="132" fill="#0F3364" font-family="'Lora', Georgia, serif" font-size="82" font-weight="700" letter-spacing="1.5">
+    Global Tax Suite
+  </text>
+  <text x="342" y="184" fill="#2F5F95" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="2">
+    NIGERIA + UK COMPLIANCE INTELLIGENCE
+  </text>
+  <rect x="340" y="206" width="820" height="2.2" fill="#C9DCF7" />
+  <text x="342" y="248" fill="#35577F" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="500" letter-spacing="1">
+    Premium advisory tools for corporate tax screening and cross-border residency planning
+  </text>
+</svg>
+

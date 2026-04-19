@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
   <defs>
-    <linearGradient id="gts_bg_512" x1="42" y1="38" x2="472" y2="486" gradientUnits="userSpaceOnUse">
+    <linearGradient id="gts_bg" x1="42" y1="38" x2="472" y2="486" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0C2D5A" />
       <stop offset="0.55" stop-color="#124D99" />
       <stop offset="1" stop-color="#1E76D7" />
     </linearGradient>
-    <linearGradient id="gts_shield_512" x1="292" y1="210" x2="388" y2="372" gradientUnits="userSpaceOnUse">
+    <linearGradient id="gts_shield" x1="292" y1="210" x2="388" y2="372" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FDFEFF" />
       <stop offset="1" stop-color="#E8F3FF" />
     </linearGradient>
   </defs>
 
-  <rect width="512" height="512" rx="110" fill="url(#gts_bg_512)" />
+  <rect width="512" height="512" rx="110" fill="url(#gts_bg)" />
   <rect x="26" y="26" width="460" height="460" rx="96" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2" />
 
   <circle cx="216" cy="252" r="126" stroke="#E9F3FF" stroke-width="20" />
@@ -20,10 +20,11 @@
   <path d="M112 206C172 232 260 232 320 206" stroke="#D8E9FF" stroke-width="12" stroke-linecap="round" />
   <path d="M112 298C172 272 260 272 320 298" stroke="#D8E9FF" stroke-width="12" stroke-linecap="round" />
 
-  <path d="M300 208H372V264C372 330 334 368 336 368C338 368 300 330 300 264V208Z" fill="url(#gts_shield_512)" stroke="#A8C8F2" stroke-width="4" />
+  <path d="M300 208H372V264C372 330 334 368 336 368C338 368 300 330 300 264V208Z" fill="url(#gts_shield)" stroke="#A8C8F2" stroke-width="4" />
   <path d="M318 282L334 298L357 266" stroke="#0F4EA3" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
 
   <circle cx="124" cy="124" r="15" fill="#F4B446" />
   <path d="M116 124H132" stroke="#0C2D5A" stroke-width="3.5" stroke-linecap="round" />
   <path d="M124 116V132" stroke="#0C2D5A" stroke-width="3.5" stroke-linecap="round" />
 </svg>
+
