@@ -1565,6 +1565,59 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Yes, within legal limits and compliance requirements."
       }
     ]
+  },
+  {
+    slug: "who-qualifies-for-the-uk-fig-regime-2026",
+    title:
+      "Who Qualifies for the UK FIG Regime? (Advanced Eligibility Guide for Founders, Remote Earners, and Global Investors)",
+    description:
+      "An advanced guide to practical UK FIG eligibility covering residency, source integrity, structure, reporting behavior, and defensibility for founders and global earners.",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
+    readingTime: "17 min read",
+    category: "UK Tax",
+    tags: [
+      "UK FIG regime eligibility",
+      "Foreign income and gains UK",
+      "HMRC residency and FIG",
+      "Global founders UK tax",
+      "UK foreign income defensibility"
+    ],
+    featuredImage: {
+      src: "/blog/who-qualifies-uk-fig-regime-2026.png",
+      alt: "What is the new FIG regime visual card"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Most explanations of foreign income taxation in the UK stop at definitions.",
+          "This guide goes beyond surface explanations and breaks down practical FIG eligibility."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What if I qualify but don’t report correctly?",
+        answer: "Eligibility can be lost due to reporting failure."
+      },
+      {
+        question: "Can eligibility be challenged years later?",
+        answer: "Yes. Patterns are reviewed over time."
+      },
+      {
+        question: "Does moving money affect tax treatment?",
+        answer: "Yes. Movement and timing can influence interpretation."
+      },
+      {
+        question: "Is partial eligibility possible?",
+        answer: "Yes. Different income streams may be treated differently."
+      },
+      {
+        question: "Can I regain eligibility after losing it?",
+        answer: "Possible, but requires structural correction and consistency."
+      }
+    ]
   }
 ] as const;
 
