@@ -15,7 +15,7 @@ interface BlogPostPageProps {
 }
 
 function renderParagraphWithInternalLinks(paragraph: string): React.ReactNode {
-  const linkPattern = /\[([^\]]+)\]\((\/[^\s)]+)\)/g;
+  const linkPattern = /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^\s)]+)\)/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
@@ -28,14 +28,28 @@ function renderParagraphWithInternalLinks(paragraph: string): React.ReactNode {
       parts.push(paragraph.slice(lastIndex, matchStart));
     }
 
+    const isExternal = href.startsWith("http://") || href.startsWith("https://");
+
     parts.push(
-      <Link
-        key={`${href}-${matchStart}`}
-        href={href}
-        className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
-      >
-        {label}
-      </Link>
+      isExternal ? (
+        <a
+          key={`${href}-${matchStart}`}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+        >
+          {label}
+        </a>
+      ) : (
+        <Link
+          key={`${href}-${matchStart}`}
+          href={href}
+          className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+        >
+          {label}
+        </Link>
+      )
     );
 
     lastIndex = matchStart + fullMatch.length;

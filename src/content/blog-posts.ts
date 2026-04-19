@@ -1244,6 +1244,171 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         url: "https://taxsummaries.pwc.com/nigeria/corporate/taxes-on-corporate-income"
       }
     ]
+  },
+  {
+    slug: "common-tax-compliance-mistakes-smes-make-in-nigeria-2026",
+    title: "Common Tax Compliance Mistakes SMEs Make in Nigeria (And How to Fix Them)",
+    description:
+      "A practical 2026 guide to the most common tax compliance mistakes Nigerian SMEs make, why they trigger audits, and how to fix them with clear operational controls.",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
+    readingTime: "16 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Tax compliance mistakes SMEs Nigeria",
+      "FIRS audit red flags",
+      "CIT VAT PAYE compliance",
+      "SME tax filing Nigeria",
+      "Nigeria tax audit readiness"
+    ],
+    featuredImage: {
+      src: "/blog/tax-compliance-mistakes-smes-nigeria-2026.png",
+      alt: "Illustration about common tax compliance mistakes in Nigeria"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Tax compliance is one of the most misunderstood parts of operating an SME in Nigeria. Many founders pay attention only when tax bills rise, but compliance discipline matters even more when a business is trying to remain within legal exemptions or maintain a low-tax position.",
+          "A large share of audits and penalties are not caused by deliberate evasion. They usually come from avoidable errors that build up quietly: late returns, weak records, VAT gaps, and inconsistent explanations.",
+          "If you are already using the [Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor) or reviewing the [How to Pay Zero Tax in Nigeria Legally guide](/blog/how-to-pay-zero-tax-in-nigeria-legally-2026), this article shows the operational controls that keep those strategies compliant in real life."
+        ]
+      },
+      {
+        heading: "What tax compliance means for SMEs in Nigeria",
+        paragraphs: [
+          "Compliance is wider than paying one tax. It includes registration, records, timely filing, correct computation, and remittance across applicable tax heads.",
+          "In practice, SMEs should validate their obligations against the [FIRS official website](https://www.firs.gov.ng/) and align legal entity records with the [Corporate Affairs Commission portal](https://www.cac.gov.ng/) so filings, identities, and operational facts are consistent."
+        ],
+        bullets: [
+          "Proper business registration and tax identification.",
+          "Accurate bookkeeping and document retention.",
+          "On-time filing for CIT, VAT, and PAYE where applicable."
+        ]
+      },
+      {
+        heading: "Why SMEs struggle with compliance",
+        paragraphs: [
+          "Most compliance problems come from structure, not intention. Many SMEs run lean teams, use fragmented accounting processes, and treat tax work as a year-end task.",
+          "That pattern creates avoidable gaps: no filing calendar, weak handover between finance and operations, and poor evidence trails when questions come from authorities."
+        ],
+        bullets: [
+          "Limited accounting capacity and unclear ownership.",
+          "Short-term cash pressure overriding compliance routines.",
+          "Misunderstanding of what remains mandatory when CIT is low or zero."
+        ]
+      },
+      {
+        heading: "Mistake 1: not filing returns consistently",
+        paragraphs: [
+          "A common and costly assumption is that no tax payable means no return required. Even when a company expects zero CIT, filing obligations still exist and must be treated as non-negotiable.",
+          "Non-filing is one of the fastest ways to increase audit probability, especially when combined with threshold-sensitive positions reviewed in the [Tax Audit Triggers guide](/blog/tax-audit-triggers-in-nigeria-for-smes-2026)."
+        ]
+      },
+      {
+        heading: "Mistake 2: poor record keeping",
+        paragraphs: [
+          "Missing receipts, incomplete invoices, and unstructured ledgers weaken every filing position. During review, unsupported numbers are often treated as unreliable, even when the underlying transaction was legitimate.",
+          "If you expect to defend a low-tax or zero-tax position, keep source documents organized by period and tax-head so each figure in your return can be traced quickly."
+        ]
+      },
+      {
+        heading: "Mistake 3: mixing personal and business finances",
+        paragraphs: [
+          "When personal and company transactions run through the same channels, income classification and deductible expense treatment become difficult to defend.",
+          "Separate accounts and clean transaction labeling are basic controls that reduce reconciliation errors and improve credibility during desk or field review, as explained in the [Desk Audit vs Field Audit comparison](/blog/desk-audit-vs-field-audit-in-nigeria-2026)."
+        ]
+      },
+      {
+        heading: "Mistake 4: misunderstanding exemptions",
+        paragraphs: [
+          "Another frequent error is assuming that exemption from Company Income Tax automatically removes all other obligations. It does not. VAT, PAYE, and withholding obligations can still apply depending on business activity.",
+          "Use the [FIRS Companies Income Tax page](https://www.firs.gov.ng/tax-types/companies-income-tax-cit/) and the [FIRS VAT page](https://www.firs.gov.ng/tax-types/value-added-tax-vat/) to keep tax-head rules distinct when preparing internal checklists."
+        ]
+      },
+      {
+        heading: "Mistake 5: inaccurate income reporting",
+        paragraphs: [
+          "Both underreporting and overreporting create problems. Underreporting raises enforcement risk, while overreporting causes downstream inconsistencies across future periods and internal forecasts.",
+          "Income declarations should match bank activity, sales records, and management accounts. Where differences exist, document the reason before filing rather than after audit notification."
+        ]
+      },
+      {
+        heading: "Mistake 6: VAT and PAYE execution gaps",
+        paragraphs: [
+          "SMEs often focus heavily on CIT but under-resource VAT and payroll controls. Charging VAT without remittance or running payroll without proper PAYE treatment can trigger significant exposure.",
+          "For payroll-related obligations, cross-check requirements on the [FIRS Personal Income Tax page](https://www.firs.gov.ng/tax-types/personal-income-tax-pit/) and keep monthly remittance evidence in the same archive as returns."
+        ]
+      },
+      {
+        heading: "Mistake 7: late filing and late payment culture",
+        paragraphs: [
+          "Late returns and delayed remittances quickly convert manageable tax positions into penalty and interest exposure. Many teams know the rules but still miss deadlines because ownership is diffuse.",
+          "A simple control works well: maintain one compliance calendar with named owners, review checkpoints, and evidence-of-submission tracking for each statutory deadline."
+        ]
+      },
+      {
+        heading: "How these mistakes lead to audits",
+        paragraphs: [
+          "Authorities evaluate patterns. Repeated inconsistencies, unresolved mismatches, and missing documentation produce risk signals that can trigger desk audits and, if unresolved, field audits.",
+          "If you receive an audit notice, use the workflow in the [How to Prepare for a Tax Audit in Nigeria guide](/blog/how-to-prepare-for-a-tax-audit-in-nigeria-2026) and respond with evidence-backed documents, not narrative alone."
+        ]
+      },
+      {
+        heading: "Step-by-step fix plan for SMEs",
+        paragraphs: [
+          "Step 1: run a compliance baseline review covering all open periods. Step 2: centralize records and reconciliations. Step 3: separate business and personal cashflows. Step 4: map obligations by tax-head and deadline. Step 5: fix historical errors with clear documentation and forward controls.",
+          "For external benchmarking, teams sometimes compare assumptions against the [PwC Nigeria corporate tax summary](https://taxsummaries.pwc.com/nigeria/corporate/taxes-on-corporate-income), then reconcile final positions to primary local authority guidance."
+        ],
+        bullets: [
+          "Create one source of truth for records and filings.",
+          "Assign accountable owners for each tax-head.",
+          "Review compliance monthly, not only at year-end."
+        ]
+      },
+      {
+        heading: "Real-world contrast: weak controls vs strong controls",
+        paragraphs: [
+          "Business A files late, keeps fragmented records, and cannot explain reconciliation gaps. It receives extended queries and higher penalty exposure.",
+          "Business B keeps a documented filing process, reconciles monthly, and archives support for each material figure. It typically resolves reviews faster and with less disruption.",
+          "The gap is rarely tax intelligence alone; it is process quality and evidence readiness."
+        ]
+      },
+      {
+        heading: "Final thoughts",
+        paragraphs: [
+          "Tax compliance is not a side activity. For Nigerian SMEs, it is a core business system that protects cash flow, lowers enforcement risk, and sustains eligibility for legal tax benefits.",
+          "If you want a practical next step, run a fresh pass in the [Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor) and validate each output against your filing records, VAT/PAYE remittances, and audit-prep controls."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the most common tax compliance mistake for SMEs in Nigeria?",
+        answer:
+          "Failure to file returns consistently remains one of the most common and most costly compliance errors."
+      },
+      {
+        question: "Can poor tax compliance trigger an audit?",
+        answer:
+          "Yes. Repeated inconsistencies, missing records, and filing gaps are common audit triggers."
+      },
+      {
+        question: "Do SMEs still need compliance controls if CIT is zero?",
+        answer:
+          "Yes. Zero CIT does not remove filing, documentation, VAT, or PAYE obligations."
+      },
+      {
+        question: "How can an SME improve compliance quickly?",
+        answer:
+          "Start with a baseline compliance review, centralize records, assign filing ownership, and run monthly control checks."
+      },
+      {
+        question: "What happens if compliance issues are ignored?",
+        answer:
+          "Unresolved issues can escalate into audits, penalties, interest exposure, and operational disruption."
+      }
+    ]
   }
 ] as const;
 
