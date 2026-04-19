@@ -200,9 +200,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
       </header>
 
       <div className="space-y-8 rounded-xl border border-[#d4e3f8] bg-white p-8">
-        {post.sections.map((section) => (
-          <section key={section.heading} className="space-y-4">
-            <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.heading}</h2>
+        {post.sections.map((section, sectionIndex) => (
+          <section key={`${section.heading}-${sectionIndex}`} className="space-y-4">
+            {section.heading.trim().length > 0 ? (
+              <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.heading}</h2>
+            ) : null}
             {section.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 48)} className="leading-7 text-[#203754]">
                 {renderParagraphWithInternalLinks(paragraph)}

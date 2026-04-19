@@ -556,7 +556,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Why legal zero-tax planning matters for SMEs",
+        heading: "",
         paragraphs: [
           "Many founders in Nigeria assume tax always means a cash payment to government every year. In practice, Nigerian tax law allows some businesses to pay 0% Company Income Tax when specific legal conditions are met.",
           "That is not tax evasion. It is lawful tax optimization inside the rules. The distinction matters because exemption without compliance still creates penalties and audit risk.",
@@ -724,7 +724,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Why SMEs need to understand audit triggers early",
+        heading: "",
         paragraphs: [
           "Many small business owners in Nigeria assume tax audits are only for large corporations. In practice, SMEs are often reviewed because of preventable compliance errors rather than fraud.",
           "If your goal is to stay compliant, reduce penalties, and lawfully optimize tax outcomes, understanding audit triggers is essential.",
@@ -892,7 +892,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Why audit readiness should be a routine control",
+        heading: "",
         paragraphs: [
           "A tax audit can be stressful for small business owners, especially when expectations are unclear. In practice, most audit problems come from weak preparation, not from the audit itself.",
           "If your business is trying to stay compliant, operates around low or zero-tax thresholds, or wants to avoid penalties, audit readiness should be treated as a routine control process.",
@@ -1052,7 +1052,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Why the desk vs field distinction matters",
+        heading: "",
         paragraphs: [
           "Tax audits in Nigeria do not follow one fixed format. Many founders assume every audit means a physical inspection, but authorities often start with remote review before escalating.",
           "The two core methods are desk audits and field audits. Understanding how each works helps businesses prepare correctly, reduce risk, and respond without avoidable mistakes.",
