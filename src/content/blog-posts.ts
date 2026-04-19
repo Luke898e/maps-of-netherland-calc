@@ -556,7 +556,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Introduction",
+        heading: "Why legal zero-tax planning matters for SMEs",
         paragraphs: [
           "Many founders in Nigeria assume tax always means a cash payment to government every year. In practice, Nigerian tax law allows some businesses to pay 0% Company Income Tax when specific legal conditions are met.",
           "That is not tax evasion. It is lawful tax optimization inside the rules. The distinction matters because exemption without compliance still creates penalties and audit risk.",
@@ -580,7 +580,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         heading: "Who can qualify for 0% Company Income Tax",
         paragraphs: [
           "Eligibility is tied to legal classification, turnover, and compliance behavior. Under current SME-focused design, small businesses may receive CIT relief when they remain within qualifying thresholds and maintain filing discipline.",
-          "In this site and tool implementation, screening currently checks turnover and sector together. The 2026 Nigeria Zero-Tax Auditor applies its configured threshold and classification logic before outputting an eligibility result.",
+          "In this site and tool implementation, screening currently checks turnover and sector together. The [2026 Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor) applies its configured threshold and classification logic before outputting an eligibility result.",
           "Freelancers and sole proprietors may benefit indirectly through structure and registration choices, but treatment differs from incorporated companies."
         ],
         bullets: [
@@ -646,7 +646,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         heading: "Nigeria and UK comparison for global founders",
         paragraphs: [
           "Nigeria's SME-oriented relief logic is turnover and compliance driven. The UK FIG framework is residence-history and timing driven. They solve different policy goals and must be assessed with different evidence sets.",
-          "If your team operates across both countries, keep separate workflow checklists for Nigerian corporate taxes and UK arrival-based FIG eligibility."
+          "If your team operates across both countries, keep separate workflow checklists for Nigerian corporate taxes and UK arrival-based FIG eligibility. Compare outputs from the [UK FIG eligibility tool](/tools/uk-fig-regime-eligibility) and this post's model assumptions as part of one governance routine."
         ]
       },
       {
@@ -681,24 +681,6 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         question: "Can I avoid VAT if I qualify for zero CIT?",
         answer: "No. VAT is a separate tax head with separate obligations."
-      }
-    ],
-    internalLinks: [
-      {
-        label: "Run the 2026 Nigeria Zero-Tax Auditor",
-        url: "/tools/nigeria-zero-tax-auditor"
-      },
-      {
-        label: "Read the Nigeria 0% CIT Threshold 2026 practical guide",
-        url: "/blog/nigeria-zero-cit-threshold-practical-guide-2026"
-      },
-      {
-        label: "Compare with the UK FIG eligibility tool",
-        url: "/tools/uk-fig-regime-eligibility"
-      },
-      {
-        label: "Report a tax-calculation issue or request a feature",
-        url: "/support"
       }
     ],
     references: [
@@ -742,7 +724,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Introduction",
+        heading: "Why SMEs need to understand audit triggers early",
         paragraphs: [
           "Many small business owners in Nigeria assume tax audits are only for large corporations. In practice, SMEs are often reviewed because of preventable compliance errors rather than fraud.",
           "If your goal is to stay compliant, reduce penalties, and lawfully optimize tax outcomes, understanding audit triggers is essential.",
@@ -828,7 +810,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         heading: "Next step check your audit risk",
         paragraphs: [
           "Most founders discover audit exposure too late, when notices arrive and records are scattered. A structured review helps you identify red flags early, close compliance gaps, and defend your position with confidence.",
-          "Use the internal risk-assessment tools on this site, then document your remediation actions with dates and owners."
+          "Use the [2026 Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor) and the [support page](/support) to document remediation actions, unresolved issues, and ownership dates in one place."
         ]
       },
       {
@@ -863,24 +845,6 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         question: "How do I avoid a tax audit completely?",
         answer:
           "No system guarantees zero audits, but consistent compliance, accurate filing, and strong records reduce risk materially."
-      }
-    ],
-    internalLinks: [
-      {
-        label: "Run the 2026 Nigeria Zero-Tax Auditor",
-        url: "/tools/nigeria-zero-tax-auditor"
-      },
-      {
-        label: "Read How to Pay Zero Tax in Nigeria Legally",
-        url: "/blog/how-to-pay-zero-tax-in-nigeria-legally-2026"
-      },
-      {
-        label: "Open the Support page to report tool or compliance issues",
-        url: "/support"
-      },
-      {
-        label: "Review release updates and fixes",
-        url: "/updates"
       }
     ],
     references: [
@@ -928,7 +892,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Introduction",
+        heading: "Why audit readiness should be a routine control",
         paragraphs: [
           "A tax audit can be stressful for small business owners, especially when expectations are unclear. In practice, most audit problems come from weak preparation, not from the audit itself.",
           "If your business is trying to stay compliant, operates around low or zero-tax thresholds, or wants to avoid penalties, audit readiness should be treated as a routine control process.",
@@ -960,7 +924,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
           "Step 1: Organize financial records. Gather bank statements, sales invoices, expense receipts, ledgers, and working papers in one searchable structure.",
           "Step 2: Reconcile income and bank transactions. Your declared revenue should tie to bank inflows and sales records. Document reasons for any difference.",
           "Step 3: Review filed returns. Check CIT, VAT, and PAYE filings for missing periods, inconsistent figures, or unexplained amendments.",
-          "Step 4: Confirm tax position. Be ready to explain why tax was paid at a given amount, or why it was legitimately zero under your eligibility logic.",
+          "Step 4: Confirm tax position. Be ready to explain why tax was paid at a given amount, or why it was legitimately zero under your eligibility logic, using the same assumptions documented in the [Nigeria zero-tax guide](/blog/how-to-pay-zero-tax-in-nigeria-legally-2026).",
           "Step 5: Prepare supporting evidence. For each material number, retain contracts, invoices, receipts, payroll records, and reconciliation notes.",
           "Step 6: Separate business and personal finances. Mixed transactions weaken credibility and complicate verification.",
           "Step 7: Pre-test for red flags. Review inconsistent patterns, missing records, unusual transactions, and threshold-sensitive declarations before questions arise.",
@@ -1011,7 +975,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       {
         heading: "Next step evaluate your audit readiness",
         paragraphs: [
-          "Do not wait for an audit notice before testing readiness. Use a structured pre-audit review to identify weak points, missing records, and unresolved tax-position assumptions.",
+          "Do not wait for an audit notice before testing readiness. Use a structured pre-audit review to identify weak points, missing records, and unresolved tax-position assumptions from the [Tax Audit Triggers guide](/blog/tax-audit-triggers-in-nigeria-for-smes-2026).",
           "Then assign owners and deadlines to close each gap before it becomes an enforcement issue."
         ]
       }
@@ -1041,24 +1005,6 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         question: "How long does a tax audit take?",
         answer:
           "Timeline depends on scope complexity and your response speed. Organized records usually shorten audit duration."
-      }
-    ],
-    internalLinks: [
-      {
-        label: "Run the 2026 Nigeria Zero-Tax Auditor",
-        url: "/tools/nigeria-zero-tax-auditor"
-      },
-      {
-        label: "Read Tax Audit Triggers in Nigeria for SMEs",
-        url: "/blog/tax-audit-triggers-in-nigeria-for-smes-2026"
-      },
-      {
-        label: "Read How to Pay Zero Tax in Nigeria Legally",
-        url: "/blog/how-to-pay-zero-tax-in-nigeria-legally-2026"
-      },
-      {
-        label: "Submit a support or compliance question",
-        url: "/support"
       }
     ],
     references: [
@@ -1106,11 +1052,11 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     },
     sections: [
       {
-        heading: "Introduction",
+        heading: "Why the desk vs field distinction matters",
         paragraphs: [
           "Tax audits in Nigeria do not follow one fixed format. Many founders assume every audit means a physical inspection, but authorities often start with remote review before escalating.",
           "The two core methods are desk audits and field audits. Understanding how each works helps businesses prepare correctly, reduce risk, and respond without avoidable mistakes.",
-          "This guide compares both methods, shows common triggers, and explains how to manage each stage professionally."
+          "This guide compares both methods, shows common triggers, and explains how to manage each stage professionally alongside the [audit preparation checklist guide](/blog/how-to-prepare-for-a-tax-audit-in-nigeria-2026)."
         ]
       },
       {
@@ -1203,7 +1149,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         heading: "How to prepare for desk and field audits",
         paragraphs: [
           "For desk audits, prioritize accurate submissions, deadline discipline, and concise evidence-based responses.",
-          "For field audits, extend preparation to full record organization, system walkthrough readiness, staff briefing, and pre-audit issue review.",
+          "For field audits, extend preparation to full record organization, system walkthrough readiness, staff briefing, and pre-audit issue review with the [Nigeria Zero-Tax Auditor](/tools/nigeria-zero-tax-auditor) as a consistency checkpoint.",
           "In both cases, provide what is requested, keep answers consistent, and avoid unsupported statements."
         ],
         bullets: [
@@ -1274,24 +1220,6 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         question: "How should I respond to an audit notice?",
         answer:
           "Respond promptly, submit accurate records, keep explanations consistent, and follow the stated scope and deadlines."
-      }
-    ],
-    internalLinks: [
-      {
-        label: "Read how to prepare for a tax audit in Nigeria",
-        url: "/blog/how-to-prepare-for-a-tax-audit-in-nigeria-2026"
-      },
-      {
-        label: "Read tax audit triggers in Nigeria for SMEs",
-        url: "/blog/tax-audit-triggers-in-nigeria-for-smes-2026"
-      },
-      {
-        label: "Run the 2026 Nigeria Zero-Tax Auditor",
-        url: "/tools/nigeria-zero-tax-auditor"
-      },
-      {
-        label: "Get support for compliance questions",
-        url: "/support"
       }
     ],
     references: [

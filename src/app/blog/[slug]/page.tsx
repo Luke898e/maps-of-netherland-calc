@@ -14,6 +14,44 @@ interface BlogPostPageProps {
   }>;
 }
 
+function renderParagraphWithInternalLinks(paragraph: string): React.ReactNode {
+  const linkPattern = /\[([^\]]+)\]\((\/[^\s)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkPattern.exec(paragraph)) !== null) {
+    const [fullMatch, label, href] = match;
+    const matchStart = match.index;
+
+    if (matchStart > lastIndex) {
+      parts.push(paragraph.slice(lastIndex, matchStart));
+    }
+
+    parts.push(
+      <Link
+        key={`${href}-${matchStart}`}
+        href={href}
+        className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+      >
+        {label}
+      </Link>
+    );
+
+    lastIndex = matchStart + fullMatch.length;
+  }
+
+  if (lastIndex < paragraph.length) {
+    parts.push(paragraph.slice(lastIndex));
+  }
+
+  if (parts.length === 0) {
+    return paragraph;
+  }
+
+  return <>{parts}</>;
+}
+
 function formatDate(dateInput: string): string {
   const parsed = new Date(dateInput);
   return new Intl.DateTimeFormat("en-GB", {
@@ -167,7 +205,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
             <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.heading}</h2>
             {section.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 48)} className="leading-7 text-[#203754]">
-                {paragraph}
+                {renderParagraphWithInternalLinks(paragraph)}
               </p>
             ))}
             {section.bullets ? (
@@ -194,24 +232,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
               </div>
             ))}
           </div>
-        </section>
-      ) : null}
-
-      {post.internalLinks && post.internalLinks.length > 0 ? (
-        <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
-          <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Related Internal Links</h2>
-          <ul className="space-y-2">
-            {post.internalLinks.map((resource) => (
-              <li key={resource.url}>
-                <Link
-                  href={resource.url}
-                  className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
-                >
-                  {resource.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </section>
       ) : null}
 
