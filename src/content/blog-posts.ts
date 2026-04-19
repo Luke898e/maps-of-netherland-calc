@@ -1513,6 +1513,58 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Periodically, especially during growth phases."
       }
     ]
+  },
+  {
+    slug: "nigeria-vs-uk-tax-residency-rules-2026",
+    title: "Nigeria vs UK Tax Residency Rules (Full Comparison Guide for Founders and Global Earners)",
+    description:
+      "A full comparison of Nigeria and UK tax residency rules for founders and global earners, including residency tests, foreign income treatment, dual-residency issues, and planning implications.",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
+    readingTime: "16 min read",
+    category: "Global Tax",
+    tags: [
+      "Nigeria vs UK tax residency rules",
+      "Statutory Residence Test UK",
+      "Nigeria tax residency founders",
+      "UK FIG residency planning",
+      "Dual residency tax risk"
+    ],
+    featuredImage: {
+      src: "/blog/nigeria-vs-uk-tax-residency-rules-2026.png",
+      alt: "Nigeria vs UK tax residency rules comparison graphic"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Tax residency is one of the most important factors in determining how income is taxed. Many founders and business owners focus on where their business operates but overlook how residency status affects their personal and corporate tax obligations.",
+          "This guide provides a comprehensive comparison between Nigeria and the United Kingdom, focusing on how tax residency is determined, how income is treated, and how different systems affect tax liability."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What determines tax residency?",
+        answer: "Primarily physical presence, ties, and legal definitions."
+      },
+      {
+        question: "Can I be resident in two countries?",
+        answer: "Yes, which may require treaty resolution."
+      },
+      {
+        question: "Does residency affect all income?",
+        answer: "Yes, especially in systems that tax worldwide income."
+      },
+      {
+        question: "Is UK residency more complex than Nigeria’s?",
+        answer: "Yes, due to its structured rule-based system."
+      },
+      {
+        question: "Can residency be planned?",
+        answer: "Yes, within legal limits and compliance requirements."
+      }
+    ]
   }
 ] as const;
 
