@@ -16,42 +16,50 @@ interface BlogPostPageProps {
 }
 
 function renderTextWithLinks(text: string): React.ReactNode {
-  const linkPattern = /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^\s)]+)\)/g;
+  const inlinePattern = /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^\s)]+)\)|\*\*([^*]+)\*\*/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
-  while ((match = linkPattern.exec(text)) !== null) {
-    const [fullMatch, label, href] = match;
+  while ((match = inlinePattern.exec(text)) !== null) {
+    const [fullMatch, linkLabel, linkHref, boldText] = match;
     const matchStart = match.index;
 
     if (matchStart > lastIndex) {
       parts.push(text.slice(lastIndex, matchStart));
     }
 
-    const isExternal = href.startsWith("http://") || href.startsWith("https://");
+    if (linkLabel && linkHref) {
+      const isExternal = linkHref.startsWith("http://") || linkHref.startsWith("https://");
 
-    parts.push(
-      isExternal ? (
-        <a
-          key={`${href}-${matchStart}`}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
-        >
-          {label}
-        </a>
-      ) : (
-        <Link
-          key={`${href}-${matchStart}`}
-          href={href}
-          className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
-        >
-          {label}
-        </Link>
-      )
-    );
+      parts.push(
+        isExternal ? (
+          <a
+            key={`${linkHref}-${matchStart}`}
+            href={linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+          >
+            {linkLabel}
+          </a>
+        ) : (
+          <Link
+            key={`${linkHref}-${matchStart}`}
+            href={linkHref}
+            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+          >
+            {linkLabel}
+          </Link>
+        )
+      );
+    } else if (boldText) {
+      parts.push(
+        <strong key={`bold-${matchStart}`} className="font-semibold text-[#0f3364]">
+          {boldText}
+        </strong>
+      );
+    }
 
     lastIndex = matchStart + fullMatch.length;
   }
