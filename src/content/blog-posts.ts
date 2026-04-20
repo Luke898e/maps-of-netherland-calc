@@ -1775,6 +1775,59 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Yes, but requires precise alignment."
       }
     ]
+  },
+  {
+    slug: "best-business-structures-for-nigerians-earning-in-usd-gbp-2026",
+    title:
+      "Best Business Structures for Nigerians Earning in USD/GBP (Advanced Tax Optimization Guide for 2026)",
+    description:
+      "A deep 2026 guide to choosing tax-efficient business structures for Nigerians earning in USD/GBP, with practical strategies for compliance, audit defensibility, and long-term growth.",
+    publishedDate: "2026-04-20",
+    updatedDate: "2026-04-20",
+    readingTime: "18 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Business structures Nigerians earning in USD GBP",
+      "Nigeria tax optimization 2026",
+      "Foreign currency income tax Nigeria",
+      "SME tax compliance Nigeria",
+      "Audit-safe tax structuring"
+    ],
+    featuredImage: {
+      src: "/blog/best-business-structures-nigerians-usd-gbp-2026.png",
+      alt: "Business structure planning for Nigerians earning in USD and GBP"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "For Nigerians earning in USD or GBP, the key tax question is not only how much they earn but how earnings are structured and reported.",
+          "This guide explains the best business structures for foreign-currency earners in Nigeria, with a focus on legal tax efficiency, compliance, and long-term scalability."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does earning in USD or GBP reduce tax automatically?",
+        answer: "No. Tax treatment depends on legal structure, classification, residency, and reporting behavior, not just currency."
+      },
+      {
+        question: "Is a limited company always the best option?",
+        answer: "Not always, but it is often more efficient as income scales and operations become more complex."
+      },
+      {
+        question: "Can I switch structures later?",
+        answer: "Yes, but transitions must be managed properly to avoid compliance and reporting issues."
+      },
+      {
+        question: "Why is documentation so important in tax optimization?",
+        answer: "Documentation determines whether your tax position can be defended during reviews or audits."
+      },
+      {
+        question: "What is the main principle for sustainable tax efficiency?",
+        answer: "Choose a structure that matches your income profile, supports compliance, and remains defensible over time."
+      }
+    ]
   }
 ] as const;
 
