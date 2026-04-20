@@ -55,13 +55,31 @@ function normalizeGithubProfile(rawValue: string | undefined): string {
   return fallbackGithubProfile;
 }
 
+function normalizeOptionalProfile(rawValue: string | undefined): string | null {
+  const raw = rawValue?.trim();
+  if (!raw) {
+    return null;
+  }
+
+  const withProtocol = raw.startsWith("http://") || raw.startsWith("https://") ? raw : `https://${raw}`;
+  try {
+    return new URL(withProtocol).toString().replace(/\/$/, "");
+  } catch {
+    return null;
+  }
+}
+
 const normalizedSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const normalizedContactEmail = normalizeContactEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
 const normalizedGithubProfile = normalizeGithubProfile(process.env.NEXT_PUBLIC_GITHUB_PROFILE);
+const normalizedLinkedInProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_LINKEDIN_PROFILE);
+const normalizedProfessionalProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_PROFESSIONAL_PROFILE);
 
 export const siteConfig = {
   siteName: "2026 Global Mobility & Tax Suite",
   siteUrl: normalizedSiteUrl,
   contactEmail: normalizedContactEmail,
-  githubProfile: normalizedGithubProfile
+  githubProfile: normalizedGithubProfile,
+  linkedInProfile: normalizedLinkedInProfile,
+  professionalProfile: normalizedProfessionalProfile
 } as const;

@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/tools/nigeria-zero-tax-auditor", label: "Nigeria Tool" },
   { href: "/tools/uk-fig-regime-eligibility", label: "UK FIG Tool" },
   { href: "/updates", label: "Updates" },

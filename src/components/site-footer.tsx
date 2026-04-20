@@ -26,6 +26,9 @@ export function SiteFooter(): React.JSX.Element {
           <Link href="/blog" className="text-[#17467f] hover:text-[#0f3364]">
             Blog
           </Link>
+          <Link href="/case-studies" className="text-[#17467f] hover:text-[#0f3364]">
+            Case Studies
+          </Link>
           <Link href="/disclaimer" className="text-[#17467f] hover:text-[#0f3364]">
             Disclaimer
           </Link>

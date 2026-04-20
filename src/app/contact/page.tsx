@@ -84,6 +84,34 @@ export default function ContactPage(): React.JSX.Element {
           .
         </p>
       </section>
+
+      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+          Corrections and Complaint Escalation
+        </h2>
+        <p className="leading-7 text-[#203754]">
+          If you identify a factual error, outdated legal interpretation, or misleading wording, submit a correction
+          request through Support and mark it as a compliance correction. We review correction requests against primary
+          sources and publish accepted changes in the dated changelog.
+        </p>
+        <ul className="list-disc space-y-2 pl-5 text-[#203754]">
+          <li>Initial correction triage target: within 2 business days.</li>
+          <li>If accepted, change publication target: within 5 business days.</li>
+          <li>Complex legal interpretation issues may require external specialist review before publication.</li>
+        </ul>
+        <p className="leading-7 text-[#203754]">
+          For unresolved process concerns, escalate via email to
+          <span> </span>
+          <Link
+            href={`mailto:${siteConfig.contactEmail}`}
+            className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            {siteConfig.contactEmail}
+          </Link>
+          <span> </span>
+          with subject line: <span className="font-semibold">Formal Editorial Complaint</span>.
+        </p>
+      </section>
     </div>
   );
 }

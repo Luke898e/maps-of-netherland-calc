@@ -63,6 +63,49 @@ export default function AboutPage(): React.JSX.Element {
 
       <Card className="border-[#d4e3f8]">
         <CardHeader>
+          <CardTitle className="text-2xl text-[#0f3364]">Public Accountability and Verification</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-5 leading-7 text-[#203754]">
+          <p>
+            Trust for this project is built through public artifacts, not claims. Users can verify author identity,
+            review dated releases, check source references, and submit correction requests through dedicated channels.
+          </p>
+          <ul className="list-disc space-y-2 pl-5">
+            <li>Author verification links and profile references are published on this site.</li>
+            <li>
+              Version changes are logged with release dates in
+              <span> </span>
+              <Link href="/updates" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+                Updates
+              </Link>
+              .
+            </li>
+            <li>
+              Editorial standards and correction governance are documented in
+              <span> </span>
+              <Link
+                href="/editorial-policy"
+                className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+              >
+                Editorial Policy
+              </Link>
+              .
+            </li>
+            <li>
+              Users can submit factual corrections via
+              <span> </span>
+              <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+                Support
+              </Link>
+              <span> </span>
+              and receive tracked follow-up.
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="border-[#d4e3f8]">
+        <CardHeader>
           <CardTitle className="text-2xl text-[#0f3364]">Primary Sources and Verification Links</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">

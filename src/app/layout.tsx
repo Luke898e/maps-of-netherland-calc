@@ -30,7 +30,8 @@ const hasValidAdsenseClient = typeof adsenseClient === "string" && adsenseClient
 
 const personProfileUrls = authorProfile.profileLinks
   .map((link) => link.url)
-  .filter((link) => link.startsWith("http://") || link.startsWith("https://"));
+  .filter((link) => link.startsWith("http://") || link.startsWith("https://"))
+  .filter((link) => !link.startsWith(siteConfig.siteUrl));
 
 const organizationStructuredData = {
   "@context": "https://schema.org",
