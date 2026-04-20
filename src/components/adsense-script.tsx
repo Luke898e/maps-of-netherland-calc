@@ -14,7 +14,7 @@ export function AdSenseScript(): React.JSX.Element | null {
     <Script
       id="google-adsense-content-only"
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-      strategy="afterInteractive"
+      strategy="lazyOnload"
       async
       crossOrigin="anonymous"
     />

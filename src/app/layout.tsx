@@ -25,6 +25,8 @@ const bodyFont = Source_Sans_3({
 const ogImagePath = "/og/global-tax-suite-og.svg";
 const ogImageAlt = "2026 Global Mobility and Tax Suite with Nigeria and UK tax compliance tools.";
 const absoluteOgImageUrl = `${siteConfig.siteUrl}${ogImagePath}`;
+const adsenseClient = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT;
+const hasValidAdsenseClient = typeof adsenseClient === "string" && adsenseClient.startsWith("ca-pub-");
 
 const personProfileUrls = authorProfile.profileLinks
   .map((link) => link.url)
@@ -96,6 +98,7 @@ export const metadata: Metadata = {
     description: "Professional 2026 tax screening tools for Nigeria and UK FIG regime planning.",
     images: [ogImagePath]
   },
+  other: hasValidAdsenseClient ? { "google-adsense-account": adsenseClient } : undefined,
   manifest: "/manifest.json",
   icons: {
     icon: [

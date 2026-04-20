@@ -30,7 +30,7 @@ export function ConsentPreferencesButton(): React.JSX.Element {
       return;
     }
 
-    setHint("Consent panel is unavailable right now. Refresh the page after CMP scripts are configured.");
+    setHint("Consent panel is temporarily unavailable. Please refresh and try again shortly.");
   };
 
   return (

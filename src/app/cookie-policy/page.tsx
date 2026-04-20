@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { siteConfig } from "@/lib/site-config";
 
-const hasFundingChoicesScript = Boolean(process.env.NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL);
-
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "Cookie policy for the 2026 Global Mobility & Tax Suite.",
@@ -43,12 +41,23 @@ export default function CookiePolicyPage(): React.JSX.Element {
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Consent and Control</h2>
         <p className="leading-7 text-[#203754]">
           Consent preferences can be updated via the Manage Consent action in the footer.
-          <span> </span>
-          CMP script detected: <span className="font-semibold">{hasFundingChoicesScript ? "Yes" : "No"}</span>.
         </p>
         <p className="leading-7 text-[#203754]">
           For users in the EEA, UK, and Switzerland, consent collection should run through a configured Google-certified
           consent workflow before non-essential ad storage is used.
+        </p>
+        <p className="leading-7 text-[#203754]">
+          Reference:
+          <span> </span>
+          <Link
+            href="https://support.google.com/adsense/answer/13554116"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            Google CMP policy documentation
+          </Link>
+          .
         </p>
       </section>
 

@@ -18,7 +18,8 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy-policy", label: "Privacy" },
-  { href: "/cookie-policy", label: "Cookies" }
+  { href: "/cookie-policy", label: "Cookies" },
+  { href: "/consent", label: "Consent" }
 ];
 
 export function SiteHeader(): React.JSX.Element {

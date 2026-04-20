@@ -3,9 +3,6 @@ import Link from "next/link";
 
 import { siteConfig } from "@/lib/site-config";
 
-const hasFundingChoicesScript = Boolean(process.env.NEXT_PUBLIC_GOOGLE_FC_SCRIPT_URL);
-const hasAdsenseClient = Boolean(process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT);
-
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for the 2026 Global Mobility & Tax Suite.",
@@ -21,25 +18,38 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Privacy Policy</h1>
         <p className="leading-7 text-[#203754]">
           This platform is built to support privacy-first tax tooling and ad policy readiness. For users in the EEA,
-          UK, and Switzerland, consent messaging should be served through a Google-certified CMP configured in Google
-          Privacy & Messaging.
+          UK, and Switzerland, consent messaging is managed through a Google-certified consent workflow when advertising
+          controls are active.
         </p>
+        <p className="text-sm text-[#4b6890]">Effective date: 20 April 2026</p>
       </section>
 
       <section id="consent-settings" className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
-        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">TCF / CMP Status</h2>
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">TCF and Consent Framework</h2>
+        <p className="leading-7 text-[#203754]">
+          Consent controls are available via the global
+          <span> </span>
+          <span className="font-semibold">Manage Consent</span>
+          <span> </span>
+          action in the footer. Users can reopen and update choices at any time.
+        </p>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
-          <li>
-            Funding Choices script configured: <span className="font-semibold">{hasFundingChoicesScript ? "Yes" : "No"}</span>
-          </li>
-          <li>
-            AdSense client script configured: <span className="font-semibold">{hasAdsenseClient ? "Yes" : "No"}</span>
-          </li>
-          <li>Consent controls are exposed via the global footer through the Manage Consent action.</li>
+          <li>Consent messaging is implemented through Google Privacy and Messaging tooling.</li>
+          <li>Ad delivery controls are configured to respect consent choices in applicable regions.</li>
+          <li>Non-essential ad personalization is not intended to run without consent where required by law.</li>
         </ul>
         <p className="leading-7 text-[#203754]">
-          If either status above is No, configure environment variables in deployment and reload the site. The project
-          includes setup keys in <code>.env.example</code>.
+          For implementation details from Google, see
+          <span> </span>
+          <Link
+            href="https://support.google.com/adsense/answer/13554116"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            CMP requirements for EEA, UK, and Switzerland
+          </Link>
+          .
         </p>
       </section>
 
@@ -81,6 +91,19 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         <p className="leading-7 text-[#203754]">
           Essential site functions may still use minimal technical storage required for security and session continuity.
           Non-essential ad personalization should depend on consent status in configured regions.
+        </p>
+        <p className="leading-7 text-[#203754]">
+          See also:
+          <span> </span>
+          <Link
+            href="https://support.google.com/adsense/answer/9804260"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            Google consent and TCF guidance
+          </Link>
+          .
         </p>
       </section>
 

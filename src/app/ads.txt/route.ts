@@ -15,9 +15,17 @@ function getPublisherId(clientId: string | undefined): string | null {
 export async function GET(): Promise<NextResponse> {
   const publisherId = getPublisherId(process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT);
 
-  const body = publisherId
-    ? `google.com, ${publisherId}, DIRECT, ${ADS_TXT_RECORD_ID}\n`
-    : "# Configure NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT to publish an ads.txt record.\n";
+  if (!publisherId) {
+    return new NextResponse("Not Found\n", {
+      status: 404,
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "public, max-age=300"
+      }
+    });
+  }
+
+  const body = `google.com, ${publisherId}, DIRECT, ${ADS_TXT_RECORD_ID}\n`;
 
   return new NextResponse(body, {
     headers: {
