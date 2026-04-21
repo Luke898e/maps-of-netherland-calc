@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Lora, Source_Sans_3 } from "next/font/google";
+import Script from "next/script";
 
 import { GoogleCmpScripts } from "@/components/google-cmp-scripts";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
@@ -25,6 +26,7 @@ const bodyFont = Source_Sans_3({
 const ogImagePath = "/og/global-tax-suite-og.svg";
 const ogImageAlt = "2026 Global Mobility and Tax Suite with Nigeria and UK tax compliance tools.";
 const absoluteOgImageUrl = `${siteConfig.siteUrl}${ogImagePath}`;
+const googleAnalyticsMeasurementId = "G-DT2TMQ66L0";
 const adsenseClient = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT;
 const hasValidAdsenseClient = typeof adsenseClient === "string" && adsenseClient.startsWith("ca-pub-");
 
@@ -128,6 +130,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${headingFont.variable} ${bodyFont.variable} min-h-screen font-[var(--font-body)]`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsMeasurementId}');
+          `}
+        </Script>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[9999] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-[#0f3364] focus:shadow-lg"
