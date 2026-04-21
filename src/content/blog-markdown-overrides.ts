@@ -1,3 +1,5 @@
+import { blogMarkdownOverridesBatchApr21 } from "@/content/blog-markdown-overrides-batch-apr21";
+
 export const blogMarkdownOverrides: Readonly<Record<string, string>> = {
   "how-to-pay-zero-tax-in-nigeria-legally-2026": `# How to Pay Zero Tax in Nigeria Legally (2026 Complete Guide for SMEs & Founders)
 
@@ -5794,5 +5796,6 @@ Understanding and applying this principle allows you to move from:
   to
 * operating efficiently and sustainably
 
-And in the long term, that difference determines both profitability and stability.`
+And in the long term, that difference determines both profitability and stability.`,
+  ...blogMarkdownOverridesBatchApr21
 } as const;

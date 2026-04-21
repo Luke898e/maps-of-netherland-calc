@@ -1828,6 +1828,266 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Choose a structure that matches your income profile, supports compliance, and remains defensible over time."
       }
     ]
+  },
+  {
+    slug: "how-to-register-a-business-for-tax-in-nigeria-2026",
+    title: "How to Register a Business for Tax in Nigeria (CAC + FIRS Step-by-Step Guide for 2026)",
+    description:
+      "A full 2026 walkthrough on registering a business for tax in Nigeria, from CAC setup to FIRS activation, filing readiness, and compliance risk control.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "16 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Register a business for tax in Nigeria",
+      "CAC and FIRS registration 2026",
+      "Nigeria tax registration guide",
+      "SME tax compliance Nigeria",
+      "TIN activation Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/register-business-tax-nigeria-2026.png",
+      alt: "How to register a business for tax in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Tax registration in Nigeria requires both legal registration and full tax-system activation.",
+          "This guide explains CAC setup, TIN activation, FIRS registration, and compliance readiness in one process."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is CAC registration enough for tax compliance?",
+        answer: "No. You still need tax activation and filing readiness with the relevant tax authority."
+      },
+      {
+        question: "Do I need a TIN after CAC registration?",
+        answer: "Yes. You must confirm that the TIN is active and correctly linked to your tax profile."
+      },
+      {
+        question: "Can poor setup at registration stage cause audit risk later?",
+        answer: "Yes. Early inconsistencies can create long-term filing and verification issues."
+      },
+      {
+        question: "Does a new business need to file returns immediately?",
+        answer: "You must follow filing obligations once registered, even when activity is low or nil."
+      },
+      {
+        question: "What is the best next step after registration?",
+        answer: "Set up a structured compliance system for records, filings, and documentation."
+      }
+    ]
+  },
+  {
+    slug: "how-to-get-a-tax-identification-number-tin-in-nigeria-2026",
+    title: "How to Get a Tax Identification Number (TIN) in Nigeria (Complete 2026 Guide for Businesses and Individuals)",
+    description:
+      "A complete 2026 guide to obtaining, verifying, and correctly using a Tax Identification Number in Nigeria for businesses and individuals.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "TIN Nigeria 2026",
+      "How to get tax identification number Nigeria",
+      "FIRS TIN activation",
+      "TIN verification Nigeria",
+      "Tax compliance identity Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/get-tin-nigeria-2026.png",
+      alt: "How to get a Tax Identification Number in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "A TIN is the foundation of tax identity and compliance tracking in Nigeria.",
+          "This guide covers TIN pathways, activation checks, common errors, and defensible usage."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is TIN mandatory in Nigeria?",
+        answer: "Yes, for taxable business and individual financial activity."
+      },
+      {
+        question: "Can I have more than one TIN?",
+        answer: "No. Multiple TINs can create serious compliance and filing problems."
+      },
+      {
+        question: "Does automatic TIN generation mean full compliance?",
+        answer: "No. You still need to confirm activation and full tax profile setup."
+      },
+      {
+        question: "Can TIN errors be corrected later?",
+        answer: "Yes, but corrections must be handled consistently across all records."
+      },
+      {
+        question: "Why is TIN verification important?",
+        answer: "Because inactive or mismatched TIN records can break filing and increase audit risk."
+      }
+    ]
+  },
+  {
+    slug: "how-to-file-company-income-tax-returns-in-nigeria-2026",
+    title: "How to File Company Income Tax Returns in Nigeria (Full Beginner Walkthrough for 2026)",
+    description:
+      "A full 2026 beginner walkthrough for filing Company Income Tax returns in Nigeria, including records, computation, filing steps, and compliance mistakes to avoid.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "File company income tax returns Nigeria 2026",
+      "CIT filing Nigeria",
+      "FIRS filing guide",
+      "CIT compliance SMEs Nigeria",
+      "Nigeria tax return deadlines"
+    ],
+    featuredImage: {
+      src: "/blog/file-cit-returns-nigeria-2026.png",
+      alt: "How to file Company Income Tax returns in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "CIT filing is a recurring legal obligation for registered companies in Nigeria.",
+          "This guide explains preparation, computation, submission, and record retention in a practical workflow."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do small companies need to file CIT returns?",
+        answer: "Yes. Filing remains mandatory even when tax payable is zero."
+      },
+      {
+        question: "Is filing required when there is no profit?",
+        answer: "Yes. Non-profit periods do not remove filing obligations."
+      },
+      {
+        question: "What causes the most filing problems?",
+        answer: "Late submission, weak records, and inconsistent data are common causes."
+      },
+      {
+        question: "Can filed returns be corrected?",
+        answer: "Yes, but corrections must be justified and documented."
+      },
+      {
+        question: "Why keep submission records after filing?",
+        answer: "They are essential for audit response and future filing consistency."
+      }
+    ]
+  },
+  {
+    slug: "do-nigerians-pay-tax-on-foreign-income-2026",
+    title: "Do Nigerians Pay Tax on Foreign Income? (Full Legal Guide for USD Earners, Freelancers, and Remote Workers in 2026)",
+    description:
+      "A full legal guide for 2026 on how Nigeria treats foreign income for freelancers, remote workers, and USD earners, including residency, remittance, and control tests.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Do Nigerians pay tax on foreign income",
+      "USD income tax Nigeria",
+      "Freelancer foreign income Nigeria",
+      "Remittance tax treatment Nigeria",
+      "Nigeria tax residency and source"
+    ],
+    featuredImage: {
+      src: "/blog/foreign-income-tax-nigeria-2026.png",
+      alt: "Do Nigerians pay tax on foreign income featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Foreign income taxation in Nigeria depends on residency, source, remittance, and control factors.",
+          "This guide explains practical tax relevance for freelancers, remote workers, and global earners."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is foreign income automatically tax-free in Nigeria?",
+        answer: "No. Tax treatment depends on structure, control, and how income is earned or moved."
+      },
+      {
+        question: "Does USD or GBP currency change tax liability?",
+        answer: "No. Currency alone does not determine tax treatment."
+      },
+      {
+        question: "Does work location matter?",
+        answer: "Yes. Where value is created can affect source analysis."
+      },
+      {
+        question: "Can keeping money abroad remove Nigerian tax obligations?",
+        answer: "Not automatically. Residency and control patterns still matter."
+      },
+      {
+        question: "What is the safest approach for foreign earners?",
+        answer: "Maintain clear classification, strong records, and consistent reporting."
+      }
+    ]
+  },
+  {
+    slug: "how-to-declare-paypal-payoneer-and-stripe-income-in-nigeria-2026",
+    title: "How to Declare PayPal, Payoneer, and Stripe Income in Nigeria (Full Tax Guide for Freelancers and Online Businesses in 2026)",
+    description:
+      "A complete 2026 tax guide on declaring PayPal, Payoneer, and Stripe income in Nigeria, with steps for classification, conversion, reporting, and documentation.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "18 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Declare PayPal income Nigeria",
+      "Payoneer tax Nigeria",
+      "Stripe income tax Nigeria",
+      "Freelancer tax reporting Nigeria",
+      "Online business tax compliance Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/declare-paypal-payoneer-stripe-income-nigeria-2026.png",
+      alt: "How to declare PayPal Payoneer and Stripe income in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Payment platforms are channels, not tax exemptions, for Nigerian online earners.",
+          "This guide explains how to declare PayPal, Payoneer, and Stripe income correctly with defensible records."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do I need to declare PayPal income in Nigeria?",
+        answer: "Yes, where it qualifies as taxable income under Nigerian rules."
+      },
+      {
+        question: "Is Payoneer income automatically tax-free?",
+        answer: "No. Platform choice does not remove tax obligations."
+      },
+      {
+        question: "Should I report only withdrawals into my bank?",
+        answer: "No. Income tracking should reflect earnings, not only withdrawals."
+      },
+      {
+        question: "Do I need to convert foreign currency to naira for reporting?",
+        answer: "Yes. Use a consistent, defensible conversion basis in your records."
+      },
+      {
+        question: "What is the strongest audit defense for platform income?",
+        answer: "Clear classification, full transaction history, and consistent filing records."
+      }
+    ]
   }
 ] as const;
 
