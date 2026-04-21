@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AdSenseScript } from "@/components/adsense-script";
+import { blogEnhancements } from "@/content/blog-enhancements";
+import { blogEnhancementsAdvanced } from "@/content/blog-enhancements-advanced";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/content/blog-posts";
 import { blogMarkdownOverrides } from "@/content/blog-markdown-overrides";
 import { authorProfile } from "@/content/author-profile";
@@ -243,6 +245,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
 
   const markdownOverride = blogMarkdownOverrides[post.slug];
   const hasMarkdownOverride = typeof markdownOverride === "string" && markdownOverride.trim().length > 0;
+  const enhancementMarkdown = blogEnhancements[post.slug];
+  const hasEnhancement = typeof enhancementMarkdown === "string" && enhancementMarkdown.trim().length > 0;
+  const advancedEnhancementMarkdown = blogEnhancementsAdvanced[post.slug];
+  const hasAdvancedEnhancement =
+    typeof advancedEnhancementMarkdown === "string" && advancedEnhancementMarkdown.trim().length > 0;
+  const mergedMarkdown = hasMarkdownOverride
+    ? `${markdownOverride}${hasEnhancement ? `\n\n${enhancementMarkdown}` : ""}${
+        hasAdvancedEnhancement ? `\n\n${advancedEnhancementMarkdown}` : ""
+      }`
+    : undefined;
 
   const postStructuredData = {
     "@context": "https://schema.org",
@@ -327,7 +339,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
 
       <div className="space-y-8 surface-panel p-8 sm:p-10">
         {hasMarkdownOverride
-          ? renderMarkdownBody(markdownOverride)
+          ? renderMarkdownBody(mergedMarkdown ?? markdownOverride)
           : post.sections.map((section, sectionIndex) => (
               <section key={`${section.heading}-${sectionIndex}`} className="space-y-4">
                 {section.heading.trim().length > 0 ? (
@@ -349,6 +361,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
                 ) : null}
               </section>
             ))}
+        {!hasMarkdownOverride && hasEnhancement ? (
+          <section className="space-y-4">
+            {renderMarkdownBody(enhancementMarkdown)}
+          </section>
+        ) : null}
+        {!hasMarkdownOverride && hasAdvancedEnhancement ? (
+          <section className="space-y-4">
+            {renderMarkdownBody(advancedEnhancementMarkdown)}
+          </section>
+        ) : null}
       </div>
 
       {!hasMarkdownOverride && post.faqs && post.faqs.length > 0 ? (
