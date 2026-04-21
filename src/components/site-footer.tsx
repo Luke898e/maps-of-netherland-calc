@@ -50,6 +50,7 @@ export function SiteFooter(): React.JSX.Element {
             <Link href="/editorial-policy" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
               Editorial Policy
             </Link>
+            <Link href="/sitemap" className="text-[#17467f] transition-colors hover:text-[#0f3364]">HTML Sitemap</Link>
           </div>
           <ConsentPreferencesButton />
         </div>
