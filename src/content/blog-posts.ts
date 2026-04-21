@@ -40,8 +40,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Nigeria 0% CIT Threshold 2026: Calculator, Rates, and Filing Rules",
     description:
       "A practical 2026 guide to the Nigeria 0% CIT threshold calculator, corporate income tax rates, minimum tax, late-filing penalties, exempt income, and salary tax examples.",
-    publishedDate: "2026-04-15",
-    updatedDate: "2026-04-15",
+    publishedDate: "2026-04-06",
+    updatedDate: "2026-04-06",
     readingTime: "21 min read",
     category: "Nigeria Tax",
     tags: [
@@ -293,8 +293,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "UK FIG Regime 2026 Explained: HMRC Rules, Eligibility, and Timeline",
     description:
       "A practical guide to the FIG regime UK from April 6, 2026: HMRC eligibility logic, 4-year foreign income and gains regime timing, evidence standards, and expiry-date planning.",
-    publishedDate: "2026-04-15",
-    updatedDate: "2026-04-15",
+    publishedDate: "2026-04-06",
+    updatedDate: "2026-04-06",
     readingTime: "22 min read",
     category: "UK Tax",
     tags: [
@@ -539,8 +539,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Pay Zero Tax in Nigeria Legally (2026 Complete Guide for SMEs & Founders)",
     description:
       "A practical 2026 guide for SMEs and founders on legal 0% Company Income Tax eligibility in Nigeria, filing duties, audit safety, and the taxes that still apply.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-07",
+    updatedDate: "2026-04-07",
     readingTime: "14 min read",
     category: "Nigeria Tax",
     tags: [
@@ -707,8 +707,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Tax Audit Triggers in Nigeria for SMEs (2026 Guide to Avoid FIRS Red Flags)",
     description:
       "A practical 2026 guide to the most common tax audit triggers for Nigerian SMEs, how to reduce FIRS red flags, and how to stay compliant even when CIT is zero.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-07",
+    updatedDate: "2026-04-07",
     readingTime: "13 min read",
     category: "Nigeria Tax",
     tags: [
@@ -875,8 +875,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Prepare for a Tax Audit in Nigeria (Step-by-Step Guide for SMEs)",
     description:
       "A practical step-by-step guide for Nigerian SMEs on how to prepare for tax audits, what records to keep, and how to reduce FIRS audit risk before and during review.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-08",
+    updatedDate: "2026-04-08",
     readingTime: "14 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1035,8 +1035,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Desk Audit vs Field Audit in Nigeria (Full Comparison Guide for SMEs and Founders)",
     description:
       "A complete comparison of desk and field tax audits in Nigeria, including triggers, process steps, response strategy, and how SMEs can avoid escalation.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-08",
+    updatedDate: "2026-04-08",
     readingTime: "15 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1250,8 +1250,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Common Tax Compliance Mistakes SMEs Make in Nigeria (And How to Fix Them)",
     description:
       "A practical 2026 guide to the most common tax compliance mistakes Nigerian SMEs make, why they trigger audits, and how to fix them with clear operational controls.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-09",
+    updatedDate: "2026-04-09",
     readingTime: "16 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1415,8 +1415,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Nigeria SME Tax Compliance Checklist (Complete 2026 Guide for Zero-Tax Eligibility and Audit Safety)",
     description:
       "A complete 2026 checklist for Nigeria SME tax compliance covering registration, records, CIT, VAT, PAYE, filing consistency, threshold monitoring, and audit readiness.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-09",
+    updatedDate: "2026-04-09",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1467,8 +1467,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Structure Your Business to Legally Reduce Tax in Nigeria (2026 Advanced Guide)",
     description:
       "An advanced 2026 guide on structuring Nigerian businesses for legal tax reduction through proper entity selection, compliance alignment, threshold planning, and audit-safe controls.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-10",
+    updatedDate: "2026-04-10",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1519,8 +1519,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Nigeria vs UK Tax Residency Rules (Full Comparison Guide for Founders and Global Earners)",
     description:
       "A full comparison of Nigeria and UK tax residency rules for founders and global earners, including residency tests, foreign income treatment, dual-residency issues, and planning implications.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-10",
+    updatedDate: "2026-04-10",
     readingTime: "16 min read",
     category: "Global Tax",
     tags: [
@@ -1572,8 +1572,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "Who Qualifies for the UK FIG Regime? (Advanced Eligibility Guide for Founders, Remote Earners, and Global Investors)",
     description:
       "An advanced guide to practical UK FIG eligibility covering residency, source integrity, structure, reporting behavior, and defensibility for founders and global earners.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-11",
+    updatedDate: "2026-04-11",
     readingTime: "17 min read",
     category: "UK Tax",
     tags: [
@@ -1625,8 +1625,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "How to Check If You Qualify for the UK FIG Regime (Step-by-Step Evaluation Guide for Founders and Global Earners)",
     description:
       "A step-by-step UK FIG eligibility evaluation framework covering residency, income mapping, structure, documentation, and consistency risk for founders and global earners.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-11",
+    updatedDate: "2026-04-11",
     readingTime: "17 min read",
     category: "UK Tax",
     tags: [
@@ -1677,8 +1677,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "UK FIG Regime vs Normal UK Taxation (Which Is Better for Founders and Global Earners?)",
     description:
       "A deep decision-level comparison of FIG-related treatment versus normal UK taxation across exposure, complexity, documentation, risk, flexibility, and long-term defensibility.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-12",
+    updatedDate: "2026-04-12",
     readingTime: "17 min read",
     category: "UK Tax",
     tags: [
@@ -1729,8 +1729,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How Nigerians Can Legally Access UK Tax Advantages Without Fully Relocating (Advanced Strategic Guide)",
     description:
       "An advanced strategic guide on how Nigerians can access UK tax advantages without full relocation through residency positioning, income structuring, cross-border discipline, and defensible compliance.",
-    publishedDate: "2026-04-19",
-    updatedDate: "2026-04-19",
+    publishedDate: "2026-04-12",
+    updatedDate: "2026-04-12",
     readingTime: "17 min read",
     category: "Global Tax",
     tags: [
@@ -1782,8 +1782,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       "Best Business Structures for Nigerians Earning in USD/GBP (Advanced Tax Optimization Guide for 2026)",
     description:
       "A deep 2026 guide to choosing tax-efficient business structures for Nigerians earning in USD/GBP, with practical strategies for compliance, audit defensibility, and long-term growth.",
-    publishedDate: "2026-04-20",
-    updatedDate: "2026-04-20",
+    publishedDate: "2026-04-13",
+    updatedDate: "2026-04-13",
     readingTime: "18 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1834,8 +1834,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Register a Business for Tax in Nigeria (CAC + FIRS Step-by-Step Guide for 2026)",
     description:
       "A full 2026 walkthrough on registering a business for tax in Nigeria, from CAC setup to FIRS activation, filing readiness, and compliance risk control.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-13",
+    updatedDate: "2026-04-13",
     readingTime: "16 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1886,8 +1886,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Get a Tax Identification Number (TIN) in Nigeria (Complete 2026 Guide for Businesses and Individuals)",
     description:
       "A complete 2026 guide to obtaining, verifying, and correctly using a Tax Identification Number in Nigeria for businesses and individuals.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-14",
+    updatedDate: "2026-04-14",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1938,8 +1938,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to File Company Income Tax Returns in Nigeria (Full Beginner Walkthrough for 2026)",
     description:
       "A full 2026 beginner walkthrough for filing Company Income Tax returns in Nigeria, including records, computation, filing steps, and compliance mistakes to avoid.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-14",
+    updatedDate: "2026-04-14",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -1990,8 +1990,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Do Nigerians Pay Tax on Foreign Income? (Full Legal Guide for USD Earners, Freelancers, and Remote Workers in 2026)",
     description:
       "A full legal guide for 2026 on how Nigeria treats foreign income for freelancers, remote workers, and USD earners, including residency, remittance, and control tests.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-15",
+    updatedDate: "2026-04-15",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -2042,8 +2042,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How to Declare PayPal, Payoneer, and Stripe Income in Nigeria (Full Tax Guide for Freelancers and Online Businesses in 2026)",
     description:
       "A complete 2026 tax guide on declaring PayPal, Payoneer, and Stripe income in Nigeria, with steps for classification, conversion, reporting, and documentation.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-15",
+    updatedDate: "2026-04-15",
     readingTime: "18 min read",
     category: "Nigeria Tax",
     tags: [
@@ -2094,8 +2094,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How Double Taxation Works Between Nigeria and the UK (And How to Avoid It Legally in 2026)",
     description:
       "A complete 2026 guide to double taxation between Nigeria and the UK, including triggers, treaty mechanisms, tax credits, and legal planning steps.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-16",
+    updatedDate: "2026-04-16",
     readingTime: "18 min read",
     category: "Global Tax",
     tags: [
@@ -2146,8 +2146,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "What Happens When You Exceed the 0% CIT Threshold in Nigeria? (Full Breakdown for SMEs in 2026)",
     description:
       "A full 2026 breakdown of what changes when SMEs exceed Nigeria's 0% CIT threshold and how to manage reclassification without compliance mistakes.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-16",
+    updatedDate: "2026-04-16",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -2198,8 +2198,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "How FIRS Verifies SME Zero-Tax Claims in Nigeria (Audit Perspective Guide for 2026)",
     description:
       "An audit-perspective guide to how FIRS verifies SME zero-tax claims using filing consistency, financial footprint checks, and pattern analysis.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-17",
+    updatedDate: "2026-04-17",
     readingTime: "17 min read",
     category: "Nigeria Tax",
     tags: [
@@ -2250,8 +2250,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "UK Non-Domiciled Status Explained (How It Works and Who Qualifies in 2026)",
     description:
       "A complete 2026 guide to UK non-domiciled status, including domicile types, remittance basis, qualification rules, and practical risk controls.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-18",
+    updatedDate: "2026-04-18",
     readingTime: "18 min read",
     category: "UK Tax",
     tags: [
@@ -2302,8 +2302,8 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
     title: "Do You Pay UK Tax on Foreign Income? (Rules for Residents and Non-Residents in 2026)",
     description:
       "A full 2026 breakdown of UK tax on foreign income for residents and non-residents, covering residency, domicile, remittance basis, and common risk areas.",
-    publishedDate: "2026-04-21",
-    updatedDate: "2026-04-21",
+    publishedDate: "2026-04-19",
+    updatedDate: "2026-04-19",
     readingTime: "18 min read",
     category: "UK Tax",
     tags: [
@@ -2358,3 +2358,5 @@ export function getAllBlogPosts(): ReadonlyArray<BlogPost> {
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+
+
