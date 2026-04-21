@@ -2088,6 +2088,266 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Clear classification, full transaction history, and consistent filing records."
       }
     ]
+  },
+  {
+    slug: "how-double-taxation-works-between-nigeria-and-the-uk-2026",
+    title: "How Double Taxation Works Between Nigeria and the UK (And How to Avoid It Legally in 2026)",
+    description:
+      "A complete 2026 guide to double taxation between Nigeria and the UK, including triggers, treaty mechanisms, tax credits, and legal planning steps.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "18 min read",
+    category: "Global Tax",
+    tags: [
+      "Double taxation Nigeria UK",
+      "Nigeria UK DTA",
+      "Tax credit relief Nigeria UK",
+      "Cross-border tax planning 2026",
+      "Freelancer double tax risk"
+    ],
+    featuredImage: {
+      src: "/blog/how-double-taxation-works-between-nigeria-uk-2026.png",
+      alt: "How double taxation works between Nigeria and the UK featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Double taxation risk between Nigeria and the UK comes from overlapping residency and source rules.",
+          "This guide explains how treaty rules and tax-credit mechanisms can legally prevent duplicate tax exposure."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do Nigeria and the UK have a double taxation agreement?",
+        answer: "Yes. A treaty framework exists to allocate taxing rights and reduce double taxation."
+      },
+      {
+        question: "Can freelancers face double taxation?",
+        answer: "Yes, especially where residency and source analysis overlap across both countries."
+      },
+      {
+        question: "How is double taxation usually relieved?",
+        answer: "Most often through tax credits, exemptions, or treaty-based allocation of taxing rights."
+      },
+      {
+        question: "Does paying tax in one country always solve the issue?",
+        answer: "Not automatically. Relief must be properly claimed with documentation."
+      },
+      {
+        question: "What is the first step to reducing double-tax risk?",
+        answer: "Start by clarifying residency and classifying income correctly."
+      }
+    ]
+  },
+  {
+    slug: "what-happens-when-you-exceed-the-0-cit-threshold-in-nigeria-2026",
+    title: "What Happens When You Exceed the 0% CIT Threshold in Nigeria? (Full Breakdown for SMEs in 2026)",
+    description:
+      "A full 2026 breakdown of what changes when SMEs exceed Nigeria's 0% CIT threshold and how to manage reclassification without compliance mistakes.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Exceed 0% CIT threshold Nigeria",
+      "SME tax transition Nigeria 2026",
+      "Company reclassification tax Nigeria",
+      "Nigeria CIT threshold breach",
+      "Tax growth planning SME"
+    ],
+    featuredImage: {
+      src: "/blog/what-happens-when-you-exceed-0-cit-threshold-nigeria-2026.png",
+      alt: "What happens when you exceed the 0 percent CIT threshold in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Exceeding the 0 percent CIT threshold is a growth transition, not an automatic penalty.",
+          "This guide explains reclassification, timing effects, and the filing adjustments SMEs should make immediately."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do penalties apply just because I exceeded the threshold?",
+        answer: "No. Penalties arise from incorrect handling, not from growth itself."
+      },
+      {
+        question: "Does tax apply to all prior income immediately?",
+        answer: "Treatment depends on period classification and accounting-year assessment rules."
+      },
+      {
+        question: "Can I return to 0 percent CIT if revenue drops later?",
+        answer: "Yes, if eligibility criteria are met again for the relevant period."
+      },
+      {
+        question: "What should I do first after crossing the threshold?",
+        answer: "Reassess classification and update your tax computation and filing workflow."
+      },
+      {
+        question: "Can I still optimize tax after leaving the 0 percent band?",
+        answer: "Yes, through compliant structuring and strong record discipline."
+      }
+    ]
+  },
+  {
+    slug: "how-firs-verifies-sme-zero-tax-claims-in-nigeria-2026",
+    title: "How FIRS Verifies SME Zero-Tax Claims in Nigeria (Audit Perspective Guide for 2026)",
+    description:
+      "An audit-perspective guide to how FIRS verifies SME zero-tax claims using filing consistency, financial footprint checks, and pattern analysis.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "FIRS verifies SME zero tax claims",
+      "Nigeria audit perspective 2026",
+      "0% CIT claim verification",
+      "FIRS data consistency checks",
+      "SME tax defensibility Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/how-firs-verifies-sme-zero-tax-claims-nigeria-2026.png",
+      alt: "How FIRS verifies SME zero-tax claims in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Zero-tax status is a verifiable claim, not an assumption, from an audit perspective.",
+          "This guide explains how FIRS checks consistency, financial alignment, and reporting patterns."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does FIRS automatically audit every zero-tax SME?",
+        answer: "No, but verification systems and risk-based checks still apply."
+      },
+      {
+        question: "What is the main defense for a zero-tax claim?",
+        answer: "Consistent, reconcilable data across filings, accounts, and documentation."
+      },
+      {
+        question: "Is reporting just below the threshold risky?",
+        answer: "It can increase scrutiny when the pattern appears artificial."
+      },
+      {
+        question: "What can trigger deeper verification?",
+        answer: "Mismatched inflows, irregular filings, and unusual turnover patterns are common triggers."
+      },
+      {
+        question: "Can genuine SMEs keep zero-tax status safely?",
+        answer: "Yes, when claims are supported by clean records and consistent reporting behavior."
+      }
+    ]
+  },
+  {
+    slug: "uk-non-domiciled-status-explained-2026",
+    title: "UK Non-Domiciled Status Explained (How It Works and Who Qualifies in 2026)",
+    description:
+      "A complete 2026 guide to UK non-domiciled status, including domicile types, remittance basis, qualification rules, and practical risk controls.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "18 min read",
+    category: "UK Tax",
+    tags: [
+      "UK non-domiciled status explained",
+      "Residence vs domicile UK",
+      "Remittance basis UK 2026",
+      "Deemed domicile UK rules",
+      "Who qualifies non-dom UK"
+    ],
+    featuredImage: {
+      src: "/blog/uk-non-domiciled-status-explained-2026.png",
+      alt: "UK non-domiciled status explained featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "UK non-dom treatment depends on legal domicile status, not just current location or passport.",
+          "This guide explains residence versus domicile, deemed domicile risk, and remittance-basis implications."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can a Nigerian be non-domiciled in the UK?",
+        answer: "Yes, if permanent-home ties remain outside the UK under legal domicile analysis."
+      },
+      {
+        question: "Does non-dom status mean no UK tax?",
+        answer: "No. UK-source income remains taxable."
+      },
+      {
+        question: "What is deemed domicile?",
+        answer: "A status that can apply after long-term UK residence and may reduce non-dom advantages."
+      },
+      {
+        question: "Is domicile the same as residence?",
+        answer: "No. Residence reflects presence; domicile reflects long-term legal home."
+      },
+      {
+        question: "Can non-dom status be challenged?",
+        answer: "Yes, especially where evidence does not support the claimed long-term position."
+      }
+    ]
+  },
+  {
+    slug: "do-you-pay-uk-tax-on-foreign-income-2026",
+    title: "Do You Pay UK Tax on Foreign Income? (Rules for Residents and Non-Residents in 2026)",
+    description:
+      "A full 2026 breakdown of UK tax on foreign income for residents and non-residents, covering residency, domicile, remittance basis, and common risk areas.",
+    publishedDate: "2026-04-21",
+    updatedDate: "2026-04-21",
+    readingTime: "18 min read",
+    category: "UK Tax",
+    tags: [
+      "Do you pay UK tax on foreign income",
+      "UK resident foreign income tax rules",
+      "UK non-resident tax exposure",
+      "Remittance basis foreign income UK",
+      "UK domicile and foreign income"
+    ],
+    featuredImage: {
+      src: "/blog/do-you-pay-uk-tax-on-foreign-income-2026.png",
+      alt: "Do you pay UK tax on foreign income featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "UK tax on foreign income depends on residency, domicile, income type, and fund handling.",
+          "This guide explains when residents and non-residents do or do not face UK tax on offshore income."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do UK residents always pay tax on foreign income?",
+        answer: "Generally yes, though treatment can vary with domicile status and remittance-basis rules."
+      },
+      {
+        question: "Do non-residents pay UK tax on foreign income?",
+        answer: "Generally no, unless there is a relevant UK connection."
+      },
+      {
+        question: "What is the remittance basis?",
+        answer: "A framework where certain foreign income is taxed when brought into the UK."
+      },
+      {
+        question: "Does keeping money abroad always avoid UK tax?",
+        answer: "No. Outcome depends on status, access, and how rules apply in context."
+      },
+      {
+        question: "What is the safest starting point for cross-border earners?",
+        answer: "Confirm residency and domicile first, then map each income stream and reporting method."
+      }
+    ]
   }
 ] as const;
 
