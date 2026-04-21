@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -30,7 +31,7 @@ export function ConsentPreferencesButton(): React.JSX.Element {
       return;
     }
 
-    setHint("Consent panel is temporarily unavailable. Please refresh and try again shortly.");
+    setHint("Consent panel is temporarily unavailable right now.");
   };
 
   return (
@@ -44,7 +45,15 @@ export function ConsentPreferencesButton(): React.JSX.Element {
       >
         Manage Consent
       </Button>
-      {hint ? <p className="max-w-xs text-xs text-[#6b7d96]">{hint}</p> : null}
+      {hint ? (
+        <p className="max-w-xs text-xs text-[#6b7d96]" aria-live="polite">
+          {hint} You can still review data controls on the{" "}
+          <Link href="/consent" className="underline decoration-[#8ab0df] underline-offset-2 hover:text-[#3d5f85]">
+            Consent page
+          </Link>
+          .
+        </p>
+      ) : null}
     </div>
   );
 }

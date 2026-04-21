@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Lukmon Isiaq
+Role: Software Architect and Tax Tooling Maintainer
+Contact: contact@map-of-netherlands.co.uk
+Site: https://map-of-netherlands.co.uk/
+
+/* SITE */
+Framework: Next.js App Router
+UI: Tailwind CSS + shadcn/ui
+Policy focus: Nigeria SME tax screening and UK FIG regime eligibility
+Standards: Accessibility, structured data, and consent-forward design
+

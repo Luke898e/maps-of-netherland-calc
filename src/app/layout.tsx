@@ -27,6 +27,8 @@ const ogImagePath = "/og/global-tax-suite-og.svg";
 const ogImageAlt = "2026 Global Mobility and Tax Suite with Nigeria and UK tax compliance tools.";
 const absoluteOgImageUrl = `${siteConfig.siteUrl}${ogImagePath}`;
 const googleAnalyticsMeasurementId = "G-DT2TMQ66L0";
+const googleSiteVerificationToken =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || "google2fccf752706bd799";
 const adsenseClient = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT;
 const hasValidAdsenseClient = typeof adsenseClient === "string" && adsenseClient.startsWith("ca-pub-");
 
@@ -79,6 +81,9 @@ export const metadata: Metadata = {
   authors: [{ name: authorProfile.name }],
   creator: authorProfile.name,
   publisher: siteConfig.siteName,
+  verification: {
+    google: googleSiteVerificationToken
+  },
   openGraph: {
     title: "2026 Global Mobility & Tax Suite",
     description:
@@ -102,7 +107,7 @@ export const metadata: Metadata = {
     images: [ogImagePath]
   },
   other: hasValidAdsenseClient ? { "google-adsense-account": adsenseClient } : undefined,
-  manifest: "/manifest.json",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },

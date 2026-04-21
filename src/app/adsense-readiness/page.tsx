@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { adsenseChecklist } from "@/content/adsense-readiness-checklist";
@@ -75,6 +76,11 @@ function resolveChecklistStatus(item: ChecklistItem): ChecklistStatus {
 }
 
 export default function AdsenseReadinessPage(): React.JSX.Element {
+  const isPublicReadinessPageEnabled = process.env.NEXT_PUBLIC_EXPOSE_READINESS_PAGE === "true";
+  if (!isPublicReadinessPageEnabled) {
+    notFound();
+  }
+
   const isAuditMode = process.env.NEXT_PUBLIC_READINESS_AUDIT_MODE === "true";
   const resolvedChecklist: ReadonlyArray<ResolvedChecklistItem> = adsenseChecklist.map((item) => ({
     ...item,

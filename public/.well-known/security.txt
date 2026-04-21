@@ -1,0 +1,7 @@
+Contact: mailto:contact@map-of-netherlands.co.uk
+Expires: 2027-04-21T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://map-of-netherlands.co.uk/.well-known/security.txt
+Policy: https://map-of-netherlands.co.uk/privacy-policy
+Acknowledgments: https://map-of-netherlands.co.uk/updates
+

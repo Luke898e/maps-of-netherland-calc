@@ -60,6 +60,15 @@ export default function ContactPage(): React.JSX.Element {
               {siteConfig.githubProfile}
             </Link>
           </li>
+          <li>
+            Security disclosure policy:{" "}
+            <Link
+              href={`${siteConfig.siteUrl}/.well-known/security.txt`}
+              className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+            >
+              /.well-known/security.txt
+            </Link>
+          </li>
         </ul>
       </section>
 

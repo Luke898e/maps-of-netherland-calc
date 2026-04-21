@@ -2,7 +2,7 @@ const CACHE_VERSION = "v2";
 const NAV_CACHE = `global-tax-suite-nav-${CACHE_VERSION}`;
 const ASSET_CACHE = `global-tax-suite-assets-${CACHE_VERSION}`;
 
-const PRECACHE_URLS = ["/", "/tools/nigeria-zero-tax-auditor", "/tools/uk-fig-regime-eligibility", "/manifest.json"];
+const PRECACHE_URLS = ["/", "/tools/nigeria-zero-tax-auditor", "/tools/uk-fig-regime-eligibility", "/site.webmanifest"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
