@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function DisclaimerPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Disclaimer</h1>
         <p className="leading-7 text-[#203754]">
           Effective date: <span className="font-semibold">20 April 2026</span>. The calculators and written material
@@ -23,7 +23,7 @@ export default function DisclaimerPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">No Professional Advice</h2>
         <p className="leading-7 text-[#203754]">
           Nothing on this site constitutes legal, tax, accounting, or investment advice. Outputs are generated from
@@ -32,7 +32,7 @@ export default function DisclaimerPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Limitation and Reliance
         </h2>
@@ -43,7 +43,7 @@ export default function DisclaimerPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Correction and Clarification Requests
         </h2>
@@ -60,3 +60,4 @@ export default function DisclaimerPage(): React.JSX.Element {
     </div>
   );
 }
+

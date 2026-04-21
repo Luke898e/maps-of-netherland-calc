@@ -134,7 +134,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
   };
 
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">Submit Bug or Feature Feedback</CardTitle>
         <CardDescription>
@@ -148,7 +148,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
             <Label htmlFor="type">Feedback Type</Label>
             <select
               id="type"
-              className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="form-select"
               value={state.type}
               onChange={(event) => setState((prev) => ({ ...prev, type: event.target.value as SupportType }))}
             >
@@ -212,7 +212,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
               value={state.details}
               onChange={(event) => setState((prev) => ({ ...prev, details: event.target.value }))}
               placeholder="Include exact steps, expected result, actual result, and device/browser if relevant."
-              className="min-h-36 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="form-textarea"
             />
             {errors.details ? <p className="text-sm text-[#b54747]">{errors.details}</p> : null}
           </div>

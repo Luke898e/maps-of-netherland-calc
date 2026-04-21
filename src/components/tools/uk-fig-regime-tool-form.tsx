@@ -89,7 +89,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
   };
 
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">2026 UK FIG Regime Eligibility Tool</CardTitle>
         <CardDescription>
@@ -124,7 +124,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
                 return (
                   <div
                     key={year}
-                    className="flex flex-col gap-2 rounded-md border border-[#dbe7f8] bg-[#f7faff] p-3 sm:flex-row sm:items-center sm:justify-between"
+                    className="flex flex-col gap-2 rounded-lg border border-[#dbe7f8] bg-[#f7faff] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] sm:flex-row sm:items-center sm:justify-between"
                   >
                     <p className="text-sm font-medium text-[#173e73]">{year}</p>
                     <div className="grid w-full grid-cols-2 gap-2 sm:w-auto sm:grid-cols-none sm:flex">
@@ -176,7 +176,7 @@ export function UkFigRegimeToolForm(): React.JSX.Element {
         </form>
 
         {result ? (
-          <div className="rounded-lg border border-[#ccddf7] bg-[#f5f9ff] p-4">
+          <div className="rounded-xl border border-[#ccddf7] bg-[#f5f9ff] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
             <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Eligibility Outcome</p>
             <p className="mt-2 text-xl font-semibold text-[#102e59]">{result.message}</p>
             <ul className="mt-4 space-y-2 text-sm text-[#1f3654]">

@@ -23,12 +23,12 @@ export function ToolMethodology({
   references = []
 }: ToolMethodologyProps): React.JSX.Element {
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">{title}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-5">
-        <p className="leading-7 text-[#203754]">{summary}</p>
+        <p className="body-copy">{summary}</p>
         <ol className="list-decimal space-y-2 pl-5 text-[#203754]">
           {steps.map((step) => (
             <li key={step.slice(0, 40)} className="leading-7">
@@ -52,7 +52,7 @@ export function ToolMethodology({
                     href={reference.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+                    className="link-inline"
                   >
                     {reference.label}
                   </Link>

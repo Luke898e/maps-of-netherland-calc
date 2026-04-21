@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function CookiePolicyPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Cookie Policy</h1>
         <p className="leading-7 text-[#203754]">
           This page explains how cookies and related storage technologies are used on the 2026 Global Mobility & Tax
@@ -22,7 +22,7 @@ export default function CookiePolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Cookie Categories</h2>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>
@@ -37,7 +37,7 @@ export default function CookiePolicyPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Consent and Control</h2>
         <p className="leading-7 text-[#203754]">
           Consent preferences can be updated via the Manage Consent action in the footer.
@@ -61,7 +61,7 @@ export default function CookiePolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">More Information</h2>
         <p className="leading-7 text-[#203754]">
           For full data-handling details, see the
@@ -80,3 +80,4 @@ export default function CookiePolicyPage(): React.JSX.Element {
     </div>
   );
 }
+

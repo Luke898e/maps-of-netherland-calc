@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ConsentPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">
           Consent and Advertising Controls
         </h1>
@@ -27,7 +27,7 @@ export default function ConsentPage(): React.JSX.Element {
         <p className="text-sm text-[#4b6890]">Effective date: 20 April 2026</p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           What this control covers
         </h2>
@@ -38,7 +38,7 @@ export default function ConsentPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Policy references
         </h2>
@@ -66,7 +66,7 @@ export default function ConsentPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Related policies
         </h2>
@@ -88,3 +88,4 @@ export default function ConsentPage(): React.JSX.Element {
     </div>
   );
 }
+

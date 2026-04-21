@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Privacy Policy</h1>
         <p className="leading-7 text-[#203754]">
           This platform is built to support privacy-first tax tooling and ad policy readiness. For users in the EEA,
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         <p className="text-sm text-[#4b6890]">Effective date: 20 April 2026</p>
       </section>
 
-      <section id="consent-settings" className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section id="consent-settings" className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">TCF and Consent Framework</h2>
         <p className="leading-7 text-[#203754]">
           Consent controls are available via the global
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Data Handling Summary</h2>
         <p className="leading-7 text-[#203754]">
           The calculators process user inputs client-side for immediate output and PDF generation. Do not enter
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Data Categories and Purpose</h2>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>Technical logs: used for security monitoring, uptime checks, and abuse prevention.</li>
@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Cookies, Advertising, and Consent</h2>
         <p className="leading-7 text-[#203754]">
           Where advertising is enabled, this site uses Google AdSense scripts only when publisher and consent
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Retention, Rights, and Requests</h2>
         <p className="leading-7 text-[#203754]">
           Operational logs and support records are retained only as long as needed for service reliability, bug
@@ -120,7 +120,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Policy Updates</h2>
         <p className="leading-7 text-[#203754]">
           Cookie-specific controls and categories are documented in the
@@ -143,3 +143,4 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
     </div>
   );
 }
+

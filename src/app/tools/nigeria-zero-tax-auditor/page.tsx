@@ -55,9 +55,9 @@ export default function NigeriaZeroTaxAuditorPage(): React.JSX.Element {
     <div className="space-y-8">
       <AdSenseScript />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nigeriaJsonLd) }} />
-      <section className="space-y-3">
-        <p className="text-sm uppercase tracking-[0.15em] text-[#2f5f9d]">Nigeria Compliance Tool</p>
-        <h1 className="font-[var(--font-heading)] text-4xl font-semibold text-[#0f3364]">
+      <section className="surface-hero space-y-3 p-8 sm:p-10">
+        <p className="section-kicker">Nigeria Compliance Tool</p>
+        <h1 className="text-4xl font-semibold text-[#0f3364]">
           2026 Nigeria Zero-Tax Auditor
         </h1>
         <p className="max-w-3xl text-lg leading-8 text-[#233d5d]">

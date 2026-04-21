@@ -88,7 +88,7 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
   };
 
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">2026 Nigeria Zero-Tax Auditor</CardTitle>
         <CardDescription>
@@ -170,7 +170,7 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
                   sector: event.target.value as (typeof nigeriaSectors)[number]
                 }))
               }
-              className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="form-select"
               aria-invalid={Boolean(errors.sector)}
               aria-describedby={errors.sector ? "sector-error" : undefined}
             >
@@ -205,7 +205,7 @@ export function NigeriaZeroTaxAuditorForm(): React.JSX.Element {
         </form>
 
         {result ? (
-          <div className="rounded-lg border border-[#ccddf7] bg-[#f5f9ff] p-4">
+          <div className="rounded-xl border border-[#ccddf7] bg-[#f5f9ff] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
             <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Audit Outcome</p>
             <p className="mt-2 text-xl font-semibold text-[#102e59]">{result.message}</p>
             <ul className="mt-4 space-y-2 text-sm text-[#1f3654]">

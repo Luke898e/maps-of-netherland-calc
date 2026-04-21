@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ContactPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Contact</h1>
         <p className="leading-7 text-[#203754]">
           This site is maintained as an educational tax resource by <span className="font-semibold">{authorProfile.name}</span>.
@@ -31,7 +31,7 @@ export default function ContactPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Publisher Identity</h2>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>
@@ -63,7 +63,7 @@ export default function ContactPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Response-Time Commitment</h2>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>Bug reports: initial response target within 1 business day.</li>
@@ -85,7 +85,7 @@ export default function ContactPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Corrections and Complaint Escalation
         </h2>
@@ -115,3 +115,4 @@ export default function ContactPage(): React.JSX.Element {
     </div>
   );
 }
+

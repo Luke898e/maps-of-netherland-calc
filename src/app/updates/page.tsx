@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function UpdatesPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-3 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-3 surface-panel p-8">
         <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">Product Maintenance Log</p>
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Updates and Changelog</h1>
         <p className="leading-7 text-[#203754]">
@@ -49,3 +49,4 @@ export default function UpdatesPage(): React.JSX.Element {
     </div>
   );
 }
+

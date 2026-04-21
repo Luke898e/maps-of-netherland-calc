@@ -39,7 +39,7 @@ export function ConsentPreferencesButton(): React.JSX.Element {
         type="button"
         variant="ghost"
         size="sm"
-        className="h-8 px-0 text-[#17467f] hover:bg-transparent hover:text-[#0f3364]"
+        className="h-8 w-fit rounded-md border border-[#d4e3f8] px-2 text-[#17467f] hover:bg-[#eef5ff] hover:text-[#0f3364]"
         onClick={onOpenPreferences}
       >
         Manage Consent

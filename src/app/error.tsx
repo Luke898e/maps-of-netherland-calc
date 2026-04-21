@@ -11,7 +11,7 @@ export default function GlobalErrorPage({
   reset: () => void;
 }): React.JSX.Element {
   return (
-    <div className="mx-auto max-w-3xl space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+    <div className="mx-auto max-w-3xl space-y-4 surface-panel p-8">
       <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">Runtime Error</p>
       <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Something went wrong</h1>
       <p className="leading-7 text-[#203754]">
@@ -31,3 +31,4 @@ export default function GlobalErrorPage({
     </div>
   );
 }
+

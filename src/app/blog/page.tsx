@@ -55,12 +55,12 @@ export default function BlogPage(): React.JSX.Element {
         }}
       />
 
-      <section className="space-y-3 rounded-xl border border-[#d4e3f8] bg-white p-8">
-        <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">Editorial Hub</p>
-        <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">
+      <section className="surface-hero space-y-3 p-8 sm:p-10">
+        <p className="section-kicker">Editorial Hub</p>
+        <h1 className="text-3xl font-semibold text-[#0f3364] sm:text-4xl">
           Global Mobility Tax Blog
         </h1>
-        <p className="leading-7 text-[#203754]">
+        <p className="body-copy">
           Practical implementation notes, policy explainers, and product methodology updates for tax teams using our
           Nigeria and UK compliance tools.
         </p>
@@ -68,10 +68,16 @@ export default function BlogPage(): React.JSX.Element {
 
       <section className="grid gap-6">
         {posts.map((post) => (
-          <Card key={post.slug} className="border-[#d4e3f8]">
+          <Card key={post.slug}>
             {post.featuredImage ? (
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border-b border-[#d4e3f8]">
-                <Image src={post.featuredImage.src} alt={post.featuredImage.alt} fill className="object-cover" sizes="(min-width: 768px) 768px, 100vw" />
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-2xl border-b border-[#d4e3f8]">
+                <Image
+                  src={post.featuredImage.src}
+                  alt={post.featuredImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 768px, 100vw"
+                />
               </div>
             ) : null}
             <CardHeader>
@@ -92,17 +98,14 @@ export default function BlogPage(): React.JSX.Element {
             <CardContent className="space-y-4">
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-[#c8dbf4] bg-[#f3f8ff] px-3 py-1 text-xs font-medium text-[#20497b]"
-                  >
+                  <span key={tag} className="chip-soft">
                     {tag}
                   </span>
                 ))}
               </div>
               <Link
                 href={`/blog/${post.slug}`}
-                className="inline-flex items-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968]"
+                className="inline-flex items-center rounded-lg bg-[linear-gradient(180deg,#1a5696_0%,#13457f_100%)] px-4 py-2 text-sm font-medium text-white shadow-[0_12px_26px_-18px_rgba(15,63,121,0.8)] transition-[transform,filter] hover:-translate-y-0.5 hover:brightness-105"
               >
                 Read article
               </Link>
@@ -113,3 +116,4 @@ export default function BlogPage(): React.JSX.Element {
     </div>
   );
 }
+

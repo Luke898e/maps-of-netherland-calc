@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function TermsOfUsePage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Terms of Use</h1>
         <p className="leading-7 text-[#203754]">
           Effective date: <span className="font-semibold">20 April 2026</span>. By using this site, you agree to use
@@ -22,7 +22,7 @@ export default function TermsOfUsePage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Scope of Service</h2>
         <p className="leading-7 text-[#203754]">
           Outputs are generated from user-provided inputs and predefined rule logic. The service is designed for
@@ -31,7 +31,7 @@ export default function TermsOfUsePage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">User Responsibilities</h2>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>Provide accurate and lawful input data.</li>
@@ -40,7 +40,7 @@ export default function TermsOfUsePage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Jurisdiction and Disputes
         </h2>
@@ -50,7 +50,7 @@ export default function TermsOfUsePage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Corrections and Complaints
         </h2>
@@ -71,3 +71,4 @@ export default function TermsOfUsePage(): React.JSX.Element {
     </div>
   );
 }
+

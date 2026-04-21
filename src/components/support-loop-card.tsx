@@ -12,12 +12,12 @@ export function SupportLoopCard({ toolName, toolPath }: SupportLoopCardProps): R
   const encodedPath = encodeURIComponent(toolPath);
 
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">Support Loop</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="leading-7 text-[#203754]">
+        <p className="body-copy">
           Found an edge case, UI issue, or policy ambiguity? Send it directly to the maintainer. This product uses
           active feedback loops to improve accuracy and usability release-by-release.
         </p>

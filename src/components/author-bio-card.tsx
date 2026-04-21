@@ -10,7 +10,7 @@ interface AuthorBioCardProps {
 
 export function AuthorBioCard({ title = "Author Bio" }: AuthorBioCardProps): React.JSX.Element {
   return (
-    <Card className="border-[#d4e3f8]">
+    <Card className="surface-panel">
       <CardHeader>
         <CardTitle className="text-2xl text-[#0f3364]">{title}</CardTitle>
       </CardHeader>
@@ -33,9 +33,9 @@ export function AuthorBioCard({ title = "Author Bio" }: AuthorBioCardProps): Rea
             </p>
           </div>
         </div>
-        <p className="leading-7 text-[#203754]">{authorProfile.mission}</p>
+        <p className="body-copy">{authorProfile.mission}</p>
         {authorProfile.bioParagraphs.map((paragraph) => (
-          <p key={paragraph.slice(0, 40)} className="leading-7 text-[#203754]">
+          <p key={paragraph.slice(0, 40)} className="body-copy">
             {paragraph}
           </p>
         ))}
@@ -48,7 +48,7 @@ export function AuthorBioCard({ title = "Author Bio" }: AuthorBioCardProps): Rea
                   href={link.url}
                   target={link.url.startsWith("http") ? "_blank" : undefined}
                   rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+                  className="link-inline"
                 >
                   {link.label}
                 </Link>

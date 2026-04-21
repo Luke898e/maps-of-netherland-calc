@@ -42,7 +42,7 @@ function renderTextWithLinks(text: string): React.ReactNode {
             href={linkHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+            className="link-inline"
           >
             {linkLabel}
           </a>
@@ -50,7 +50,7 @@ function renderTextWithLinks(text: string): React.ReactNode {
           <Link
             key={`${linkHref}-${matchStart}`}
             href={linkHref}
-            className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+            className="link-inline"
           >
             {linkLabel}
           </Link>
@@ -299,10 +299,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         />
       ) : null}
 
-      <header className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
-        <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">{post.category}</p>
-        <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">{post.title}</h1>
-        <p className="leading-7 text-[#203754]">{post.description}</p>
+      <header className="surface-hero space-y-4 p-8 sm:p-10">
+        <p className="section-kicker">{post.category}</p>
+        <h1 className="text-3xl font-semibold text-[#0f3364] sm:text-4xl">{post.title}</h1>
+        <p className="body-copy">{post.description}</p>
         {post.featuredImage ? (
           <div className="relative mt-2 aspect-[16/9] w-full overflow-hidden rounded-lg border border-[#d4e3f8]">
             <Image
@@ -325,7 +325,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         </div>
       </header>
 
-      <div className="space-y-8 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <div className="space-y-8 surface-panel p-8 sm:p-10">
         {hasMarkdownOverride
           ? renderMarkdownBody(markdownOverride)
           : post.sections.map((section, sectionIndex) => (
@@ -352,7 +352,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
       </div>
 
       {!hasMarkdownOverride && post.faqs && post.faqs.length > 0 ? (
-        <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <section className="space-y-5 surface-panel p-8">
           <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
             People Also Ask
           </h2>
@@ -368,17 +368,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
       ) : null}
 
       {!hasMarkdownOverride && post.references && post.references.length > 0 ? (
-        <section className="space-y-5 rounded-xl border border-[#d4e3f8] bg-white p-8">
+        <section className="space-y-5 surface-panel p-8">
           <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Sources and References</h2>
           <ul className="space-y-2">
             {post.references.map((reference) => (
               <li key={reference.url}>
-                <Link
-                  href={reference.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
-                >
+                <Link href={reference.url} target="_blank" rel="noopener noreferrer" className="link-inline">
                   {reference.label}
                 </Link>
               </li>
@@ -387,7 +382,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         </section>
       ) : null}
 
-      <section className="rounded-xl border border-[#d4e3f8] bg-white p-6">
+      <section className="surface-panel p-6">
         <h2 className="font-[var(--font-heading)] text-xl font-semibold text-[#0f3364]">Continue reading</h2>
         <p className="mt-2 leading-7 text-[#203754]">
           Explore other implementation notes in the blog or return to the tool suite.
@@ -395,7 +390,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link
             href="/blog"
-            className="inline-flex w-full items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968] sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-[linear-gradient(180deg,#1a5696_0%,#13457f_100%)] px-4 py-2 text-sm font-medium text-white shadow-[0_12px_26px_-18px_rgba(15,63,121,0.8)] transition-[transform,filter] hover:-translate-y-0.5 hover:brightness-105 sm:w-auto"
           >
             Back to Blog
           </Link>
@@ -410,3 +405,4 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
     </article>
   );
 }
+

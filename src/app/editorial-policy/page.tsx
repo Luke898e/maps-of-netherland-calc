@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function EditorialPolicyPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Editorial Policy</h1>
         <p className="leading-7 text-[#203754]">
           Effective date: <span className="font-semibold">20 April 2026</span>. This project follows an evidence-first
@@ -24,7 +24,7 @@ export default function EditorialPolicyPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Source Hierarchy and Review Model
         </h2>
@@ -36,7 +36,7 @@ export default function EditorialPolicyPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Corrections, Complaints, and Conflicts
         </h2>
@@ -48,7 +48,7 @@ export default function EditorialPolicyPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
           Current Maintenance Signal
         </h2>
@@ -74,3 +74,4 @@ export default function EditorialPolicyPage(): React.JSX.Element {
     </div>
   );
 }
+

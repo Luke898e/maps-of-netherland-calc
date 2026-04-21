@@ -92,7 +92,7 @@ const scenarios = [
 export default function CaseStudiesPage(): React.JSX.Element {
   return (
     <div className="mx-auto max-w-5xl space-y-8">
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">Practical Implementation Library</p>
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">Worked Case Studies</h1>
         <p className="leading-7 text-[#203754]">
@@ -145,7 +145,7 @@ export default function CaseStudiesPage(): React.JSX.Element {
         ))}
       </section>
 
-      <section className="space-y-4 rounded-xl border border-[#d4e3f8] bg-white p-8">
+      <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Primary Source Set</h2>
         <p className="leading-7 text-[#203754]">
           These cases are educational examples and should be validated against primary institutional materials before
@@ -179,3 +179,4 @@ export default function CaseStudiesPage(): React.JSX.Element {
     </div>
   );
 }
+

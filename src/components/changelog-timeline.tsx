@@ -9,7 +9,7 @@ export function ChangelogTimeline({ entries }: ChangelogTimelineProps): React.JS
   return (
     <div className="space-y-4">
       {entries.map((entry) => (
-        <Card key={`${entry.version}-${entry.date}`} className="border-[#d4e3f8]">
+        <Card key={`${entry.version}-${entry.date}`} className="surface-panel">
           <CardHeader className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#3f5c84]">
               {entry.date} | {entry.version}
