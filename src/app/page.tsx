@@ -104,7 +104,9 @@ function slugify(value: string): string {
 }
 
 export default function HomePage(): React.JSX.Element {
-  const latestBlogPosts = getAllBlogPosts().slice(0, 2);
+  const allBlogPosts = getAllBlogPosts();
+  const latestBlogPosts = allBlogPosts.slice(0, 8);
+  const remainingBlogPosts = allBlogPosts.slice(8);
   const knowledgeSectionLinks = homeKnowledgeSections.map((section) => ({
     id: `knowledge-${slugify(section.title)}`,
     label: section.title
@@ -502,6 +504,24 @@ export default function HomePage(): React.JSX.Element {
             </Card>
           ))}
         </div>
+
+        {remainingBlogPosts.length > 0 ? (
+          <div className="rounded-lg border border-[#dbe7f8] bg-[#f8fbff] p-4">
+            <p className="text-xs uppercase tracking-[0.1em] text-[#4b6890]">All Article URLs</p>
+            <p className="mt-1 text-sm text-[#35577f]">
+              Direct link index to help users and crawlers discover every published post quickly.
+            </p>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {remainingBlogPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="text-sm text-[#12447d] hover:text-[#0f3968]">
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </section>
     </div>
   );

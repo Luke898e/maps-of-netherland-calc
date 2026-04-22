@@ -18,7 +18,9 @@ const corePages = [
   { href: "/blog", label: "Blog" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/tools/nigeria-zero-tax-auditor", label: "2026 Nigeria Zero-Tax Auditor" },
-  { href: "/tools/uk-fig-regime-eligibility", label: "2026 UK FIG Regime Eligibility Tool" }
+  { href: "/tools/uk-fig-regime-eligibility", label: "2026 UK FIG Regime Eligibility Tool" },
+  { href: "/sitemap.xml", label: "XML Sitemap" },
+  { href: "/feed.xml", label: "RSS Feed" }
 ] as const;
 
 const productPages = [
@@ -119,4 +121,3 @@ export default function HtmlSitemapPage(): React.JSX.Element {
     </div>
   );
 }
-

@@ -51,6 +51,8 @@ export function SiteFooter(): React.JSX.Element {
               Editorial Policy
             </Link>
             <Link href="/sitemap" className="text-[#17467f] transition-colors hover:text-[#0f3364]">HTML Sitemap</Link>
+            <Link href="/sitemap.xml" className="text-[#17467f] transition-colors hover:text-[#0f3364]">XML Sitemap</Link>
+            <Link href="/feed.xml" className="text-[#17467f] transition-colors hover:text-[#0f3364]">RSS Feed</Link>
           </div>
           <ConsentPreferencesButton />
         </div>
