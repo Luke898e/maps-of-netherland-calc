@@ -17,7 +17,7 @@ From **6 April 2025**, the UK moved away from the legacy non-dom remittance basi
 * prior ten-year residency history outcome
 * four-year relief window end date
 
-Policy source: [Reform to taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/tax-on-foreign-income/reform-to-the-taxation-of-non-uk-domiciled-individuals).`,
+Policy source: [Reform to taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/reforming-the-taxation-of-non-uk-domiciled-individuals).`,
 
   "nigeria-vs-uk-tax-residency-rules-2026": `## Side-by-Side Technical Triggers (Practical Lens)
 
@@ -122,4 +122,5 @@ A practical compliance file should show:
 
 For platform earners, reconcile this with [How to Declare PayPal, Payoneer, and Stripe Income in Nigeria](/blog/how-to-declare-paypal-payoneer-and-stripe-income-in-nigeria-2026).`
 } as const;
+
 

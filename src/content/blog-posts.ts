@@ -694,7 +694,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       },
       {
         label: "Corporate Affairs Commission (CAC) official portal",
-        url: "https://www.cac.gov.ng/"
+        url: "https://pre.cac.gov.ng/"
       },
       {
         label: "PwC Nigeria - Corporate tax summary",
@@ -862,7 +862,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       },
       {
         label: "Corporate Affairs Commission (CAC) official portal",
-        url: "https://www.cac.gov.ng/"
+        url: "https://pre.cac.gov.ng/"
       },
       {
         label: "PwC Nigeria corporate tax summary",
@@ -1026,7 +1026,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       },
       {
         label: "Corporate Affairs Commission (CAC) official portal",
-        url: "https://www.cac.gov.ng/"
+        url: "https://pre.cac.gov.ng/"
       }
     ]
   },
@@ -1237,7 +1237,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
       },
       {
         label: "Corporate Affairs Commission (CAC) official portal",
-        url: "https://www.cac.gov.ng/"
+        url: "https://pre.cac.gov.ng/"
       },
       {
         label: "PwC Nigeria corporate tax summary",
@@ -1278,7 +1278,7 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         heading: "What tax compliance means for SMEs in Nigeria",
         paragraphs: [
           "Compliance is wider than paying one tax. It includes registration, records, timely filing, correct computation, and remittance across applicable tax heads.",
-          "In practice, SMEs should validate their obligations against the [FIRS official website](https://www.firs.gov.ng/) and align legal entity records with the [Corporate Affairs Commission portal](https://www.cac.gov.ng/) so filings, identities, and operational facts are consistent."
+          "In practice, SMEs should validate their obligations against the [FIRS official website](https://www.firs.gov.ng/) and align legal entity records with the [Corporate Affairs Commission portal](https://pre.cac.gov.ng/) so filings, identities, and operational facts are consistent."
         ],
         bullets: [
           "Proper business registration and tax identification.",
@@ -2358,5 +2358,6 @@ export function getAllBlogPosts(): ReadonlyArray<BlogPost> {
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+
 
 

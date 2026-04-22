@@ -136,7 +136,7 @@ A DTA is a legal framework between two countries that:
 * eliminate double taxation
 * provide clarity on tax rights
 
-For treaty-policy background, review [OECD treaty resources](https://www.oecd.org/tax/treaties/).
+For treaty-policy background, review [OECD treaty resources](https://www.gov.uk/government/collections/tax-treaties).
 
 ## How Double Taxation Is Resolved in Practice
 
@@ -1415,7 +1415,7 @@ This guide provides a **complete, expert-level breakdown** of:
 * how it affects taxation
 * how it connects to global income planning
 
-For official references, review [HMRC](https://www.gov.uk/government/organisations/hm-revenue-customs), [RDR1 guidance](https://www.gov.uk/government/publications/residence-domicile-and-remittance-basis-rdr1), and [GOV.UK non-domiciled residents page](https://www.gov.uk/tax-foreign-income/non-domiciled-residents).
+For official references, review [HMRC](https://www.gov.uk/government/organisations/hm-revenue-customs), [RDR1 guidance](https://www.gov.uk/government/publications/residence-domicile-and-remittance-basis-rules-uk-tax-liability), and [GOV.UK non-domiciled residents page](https://www.gov.uk/tax-foreign-income/non-domiciled-residents).
 
 ## The Core Concept: Residence vs Domicile
 
@@ -2254,4 +2254,6 @@ you move from:
 
 And in a global financial environment, that clarity is essential.`
 } as const;
+
+
 

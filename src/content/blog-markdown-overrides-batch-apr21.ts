@@ -31,7 +31,7 @@ Done incorrectly, it creates:
 
 This guide provides a **complete, step-by-step breakdown** of how to register a business for tax in Nigeria—while also explaining the deeper implications most guides ignore.
 
-For official reference points, see [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/) and [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/).
+For official reference points, see [Corporate Affairs Commission (CAC)](https://pre.cac.gov.ng/) and [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/).
 
 ## Understanding the Two Systems: CAC vs FIRS
 
@@ -472,7 +472,7 @@ Understanding how to properly obtain, verify, and use a TIN is essential for:
 
 This guide provides a **complete, step-by-step breakdown** of how to get a TIN in Nigeria, while also explaining the deeper implications most guides ignore.
 
-For official references, see [FIRS](https://www.firs.gov.ng/), [CAC](https://www.cac.gov.ng/), and [Joint Tax Board (JTB)](https://www.jtb.gov.ng/).
+For official references, see [FIRS](https://www.firs.gov.ng/), [CAC](https://pre.cac.gov.ng/), and [Joint Tax Board (JTB)](https://www.jtb.gov.ng/).
 
 ## What a TIN Actually Represents (Beyond the Definition)
 
@@ -869,7 +869,7 @@ This guide provides a **complete beginner-to-advanced walkthrough** of how to fi
 * what mistakes to avoid
 * how to maintain defensible compliance
 
-For official filing references, check [FIRS](https://www.firs.gov.ng/) and keep entity data aligned at [CAC](https://www.cac.gov.ng/).
+For official filing references, check [FIRS](https://www.firs.gov.ng/) and keep entity data aligned at [CAC](https://pre.cac.gov.ng/).
 
 ## Understanding Company Income Tax Filing in Nigeria
 
@@ -1492,7 +1492,7 @@ Nigeria has agreements that may:
 
 > Proper structuring is required to benefit from these protections.
 
-For treaty background, see [OECD tax treaty resources](https://www.oecd.org/tax/treaties/).
+For treaty background, see [OECD tax treaty resources](https://www.gov.uk/government/collections/tax-treaties).
 
 ## What Most Guides Get Wrong
 
@@ -1736,7 +1736,7 @@ Tax compliance is not determined by:
 
 This guide provides a **complete, expert-level breakdown** of how to properly declare income from PayPal, Payoneer, and Stripe in Nigeria—while avoiding common compliance mistakes.
 
-For official policy anchors, see [FIRS](https://www.firs.gov.ng/), [FIRS PIT](https://www.firs.gov.ng/tax-types/personal-income-tax-pit/), and [CAC](https://www.cac.gov.ng/).
+For official policy anchors, see [FIRS](https://www.firs.gov.ng/), [FIRS PIT](https://www.firs.gov.ng/tax-types/personal-income-tax-pit/), and [CAC](https://pre.cac.gov.ng/).
 
 ## Understanding the Nature of Platform-Based Income
 
@@ -2179,4 +2179,5 @@ By applying these principles, you move from:
 
 And in a digital economy where income flows across borders, that clarity is essential.`
 } as const;
+
 

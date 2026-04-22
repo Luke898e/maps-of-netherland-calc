@@ -23,7 +23,7 @@ This guide will show you exactly:
 * how to stay compliant
 * how to avoid audit risks
 
-For official tax administration details, see [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/).
+For official tax administration details, see [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://pre.cac.gov.ng/).
 
 ---
 
@@ -384,7 +384,7 @@ If you’re trying to:
 
 Then understanding what triggers a tax audit is essential.
 
-For statutory direction, start with [FIRS](https://www.firs.gov.ng/) and keep your registration details current with [CAC](https://www.cac.gov.ng/).
+For statutory direction, start with [FIRS](https://www.firs.gov.ng/) and keep your registration details current with [CAC](https://pre.cac.gov.ng/).
 
 ---
 
@@ -724,7 +724,7 @@ Then proper audit preparation is essential.
 
 This guide explains exactly how to prepare for a tax audit in Nigeria, what documents you need, and how to reduce risk before and during the process.
 
-For formal tax administration references, see [FIRS](https://www.firs.gov.ng/) and keep entity records aligned through [CAC](https://www.cac.gov.ng/).
+For formal tax administration references, see [FIRS](https://www.firs.gov.ng/) and keep entity records aligned through [CAC](https://pre.cac.gov.ng/).
 
 ---
 
@@ -1614,7 +1614,7 @@ Understanding these mistakes is essential for any business that wants to:
 
 This guide provides a comprehensive breakdown of the most common tax compliance mistakes SMEs make in Nigeria, why they occur, and how to fix them effectively.
 
-For primary guidance, see [FIRS](https://www.firs.gov.ng/) and [CAC](https://www.cac.gov.ng/).
+For primary guidance, see [FIRS](https://www.firs.gov.ng/) and [CAC](https://pre.cac.gov.ng/).
 
 ---
 
@@ -2088,7 +2088,7 @@ A structured compliance checklist provides a comprehensive framework that ensure
 
 This guide presents a complete tax compliance checklist for SMEs in Nigeria, covering registration, reporting, documentation, tax obligations, and audit readiness. It is designed not just as a list, but as a system that supports long-term compliance and legal tax optimization.
 
-For official administration guidance, see [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/).
+For official administration guidance, see [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://pre.cac.gov.ng/).
 
 ---
 
@@ -2537,7 +2537,7 @@ A poorly structured business may pay more tax than necessary, even when operatin
 
 This guide explains how to structure your business in Nigeria to legally reduce tax, with a focus on sustainability, compliance, and long-term efficiency.
 
-For primary guidance, review [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/) and [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/).
+For primary guidance, review [Corporate Affairs Commission (CAC)](https://pre.cac.gov.ng/) and [Federal Inland Revenue Service (FIRS)](https://www.firs.gov.ng/).
 
 ---
 
@@ -2662,7 +2662,7 @@ Advantages:
 
 For tax optimization, this structure often provides the most flexibility.
 
-Entity setup references: [CAC](https://www.cac.gov.ng/) and [How to Pay Zero Tax in Nigeria Legally](/blog/how-to-pay-zero-tax-in-nigeria-legally-2026).
+Entity setup references: [CAC](https://pre.cac.gov.ng/) and [How to Pay Zero Tax in Nigeria Legally](/blog/how-to-pay-zero-tax-in-nigeria-legally-2026).
 
 ---
 
@@ -4870,7 +4870,7 @@ However, it also introduces complexity. Without proper understanding, individual
 
 This guide explains how Nigerians can **legally and strategically position themselves** to access UK tax advantages without fully relocating, while maintaining compliance across both jurisdictions.
 
-For official baselines, review [HMRC](https://www.gov.uk/government/organisations/hm-revenue-customs), [HMRC Statutory Residence Test (RDR3)](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt), [FIRS](https://www.firs.gov.ng/), and [CAC](https://www.cac.gov.ng/).
+For official baselines, review [HMRC](https://www.gov.uk/government/organisations/hm-revenue-customs), [HMRC Statutory Residence Test (RDR3)](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt), [FIRS](https://www.firs.gov.ng/), and [CAC](https://pre.cac.gov.ng/).
 
 ---
 
@@ -5420,7 +5420,7 @@ Each structure interacts differently with:
 * compliance requirements
 * audit exposure
 
-For baseline compliance context, review [FIRS guidance](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://www.cac.gov.ng/).
+For baseline compliance context, review [FIRS guidance](https://www.firs.gov.ng/) and [Corporate Affairs Commission (CAC)](https://pre.cac.gov.ng/).
 
 ## Structure 1: Operating as an Individual (Unstructured Income)
 
@@ -5801,3 +5801,4 @@ And in the long term, that difference determines both profitability and stabilit
   ...blogMarkdownOverridesBatchApr21,
   ...blogMarkdownOverridesBatchApr21Extra
 } as const;
+

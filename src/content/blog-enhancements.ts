@@ -30,7 +30,7 @@ In 2026 practice, FIG analysis is incomplete without a Statutory Residence Test 
 * assess Automatic UK Tests
 * then apply Sufficient Ties only if needed
 
-Use [RDR3 Statutory Residence Test guidance](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt) alongside your FIG timeline. For the broader framework, keep [HMRC residence, domicile and remittance basis manual](https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis-manual) bookmarked.
+Use [RDR3 Statutory Residence Test guidance](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt) alongside your FIG timeline. For the broader framework, keep [HMRC residence, domicile and remittance basis manual](https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis) bookmarked.
 
 ## Why This Raises Decision Quality
 
@@ -58,7 +58,7 @@ For structure-level context, read [Nigeria SME Tax Compliance Checklist](/blog/n
 
 Cross-check operational assumptions against primary sources:
 
-* [CAC official portal](https://www.cac.gov.ng/)
+* [CAC official portal](https://pre.cac.gov.ng/)
 * [Joint Tax Board](https://jtb.gov.ng/)
 * [FIRS corporate tax overview](https://www.firs.gov.ng/tax-types/companies-income-tax-cit/)
 
@@ -136,7 +136,7 @@ For each recurring mistake in your team, create one permanent control:
 
 Keep your rules aligned with official and technical references:
 
-* [CAC](https://www.cac.gov.ng/)
+* [CAC](https://pre.cac.gov.ng/)
 * [Joint Tax Board](https://jtb.gov.ng/)
 * [FIRS](https://www.firs.gov.ng/)
 * [PwC Nigeria tax summary](https://taxsummaries.pwc.com/nigeria)
@@ -159,7 +159,7 @@ For threshold-sensitive businesses, add an early-warning line item linked to [Wh
 ## External Validation Touchpoints
 
 * [FIRS CIT page](https://www.firs.gov.ng/tax-types/companies-income-tax-cit/)
-* [CAC registration portal](https://www.cac.gov.ng/)
+* [CAC registration portal](https://pre.cac.gov.ng/)
 * [JTB information page](https://jtb.gov.ng/)`,
 
   "how-to-structure-your-business-to-legally-reduce-tax-in-nigeria-2026": `## Structural Depth Layer: Classification Risk Map
@@ -189,7 +189,7 @@ Primary references:
 
 * [RDR3 Statutory Residence Test](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt)
 * [Tax on foreign income](https://www.gov.uk/tax-foreign-income)
-* [Reform to taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/tax-on-foreign-income/reform-to-the-taxation-of-non-uk-domiciled-individuals)
+* [Reform to taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/reforming-the-taxation-of-non-uk-domiciled-individuals)
 
 ## Decision Utility
 
@@ -205,7 +205,7 @@ For 2026 readers, eligibility must be framed in the newer regime architecture. A
 * How are foreign income streams segmented and evidenced?
 * What is the precise relief window end date?
 
-Use [RDR3 guidance](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt) and [HMRC residence manual](https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis-manual) as primary references.
+Use [RDR3 guidance](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt) and [HMRC residence manual](https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis) as primary references.
 
 ## Case Granularity: Eligibility in Theory vs Defensibility in Practice
 
@@ -294,7 +294,7 @@ The high-value upgrade after registration is profile activation quality:
 
 ## Technical Source Chain
 
-* [CAC](https://www.cac.gov.ng/)
+* [CAC](https://pre.cac.gov.ng/)
 * [JTB](https://jtb.gov.ng/)
 * [FIRS](https://www.firs.gov.ng/)
 
@@ -315,7 +315,7 @@ Run a quarterly TIN hygiene check with three documents: incorporation record, ba
 ## Source Anchors
 
 * [JTB](https://jtb.gov.ng/)
-* [CAC](https://www.cac.gov.ng/)
+* [CAC](https://pre.cac.gov.ng/)
 * [FIRS official site](https://www.firs.gov.ng/)
 
 Then connect this guide to [How to Register a Business for Tax in Nigeria](/blog/how-to-register-a-business-for-tax-in-nigeria-2026) so your setup and usage remain aligned.`,
@@ -393,7 +393,7 @@ If your residency status is uncertain, first complete [Nigeria vs UK Tax Residen
 
 ## Primary References
 
-* [UK HMRC manuals](https://www.gov.uk/hmrc-internal-manuals)
+* [UK HMRC manuals](https://www.gov.uk/hmrc-internal-manuals/residence-domicile-and-remittance-basis)
 * [FIRS official portal](https://www.firs.gov.ng/)`,
 
   "what-happens-when-you-exceed-the-0-cit-threshold-in-nigeria-2026": `## Transition Engineering: Replace Exemption Logic Early
@@ -438,7 +438,7 @@ For current-year accuracy, readers should treat legacy non-dom and remittance-ba
 
 Primary references:
 
-* [Reform to the taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/tax-on-foreign-income/reform-to-the-taxation-of-non-uk-domiciled-individuals)
+* [Reform to the taxation of non-UK domiciled individuals](https://www.gov.uk/government/publications/reforming-the-taxation-of-non-uk-domiciled-individuals)
 * [Tax on foreign income](https://www.gov.uk/tax-foreign-income)
 * [RDR3 Statutory Residence Test](https://www.gov.uk/government/publications/rdr3-statutory-residence-test-srt)
 
@@ -475,4 +475,7 @@ For current thresholds and rates, use official HMRC/GOV.UK pages instead of stat
 
 Two taxpayers can earn the same foreign dividend and still face different outcomes if one is UK resident with full access in-year while the other is non-resident with no UK-source nexus. The legal status sequence decides the result, not the currency alone.`
 } as const;
+
+
+
 
