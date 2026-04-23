@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const thirtyDaysInMs = 30 * 24 * 60 * 60 * 1000;
 
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => {
-    const updatedAt = new Date(`${post.updatedDate}T00:00:00.000Z`);
+    const updatedAt = new Date(post.updatedAt ?? `${post.updatedDate}T00:00:00.000Z`);
     const isFresh = now - updatedAt.getTime() <= thirtyDaysInMs;
 
     return {

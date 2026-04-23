@@ -15,6 +15,8 @@ export interface BlogPost {
   description: string;
   publishedDate: string;
   updatedDate: string;
+  publishedAt?: string;
+  updatedAt?: string;
   readingTime: string;
   category: string;
   tags: ReadonlyArray<string>;
@@ -2348,11 +2350,188 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         answer: "Confirm residency and domicile first, then map each income stream and reporting method."
       }
     ]
+  },
+  {
+    slug: "do-you-need-to-register-a-business-to-receive-foreign-payments-in-nigeria-2026",
+    title: "Do You Need to Register a Business to Receive Foreign Payments in Nigeria?",
+    description:
+      "A practical 2026 guide on whether Nigerians need a registered business before receiving USD, GBP, or EUR payments, and where tax, banking, and documentation rules actually bite.",
+    publishedDate: "2026-04-23",
+    updatedDate: "2026-04-23",
+    publishedAt: "2026-04-23T09:00:00+01:00",
+    updatedAt: "2026-04-23T09:00:00+01:00",
+    readingTime: "15 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Receive foreign payments Nigeria",
+      "Register business Nigeria foreign clients",
+      "Freelancer compliance Nigeria",
+      "Payoneer Wise business registration Nigeria",
+      "Foreign income tax Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/receive-foreign-payments-nigeria-2026.png",
+      alt: "Receive foreign payments in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Receiving foreign payments in Nigeria is not the same question as running a compliant business in Nigeria.",
+          "This guide explains when a freelancer can receive money as an individual, when registration becomes sensible, and what tax records matter either way."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I receive foreign payments in Nigeria without registering a business?",
+        answer: "Yes, many people can receive foreign payments as individuals, but the income may still be taxable and should still be documented."
+      },
+      {
+        question: "Does opening Payoneer or Wise remove the need for tax compliance?",
+        answer: "No. The payment channel does not remove the underlying tax or record-keeping obligation."
+      },
+      {
+        question: "When does business registration become the safer option?",
+        answer: "Usually when the work is ongoing, the income is material, clients request invoices in a business name, or banking and audit discipline matter."
+      },
+      {
+        question: "Do I need CAC registration before my first foreign client pays me?",
+        answer: "Not always, but operating repeatedly without a clear structure becomes harder to defend over time."
+      },
+      {
+        question: "What documents should I keep for foreign payments?",
+        answer: "Keep contracts, invoices, platform statements, bank records, and a clear income log that ties receipts back to actual work."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "Do Nigerians Pay Tax on Foreign Income?",
+        url: "/blog/do-nigerians-pay-tax-on-foreign-income-2026"
+      },
+      {
+        label: "How to Register a Business for Tax in Nigeria",
+        url: "/blog/how-to-register-a-business-for-tax-in-nigeria-2026"
+      },
+      {
+        label: "How to Get a TIN in Nigeria",
+        url: "/blog/how-to-get-a-tax-identification-number-tin-in-nigeria-2026"
+      }
+    ],
+    references: [
+      {
+        label: "Nigeria Revenue Service transition page from FIRS",
+        url: "https://www.firs.gov.ng/"
+      },
+      {
+        label: "CAC registration portal",
+        url: "https://pre.cac.gov.ng/"
+      },
+      {
+        label: "Personal Income Tax Act PDF",
+        url: "https://old.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf"
+      },
+      {
+        label: "FIRS TaxPro Max non-residence registration request",
+        url: "https://taxpromax.firs.gov.ng/nrtpPreregistrationPage"
+      }
+    ]
+  },
+  {
+    slug: "how-much-tax-do-freelancers-pay-in-nigeria-rates-examples-2026",
+    title: "How Much Tax Do Freelancers Pay in Nigeria? (Rates and Examples)",
+    description:
+      "A practical 2026 breakdown of Nigerian freelancer tax, including the personal income tax bands, relief allowance, minimum tax rule, and worked examples.",
+    publishedDate: "2026-04-23",
+    updatedDate: "2026-04-23",
+    publishedAt: "2026-04-23T12:30:00+01:00",
+    updatedAt: "2026-04-23T12:30:00+01:00",
+    readingTime: "17 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Freelancer tax Nigeria",
+      "Personal income tax rates Nigeria",
+      "Nigeria PIT examples",
+      "Foreign income freelancer Nigeria",
+      "Tax bands Nigeria 2026"
+    ],
+    featuredImage: {
+      src: "/blog/freelancer-tax-rates-nigeria-2026.png",
+      alt: "Freelancer tax rates in Nigeria featured image"
+    },
+    sections: [
+      {
+        heading: "",
+        paragraphs: [
+          "Freelancers in Nigeria do not have a single flat tax rate; the outcome depends on reliefs, chargeable income, and how cleanly the records have been kept.",
+          "This guide walks through the core tax bands, common examples, and the mistakes that make a simple filing harder than it needs to be."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What tax rate do freelancers pay in Nigeria?",
+        answer: "Freelancers usually fall under personal income tax rules, where chargeable income is taxed on graduated bands from 7% to 24% after reliefs."
+      },
+      {
+        question: "Is there a minimum tax for freelancers in Nigeria?",
+        answer: "Yes. The cited rule in the Personal Income Tax Act applies a minimum tax of 1% of gross income where income is less than NGN 300,000 per year."
+      },
+      {
+        question: "Do freelancers pay tax only on withdrawals from Payoneer or Wise?",
+        answer: "No. The safer approach is to track earnings when earned, then reconcile those earnings to withdrawals and bank receipts."
+      },
+      {
+        question: "Can freelancers deduct expenses before tax?",
+        answer: "Allowable business expenses matter, but your filing position depends on proper records and the way your total income is computed under the applicable rules."
+      },
+      {
+        question: "Should a freelancer stay as an individual or register a company?",
+        answer: "That depends on income level, client profile, record discipline, and whether a company structure produces a cleaner long-term compliance position."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "How to Declare PayPal, Payoneer, and Stripe Income in Nigeria",
+        url: "/blog/how-to-declare-paypal-payoneer-and-stripe-income-in-nigeria-2026"
+      },
+      {
+        label: "Best Business Structures for Nigerians Earning in USD/GBP",
+        url: "/blog/best-business-structures-for-nigerians-earning-in-usd-gbp-2026"
+      },
+      {
+        label: "Do Nigerians Pay Tax on Foreign Income?",
+        url: "/blog/do-nigerians-pay-tax-on-foreign-income-2026"
+      }
+    ],
+    references: [
+      {
+        label: "Personal Income Tax Act PDF",
+        url: "https://old.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf"
+      },
+      {
+        label: "FIRS taxes and rates PDF",
+        url: "https://old.firs.gov.ng/wp-content/uploads/2020/11/TAX-TYPES-AND-RATES.pdf"
+      },
+      {
+        label: "Nigeria Revenue Service transition page from FIRS",
+        url: "https://www.firs.gov.ng/"
+      }
+    ]
   }
 ] as const;
 
 export function getAllBlogPosts(): ReadonlyArray<BlogPost> {
-  return blogPosts;
+  return [...blogPosts].sort((left, right) => {
+    const leftDate = new Date(left.publishedAt ?? left.publishedDate).getTime();
+    const rightDate = new Date(right.publishedAt ?? right.publishedDate).getTime();
+
+    if (leftDate === rightDate) {
+      return right.title.localeCompare(left.title);
+    }
+
+    return rightDate - leftDate;
+  });
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

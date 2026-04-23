@@ -179,10 +179,18 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
 
 function formatDate(dateInput: string): string {
   const parsed = new Date(dateInput);
+  const includeTime = dateInput.includes("T");
+
   return new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
+    ...(includeTime
+      ? {
+          hour: "2-digit" as const,
+          minute: "2-digit" as const
+        }
+      : {})
   }).format(parsed);
 }
 
@@ -203,6 +211,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const featureImageUrl = post.featuredImage ? `${siteConfig.siteUrl}${post.featuredImage.src}` : undefined;
+  const publishedTime = post.publishedAt ?? post.publishedDate;
+  const modifiedTime = post.updatedAt ?? post.updatedDate;
 
   return {
     title: post.title,
@@ -214,8 +224,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.description,
       type: "article",
-      publishedTime: post.publishedDate,
-      modifiedTime: post.updatedDate,
+      publishedTime,
+      modifiedTime,
       url: `${siteConfig.siteUrl}/blog/${post.slug}`,
       images: featureImageUrl
         ? [
@@ -262,8 +272,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
     "@id": `${siteConfig.siteUrl}/blog/${post.slug}#article`,
     headline: post.title,
     description: post.description,
-    datePublished: post.publishedDate,
-    dateModified: post.updatedDate,
+    datePublished: post.publishedAt ?? post.publishedDate,
+    dateModified: post.updatedAt ?? post.updatedDate,
     author: {
       "@id": `${siteConfig.siteUrl}#author`
     },
@@ -329,9 +339,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         <div className="flex flex-wrap items-center gap-2 text-sm text-[#486789]">
           <span>By {authorProfile.name}</span>
           <span aria-hidden="true">|</span>
-          <span>Published: {formatDate(post.publishedDate)}</span>
+          <span>Published: {formatDate(post.publishedAt ?? post.publishedDate)}</span>
           <span aria-hidden="true">|</span>
-          <span>Updated: {formatDate(post.updatedDate)}</span>
+          <span>Updated: {formatDate(post.updatedAt ?? post.updatedDate)}</span>
           <span aria-hidden="true">|</span>
           <span>{post.readingTime}</span>
         </div>

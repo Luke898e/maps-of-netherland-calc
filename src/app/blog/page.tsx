@@ -17,10 +17,18 @@ export const metadata: Metadata = {
 
 function formatDate(dateInput: string): string {
   const parsed = new Date(dateInput);
+  const includeTime = dateInput.includes("T");
+
   return new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
+    ...(includeTime
+      ? {
+          hour: "2-digit" as const,
+          minute: "2-digit" as const
+        }
+      : {})
   }).format(parsed);
 }
 
@@ -38,8 +46,8 @@ export default function BlogPage(): React.JSX.Element {
       "@type": "BlogPosting",
       headline: post.title,
       description: post.description,
-      datePublished: post.publishedDate,
-      dateModified: post.updatedDate,
+      datePublished: post.publishedAt ?? post.publishedDate,
+      dateModified: post.updatedAt ?? post.updatedDate,
       url: `${siteConfig.siteUrl}/blog/${post.slug}`,
       image: post.featuredImage ? `${siteConfig.siteUrl}${post.featuredImage.src}` : undefined
     }))
@@ -84,7 +92,7 @@ export default function BlogPage(): React.JSX.Element {
               <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.08em] text-[#4b6890]">
                 <span>{post.category}</span>
                 <span aria-hidden="true">|</span>
-                <span>{formatDate(post.publishedDate)}</span>
+                <span>{formatDate(post.publishedAt ?? post.publishedDate)}</span>
                 <span aria-hidden="true">|</span>
                 <span>{post.readingTime}</span>
               </div>
