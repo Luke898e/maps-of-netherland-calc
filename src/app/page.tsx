@@ -105,8 +105,8 @@ function slugify(value: string): string {
 
 export default function HomePage(): React.JSX.Element {
   const allBlogPosts = getAllBlogPosts();
-  const latestBlogPosts = allBlogPosts.slice(0, 8);
-  const remainingBlogPosts = allBlogPosts.slice(8);
+  const latestBlogPosts = allBlogPosts.slice(0, 10);
+  const remainingBlogPosts = allBlogPosts.slice(10);
   const knowledgeSectionLinks = homeKnowledgeSections.map((section) => ({
     id: `knowledge-${slugify(section.title)}`,
     label: section.title
@@ -489,7 +489,7 @@ export default function HomePage(): React.JSX.Element {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {latestBlogPosts.map((post) => (
             <Card key={post.slug} className="border-[#d4e3f8]">
               <CardHeader>

@@ -4,8 +4,6 @@ import { getAllBlogPosts } from "@/content/blog-posts";
 import { changelogEntries } from "@/content/changelog";
 import { siteConfig } from "@/lib/site-config";
 
-export const revalidate = 60 * 60;
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllBlogPosts();
 

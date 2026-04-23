@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "AdSense Readiness Checklist",
-  description: "50+ point AdSense-style readiness checklist with pass/fix/pending status.",
+  description: "50+ point AdSense-style readiness checklist with implementation tracking.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/adsense-readiness`
   },
@@ -29,7 +29,7 @@ type ChecklistByCategory = Record<string, ResolvedChecklistItem[]>;
 const statusLabel = {
   pass: "Pass",
   fixed: "Fix Applied",
-  pending: "Action Required"
+  pending: "Queued"
 } as const;
 
 const statusClasses = {
@@ -76,7 +76,7 @@ function resolveChecklistStatus(item: ChecklistItem): ChecklistStatus {
 }
 
 export default function AdsenseReadinessPage(): React.JSX.Element {
-  const isPublicReadinessPageEnabled = process.env.NEXT_PUBLIC_EXPOSE_READINESS_PAGE === "true";
+  const isPublicReadinessPageEnabled = process.env.EXPOSE_READINESS_PAGE === "true";
   if (!isPublicReadinessPageEnabled) {
     notFound();
   }
@@ -127,7 +127,7 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
           </div>
           {isAuditMode ? (
             <div className="rounded-md border border-[#dce8f9] bg-[#f7fbff] p-3">
-              <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Action Required</p>
+              <p className="text-xs uppercase tracking-[0.08em] text-[#4b6890]">Queued</p>
               <p className="text-2xl font-semibold text-[#0f3364]">{pendingItems.length}</p>
             </div>
           ) : (
@@ -165,7 +165,7 @@ export default function AdsenseReadinessPage(): React.JSX.Element {
       {isAuditMode ? (
         <Card className="border-[#d4e3f8]">
           <CardHeader>
-            <CardTitle className="text-xl text-[#0f3364]">Action Required Before Submission</CardTitle>
+            <CardTitle className="text-xl text-[#0f3364]">Implementation Queue</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             {pendingItems.map((item) => (
