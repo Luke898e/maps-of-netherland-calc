@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight, FileCheck2, ShieldCheck, Workflow } from "lucide-react";
 
@@ -492,6 +493,17 @@ export default function HomePage(): React.JSX.Element {
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {latestBlogPosts.map((post) => (
             <Card key={post.slug} className="border-[#d4e3f8]">
+              {post.featuredImage ? (
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-2xl border-b border-[#d4e3f8]">
+                  <Image
+                    src={post.featuredImage.src}
+                    alt={post.featuredImage.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+              ) : null}
               <CardHeader>
                 <CardTitle className="font-[var(--font-heading)] text-xl text-[#0f3364]">{post.title}</CardTitle>
                 <CardDescription className="text-base leading-7">{post.description}</CardDescription>
