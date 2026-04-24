@@ -37,15 +37,36 @@ const personProfileUrls = authorProfile.profileLinks
   .filter((link) => link.startsWith("http://") || link.startsWith("https://"))
   .filter((link) => !link.startsWith(siteConfig.siteUrl));
 
+const organizationSameAs = [
+  siteConfig.githubProfile,
+  siteConfig.linkedInProfile,
+  siteConfig.professionalProfile
+].filter((value): value is string => typeof value === "string" && value.length > 0);
+
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${siteConfig.siteUrl}#organization`,
+  legalName: siteConfig.legalName,
+  alternateName: ["Global Tax Suite", "map-of-netherlands.co.uk"],
   name: siteConfig.siteName,
   url: siteConfig.siteUrl,
   email: siteConfig.contactEmail,
-  sameAs: [siteConfig.githubProfile],
-  logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`
+  telephone: siteConfig.contactPhone,
+  sameAs: organizationSameAs,
+  logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`,
+  description:
+    "Educational tax-compliance screening platform for Nigeria corporate tax workflows and UK FIG eligibility analysis.",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: siteConfig.contactEmail,
+      telephone: siteConfig.contactPhone,
+      availableLanguage: ["en"],
+      areaServed: ["NG", "GB"]
+    }
+  ]
 };
 
 const personStructuredData = {
@@ -60,6 +81,56 @@ const personStructuredData = {
   },
   url: siteConfig.siteUrl,
   sameAs: personProfileUrls
+};
+
+const localBusinessStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${siteConfig.siteUrl}#business`,
+  alternateName: ["Global Tax Suite", "map-of-netherlands.co.uk"],
+  name: siteConfig.siteName,
+  url: siteConfig.siteUrl,
+  logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`,
+  image: absoluteOgImageUrl,
+  telephone: siteConfig.contactPhone,
+  email: siteConfig.contactEmail,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.address.streetAddress,
+    addressLocality: siteConfig.address.addressLocality,
+    addressRegion: siteConfig.address.addressRegion,
+    postalCode: siteConfig.address.postalCode,
+    addressCountry: siteConfig.address.addressCountryCode
+  },
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "Nigeria"
+    },
+    {
+      "@type": "Country",
+      name: "United Kingdom"
+    }
+  ],
+  sameAs: organizationSameAs
+};
+
+const serviceStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteConfig.siteUrl}#service`,
+  serviceType: "Tax compliance screening and eligibility analysis",
+  provider: {
+    "@id": `${siteConfig.siteUrl}#organization`
+  },
+  areaServed: ["NG", "GB"],
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: siteConfig.siteUrl
+  },
+  name: "Global Mobility and Tax Screening Service",
+  description:
+    "Decision-support tools for Nigeria company tax screening, audit readiness, and UK FIG regime timeline eligibility."
 };
 
 export const metadata: Metadata = {
@@ -186,6 +257,18 @@ export default function RootLayout({
               },
               image: absoluteOgImageUrl
             })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceStructuredData)
           }}
         />
         <GoogleCmpScripts />

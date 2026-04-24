@@ -32,6 +32,8 @@ const productPages = [
 const trustPages = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/accessibility-statement", label: "Accessibility Statement" },
+  { href: "/vpat", label: "VPAT" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/cookie-policy", label: "Cookie Policy" },
   { href: "/consent", label: "Consent" },

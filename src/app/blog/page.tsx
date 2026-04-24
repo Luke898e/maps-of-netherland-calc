@@ -53,6 +53,25 @@ export default function BlogPage(): React.JSX.Element {
     }))
   };
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteConfig.siteUrl}/blog`
+      }
+    ]
+  };
+
   return (
     <div className="mx-auto max-w-5xl space-y-8">
       <AdSenseScript />
@@ -60,6 +79,12 @@ export default function BlogPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(blogStructuredData)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData)
         }}
       />
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ConsentPreferencesButton } from "@/components/consent-preferences-button";
+import { siteConfig } from "@/lib/site-config";
 
 export function SiteFooter(): React.JSX.Element {
   return (
@@ -12,6 +13,20 @@ export function SiteFooter(): React.JSX.Element {
             Professional screening tools and technical tax documentation for Nigeria and UK cross-border planning.
             Compliance content is educational and not legal advice.
           </p>
+          <div className="grid gap-1 text-sm">
+            <Link
+              href={`mailto:${siteConfig.contactEmail}`}
+              className="text-[#17467f] transition-colors hover:text-[#0f3364]"
+            >
+              Email: {siteConfig.contactEmail}
+            </Link>
+            <Link
+              href={`tel:${siteConfig.contactPhoneDial}`}
+              className="text-[#17467f] transition-colors hover:text-[#0f3364]"
+            >
+              Phone: {siteConfig.contactPhone}
+            </Link>
+          </div>
           <p className="text-xs uppercase tracking-[0.12em] text-[#567396]">Updated continuously with public changelog records</p>
         </div>
 
@@ -46,6 +61,10 @@ export function SiteFooter(): React.JSX.Element {
             </Link>
             <Link href="/consent" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Consent</Link>
             <Link href="/disclaimer" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Disclaimer</Link>
+            <Link href="/accessibility-statement" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
+              Accessibility Statement
+            </Link>
+            <Link href="/vpat" className="text-[#17467f] transition-colors hover:text-[#0f3364]">VPAT</Link>
             <Link href="/terms-of-use" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Terms</Link>
             <Link href="/editorial-policy" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
               Editorial Policy
@@ -59,9 +78,10 @@ export function SiteFooter(): React.JSX.Element {
       </div>
       <div className="border-t border-[#dfebfa] bg-white/70">
         <p className="mx-auto w-full max-w-[86rem] px-4 py-3 text-xs text-[#567396] sm:px-6 lg:px-8">
-          © 2026 Global Mobility & Tax Suite. All rights reserved.
+          Copyright 2026 Global Mobility & Tax Suite. All rights reserved.
         </p>
       </div>
     </footer>
   );
 }
+

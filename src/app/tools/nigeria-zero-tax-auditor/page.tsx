@@ -41,6 +41,31 @@ const nigeriaJsonLd = {
   ]
 };
 
+const nigeriaBreadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Tools",
+      item: `${siteConfig.siteUrl}/#tools`
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Nigeria Zero-Tax Auditor",
+      item: `${siteConfig.siteUrl}/tools/nigeria-zero-tax-auditor`
+    }
+  ]
+};
+
 export default function NigeriaZeroTaxAuditorPage(): React.JSX.Element {
   const methodologySteps = [
     "Validate annual turnover, asset value, assessable profit, and sector using Zod before any calculation runs.",
@@ -55,6 +80,10 @@ export default function NigeriaZeroTaxAuditorPage(): React.JSX.Element {
     <div className="space-y-8">
       <AdSenseScript />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nigeriaJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(nigeriaBreadcrumbJsonLd) }}
+      />
       <section className="surface-hero space-y-3 p-8 sm:p-10">
         <p className="section-kicker">Nigeria Compliance Tool</p>
         <h1 className="text-4xl font-semibold text-[#0f3364]">

@@ -13,13 +13,10 @@ const primaryNavItems = [
   { href: "/tools/nigeria-zero-tax-auditor", label: "Nigeria Auditor" },
   { href: "/tools/uk-fig-regime-eligibility", label: "UK FIG Tool" },
   { href: "/blog", label: "Blog" },
-  { href: "/case-studies", label: "Case Studies" },
   { href: "/support", label: "Support" }
 ];
 
 const utilityNavItems = [
-  { href: "/updates", label: "Updates" },
-  { href: "/status", label: "Status" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
 ];

@@ -17,7 +17,7 @@ import { externalReferences } from "@/content/references";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Nigeria and UK Tax Compliance Tools for 2026",
   description:
     "2026 Global Mobility & Tax Suite homepage with access to the Nigeria Zero-Tax Auditor and UK FIG Regime Eligibility Tool.",
   alternates: {
@@ -126,6 +126,19 @@ export default function HomePage(): React.JSX.Element {
     }))
   };
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      }
+    ]
+  };
+
   return (
     <div className="space-y-10">
       <AdSenseScript />
@@ -133,6 +146,12 @@ export default function HomePage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqStructuredData)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData)
         }}
       />
 
@@ -474,6 +493,63 @@ export default function HomePage(): React.JSX.Element {
             View Version Changelog
           </Link>
         </div>
+      </section>
+
+      <section id="quick-inquiry" className="surface-panel p-6 scroll-mt-28 sm:p-8">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Quick Inquiry Form</h2>
+        <p className="mt-3 max-w-3xl leading-7 text-[#203754]">
+          Start a support request directly from the homepage. This form pre-fills the support workflow so you can
+          continue with full details on the dedicated support page.
+        </p>
+        <form action="/support" method="get" className="mt-5 grid gap-3 sm:grid-cols-2">
+          <input type="hidden" name="type" value="question" />
+          <input type="hidden" name="path" value="/" />
+          <input type="hidden" name="tool" value="Homepage Quick Inquiry" />
+          <label className="flex flex-col gap-1 text-sm text-[#203754]">
+            Name
+            <input
+              type="text"
+              name="name"
+              autoComplete="name"
+              className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"
+              placeholder="Your full name"
+            />
+          </label>
+          <label className="flex flex-col gap-1 text-sm text-[#203754]">
+            Email
+            <input
+              type="email"
+              name="email"
+              autoComplete="email"
+              className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"
+              placeholder="you@example.com"
+            />
+          </label>
+          <label className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
+            Topic
+            <input
+              type="text"
+              name="title"
+              className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"
+              placeholder="What do you need help with?"
+            />
+          </label>
+          <label className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
+            Message
+            <textarea
+              name="details"
+              rows={4}
+              className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"
+              placeholder="Share brief context and we will carry this into the support form."
+            />
+          </label>
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968] sm:w-fit"
+          >
+            Continue to Support
+          </button>
+        </form>
       </section>
 
       <section id="latest-blog" className="space-y-6 surface-panel p-6 scroll-mt-28 sm:p-8">

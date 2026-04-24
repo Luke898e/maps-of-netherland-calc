@@ -41,6 +41,31 @@ const ukFigJsonLd = {
   ]
 };
 
+const ukFigBreadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Tools",
+      item: `${siteConfig.siteUrl}/#tools`
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "UK FIG Regime Eligibility Tool",
+      item: `${siteConfig.siteUrl}/tools/uk-fig-regime-eligibility`
+    }
+  ]
+};
+
 export default function UkFigRegimeEligibilityPage(): React.JSX.Element {
   const methodologySteps = [
     "Validate the arrival date and confirm that a full 10-year residency timeline has been supplied.",
@@ -54,6 +79,10 @@ export default function UkFigRegimeEligibilityPage(): React.JSX.Element {
     <div className="space-y-8">
       <AdSenseScript />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ukFigJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ukFigBreadcrumbJsonLd) }}
+      />
       <section className="surface-hero space-y-3 p-8 sm:p-10">
         <p className="section-kicker">UK Compliance Tool</p>
         <h1 className="text-4xl font-semibold text-[#0f3364]">

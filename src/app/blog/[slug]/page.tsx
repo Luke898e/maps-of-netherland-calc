@@ -303,6 +303,31 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
         }
       : null;
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteConfig.siteUrl}/blog`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${siteConfig.siteUrl}/blog/${post.slug}`
+      }
+    ]
+  };
+
   return (
     <article className="mx-auto max-w-4xl space-y-8">
       <AdSenseScript />
@@ -320,6 +345,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps): Promi
           }}
         />
       ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData)
+        }}
+      />
 
       <header className="surface-hero space-y-4 p-8 sm:p-10">
         <p className="section-kicker">{post.category}</p>

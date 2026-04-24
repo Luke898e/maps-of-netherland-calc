@@ -7,7 +7,7 @@ export function SiteLogo(): React.JSX.Element {
       <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-[#d2e1f6] bg-white shadow-[0_10px_26px_-18px_rgba(15,63,121,0.75)] ring-1 ring-[#ebf3ff] transition-transform duration-200 group-hover:-translate-y-0.5">
         <Image
           src="/brand/logo-emblem.svg"
-          alt="Global Tax Suite logo emblem"
+          alt="Global Tax Suite logo"
           fill
           priority
           sizes="44px"

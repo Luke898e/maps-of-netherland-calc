@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/case-studies", changeFrequency: "weekly", priority: 0.8 },
     { route: "/about", changeFrequency: "monthly", priority: 0.7 },
     { route: "/contact", changeFrequency: "monthly", priority: 0.7 },
+    { route: "/accessibility-statement", changeFrequency: "monthly", priority: 0.68 },
+    { route: "/vpat", changeFrequency: "monthly", priority: 0.66 },
     { route: "/privacy-policy", changeFrequency: "monthly", priority: 0.7 },
     { route: "/cookie-policy", changeFrequency: "monthly", priority: 0.7 },
     { route: "/consent", changeFrequency: "monthly", priority: 0.65 },

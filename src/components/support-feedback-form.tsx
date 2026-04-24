@@ -44,14 +44,17 @@ export function SupportFeedbackForm(): React.JSX.Element {
   const initialType = searchParams.get("type");
   const initialTool = searchParams.get("tool");
   const initialPath = searchParams.get("path");
+  const initialTitle = searchParams.get("title");
+  const initialEmail = searchParams.get("email");
+  const initialDetails = searchParams.get("details");
 
   const [state, setState] = useState<FeedbackState>({
     type: initialType === "bug" || initialType === "feature" || initialType === "question" ? initialType : "bug",
     tool: initialTool ?? "Global Mobility & Tax Suite",
     pagePath: initialPath ?? "/",
-    title: "",
-    email: "",
-    details: "",
+    title: initialTitle ?? "",
+    email: initialEmail ?? "",
+    details: initialDetails ?? "",
     website: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
