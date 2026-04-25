@@ -30,6 +30,48 @@ const policyNavItems = [
   { href: "/consent", label: "Consent" }
 ];
 
+const mobileNavGroups = [
+  {
+    title: "Product",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/tools/nigeria-zero-tax-auditor", label: "Zero-Tax Auditor" },
+      { href: "/tools/uk-fig-regime-eligibility", label: "FIG Eligibility" },
+      { href: "/pricing", label: "Pricing" },
+      { href: "/book-demo", label: "Book Demo" },
+      { href: "/blog", label: "Blog" },
+      { href: "/case-studies", label: "Case Studies" },
+      { href: "/testimonials", label: "Testimonials" },
+      { href: "/support", label: "Support" },
+      { href: "/updates", label: "Updates" },
+      { href: "/status", label: "Status" }
+    ]
+  },
+  {
+    title: "Company",
+    links: [
+      { href: "/about", label: "About" },
+      { href: "/contact", label: "Contact" },
+      { href: "/sitemap", label: "HTML Sitemap" },
+      { href: "/sitemap.xml", label: "XML Sitemap" },
+      { href: "/feed.xml", label: "RSS Feed" }
+    ]
+  },
+  {
+    title: "Legal",
+    links: [
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/cookie-policy", label: "Cookie Policy" },
+      { href: "/consent", label: "Consent" },
+      { href: "/disclaimer", label: "Disclaimer" },
+      { href: "/terms-of-use", label: "Terms" },
+      { href: "/editorial-policy", label: "Editorial Policy" },
+      { href: "/accessibility-statement", label: "Accessibility Statement" },
+      { href: "/vpat", label: "VPAT" }
+    ]
+  }
+] as const;
+
 function isActiveRoute(pathname: string, href: string): boolean {
   if (href === "/") {
     return pathname === "/";
@@ -208,46 +250,34 @@ export function SiteHeader(): React.JSX.Element {
               </div>
             ) : null}
 
-            <nav aria-label="Mobile primary navigation" className="mt-4 grid gap-2">
-              {primaryNavItems.map((item) => {
-                const active = isActiveRoute(pathname, item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    aria-current={active ? "page" : undefined}
-                    className={cn(
-                      "rounded-md border px-3 py-2.5 text-sm font-semibold transition-colors",
-                      active
-                        ? "border-[#bed5f2] bg-[#eaf2ff] text-[#0f3364]"
-                        : "border-[#d4e3f8] bg-white text-[#17467f] hover:bg-[#eaf2ff] hover:text-[#0f3364]"
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-            <nav aria-label="Mobile utility navigation" className="mt-4 grid gap-2 border-t border-[#dfebfa] pt-4">
-              {[...utilityNavItems, ...policyNavItems].map((item) => {
-                const active = isActiveRoute(pathname, item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    aria-current={active ? "page" : undefined}
-                    className={cn(
-                      "rounded-md px-3 py-2 text-sm transition-colors",
-                      active ? "bg-[#eaf2ff] font-semibold text-[#0f3364]" : "text-[#285382] hover:bg-[#f2f7ff]"
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
+            <div className="mt-4 max-h-[calc(100vh-11.5rem)] space-y-4 overflow-y-auto pr-1">
+              {mobileNavGroups.map((group) => (
+                <nav key={group.title} aria-label={`Mobile ${group.title} navigation`} className="space-y-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#3a5f8a]">{group.title}</p>
+                  <div className="grid gap-2">
+                    {group.links.map((item) => {
+                      const active = isActiveRoute(pathname, item.href);
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          aria-current={active ? "page" : undefined}
+                          className={cn(
+                            "rounded-md border px-3 py-2.5 text-sm transition-colors",
+                            active
+                              ? "border-[#bed5f2] bg-[#eaf2ff] font-semibold text-[#0f3364]"
+                              : "border-[#d4e3f8] bg-white text-[#17467f] hover:bg-[#eaf2ff] hover:text-[#0f3364]"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </nav>
+              ))}
+            </div>
           </aside>
         </div>
       ) : null}

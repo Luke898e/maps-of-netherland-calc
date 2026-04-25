@@ -252,7 +252,7 @@ export default function HomePage(): React.JSX.Element {
   };
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-14">
       <AdSenseScript />
       <script
         type="application/ld+json"
@@ -270,6 +270,26 @@ export default function HomePage(): React.JSX.Element {
       <section className="surface-hero p-8 sm:p-10 lg:p-12">
         <div className="grid gap-7 lg:grid-cols-[1.3fr_1fr] lg:items-start">
           <div>
+            <div className="mb-4 inline-flex items-center gap-3 rounded-xl border border-[#d5e3f8] bg-white/90 px-3 py-2">
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md border border-[#d6e3f7] bg-white">
+                <Image
+                  src="/brand/logo-emblem.svg"
+                  alt="Global Tax Suite emblem"
+                  fill
+                  sizes="36px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-5 w-[132px]">
+                <Image
+                  src="/brand/logo-wordmark.svg"
+                  alt="Global Tax Suite wordmark"
+                  fill
+                  sizes="132px"
+                  className="object-contain object-left"
+                />
+              </div>
+            </div>
             <p className="section-kicker">Tax Help for Real Cases</p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight text-[#0e325f] sm:text-5xl">
               UK and Nigeria Tax Compliance Tools for London and Lagos Teams
@@ -303,6 +323,16 @@ export default function HomePage(): React.JSX.Element {
             </p>
           </div>
           <div className="space-y-3 rounded-xl border border-[#d3e3f7] bg-white/85 p-4">
+            <figure className="relative overflow-hidden rounded-lg border border-[#d3e3f7]">
+              <Image
+                src="/og/global-tax-suite-og.svg"
+                alt="Global Tax Suite dashboard preview"
+                width={1200}
+                height={630}
+                className="h-auto w-full object-cover"
+                priority
+              />
+            </figure>
             {heroHighlights.map((item) => (
               <div key={item.title} className="rounded-lg border border-[#d9e6f8] bg-[#f8fbff] p-3">
                 <div className="flex items-start gap-3">
