@@ -2518,6 +2518,324 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         url: "https://www.firs.gov.ng/"
       }
     ]
+  },
+  {
+    slug: "payoneer-vs-wise-for-nigerians-tax-compliance-2026",
+    title: "Is Payoneer or Wise Better for Nigerians? (Tax and Compliance Perspective)",
+    description:
+      "A practical 2026 comparison of Payoneer and Wise for Nigerians who want cleaner records, fewer compliance problems, and fewer surprises during tax review.",
+    publishedDate: "2026-04-25",
+    updatedDate: "2026-04-25",
+    publishedAt: "2026-04-25T09:00:00+01:00",
+    updatedAt: "2026-04-25T09:00:00+01:00",
+    readingTime: "13 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Payoneer or Wise Nigeria",
+      "Wise vs Payoneer tax compliance Nigeria",
+      "Foreign payment records Nigeria",
+      "Freelancer foreign income Nigeria",
+      "Tax audit evidence Nigeria"
+    ],
+    featuredImage: {
+      src: "/blog/payoneer-vs-wise-for-nigerians-tax-compliance-2026.png",
+      alt: "Payoneer versus Wise for Nigerians featured image"
+    },
+    sections: [
+      {
+        heading: "The short answer before the details",
+        paragraphs: [
+          "Most Nigerians asking whether Payoneer or Wise is better are really asking a compliance question, not a brand-loyalty question. They want to know which platform will leave a cleaner trail when a client asks for proper invoices, when a bank asks what the inflows represent, or when a tax officer wants proof that the money came from real work and not unexplained transfers.",
+          "The practical answer is this: Wise is usually easier when your work already looks like a normal business operation with invoices, named customers, and matching bank references. Payoneer is often easier when you are being paid through marketplaces, platform flows, or clients that already use Payoneer. Neither platform removes Nigerian tax duties. The better option is the one that produces records you can explain line by line."
+        ]
+      },
+      {
+        heading: "Why the tax result is not created by the payment app",
+        paragraphs: [
+          "A recurring mistake is to think tax starts when money reaches a Nigerian bank account. That is too narrow. For a freelancer, consultant, agency owner, or remote contractor, the real compliance file should tie together the contract, invoice, service period, payment notice, platform statement, conversion trail, and final bank settlement. The platform is only one layer in that chain.",
+          "That is why two people can receive the same USD amount and still face very different review outcomes. One person keeps client contracts, sequential invoices, and a monthly earnings log. The other only has screenshots of withdrawals. The tax law does not reward the prettier dashboard. It rewards the person whose records are coherent."
+        ],
+        bullets: [
+          "The payment rail does not determine whether income is taxable.",
+          "Record quality matters more than brand preference.",
+          "Matching business evidence reduces audit friction."
+        ]
+      },
+      {
+        heading: "Where Wise usually has the cleaner compliance edge",
+        paragraphs: [
+          "Wise tends to fit naturally into a straightforward invoice-to-payment workflow. Its help materials show that users can open account details in currencies such as USD, EUR, and GBP, receive payments directly into those balances, and for Wise Business create invoices inside the platform. That matters because it supports a simple story: named customer, named invoice, named transfer, same trail all the way through.",
+          "From a Nigerian compliance angle, that kind of traceability is useful. If a reviewer asks where a GBP inflow came from, you are not forced to start from vague wallet activity. You can often point to the invoice reference, the currency balance, the conversion event, and the transfer to your local bank. That is not legal immunity, but it is cleaner evidence."
+        ],
+        bullets: [
+          "Wise can provide local-style receiving details for major currencies.",
+          "Invoice and payment-reference discipline is easier to maintain.",
+          "A simple chain from client to settlement is easier to defend."
+        ]
+      },
+      {
+        heading: "Where Payoneer can be the better operational choice",
+        paragraphs: [
+          "Payoneer becomes harder to dismiss when your clients or platforms already live inside that ecosystem. Many Nigerians receive payments from marketplaces, affiliate networks, media platforms, and overseas contractors that already know how to send through Payoneer. In those cases, the lowest-friction setup can be the one clients will actually use without delay.",
+          "There is also a practical monitoring advantage in Payoneer’s transaction-status workflow. Payoneer’s own guidance emphasizes status tracking, confirmation, and transaction history. For someone handling repeated cross-border receipts, that can help prove when a payment was pending, completed, or delayed. It does not replace invoice records, but it does help reconcile timing questions."
+        ]
+      },
+      {
+        heading: "Identity checks, business verification, and why mismatches cause trouble",
+        paragraphs: [
+          "Wise states clearly that it may ask for photo ID, proof of address, and sometimes evidence of how funds were obtained. For business profiles, it may also ask for registration details, ownership documents, and proof of trading address. That means the platform itself is already forcing a kind of discipline that many small operators postpone until it becomes painful.",
+          "This is where Nigerian users often create problems for themselves. They open a personal profile, collect regular business income, issue no proper invoices, and later try to explain sustained foreign inflows as casual transfers. If the platform profile, invoice name, bank account name, and tax identity do not line up, the story weakens fast. Use the platform setup that matches reality, not the one that only feels faster on day one."
+        ]
+      },
+      {
+        heading: "What matters if you are audited in Nigeria",
+        paragraphs: [
+          "During a tax review, the question is usually not whether Wise is cheaper or whether Payoneer settles faster. The useful questions are different. Can you show what service produced the income? Can you show the customer? Can you reconcile gross earnings to fees and net receipts? Can you show why one transfer arrived in instalments? Can you explain why business inflows hit a personal account?",
+          "If your answer depends on memory, you are exposed. If your answer depends on a monthly reconciliation pack, you are in a better position. A workable pack usually includes contracts, invoice register, platform statements, bank statements, FX notes, and a spreadsheet that ties every inflow to a commercial event. Either platform can fit into that system. Neither platform can replace it."
+        ],
+        bullets: [
+          "Keep a monthly earnings-to-bank reconciliation.",
+          "Store client-facing invoices, not just wallet screenshots.",
+          "Separate personal transfers from business receipts."
+        ]
+      },
+      {
+        heading: "Wise is often better for service businesses; Payoneer is often better for ecosystem compatibility",
+        paragraphs: [
+          "If you run a clean service business with repeat invoices, named international clients, and a need for a neat accounting trail, Wise is often the easier choice. It supports a record structure that looks familiar to accountants and easier to sort by client, date, and currency. That can matter more than marginal fee debates because it lowers compliance noise later.",
+          "If you depend on client ecosystems or online platforms where Payoneer is already the default, Payoneer may still be the better choice in practice. A theoretically better record system is not useful if clients hesitate to pay you through it. In that case, the smarter move is to accept the operational reality and build stronger supporting records around Payoneer rather than force a payment rail your market will not use."
+        ]
+      },
+      {
+        heading: "A simple decision framework for Nigerians",
+        paragraphs: [
+          "Choose Wise first if most of your work is invoice-based, your client list is stable, and you want a tidy business trail from request to receipt. Choose Payoneer first if the client or platform already pays through Payoneer, or if your earnings depend on networks where it is the path of least resistance. If you use both, keep one rule: one master ledger must reconcile both channels into one tax story.",
+          "That last point matters more than many people think. Using two payment tools is not inherently risky. Using two tools without one unified record is risky. Once a taxpayer starts defending one income stream with one naming style and another stream with a different naming style, errors multiply. Consolidation is the control."
+        ]
+      },
+      {
+        heading: "What I would do in a real-file scenario",
+        paragraphs: [
+          "If I were setting this up for a Nigerian consultant starting from scratch, I would begin by asking what type of payer sends the money. If the answer is direct clients who accept formal invoices, I would lean toward a properly configured Wise workflow. If the answer is a mix of freelance platforms, agency portals, and cross-border marketplace payouts, I would accept Payoneer where it reduces payment friction and then harden the bookkeeping around it.",
+          "Either way, I would insist on the same back-office habits from the first month: a numbered invoice trail, a calendar of when work was done, a note explaining each material inflow, and a clean link from gross foreign income to the amount that eventually lands in naira. The best platform is the one that leaves you with less explaining to do."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does using Wise or Payoneer reduce tax in Nigeria?",
+        answer:
+          "No. The platform you use does not by itself reduce Nigerian tax. What changes your risk profile is how well you document the income, the client, the timing, and the reconciliation."
+      },
+      {
+        question: "Is Wise better than Payoneer for invoices?",
+        answer:
+          "Often yes for straightforward invoice-based work, because Wise supports a cleaner invoice-to-payment trail. But Payoneer may still be better if your clients or platforms already pay through it."
+      },
+      {
+        question: "Can I use a personal account for recurring foreign business income?",
+        answer:
+          "You can receive money that way in some cases, but recurring business inflows are harder to defend if your profile, invoices, and banking trail do not match the real business activity."
+      },
+      {
+        question: "What documents should I keep for a Nigerian tax review?",
+        answer:
+          "Keep contracts, invoices, platform statements, bank statements, FX notes, and a monthly reconciliation that ties each inflow to actual work performed."
+      },
+      {
+        question: "Can I use both Wise and Payoneer?",
+        answer:
+          "Yes, but only if you keep one master ledger that consolidates both channels into a single, consistent tax record."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "Do You Need to Register a Business to Receive Foreign Payments in Nigeria?",
+        url: "/blog/do-you-need-to-register-a-business-to-receive-foreign-payments-in-nigeria-2026"
+      },
+      {
+        label: "How Much Tax Do Freelancers Pay in Nigeria?",
+        url: "/blog/how-much-tax-do-freelancers-pay-in-nigeria-rates-examples-2026"
+      },
+      {
+        label: "How to Declare PayPal, Payoneer, and Stripe Income in Nigeria",
+        url: "/blog/how-to-declare-paypal-payoneer-and-stripe-income-in-nigeria-2026"
+      }
+    ],
+    references: [
+      {
+        label: "Wise Help Centre: Guide to getting verified",
+        url: "https://wise.com/help/articles/2949782/guide-to-getting-verified"
+      },
+      {
+        label: "Wise Help Centre: How can I verify my business?",
+        url: "https://wise.com/help/articles/2769792/how-can-i-verify-my-business"
+      },
+      {
+        label: "Wise Help Centre: How do I receive money to my Wise account details?",
+        url: "https://wise.com/help/articles/2898124/how-do-i-receive-money-to-my-wise-account-details"
+      },
+      {
+        label: "Payoneer: Payment Confirmation Guide",
+        url: "https://www.payoneer.com/resources/general-payments/payment-confirmation-tracking/"
+      },
+      {
+        label: "Federal Inland Revenue Service official portal",
+        url: "https://www.firs.gov.ng/"
+      }
+    ]
+  },
+  {
+    slug: "uk-statutory-residence-test-explained-2026",
+    title: "UK Statutory Residence Test Explained (How to Know If You're UK Tax Resident)",
+    description:
+      "A plain-English 2026 guide to the UK Statutory Residence Test, including the automatic tests, sufficient ties, split years, and why day counting alone is not enough.",
+    publishedDate: "2026-04-25",
+    updatedDate: "2026-04-25",
+    publishedAt: "2026-04-25T12:00:00+01:00",
+    updatedAt: "2026-04-25T12:00:00+01:00",
+    readingTime: "14 min read",
+    category: "UK Tax",
+    tags: [
+      "UK Statutory Residence Test explained",
+      "How to know if you are UK tax resident",
+      "SRT automatic UK tests",
+      "Sufficient ties test UK",
+      "Split year treatment UK"
+    ],
+    featuredImage: {
+      src: "/blog/uk-statutory-residence-test-explained-2026.png",
+      alt: "UK Statutory Residence Test featured image"
+    },
+    sections: [
+      {
+        heading: "Start with the right question",
+        paragraphs: [
+          "When people ask whether they are UK tax resident, they often expect a single day-count rule. The UK system is more exact than that. The Statutory Residence Test, usually shortened to SRT, works in stages. You do not simply total your UK days and stop there. You move through automatic overseas tests, automatic UK tests, and then, if needed, the sufficient ties test.",
+          "That structure matters because the same number of UK days can produce different results depending on your history and your connections. Someone returning after years abroad may be treated differently from someone who has been regularly UK resident. A useful residence analysis is therefore always year-specific and evidence-specific."
+        ]
+      },
+      {
+        heading: "The tax year you are testing is 6 April to 5 April",
+        paragraphs: [
+          "The first practical discipline is to test the right period. UK tax residence is measured by tax year, not calendar year. The relevant year runs from 6 April to 5 April. That sounds basic, but it is where many bad conclusions begin. Someone may say they spent only four months in the UK in 2026 and assume they are safe, even though those months straddle two different tax years.",
+          "If your travel crosses April, you need a proper timeline. Record entry dates, exit dates, workdays, where you slept, and whether you had a home available. Without that timeline, SRT analysis becomes guesswork dressed as certainty."
+        ]
+      },
+      {
+        heading: "Automatic overseas tests can settle the answer quickly",
+        paragraphs: [
+          "HMRC's public guidance says you are usually non-resident if you spent fewer than 16 days in the UK, or fewer than 46 days if you had not been UK resident in the previous three tax years. A separate route also applies where you worked full-time abroad, spent fewer than 91 days in the UK, and had no more than 30 UK workdays. If you clearly satisfy one of those automatic overseas tests, the analysis may end there.",
+          "But this is where people get careless. The words 'usually' and 'worked full-time abroad' are carrying real technical weight. You need evidence of the work pattern, not just a feeling that you were based abroad. A proper file normally includes travel records, calendar logs, payslips or invoices, and a defensible count of UK workdays."
+        ],
+        bullets: [
+          "Fewer than 16 UK days can matter if you were recently UK resident.",
+          "Fewer than 46 UK days can matter if you were not UK resident in the previous three tax years.",
+          "Full-time work abroad can still fail if UK day and workday limits are breached."
+        ]
+      },
+      {
+        heading: "Automatic UK tests can make you resident even if that feels counterintuitive",
+        paragraphs: [
+          "HMRC also lists automatic UK tests. You may be UK resident if you spent 183 or more days in the UK in the tax year. You may also be resident if your only home was in the UK for at least 91 consecutive days and you were present there for at least 30 days in the tax year. Full-time work in the UK over the relevant period can also trigger residence.",
+          "The important point is that these tests are not just about tourism-style day counting. Home availability and work pattern matter. Someone who thinks, 'I was travelling a lot, so I cannot be resident,' may still be resident if the UK was their only real home for the relevant stretch."
+        ]
+      },
+      {
+        heading: "The sufficient ties test is where many border cases are decided",
+        paragraphs: [
+          "If the automatic tests do not settle the issue, the sufficient ties test comes into play. This is where residence depends on both day counts and connecting factors to the UK, such as family, accommodation, work, and prior residence pattern. In plain terms, the more ties you have, the fewer UK days it can take to become resident.",
+          "This is why simple online takes like 'under 183 days means non-resident' are unreliable. That rule is incomplete. A person with family in the UK, a place to stay, repeated workdays, and prior UK residence can become resident on a much lower number of days than 183."
+        ]
+      },
+      {
+        heading: "Split-year treatment is real, but it is not automatic",
+        paragraphs: [
+          "People moving into or out of the UK often hear that the tax year can be split into resident and non-resident parts. That is true in some cases, but HMRC's guidance makes clear that split-year treatment depends on meeting specific conditions. It is not available just because you moved in the middle of the year.",
+          "Operationally, this means you should not assume foreign income earned before arrival is automatically outside UK scope, or that income after departure is automatically free of UK relevance. You need to test the actual split-year case that may apply. That usually requires a cleaner chronology than most people keep on their phones."
+        ]
+      },
+      {
+        heading: "Why SRT matters even more after the 6 April 2025 reform",
+        paragraphs: [
+          "From 6 April 2025, the UK replaced the old remittance-basis framework for current years with the foreign income and gains, or FIG, regime for qualifying new residents. HMRC's 2026 helpsheet says this relief is available only if you are within your first four years of UK residence after at least ten consecutive tax years of non-UK residence. That means SRT now sits even closer to the center of cross-border planning.",
+          "In other words, you cannot sensibly discuss foreign income treatment, FIG claims, or Self Assessment reporting until you have settled the residence question for the relevant tax year. Residence is not a side issue. It is the gatekeeper."
+        ]
+      },
+      {
+        heading: "How I would test a real case",
+        paragraphs: [
+          "A practical review starts with a dated travel table. Then I would mark all UK midnights, identify UK workdays, note any UK home that was available, and record family or accommodation ties. After that, I would test the automatic overseas routes first, then the automatic UK routes, and only then move to sufficient ties if the answer remained open.",
+          "That order matters because it prevents people from overcomplicating simple cases and oversimplifying hard ones. The SRT is not impossible, but it punishes loose chronology. Once the facts are assembled in the right order, the answer is usually much clearer than people expect."
+        ]
+      },
+      {
+        heading: "What to do if you are still unsure",
+        paragraphs: [
+          "If you are close to a threshold, crossing years, or moving with a spouse, do not rely on memory or social-media summaries. Build a file. Keep passport travel data, flight records, UK accommodation evidence, work calendars, and a note explaining where each income stream arose. If your position later needs to be defended, your evidence pack should already exist.",
+          "For most cross-border earners, the safest sequence is simple: settle SRT first, then assess foreign income reporting, then decide whether a FIG claim or foreign tax credit question exists. People who reverse that order usually end up repairing logic later."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is spending fewer than 183 days in the UK enough to be non-resident?",
+        answer:
+          "No. That is only one possible indicator. The automatic overseas tests, automatic UK tests, and sufficient ties test can all matter."
+      },
+      {
+        question: "What period does the UK Statutory Residence Test use?",
+        answer:
+          "It uses the UK tax year, which runs from 6 April to 5 April, not the calendar year."
+      },
+      {
+        question: "Can I become UK resident with fewer than 183 days?",
+        answer:
+          "Yes. If you meet an automatic UK test or enough sufficient ties conditions, you can be UK resident below 183 days."
+      },
+      {
+        question: "Does split-year treatment happen automatically when I move?",
+        answer:
+          "No. Split-year treatment depends on specific conditions. You need to test whether one of the qualifying cases actually applies."
+      },
+      {
+        question: "Why does SRT matter for foreign income in 2026?",
+        answer:
+          "Because current UK foreign income treatment, including possible FIG relief, depends first on whether you are UK resident for the tax year being tested."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "Do You Pay UK Tax on Foreign Income?",
+        url: "/blog/do-you-pay-uk-tax-on-foreign-income-2026"
+      },
+      {
+        label: "How Double Taxation Works Between Nigeria and the UK",
+        url: "/blog/how-double-taxation-works-between-nigeria-and-the-uk-2026"
+      },
+      {
+        label: "UK Non-Domiciled Status Explained",
+        url: "/blog/uk-non-domiciled-status-explained-2026"
+      }
+    ],
+    references: [
+      {
+        label: "GOV.UK: Tax on foreign income - UK residence and tax",
+        url: "https://www.gov.uk/tax-foreign-income/residence"
+      },
+      {
+        label: "GOV.UK: Tax on foreign income - Reporting your foreign income",
+        url: "https://www.gov.uk/tax-foreign-income/paying-tax"
+      },
+      {
+        label: "HMRC helpsheet HS266 Foreign income and gains (FIG) regime (2026)",
+        url: "https://www.gov.uk/government/publications/foreign-income-and-gains-fig-regime-self-assessment-helpsheet-hs266/hs266-foreign-income-and-gains-fig-regime-2026"
+      },
+      {
+        label: "GOV.UK: Check if you can claim the 4-year foreign income and gains regime",
+        url: "https://www.gov.uk/guidance/check-if-you-can-claim-the-4-year-foreign-income-and-gains-regime"
+      }
+    ]
   }
 ] as const;
 
