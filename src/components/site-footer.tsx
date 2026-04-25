@@ -29,6 +29,19 @@ export function SiteFooter(): React.JSX.Element {
               </Link>
             ) : null}
           </div>
+          <div className="flex flex-wrap items-center gap-3 pt-1 text-sm">
+            {siteConfig.socialProfiles.slice(0, 4).map((profile) => (
+              <Link
+                key={profile.url}
+                href={profile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#17467f] underline decoration-[#8ab0df] underline-offset-2 transition-colors hover:text-[#0f3364]"
+              >
+                {profile.label}
+              </Link>
+            ))}
+          </div>
           <p className="text-xs uppercase tracking-[0.12em] text-[#567396]">Updated continuously with public changelog records</p>
         </div>
 

@@ -56,6 +56,20 @@ export function AuthorBioCard({ title = "Author Bio" }: AuthorBioCardProps): Rea
             ))}
           </ul>
         </div>
+        <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#3f5c84]">
+            Verifiable Credentials
+          </p>
+          <ul className="space-y-1">
+            {authorProfile.verifiableCredentials.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="link-inline">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </CardContent>
     </Card>
   );

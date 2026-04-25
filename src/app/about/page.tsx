@@ -67,7 +67,7 @@ export default function AboutPage(): React.JSX.Element {
         </CardHeader>
         <CardContent className="space-y-5 leading-7 text-[#203754]">
           <p>
-            Trust for this project is built through public artifacts, not claims. Users can verify author identity,
+            Trust for this project is built through public artifacts, not ranking claims. Users can verify author identity,
             review dated releases, check source references, and submit correction requests through dedicated channels.
           </p>
           <ul className="list-disc space-y-2 pl-5">

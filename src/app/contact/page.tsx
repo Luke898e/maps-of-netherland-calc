@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { ContactInquiryForm } from "@/components/contact-inquiry-form";
 import { authorProfile } from "@/content/author-profile";
 import { siteConfig } from "@/lib/site-config";
 
@@ -68,6 +69,13 @@ export default function ContactPage(): React.JSX.Element {
             Publisher domain: <span className="font-semibold">{siteConfig.siteUrl}</span>
           </li>
           <li>
+            Correspondence address:{" "}
+            <span className="font-semibold">
+              {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion},{" "}
+              {siteConfig.address.postalCode}, {siteConfig.address.addressCountry}
+            </span>
+          </li>
+          <li>
             Public maintainer profile:{" "}
             <Link
               href={siteConfig.githubProfile}
@@ -88,7 +96,25 @@ export default function ContactPage(): React.JSX.Element {
             </Link>
           </li>
         </ul>
+        <div className="space-y-2 rounded-md border border-[#dbe7f8] bg-[#f7fbff] p-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#3f5c84]">Social Profiles</p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            {siteConfig.socialProfiles.slice(0, 4).map((profile) => (
+              <Link
+                key={profile.url}
+                href={profile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 hover:text-[#0f3364]"
+              >
+                {profile.label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
+
+      <ContactInquiryForm />
 
       <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Response-Time Commitment</h2>

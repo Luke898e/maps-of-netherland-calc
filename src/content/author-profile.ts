@@ -44,5 +44,23 @@ export const authorProfile = {
     "Instead of publishing opaque calculators, I document assumptions, expose formulas, and keep validation strict. Every tool output is traceable to explicit input fields and deterministic logic so that users can challenge, verify, or improve each decision branch.",
     "I maintain this project in public with a versioned codebase, reproducible builds, and update notes tied to source documents. That approach is intentional: trust in tax software should come from visible process, not marketing language."
   ],
+  verifiableCredentials: [
+    {
+      label: "Public release history with dated versions",
+      href: "/updates"
+    },
+    {
+      label: "Editorial and corrections policy",
+      href: "/editorial-policy"
+    },
+    {
+      label: "Source and methodology documentation",
+      href: "/about"
+    },
+    {
+      label: "Security disclosure record",
+      href: "/.well-known/security.txt"
+    }
+  ],
   profileLinks
 } as const;

@@ -3,6 +3,7 @@ import { Lora, Source_Sans_3 } from "next/font/google";
 import Script from "next/script";
 
 import { GoogleCmpScripts } from "@/components/google-cmp-scripts";
+import { GdprCookieBanner } from "@/components/gdpr-cookie-banner";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -39,6 +40,8 @@ const personProfileUrls = authorProfile.profileLinks
 
 const organizationSameAs = [
   siteConfig.githubProfile,
+  siteConfig.xProfile,
+  siteConfig.facebookProfile,
   siteConfig.linkedInProfile,
   siteConfig.professionalProfile
 ].filter((value): value is string => typeof value === "string" && value.length > 0);
@@ -277,6 +280,7 @@ export default function RootLayout({
         <main id="main-content" className="mx-auto w-full max-w-[86rem] px-4 pb-16 pt-8 sm:px-6 lg:px-8">
           {children}
         </main>
+        <GdprCookieBanner />
         <SiteFooter />
         <ServiceWorkerRegister />
       </body>
