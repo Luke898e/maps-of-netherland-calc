@@ -55,6 +55,7 @@ export default function TestimonialsPage(): React.JSX.Element {
         <ul className="mt-3 list-disc space-y-2 pl-5 text-[#203754]">
           <li>Each entry includes a clear use case, timeline, and measurable workflow outcome.</li>
           <li>Where client identities are restricted, we publish role-level context with explicit verification notes.</li>
+          <li>We do not publish fabricated customer reviews or invented names.</li>
           <li>For procurement, direct references can be arranged through a controlled intro workflow.</li>
         </ul>
       </section>
@@ -147,8 +148,14 @@ export default function TestimonialsPage(): React.JSX.Element {
         </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link
-            href="/book-demo"
+            href="/support?type=testimonial&tool=Testimonials%20Page&path=%2Ftestimonials&title=Customer%20Testimonial%20Submission"
             className="inline-flex items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968]"
+          >
+            Submit Named Testimonial
+          </Link>
+          <Link
+            href="/book-demo"
+            className="inline-flex items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff]"
           >
             Book Demo
           </Link>

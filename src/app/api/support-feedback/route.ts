@@ -5,7 +5,7 @@ import { z } from "zod";
 
 import { siteConfig } from "@/lib/site-config";
 
-const supportTypes = ["bug", "feature", "question"] as const;
+const supportTypes = ["bug", "feature", "question", "testimonial"] as const;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 8;
 const RATE_LIMIT_GC_MS = 15 * 60_000;
@@ -27,7 +27,42 @@ const feedbackPayloadSchema = z.object({
   title: z.string().trim().min(5).max(140),
   email: z.string().trim().email(),
   details: z.string().trim().min(30).max(4000),
+  fullName: z.string().trim().max(120).optional().default(""),
+  roleTitle: z.string().trim().max(120).optional().default(""),
+  companyName: z.string().trim().max(120).optional().default(""),
+  publishConsent: z.boolean().optional().default(false),
   website: z.string().trim().max(0, "Invalid request.").optional().default("")
+}).superRefine((value, ctx) => {
+  if (value.type === "testimonial") {
+    if (!value.fullName || value.fullName.length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["fullName"],
+        message: "Full name is required for named testimonial review."
+      });
+    }
+    if (!value.roleTitle || value.roleTitle.length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["roleTitle"],
+        message: "Role/title is required for named testimonial review."
+      });
+    }
+    if (!value.companyName || value.companyName.length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["companyName"],
+        message: "Company name is required for named testimonial review."
+      });
+    }
+    if (!value.publishConsent) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["publishConsent"],
+        message: "Publication consent is required for named testimonials."
+      });
+    }
+  }
 });
 
 interface FeedbackPayload extends z.infer<typeof feedbackPayloadSchema> {

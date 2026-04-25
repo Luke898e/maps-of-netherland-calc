@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { siteConfig } from "@/lib/site-config";
 
-const supportTypes = ["bug", "feature", "question"] as const;
+const supportTypes = ["bug", "feature", "question", "testimonial"] as const;
 type SupportType = (typeof supportTypes)[number];
 
 const feedbackSchema = z.object({
@@ -20,7 +20,49 @@ const feedbackSchema = z.object({
   title: z.string().min(5, "Title should be at least 5 characters."),
   email: z.string().email("Please enter a valid email address."),
   details: z.string().min(30, "Please provide at least 30 characters of detail."),
+  fullName: z.string().max(120, "Please use 120 characters or fewer.").optional().default(""),
+  roleTitle: z.string().max(120, "Please use 120 characters or fewer.").optional().default(""),
+  companyName: z.string().max(120, "Please use 120 characters or fewer.").optional().default(""),
+  publishConsent: z.boolean().optional().default(false),
   website: z.string().max(0, "Invalid request.").optional().default("")
+}).superRefine((value, ctx) => {
+  if (value.type === "testimonial") {
+    if (!value.fullName || value.fullName.trim().length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["fullName"],
+        message: "Please provide the customer full name for publication review."
+      });
+    }
+    if (!value.roleTitle || value.roleTitle.trim().length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["roleTitle"],
+        message: "Please provide a role or title."
+      });
+    }
+    if (!value.companyName || value.companyName.trim().length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["companyName"],
+        message: "Please provide the company name."
+      });
+    }
+    if (!value.publishConsent) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["publishConsent"],
+        message: "Written publication consent is required for named testimonial review."
+      });
+    }
+    if (value.details.trim().length < 50) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["details"],
+        message: "Please provide at least 50 characters for testimonial review."
+      });
+    }
+  }
 });
 
 interface FeedbackState {
@@ -30,13 +72,18 @@ interface FeedbackState {
   title: string;
   email: string;
   details: string;
+  fullName?: string;
+  roleTitle?: string;
+  companyName?: string;
+  publishConsent?: boolean;
   website?: string;
 }
 
 const supportTypeLabel: Record<SupportType, string> = {
   bug: "Bug Report",
   feature: "Feature Request",
-  question: "General Question"
+  question: "General Question",
+  testimonial: "Customer Testimonial"
 };
 
 export function SupportFeedbackForm(): React.JSX.Element {
@@ -49,12 +96,22 @@ export function SupportFeedbackForm(): React.JSX.Element {
   const initialDetails = searchParams.get("details");
 
   const [state, setState] = useState<FeedbackState>({
-    type: initialType === "bug" || initialType === "feature" || initialType === "question" ? initialType : "bug",
+    type:
+      initialType === "bug" ||
+      initialType === "feature" ||
+      initialType === "question" ||
+      initialType === "testimonial"
+        ? initialType
+        : "bug",
     tool: initialTool ?? "Global Mobility & Tax Suite",
     pagePath: initialPath ?? "/",
     title: initialTitle ?? "",
     email: initialEmail ?? "",
     details: initialDetails ?? "",
+    fullName: "",
+    roleTitle: "",
+    companyName: "",
+    publishConsent: false,
     website: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -75,7 +132,11 @@ export function SupportFeedbackForm(): React.JSX.Element {
         pagePath: fieldErrors.pagePath?.[0] ?? "",
         title: fieldErrors.title?.[0] ?? "",
         email: fieldErrors.email?.[0] ?? "",
-        details: fieldErrors.details?.[0] ?? ""
+        details: fieldErrors.details?.[0] ?? "",
+        fullName: fieldErrors.fullName?.[0] ?? "",
+        roleTitle: fieldErrors.roleTitle?.[0] ?? "",
+        companyName: fieldErrors.companyName?.[0] ?? "",
+        publishConsent: fieldErrors.publishConsent?.[0] ?? ""
       });
       setSuccessMessage("");
       setSubmitError("");
@@ -124,10 +185,14 @@ export function SupportFeedbackForm(): React.JSX.Element {
       `Tool/Page: ${parsed.data.tool}`,
       `Path: ${parsed.data.pagePath}`,
       `Reporter Email: ${parsed.data.email}`,
+      parsed.data.type === "testimonial" ? `Customer Name: ${parsed.data.fullName}` : "",
+      parsed.data.type === "testimonial" ? `Role/Title: ${parsed.data.roleTitle}` : "",
+      parsed.data.type === "testimonial" ? `Company: ${parsed.data.companyName}` : "",
+      parsed.data.type === "testimonial" ? `Publication Consent: ${parsed.data.publishConsent ? "Yes" : "No"}` : "",
       "",
       "Details:",
       parsed.data.details
-    ];
+    ].filter(Boolean);
 
     const subject = encodeURIComponent(`[${supportTypeLabel[parsed.data.type]}] ${parsed.data.title}`);
     const body = encodeURIComponent(bodyLines.join("\n"));
@@ -139,10 +204,10 @@ export function SupportFeedbackForm(): React.JSX.Element {
   return (
     <Card className="surface-panel">
       <CardHeader>
-        <CardTitle className="text-2xl text-[#0f3364]">Submit Bug or Feature Feedback</CardTitle>
+        <CardTitle className="text-2xl text-[#0f3364]">Submit Support Feedback or Testimonial</CardTitle>
         <CardDescription>
-          Use this form to report issues and request improvements. Reports are submitted to the support endpoint, with
-          automatic email fallback only when a network failure blocks API submission.
+          Use this form to report issues, request improvements, or submit a named testimonial with publication consent.
+          Submissions go to the support endpoint, with automatic email fallback only when API submission fails.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -158,6 +223,7 @@ export function SupportFeedbackForm(): React.JSX.Element {
               <option value="bug">Bug Report</option>
               <option value="feature">Feature Request</option>
               <option value="question">General Question</option>
+              <option value="testimonial">Customer Testimonial</option>
             </select>
             {errors.type ? <p className="text-sm text-[#b54747]">{errors.type}</p> : null}
           </div>
@@ -186,15 +252,54 @@ export function SupportFeedbackForm(): React.JSX.Element {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="title">Issue/Request Title</Label>
+            <Label htmlFor="title">{state.type === "testimonial" ? "Testimonial Title" : "Issue/Request Title"}</Label>
             <Input
               id="title"
               value={state.title}
               onChange={(event) => setState((prev) => ({ ...prev, title: event.target.value }))}
-              placeholder="Development levy result does not update after edit"
+              placeholder={
+                state.type === "testimonial"
+                  ? "How the suite helped your workflow"
+                  : "Development levy result does not update after edit"
+              }
             />
             {errors.title ? <p className="text-sm text-[#b54747]">{errors.title}</p> : null}
           </div>
+
+          {state.type === "testimonial" ? (
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="space-y-2">
+                <Label htmlFor="fullName">Customer Full Name</Label>
+                <Input
+                  id="fullName"
+                  value={state.fullName ?? ""}
+                  onChange={(event) => setState((prev) => ({ ...prev, fullName: event.target.value }))}
+                  placeholder="Jane Doe"
+                />
+                {errors.fullName ? <p className="text-sm text-[#b54747]">{errors.fullName}</p> : null}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="roleTitle">Role/Title</Label>
+                <Input
+                  id="roleTitle"
+                  value={state.roleTitle ?? ""}
+                  onChange={(event) => setState((prev) => ({ ...prev, roleTitle: event.target.value }))}
+                  placeholder="Head of Finance"
+                />
+                {errors.roleTitle ? <p className="text-sm text-[#b54747]">{errors.roleTitle}</p> : null}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="companyName">Company</Label>
+                <Input
+                  id="companyName"
+                  value={state.companyName ?? ""}
+                  onChange={(event) => setState((prev) => ({ ...prev, companyName: event.target.value }))}
+                  placeholder="Acme Holdings Ltd"
+                />
+                {errors.companyName ? <p className="text-sm text-[#b54747]">{errors.companyName}</p> : null}
+              </div>
+            </div>
+          ) : null}
 
           <div className="space-y-2">
             <Label htmlFor="email">Your Email</Label>
@@ -214,11 +319,33 @@ export function SupportFeedbackForm(): React.JSX.Element {
               id="details"
               value={state.details}
               onChange={(event) => setState((prev) => ({ ...prev, details: event.target.value }))}
-              placeholder="Include exact steps, expected result, actual result, and device/browser if relevant."
+              placeholder={
+                state.type === "testimonial"
+                  ? "Describe the workflow impact, measurable improvement, and the context in which you used the tools."
+                  : "Include exact steps, expected result, actual result, and device/browser if relevant."
+              }
               className="form-textarea"
             />
             {errors.details ? <p className="text-sm text-[#b54747]">{errors.details}</p> : null}
           </div>
+
+          {state.type === "testimonial" ? (
+            <div className="space-y-2 rounded-md border border-[#dbe7f8] bg-[#f6f9ff] p-3">
+              <label className="inline-flex items-start gap-2 text-sm text-[#203754]">
+                <input
+                  type="checkbox"
+                  checked={Boolean(state.publishConsent)}
+                  onChange={(event) => setState((prev) => ({ ...prev, publishConsent: event.target.checked }))}
+                  className="mt-1"
+                />
+                <span>
+                  I confirm I have permission to publish this quote with the provided full name, role, and company on
+                  the public testimonials page.
+                </span>
+              </label>
+              {errors.publishConsent ? <p className="text-sm text-[#b54747]">{errors.publishConsent}</p> : null}
+            </div>
+          ) : null}
 
           <div className="hidden" aria-hidden>
             <Label htmlFor="website">Website</Label>
@@ -257,6 +384,10 @@ export function SupportFeedbackForm(): React.JSX.Element {
                   title: "",
                   email: "",
                   details: "",
+                  fullName: "",
+                  roleTitle: "",
+                  companyName: "",
+                  publishConsent: false,
                   website: ""
                 });
                 setSubmitError("");

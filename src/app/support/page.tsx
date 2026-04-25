@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Report bugs, request features, and contact the maintainer for the 2026 Global Mobility & Tax Suite.",
+    "Report bugs, request features, submit customer testimonials, and contact the maintainer for the 2026 Global Mobility & Tax Suite.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/support`
   }
@@ -21,11 +21,11 @@ export default function SupportPage(): React.JSX.Element {
       <section className="space-y-3 surface-panel p-8">
         <p className="text-sm uppercase tracking-[0.15em] text-[#3f5c84]">Support and Feedback</p>
         <h1 className="font-[var(--font-heading)] text-3xl font-semibold text-[#0f3364]">
-          Report a Bug or Request a Feature
+          Report a Bug, Request a Feature, or Submit a Testimonial
         </h1>
         <p className="leading-7 text-[#203754]">
           Legitimate compliance tools improve through real-world feedback. Use this page to report issues, request
-          enhancements, and submit reproducible edge cases.
+          enhancements, submit reproducible edge cases, or send customer testimonials with publication permission.
         </p>
       </section>
 
