@@ -42,18 +42,18 @@ export function SiteFooter(): React.JSX.Element {
               </Link>
             ))}
           </div>
-          <p className="text-xs uppercase tracking-[0.12em] text-[#567396]">Updated continuously with public changelog records</p>
+          <p className="text-xs uppercase tracking-[0.12em] text-[#355c87]">Updated continuously with public changelog records</p>
         </div>
 
         <nav aria-label="Product links" className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#4a688e]">Product</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2f527b]">Product</p>
           <div className="grid gap-2 text-sm">
             <Link href="/" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Home</Link>
             <Link href="/tools/nigeria-zero-tax-auditor" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
-              Nigeria Tool
+              Zero-Tax Auditor
             </Link>
             <Link href="/tools/uk-fig-regime-eligibility" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
-              UK FIG Tool
+              FIG Eligibility Tool
             </Link>
             <Link href="/pricing" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Pricing</Link>
             <Link href="/book-demo" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Book Demo</Link>
@@ -67,7 +67,7 @@ export function SiteFooter(): React.JSX.Element {
         </nav>
 
         <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#4a688e]">Trust and Legal</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2f527b]">Trust and Legal</p>
           <div className="grid gap-2 text-sm">
             <Link href="/about" className="text-[#17467f] transition-colors hover:text-[#0f3364]">About</Link>
             <Link href="/contact" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Contact</Link>
@@ -95,7 +95,7 @@ export function SiteFooter(): React.JSX.Element {
         </div>
       </div>
       <div className="border-t border-[#dfebfa] bg-white/70">
-        <p className="mx-auto w-full max-w-[86rem] px-4 py-3 text-xs text-[#567396] sm:px-6 lg:px-8">
+        <p className="mx-auto w-full max-w-[86rem] px-4 py-3 text-xs text-[#355c87] sm:px-6 lg:px-8">
           Copyright 2026 Global Mobility & Tax Suite. All rights reserved.
         </p>
       </div>

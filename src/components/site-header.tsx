@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 
 const primaryNavItems = [
   { href: "/", label: "Home" },
-  { href: "/tools/nigeria-zero-tax-auditor", label: "Nigeria Auditor" },
-  { href: "/tools/uk-fig-regime-eligibility", label: "UK FIG Tool" },
+  { href: "/tools/nigeria-zero-tax-auditor", label: "Zero-Tax Auditor" },
+  { href: "/tools/uk-fig-regime-eligibility", label: "FIG Eligibility" },
   { href: "/pricing", label: "Pricing" },
   { href: "/book-demo", label: "Book Demo" },
   { href: "/blog", label: "Blog" },
@@ -52,6 +52,27 @@ export function SiteHeader(): React.JSX.Element {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleEscape = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [mobileOpen]);
 
   return (
     <header
@@ -145,12 +166,49 @@ export function SiteHeader(): React.JSX.Element {
           })}
         </div>
 
-        {mobileOpen ? (
-          <div
+      </div>
+      <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-[#c9dbf3] to-transparent" />
+      {mobileOpen ? (
+        <div className="fixed inset-0 z-[1100] lg:hidden" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title">
+          <button
+            type="button"
+            aria-label="Close mobile navigation"
+            className="absolute inset-0 bg-[#07172c]/45 backdrop-blur-[1px]"
+            onClick={() => setMobileOpen(false)}
+          />
+          <aside
             id="mobile-nav"
-            className="mt-4 grid gap-4 rounded-xl border border-[#d5e3f7] bg-white/95 p-4 shadow-[0_16px_36px_-28px_rgba(16,62,121,0.65)] lg:hidden"
+            className="absolute right-0 top-0 h-full w-[86vw] max-w-sm border-l border-[#cfdef3] bg-white p-5 shadow-[-24px_0_56px_-36px_rgba(7,34,70,0.8)]"
           >
-            <nav aria-label="Mobile primary navigation" className="grid gap-2">
+            <div className="flex items-center justify-between">
+              <p id="mobile-nav-title" className="text-sm font-semibold uppercase tracking-[0.12em] text-[#294f79]">
+                Menu
+              </p>
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center rounded-md border border-[#c7daf3] bg-white p-1.5 text-[#153f77] hover:bg-[#eaf2ff]"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
+              <div className="mt-4 rounded-md border border-[#d5e3f7] bg-[#f6faff] p-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#355b86]">UK support</p>
+                <Link
+                  href={`tel:${siteConfig.contactPhoneDial}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-[#0f3364]"
+                >
+                  <Phone className="h-3.5 w-3.5" />
+                  {siteConfig.contactPhone}
+                </Link>
+              </div>
+            ) : null}
+
+            <nav aria-label="Mobile primary navigation" className="mt-4 grid gap-2">
               {primaryNavItems.map((item) => {
                 const active = isActiveRoute(pathname, item.href);
                 return (
@@ -160,7 +218,7 @@ export function SiteHeader(): React.JSX.Element {
                     onClick={() => setMobileOpen(false)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "rounded-md border px-3 py-2 text-sm font-semibold transition-colors",
+                      "rounded-md border px-3 py-2.5 text-sm font-semibold transition-colors",
                       active
                         ? "border-[#bed5f2] bg-[#eaf2ff] text-[#0f3364]"
                         : "border-[#d4e3f8] bg-white text-[#17467f] hover:bg-[#eaf2ff] hover:text-[#0f3364]"
@@ -171,7 +229,7 @@ export function SiteHeader(): React.JSX.Element {
                 );
               })}
             </nav>
-            <nav aria-label="Mobile utility navigation" className="grid gap-2">
+            <nav aria-label="Mobile utility navigation" className="mt-4 grid gap-2 border-t border-[#dfebfa] pt-4">
               {[...utilityNavItems, ...policyNavItems].map((item) => {
                 const active = isActiveRoute(pathname, item.href);
                 return (
@@ -190,10 +248,9 @@ export function SiteHeader(): React.JSX.Element {
                 );
               })}
             </nav>
-          </div>
-        ) : null}
-      </div>
-      <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-[#c9dbf3] to-transparent" />
+          </aside>
+        </div>
+      ) : null}
     </header>
   );
 }

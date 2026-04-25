@@ -114,7 +114,22 @@ export default function ContactPage(): React.JSX.Element {
         </div>
       </section>
 
-      <ContactInquiryForm />
+      <section id="accessibility-feedback" className="space-y-4 surface-panel p-8 scroll-mt-28">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Accessibility Feedback</h2>
+        <p className="leading-7 text-[#203754]">
+          For accessibility barriers (keyboard access, screen-reader flow, contrast, or mobile navigation issues), use
+          this form or email
+          <span> </span>
+          <Link
+            href={`mailto:${siteConfig.accessibilityEmail}?subject=Accessibility%20Feedback`}
+            className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+          >
+            {siteConfig.accessibilityEmail}
+          </Link>
+          . Include the affected URL and device/browser details so we can reproduce quickly.
+        </p>
+        <ContactInquiryForm />
+      </section>
 
       <section className="space-y-4 surface-panel p-8">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Response-Time Commitment</h2>

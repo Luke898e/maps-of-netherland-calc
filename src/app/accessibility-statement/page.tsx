@@ -46,14 +46,28 @@ export default function AccessibilityStatementPage(): React.JSX.Element {
           If you experience an accessibility barrier, contact us and include the affected URL, browser/device details,
           and the action you were trying to complete.
         </p>
+        <div className="rounded-md border border-[#d6e3f7] bg-[#f6faff] p-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#2f527d]">Accessibility feedback channel</p>
+          <p className="mt-2 leading-7 text-[#203754]">
+            Primary accessibility contact:
+            <span> </span>
+            <Link
+              href={`mailto:${siteConfig.accessibilityEmail}?subject=Accessibility%20Feedback`}
+              className="font-semibold text-[#123f76] underline decoration-[#6f9ed8] underline-offset-2"
+            >
+              {siteConfig.accessibilityEmail}
+            </Link>
+            . We target an initial response within 2 business days.
+          </p>
+        </div>
         <ul className="list-disc space-y-2 pl-5 text-[#203754]">
           <li>
             Email:{" "}
             <Link
-              href={`mailto:${siteConfig.contactEmail}`}
+              href={`mailto:${siteConfig.accessibilityEmail}?subject=Accessibility%20Feedback`}
               className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
             >
-              {siteConfig.contactEmail}
+              {siteConfig.accessibilityEmail}
             </Link>
           </li>
           {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
@@ -69,8 +83,8 @@ export default function AccessibilityStatementPage(): React.JSX.Element {
           ) : null}
           <li>
             Structured report form:{" "}
-            <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
-              Support
+            <Link href="/contact#accessibility-feedback" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">
+              Contact accessibility form
             </Link>
           </li>
         </ul>

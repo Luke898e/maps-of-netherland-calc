@@ -14,7 +14,7 @@
   --secondary: 210 80% 95%;
   --secondary-foreground: 215 52% 16%;
   --muted: 210 55% 96%;
-  --muted-foreground: 216 27% 37%;
+  --muted-foreground: 215 33% 30%;
   --accent: 210 84% 92%;
   --accent-foreground: 215 52% 16%;
   --border: 212 52% 86%;
@@ -39,6 +39,8 @@ html {
 body {
   @apply bg-background text-foreground antialiased;
   position: relative;
+  font-size: 17px;
+  line-height: 1.7;
   font-feature-settings: "ss01" 1, "ss03" 1, "cv02" 1;
   background:
     radial-gradient(circle at 10% -5%, rgba(40, 108, 194, 0.18), transparent 36%),
@@ -73,6 +75,36 @@ p {
   text-wrap: pretty;
 }
 
+a,
+button,
+input,
+select,
+textarea,
+label {
+  font-size: inherit;
+}
+
+p,
+li {
+  line-height: 1.75;
+}
+
+main > div > section,
+main > section {
+  position: relative;
+}
+
+main > div > section + section::before,
+main > section + section::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: -1.3rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(18, 69, 126, 0.26), transparent);
+}
+
 a {
   color: inherit;
 }
@@ -103,7 +135,7 @@ textarea {
   }
 
   .section-kicker {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-[#3a6699];
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-[#2f5682];
   }
 
   .section-title {
@@ -111,15 +143,15 @@ textarea {
   }
 
   .body-copy {
-    @apply leading-7 text-[#203754];
+    @apply leading-8 text-[#1f3652];
   }
 
   .link-inline {
-    @apply text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2 transition-colors hover:text-[#0f3364];
+    @apply text-[#123f76] underline decoration-[#6f9ed8] underline-offset-2 transition-colors hover:text-[#0f3364];
   }
 
   .chip-soft {
-    @apply rounded-full border border-[#ceddf4] bg-[#f2f7ff] px-3 py-1 text-xs font-medium text-[#265182];
+    @apply rounded-full border border-[#ceddf4] bg-[#f2f7ff] px-3 py-1 text-xs font-medium text-[#1f4673];
   }
 
   .form-select {

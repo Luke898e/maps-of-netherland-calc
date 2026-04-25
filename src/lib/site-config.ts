@@ -1,6 +1,7 @@
 const localFallbackSiteUrl = "http://localhost:3001";
 const productionFallbackSiteUrl = "https://map-of-netherlands.co.uk";
 const fallbackContactEmail = "contact@map-of-netherlands.co.uk";
+const fallbackAccessibilityEmail = "accessibility@map-of-netherlands.co.uk";
 const fallbackUkContactPhone = "+44 1632 960123";
 const fallbackGithubProfile = "https://github.com/LukmonIsiaq";
 const fallbackFacebookProfile = "https://www.facebook.com/lukmon.isiaq";
@@ -113,6 +114,9 @@ function normalizeOptionalProfile(rawValue: string | undefined): string | null {
 
 const normalizedSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const normalizedContactEmail = normalizeContactEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
+const normalizedAccessibilityEmail = normalizeContactEmail(
+  process.env.NEXT_PUBLIC_ACCESSIBILITY_EMAIL ?? fallbackAccessibilityEmail
+);
 const allowCrossRegionPhone = process.env.NEXT_PUBLIC_ALLOW_CROSS_REGION_PHONE === "true";
 const useUkFallbackAddress = normalizedSiteUrl.endsWith(".co.uk");
 const normalizedConfiguredPhone = normalizePhone(process.env.NEXT_PUBLIC_CONTACT_PHONE, {
@@ -166,6 +170,7 @@ export const siteConfig = {
   siteName: "2026 Global Mobility & Tax Suite",
   siteUrl: normalizedSiteUrl,
   contactEmail: normalizedContactEmail,
+  accessibilityEmail: normalizedAccessibilityEmail,
   contactPhone: normalizedPhone?.display ?? null,
   contactPhoneDial: normalizedPhone?.dial ?? null,
   legalName: businessLegalName,
