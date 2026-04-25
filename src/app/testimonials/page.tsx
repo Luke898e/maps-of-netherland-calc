@@ -144,7 +144,8 @@ export default function TestimonialsPage(): React.JSX.Element {
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">Request Direct Customer References</h2>
         <p className="mt-3 leading-7 text-[#203754]">
           For procurement review, request reference context through our contact channels and we will arrange a
-          reference call path where disclosure permissions exist.
+          reference call path where disclosure permissions exist. For named testimonials, the support flow now returns
+          a publish-ready block after submission.
         </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link

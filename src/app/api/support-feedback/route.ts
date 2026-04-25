@@ -70,6 +70,37 @@ interface FeedbackPayload extends z.infer<typeof feedbackPayloadSchema> {
   submittedAtIso: string;
 }
 
+function escapeForDoubleQuotedString(value: string): string {
+  return value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+}
+
+function normalizeQuoteText(value: string): string {
+  return value.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function buildPublicationSnippet(payload: FeedbackPayload): string | null {
+  if (payload.type !== "testimonial") {
+    return null;
+  }
+
+  const quote = escapeForDoubleQuotedString(normalizeQuoteText(payload.details));
+  const fullName = escapeForDoubleQuotedString(payload.fullName);
+  const roleTitle = escapeForDoubleQuotedString(payload.roleTitle);
+  const companyName = escapeForDoubleQuotedString(payload.companyName);
+
+  return [
+    "{",
+    `  quote: "${quote}",`,
+    `  name: "${fullName}",`,
+    `  title: "${roleTitle}",`,
+    `  company: "${companyName}",`,
+    `  ticketId: "${payload.ticketId}",`,
+    `  submittedAtIso: "${payload.submittedAtIso}",`,
+    '  permission: "publication-consent-confirmed"',
+    "}"
+  ].join("\n");
+}
+
 function isHttpsUrl(value: string | undefined): value is string {
   return typeof value === "string" && value.startsWith("https://");
 }
@@ -297,6 +328,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     ticketId,
     submittedAtIso: new Date().toISOString()
   };
+  const publicationSnippet = buildPublicationSnippet(payload);
 
   try {
     await forwardToWebhook(payload);
@@ -309,6 +341,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   return NextResponse.json({
     ticketId,
-    status: "received"
+    status: "received",
+    publicationSnippet
   });
 }

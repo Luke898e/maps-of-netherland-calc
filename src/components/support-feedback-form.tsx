@@ -117,6 +117,8 @@ export function SupportFeedbackForm(): React.JSX.Element {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [successMessage, setSuccessMessage] = useState<string>("");
   const [submitError, setSubmitError] = useState<string>("");
+  const [publicationSnippet, setPublicationSnippet] = useState<string>("");
+  const [copyMessage, setCopyMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const previewSubject = useMemo(() => `[${supportTypeLabel[state.type]}] ${state.title || "Untitled"}`, [state]);
@@ -146,6 +148,8 @@ export function SupportFeedbackForm(): React.JSX.Element {
     setErrors({});
     setSuccessMessage("");
     setSubmitError("");
+    setPublicationSnippet("");
+    setCopyMessage("");
     setIsSubmitting(true);
 
     try {
@@ -157,10 +161,13 @@ export function SupportFeedbackForm(): React.JSX.Element {
         body: JSON.stringify(parsed.data)
       });
 
-      const payload = (await response.json().catch(() => null)) as { ticketId?: string; message?: string } | null;
+      const payload = (await response.json().catch(() => null)) as
+        | { ticketId?: string; message?: string; publicationSnippet?: string | null }
+        | null;
       if (response.ok) {
         const ticketSuffix = payload?.ticketId ? ` Ticket ID: ${payload.ticketId}.` : "";
         setSuccessMessage(`Report received successfully.${ticketSuffix}`);
+        setPublicationSnippet(payload?.publicationSnippet ?? "");
         setSubmitError("");
         return;
       }
@@ -198,7 +205,21 @@ export function SupportFeedbackForm(): React.JSX.Element {
     const body = encodeURIComponent(bodyLines.join("\n"));
     window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
     setSuccessMessage("Support endpoint is unavailable. A prefilled email draft was opened as fallback.");
+    setPublicationSnippet("");
     setSubmitError("");
+  };
+
+  const onCopyPublicationSnippet = async (): Promise<void> => {
+    if (!publicationSnippet) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(publicationSnippet);
+      setCopyMessage("Publish block copied.");
+    } catch {
+      setCopyMessage("Copy failed. Select the block manually and copy.");
+    }
   };
 
   return (
@@ -392,6 +413,8 @@ export function SupportFeedbackForm(): React.JSX.Element {
                 });
                 setSubmitError("");
                 setSuccessMessage("");
+                setPublicationSnippet("");
+                setCopyMessage("");
               }}
             >
               Reset Form
@@ -400,6 +423,23 @@ export function SupportFeedbackForm(): React.JSX.Element {
 
           {submitError ? <p className="text-sm text-[#b54747]">{submitError}</p> : null}
           {successMessage ? <p className="text-sm text-[#1d5a2b]">{successMessage}</p> : null}
+          {publicationSnippet ? (
+            <div className="space-y-3 rounded-md border border-[#dbe7f8] bg-[#f6f9ff] p-3">
+              <p className="text-sm font-semibold text-[#17467f]">Publish-ready testimonial block</p>
+              <p className="text-sm text-[#35577f]">
+                Paste this object into your approved testimonials list after verification.
+              </p>
+              <pre className="overflow-x-auto rounded-md border border-[#d8e6f8] bg-white p-3 text-xs text-[#203754]">
+                {publicationSnippet}
+              </pre>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                <Button type="button" variant="outline" onClick={onCopyPublicationSnippet}>
+                  Copy Publish Block
+                </Button>
+                {copyMessage ? <p className="text-sm text-[#35577f]">{copyMessage}</p> : null}
+              </div>
+            </div>
+          ) : null}
         </form>
       </CardContent>
     </Card>
