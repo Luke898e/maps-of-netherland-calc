@@ -29,17 +29,24 @@ export default function ContactPage(): React.JSX.Element {
           </Link>
           .
         </p>
-        <p className="leading-7 text-[#203754]">
-          Phone support is available by appointment at
-          <span> </span>
-          <Link
-            href={`tel:${siteConfig.contactPhoneDial}`}
-            className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
-          >
-            {siteConfig.contactPhone}
-          </Link>
-          .
-        </p>
+        {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
+          <p className="leading-7 text-[#203754]">
+            Phone support is available by appointment at
+            <span> </span>
+            <Link
+              href={`tel:${siteConfig.contactPhoneDial}`}
+              className="font-semibold text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+            >
+              {siteConfig.contactPhone}
+            </Link>
+            .
+          </p>
+        ) : (
+          <p className="leading-7 text-[#203754]">
+            Phone support is available after an initial email request, so all inquiries begin with a documented
+            support thread.
+          </p>
+        )}
       </section>
 
       <section className="space-y-4 surface-panel p-8">

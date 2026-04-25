@@ -20,12 +20,14 @@ export function SiteFooter(): React.JSX.Element {
             >
               Email: {siteConfig.contactEmail}
             </Link>
-            <Link
-              href={`tel:${siteConfig.contactPhoneDial}`}
-              className="text-[#17467f] transition-colors hover:text-[#0f3364]"
-            >
-              Phone: {siteConfig.contactPhone}
-            </Link>
+            {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
+              <Link
+                href={`tel:${siteConfig.contactPhoneDial}`}
+                className="text-[#17467f] transition-colors hover:text-[#0f3364]"
+              >
+                Phone: {siteConfig.contactPhone}
+              </Link>
+            ) : null}
           </div>
           <p className="text-xs uppercase tracking-[0.12em] text-[#567396]">Updated continuously with public changelog records</p>
         </div>
@@ -40,8 +42,11 @@ export function SiteFooter(): React.JSX.Element {
             <Link href="/tools/uk-fig-regime-eligibility" className="text-[#17467f] transition-colors hover:text-[#0f3364]">
               UK FIG Tool
             </Link>
+            <Link href="/pricing" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Pricing</Link>
+            <Link href="/book-demo" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Book Demo</Link>
             <Link href="/blog" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Blog</Link>
             <Link href="/case-studies" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Case Studies</Link>
+            <Link href="/testimonials" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Testimonials</Link>
             <Link href="/support" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Support</Link>
             <Link href="/updates" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Updates</Link>
             <Link href="/status" className="text-[#17467f] transition-colors hover:text-[#0f3364]">Status</Link>

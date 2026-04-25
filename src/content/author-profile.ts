@@ -34,7 +34,7 @@ const profileLinks = [
 export const authorProfile = {
   name: "Lukmon Isiaq",
   role: "Software Architect and Tax Tooling Maintainer",
-  location: "Lagos, Nigeria",
+  location: "UK and Nigeria (cross-border operations)",
   photoSrc: "/authors/lukmon-isiaq.jpg",
   photoAlt: "Portrait of Lukmon Isiaq, maintainer of the Global Tax Suite",
   mission:

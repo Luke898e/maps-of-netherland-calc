@@ -52,7 +52,7 @@ const organizationStructuredData = {
   name: siteConfig.siteName,
   url: siteConfig.siteUrl,
   email: siteConfig.contactEmail,
-  telephone: siteConfig.contactPhone,
+  ...(siteConfig.contactPhone ? { telephone: siteConfig.contactPhone } : {}),
   sameAs: organizationSameAs,
   logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`,
   description:
@@ -62,7 +62,7 @@ const organizationStructuredData = {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: siteConfig.contactEmail,
-      telephone: siteConfig.contactPhone,
+      ...(siteConfig.contactPhone ? { telephone: siteConfig.contactPhone } : {}),
       availableLanguage: ["en"],
       areaServed: ["NG", "GB"]
     }
@@ -92,7 +92,7 @@ const localBusinessStructuredData = {
   url: siteConfig.siteUrl,
   logo: `${siteConfig.siteUrl}/brand/logo-emblem.svg`,
   image: absoluteOgImageUrl,
-  telephone: siteConfig.contactPhone,
+  ...(siteConfig.contactPhone ? { telephone: siteConfig.contactPhone } : {}),
   email: siteConfig.contactEmail,
   address: {
     "@type": "PostalAddress",

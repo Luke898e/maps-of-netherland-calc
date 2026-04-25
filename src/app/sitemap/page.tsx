@@ -16,6 +16,9 @@ export const metadata: Metadata = {
 const corePages = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/book-demo", label: "Book Demo" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/tools/nigeria-zero-tax-auditor", label: "2026 Nigeria Zero-Tax Auditor" },
   { href: "/tools/uk-fig-regime-eligibility", label: "2026 UK FIG Regime Eligibility Tool" },

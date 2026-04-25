@@ -18,8 +18,13 @@ function CardHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElement
   return <div className={cn("space-y-1.5 p-6", className)} {...props} />;
 }
 
-function CardTitle({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>): React.JSX.Element {
-  return <h3 className={cn("text-xl font-semibold tracking-tight", className)} {...props} />;
+interface CardTitleProps extends React.HTMLAttributes<HTMLElement> {
+  as?: "h2" | "h3" | "h4" | "p" | "div" | "span";
+}
+
+function CardTitle({ className, as = "h3", ...props }: CardTitleProps): React.JSX.Element {
+  const Component = as;
+  return <Component className={cn("text-xl font-semibold tracking-tight", className)} {...props} />;
 }
 
 function CardDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>): React.JSX.Element {

@@ -17,7 +17,7 @@ import { externalReferences } from "@/content/references";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Nigeria and UK Tax Compliance Tools for 2026",
+  title: "2026 Global Mobility Tax Suite for Nigeria and UK Compliance",
   description:
     "2026 Global Mobility & Tax Suite homepage with access to the Nigeria Zero-Tax Auditor and UK FIG Regime Eligibility Tool.",
   alternates: {
@@ -63,6 +63,32 @@ interface HomeFaqItem {
   answer: string;
 }
 
+interface PersonaStory {
+  persona: string;
+  intro: string;
+  focus: string;
+  payoff: string;
+}
+
+interface NigeriaWorkedExample {
+  persona: string;
+  turnover: string;
+  sector: string;
+  assessableProfit: string;
+  citScreeningBranch: string;
+  levyEstimate: string;
+  nextAction: string;
+}
+
+interface UkWorkedExample {
+  persona: string;
+  ukArrivalDate: string;
+  priorYearsNonResident: string;
+  figScreeningResult: string;
+  reliefEndDate: string;
+  immediateAction: string;
+}
+
 const homepageFaqs: ReadonlyArray<HomeFaqItem> = [
   {
     question: "How do I screen 0% CIT eligibility for Nigeria in 2026?",
@@ -93,6 +119,79 @@ const homepageFaqs: ReadonlyArray<HomeFaqItem> = [
     question: "Which sources should users trust first for policy interpretation?",
     answer:
       "Primary institutional sources should come first, including UK government policy publications and HMRC manuals for UK topics, plus official Nigerian authority sources for Nigeria topics. Secondary summaries are helpful for context but not a substitute for primary verification."
+  }
+];
+
+const personaStories: ReadonlyArray<PersonaStory> = [
+  {
+    persona: "Payroll Lead in Lagos, Q1 transition",
+    intro:
+      "You have just moved payroll ownership from a founder to an in-house finance lead. The first deadline is close and everyone needs one clear answer, not five competing spreadsheets.",
+    focus: "Use the Nigeria threshold table first, then run one controlled levy scenario.",
+    payoff: "You leave the meeting with a documented branch result and a single follow-up list."
+  },
+  {
+    persona: "Founder moving to the UK in July 2026",
+    intro:
+      "You are planning compensation events and equity vesting, but your tax timeline still feels uncertain. A one-week date slip could change filing decisions and payroll treatment.",
+    focus: "Run the UK FIG timeline table with exact arrival date and full 10-year history.",
+    payoff: "You get a dated screening output that payroll, legal, and advisers can read in one pass."
+  },
+  {
+    persona: "CFO preparing a board pack",
+    intro:
+      "The board wants Nigeria and UK exposure in one brief. They do not want abstract commentary, they want numbers, dates, and control checks.",
+    focus: "Combine one Nigeria row and one UK row in the comparison matrix below.",
+    payoff: "You present a defensible summary with assumptions, outputs, and next actions."
+  }
+];
+
+const nigeriaWorkedExamples: ReadonlyArray<NigeriaWorkedExample> = [
+  {
+    persona: "SME importer",
+    turnover: "NGN 82,500,000",
+    sector: "General Trading",
+    assessableProfit: "NGN 18,200,000",
+    citScreeningBranch: "0% CIT branch (screening)",
+    levyEstimate: "NGN 0 (threshold not exceeded)",
+    nextAction: "Rerun quarterly; keep turnover evidence with export."
+  },
+  {
+    persona: "Services operator",
+    turnover: "NGN 142,300,000",
+    sector: "Business Services",
+    assessableProfit: "NGN 39,500,000",
+    citScreeningBranch: "Levy branch active",
+    levyEstimate: "NGN 1,580,000 (4% x NGN 39,500,000)",
+    nextAction: "Run downside/upside scenarios before cash planning sign-off."
+  },
+  {
+    persona: "Fast-growth distributor",
+    turnover: "NGN 101,200,000",
+    sector: "Distribution",
+    assessableProfit: "NGN 26,400,000",
+    citScreeningBranch: "Levy branch active",
+    levyEstimate: "NGN 1,056,000 (4% x NGN 26,400,000)",
+    nextAction: "Review classification and threshold triggers monthly."
+  }
+];
+
+const ukWorkedExamples: ReadonlyArray<UkWorkedExample> = [
+  {
+    persona: "New UK arrival founder",
+    ukArrivalDate: "12 Jul 2026",
+    priorYearsNonResident: "10/10 years",
+    figScreeningResult: "Eligible branch",
+    reliefEndDate: "11 Jul 2030",
+    immediateAction: "Add end date to payroll and vesting calendar now."
+  },
+  {
+    persona: "Split-history remote earner",
+    ukArrivalDate: "01 Oct 2026",
+    priorYearsNonResident: "9/10 years",
+    figScreeningResult: "Ineligible branch",
+    reliefEndDate: "Not available in screening model",
+    immediateAction: "Escalate for adviser review before compensation planning."
   }
 ];
 
@@ -160,13 +259,32 @@ export default function HomePage(): React.JSX.Element {
           <div>
             <p className="section-kicker">Tax Help for Real Cases</p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight text-[#0e325f] sm:text-5xl">
-              2026 Global Mobility & Tax Suite
+              2026 Global Mobility Tax Suite for Nigeria and UK Compliance
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#233d5d]">
-              Run expert-grade preliminary tax checks for Nigeria and the UK in one place. Each tool combines strict
-              input validation, policy-linked logic, and downloadable reports that support adviser conversations and
-              internal compliance workflows.
+              Run fast tax checks for Nigeria and the UK in one place. Each tool shows clear rules, validates your
+              inputs, and gives you a report you can share with your adviser.
             </p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/tools/nigeria-zero-tax-auditor"
+                className="inline-flex items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968]"
+              >
+                Try Tools
+              </Link>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff]"
+              >
+                View Pricing
+              </Link>
+              <Link
+                href="/book-demo"
+                className="inline-flex items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff]"
+              >
+                Book Demo
+              </Link>
+            </div>
           </div>
           <div className="space-y-3 rounded-xl border border-[#d3e3f7] bg-white/85 p-4">
             {heroHighlights.map((item) => (
@@ -204,6 +322,18 @@ export default function HomePage(): React.JSX.Element {
             Common Questions
           </a>
           <a
+            href="#buyer-stages"
+            className="rounded-lg border border-[#d2e1f6] bg-white px-3 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eef5ff]"
+          >
+            Buyer Stages
+          </a>
+          <a
+            href="#persona-stories"
+            className="rounded-lg border border-[#d2e1f6] bg-white px-3 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eef5ff]"
+          >
+            Story Scenarios
+          </a>
+          <a
             href="#worked-cases"
             className="rounded-lg border border-[#d2e1f6] bg-white px-3 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eef5ff]"
           >
@@ -237,7 +367,7 @@ export default function HomePage(): React.JSX.Element {
         {toolCards.map((card) => (
           <Card key={card.href} className="border-[#d4e3f8]">
             <CardHeader>
-              <CardTitle className="font-[var(--font-heading)] text-2xl text-[#0f3364]">{card.title}</CardTitle>
+              <CardTitle as="p" className="font-[var(--font-heading)] text-2xl text-[#0f3364]">{card.title}</CardTitle>
               <CardDescription className="text-base leading-7">{card.description}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -251,6 +381,99 @@ export default function HomePage(): React.JSX.Element {
             </CardContent>
           </Card>
         ))}
+      </section>
+
+      <section id="buyer-stages" className="space-y-6 surface-panel p-6 scroll-mt-28 sm:p-8">
+        <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Buyer Stage Paths</p>
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+          Choose the Next Step That Matches Your Stage
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <Card className="border-[#d4e3f8]">
+            <CardHeader>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">Stage 1: Explore</CardTitle>
+              <CardDescription className="text-base leading-7">
+                Understand the method and compare example scenarios.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/blog" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
+                Read Guides
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#d4e3f8]">
+            <CardHeader>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">Stage 2: Evaluate</CardTitle>
+              <CardDescription className="text-base leading-7">
+                Compare plan options for your team size and workflow.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/pricing" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
+                View Pricing
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#d4e3f8]">
+            <CardHeader>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">Stage 3: Validate</CardTitle>
+              <CardDescription className="text-base leading-7">
+                Review proof signals from case workflows and release records.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/testimonials" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
+                See Proof
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#d4e3f8]">
+            <CardHeader>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">Stage 4: Decide</CardTitle>
+              <CardDescription className="text-base leading-7">
+                Book a guided demo and map rollout steps for your team.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/book-demo" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
+                Book Demo
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="persona-stories" className="space-y-6 surface-panel p-6 scroll-mt-28 sm:p-8">
+        <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Story Scenarios</p>
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+          What This Looks Like in Real Team Situations
+        </h2>
+        <p className="leading-7 text-[#203754]">
+          These short scenarios mirror the situations we see most often. Use them to pick the right starting point
+          before you run any tool inputs.
+        </p>
+        <div className="grid gap-4 lg:grid-cols-3">
+          {personaStories.map((story) => (
+            <Card key={story.persona} className="border-[#d4e3f8]">
+              <CardHeader>
+                <CardTitle as="p" className="text-lg text-[#0f3364]">{story.persona}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-[#203754]">
+                <p className="leading-7">{story.intro}</p>
+                <p className="rounded-md border border-[#dbe7f8] bg-[#f7fbff] px-3 py-2 text-sm leading-6">
+                  <span className="font-semibold text-[#123f76]">Focus:</span> {story.focus}
+                </p>
+                <p className="rounded-md border border-[#dbe7f8] bg-[#f7fbff] px-3 py-2 text-sm leading-6">
+                  <span className="font-semibold text-[#123f76]">Payoff:</span> {story.payoff}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
 
       <section id="knowledge-guide" className="space-y-8 surface-panel p-6 scroll-mt-28 sm:p-8">
@@ -287,7 +510,7 @@ export default function HomePage(): React.JSX.Element {
                 key={section.title}
                 className="space-y-4 rounded-lg border border-[#dbe7f8] bg-[#f9fbff] p-5 scroll-mt-28"
               >
-              <h3 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.title}</h3>
+              <p className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">{section.title}</p>
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 70)} className="leading-7 text-[#203754]">
                   {paragraph}
@@ -315,7 +538,7 @@ export default function HomePage(): React.JSX.Element {
           {commonQuestions.map((item) => (
             <Card key={item.intent} className="border-[#d4e3f8]">
               <CardHeader>
-                <CardTitle className="text-xl text-[#0f3364]">{item.intent}</CardTitle>
+                <CardTitle as="p" className="text-xl text-[#0f3364]">{item.intent}</CardTitle>
                 <CardDescription className="text-base leading-7 text-[#203754]">{item.answer}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -345,7 +568,7 @@ export default function HomePage(): React.JSX.Element {
           {entityDirectory.map((entry) => (
             <Card key={entry.entity} className="border-[#d4e3f8]">
               <CardHeader>
-                <CardTitle className="text-lg text-[#0f3364]">{entry.entity}</CardTitle>
+                <CardTitle as="p" className="text-lg text-[#0f3364]">{entry.entity}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-7 text-[#203754]">
                 <p>
@@ -377,7 +600,7 @@ export default function HomePage(): React.JSX.Element {
         <div className="grid gap-4 md:grid-cols-2">
           <Card className="border-[#d4e3f8]">
             <CardHeader>
-              <CardTitle className="text-lg text-[#0f3364]">UK Primary References</CardTitle>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">UK Primary References</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
               {externalReferences.uk.map((reference) => (
@@ -395,7 +618,7 @@ export default function HomePage(): React.JSX.Element {
           </Card>
           <Card className="border-[#d4e3f8]">
             <CardHeader>
-              <CardTitle className="text-lg text-[#0f3364]">Nigeria Primary References</CardTitle>
+              <CardTitle as="p" className="text-lg text-[#0f3364]">Nigeria Primary References</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
               {externalReferences.nigeria.map((reference) => (
@@ -423,7 +646,7 @@ export default function HomePage(): React.JSX.Element {
           {homepageFaqs.map((faq) => (
             <Card key={faq.question} className="border-[#d4e3f8]">
               <CardHeader>
-                <CardTitle className="text-lg text-[#0f3364]">{faq.question}</CardTitle>
+                <CardTitle as="p" className="text-lg text-[#0f3364]">{faq.question}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="leading-7 text-[#203754]">{faq.answer}</p>
@@ -436,40 +659,92 @@ export default function HomePage(): React.JSX.Element {
       <section id="worked-cases" className="space-y-6 surface-panel p-6 scroll-mt-28 sm:p-8">
         <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Worked Cases</p>
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
-          Real Decision Scenarios
+          Worked Examples with Real Numbers and Dates
         </h2>
         <p className="leading-7 text-[#203754]">
-          Review worked examples showing how teams use these tools for threshold checks, levy planning, residency
-          timelines, and cross-border briefing packs.
+          These comparison tables are designed for quick review in finance meetings. They use concrete values so teams
+          can test assumptions before they run live records through each calculator.
         </p>
-        <div className="grid gap-4 md:grid-cols-2">
-          <Card className="border-[#d4e3f8]">
-            <CardHeader>
-              <CardTitle className="text-lg text-[#0f3364]">Nigeria Threshold and Levy Cases</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <p className="leading-7 text-[#203754]">
-                Includes practical assumptions, control checks, and defensibility notes for 0% CIT screening and levy
-                exposure planning.
-              </p>
-              <Link href="/case-studies" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
-                Open case library
-              </Link>
-            </CardContent>
-          </Card>
-          <Card className="border-[#d4e3f8]">
-            <CardHeader>
-              <CardTitle className="text-lg text-[#0f3364]">UK FIG Timeline Cases</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <p className="leading-7 text-[#203754]">
-                Includes date-bound eligibility scenarios and governance workflow patterns for cross-team planning.
-              </p>
-              <Link href="/case-studies" className="text-sm font-medium text-[#12447d] hover:text-[#0f3968]">
-                View worked scenarios
-              </Link>
-            </CardContent>
-          </Card>
+
+        <div className="space-y-3 rounded-lg border border-[#dbe7f8] bg-[#f7fbff] p-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#3f5c84]">
+            Nigeria Screening Comparison Table
+          </p>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm">
+              <thead className="bg-[#edf5ff] text-[#123f76]">
+                <tr>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Persona</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Turnover</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Sector</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Assessable Profit</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Branch</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Levy Estimate</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Next Action</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#203754]">
+                {nigeriaWorkedExamples.map((example) => (
+                  <tr key={example.persona} className="bg-white">
+                    <td className="border border-[#dfeafb] px-3 py-2 font-medium">{example.persona}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.turnover}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.sector}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.assessableProfit}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.citScreeningBranch}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.levyEstimate}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.nextAction}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="space-y-3 rounded-lg border border-[#dbe7f8] bg-[#f7fbff] p-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#3f5c84]">
+            UK FIG Timeline Comparison Table
+          </p>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm">
+              <thead className="bg-[#edf5ff] text-[#123f76]">
+                <tr>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Persona</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Arrival Date</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Prior Non-Resident Years</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Screening Result</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Relief End Date</th>
+                  <th className="border border-[#d5e3f7] px-3 py-2 font-semibold">Immediate Action</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#203754]">
+                {ukWorkedExamples.map((example) => (
+                  <tr key={example.persona} className="bg-white">
+                    <td className="border border-[#dfeafb] px-3 py-2 font-medium">{example.persona}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.ukArrivalDate}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.priorYearsNonResident}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.figScreeningResult}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.reliefEndDate}</td>
+                    <td className="border border-[#dfeafb] px-3 py-2">{example.immediateAction}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968]"
+          >
+            Open Full Case Library
+          </Link>
+          <Link
+            href="/book-demo"
+            className="inline-flex items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff]"
+          >
+            Book Workflow Walkthrough
+          </Link>
         </div>
       </section>
 
@@ -581,7 +856,7 @@ export default function HomePage(): React.JSX.Element {
                 </div>
               ) : null}
               <CardHeader>
-                <CardTitle className="font-[var(--font-heading)] text-xl text-[#0f3364]">{post.title}</CardTitle>
+                <CardTitle as="p" className="font-[var(--font-heading)] text-xl text-[#0f3364]">{post.title}</CardTitle>
                 <CardDescription className="text-base leading-7">{post.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -614,4 +889,5 @@ export default function HomePage(): React.JSX.Element {
     </div>
   );
 }
+
 

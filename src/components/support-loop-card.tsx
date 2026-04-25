@@ -40,6 +40,24 @@ export function SupportLoopCard({ toolName, toolPath }: SupportLoopCardProps): R
           >
             View Changelog
           </Link>
+          <Link
+            href="/pricing"
+            className="inline-flex w-full items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff] sm:w-auto"
+          >
+            View Pricing
+          </Link>
+          <Link
+            href="/book-demo"
+            className="inline-flex w-full items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff] sm:w-auto"
+          >
+            Book Demo
+          </Link>
+          <Link
+            href="/testimonials"
+            className="inline-flex w-full items-center justify-center rounded-md border border-[#c1d8f5] bg-white px-4 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eaf2ff] sm:w-auto"
+          >
+            Client Proof
+          </Link>
         </div>
       </CardContent>
     </Card>

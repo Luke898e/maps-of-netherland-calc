@@ -14,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }> = [
     { route: "", changeFrequency: "daily", priority: 1 },
     { route: "/blog", changeFrequency: "daily", priority: 0.95 },
+    { route: "/pricing", changeFrequency: "weekly", priority: 0.9 },
+    { route: "/book-demo", changeFrequency: "weekly", priority: 0.88 },
+    { route: "/testimonials", changeFrequency: "weekly", priority: 0.85 },
     { route: "/tools/nigeria-zero-tax-auditor", changeFrequency: "weekly", priority: 0.9 },
     { route: "/tools/uk-fig-regime-eligibility", changeFrequency: "weekly", priority: 0.9 },
     { route: "/sitemap", changeFrequency: "weekly", priority: 0.85 },

@@ -56,15 +56,17 @@ export default function AccessibilityStatementPage(): React.JSX.Element {
               {siteConfig.contactEmail}
             </Link>
           </li>
-          <li>
-            Phone:{" "}
-            <Link
-              href={`tel:${siteConfig.contactPhoneDial}`}
-              className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
-            >
-              {siteConfig.contactPhone}
-            </Link>
-          </li>
+          {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
+            <li>
+              Phone:{" "}
+              <Link
+                href={`tel:${siteConfig.contactPhoneDial}`}
+                className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2"
+              >
+                {siteConfig.contactPhone}
+              </Link>
+            </li>
+          ) : null}
           <li>
             Structured report form:{" "}
             <Link href="/support" className="text-[#17467f] underline decoration-[#7aa6dd] underline-offset-2">

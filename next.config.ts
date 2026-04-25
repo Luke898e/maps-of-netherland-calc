@@ -2,11 +2,11 @@ import type { NextConfig } from "next";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://*.googlesyndication.com https://fundingchoicesmessages.google.com https://*.google.com https://*.g.doubleclick.net https://*.doubleclick.net",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://*.googlesyndication.com https://fundingchoicesmessages.google.com https://*.google.com https://*.g.doubleclick.net https://*.doubleclick.net",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "img-src 'self' data: https:",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "connect-src 'self' https:",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https:",
   "frame-src https://*.google.com https://*.googlesyndication.com https://*.g.doubleclick.net https://*.doubleclick.net",
   "object-src 'none'",
   "base-uri 'self'",

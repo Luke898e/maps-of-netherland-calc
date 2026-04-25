@@ -1,11 +1,9 @@
 const localFallbackSiteUrl = "http://localhost:3001";
 const productionFallbackSiteUrl = "https://map-of-netherlands.co.uk";
 const fallbackContactEmail = "contact@map-of-netherlands.co.uk";
-const fallbackContactPhone = "+2348000000000";
 const fallbackGithubProfile = "https://github.com/LukmonIsiaq";
 const fallbackServiceName = "Global Tax Suite";
 const isProductionBuild = process.env.NODE_ENV === "production";
-const isVercelProduction = isProductionBuild && process.env.VERCEL === "1";
 
 function isLocalOrigin(origin: string): boolean {
   return origin.includes("localhost") || origin.includes("127.0.0.1") || origin.includes("[::1]");
@@ -42,23 +40,16 @@ function normalizeContactEmail(rawValue: string | undefined): string {
   return fallbackContactEmail;
 }
 
-function normalizePhone(rawValue: string | undefined): { display: string; dial: string } {
+function normalizePhone(rawValue: string | undefined): { display: string; dial: string } | null {
   const raw = rawValue?.trim();
-  const fallbackDial = fallbackContactPhone.replace(/[^\d+]/g, "");
 
   if (!raw) {
-    return {
-      display: fallbackContactPhone,
-      dial: fallbackDial
-    };
+    return null;
   }
 
   const dial = raw.replace(/[^\d+]/g, "");
   if (!dial.startsWith("+") || dial.length < 8) {
-    return {
-      display: fallbackContactPhone,
-      dial: fallbackDial
-    };
+    return null;
   }
 
   return {
@@ -108,19 +99,26 @@ const normalizedGithubProfile = normalizeGithubProfile(process.env.NEXT_PUBLIC_G
 const normalizedLinkedInProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_LINKEDIN_PROFILE);
 const normalizedProfessionalProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_PROFESSIONAL_PROFILE);
 const businessLegalName = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_LEGAL_NAME, fallbackServiceName);
-const locality = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_LOCALITY, "Lagos");
-const region = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_REGION, "Lagos");
-const countryCode = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_COUNTRY_CODE, "NG");
-const addressCountryName = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_COUNTRY_NAME, "Nigeria");
-const streetAddress = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_STREET_ADDRESS, "Lagos, Nigeria");
-const postalCode = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_POSTAL_CODE, "100001");
+const useUkFallbackAddress = normalizedSiteUrl.endsWith(".co.uk");
+const fallbackLocality = useUkFallbackAddress ? "London" : "Lagos";
+const fallbackRegion = useUkFallbackAddress ? "England" : "Lagos";
+const fallbackCountryCode = useUkFallbackAddress ? "GB" : "NG";
+const fallbackCountryName = useUkFallbackAddress ? "United Kingdom" : "Nigeria";
+const fallbackStreet = useUkFallbackAddress ? "London, United Kingdom" : "Lagos, Nigeria";
+const fallbackPostalCode = useUkFallbackAddress ? "EC1A 1AA" : "100001";
+const locality = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_LOCALITY, fallbackLocality);
+const region = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_REGION, fallbackRegion);
+const countryCode = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_COUNTRY_CODE, fallbackCountryCode);
+const addressCountryName = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_COUNTRY_NAME, fallbackCountryName);
+const streetAddress = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_STREET_ADDRESS, fallbackStreet);
+const postalCode = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_POSTAL_CODE, fallbackPostalCode);
 
 export const siteConfig = {
   siteName: "2026 Global Mobility & Tax Suite",
   siteUrl: normalizedSiteUrl,
   contactEmail: normalizedContactEmail,
-  contactPhone: normalizedPhone.display,
-  contactPhoneDial: normalizedPhone.dial,
+  contactPhone: normalizedPhone?.display ?? null,
+  contactPhoneDial: normalizedPhone?.dial ?? null,
   legalName: businessLegalName,
   address: {
     streetAddress,

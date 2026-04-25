@@ -12,6 +12,8 @@ const primaryNavItems = [
   { href: "/", label: "Home" },
   { href: "/tools/nigeria-zero-tax-auditor", label: "Nigeria Auditor" },
   { href: "/tools/uk-fig-regime-eligibility", label: "UK FIG Tool" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/book-demo", label: "Book Demo" },
   { href: "/blog", label: "Blog" },
   { href: "/support", label: "Support" }
 ];

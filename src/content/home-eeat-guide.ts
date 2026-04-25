@@ -19,18 +19,18 @@ export interface EntityDirectoryItem {
 }
 
 export const homeGuideIntro: ReadonlyArray<string> = [
-  "This page is written for people who need to make real tax decisions with limited time and imperfect data. That includes founders, finance leads, payroll managers, mobility teams, and advisers who are expected to explain not only what a result is, but also why it is reasonable and what should happen next. The goal here is simple: give you clear language, practical steps, and a structure you can use in meetings, reviews, and filing preparation.",
-  "The suite focuses on two areas that regularly create confusion in 2026 planning. First, Nigeria corporate screening, where turnover thresholds, sector classification, and assessable profit can be mixed up in everyday reporting. Second, UK FIG screening, where arrival timing and residency history can be misunderstood when teams rely on memory or informal summaries. Both tools are built to turn those recurring pain points into auditable decisions.",
-  "You can read this page in order or jump directly to the section that matches your current problem. Either way, treat it as a working guide. Run the relevant tool, save the output, pair it with evidence, and then escalate edge cases to a qualified professional. That sequence gives you speed without pretending that tax decisions are risk-free."
+  "This guide is for busy teams. You may have little time and messy data. You still need clear tax decisions you can explain.",
+  "We focus on two jobs. Job one is Nigeria company screening. Job two is UK FIG timeline screening. Both tools turn unclear rules into clear steps.",
+  "Use this page like a checklist. Run the tool. Save the output. Attach evidence. Escalate hard cases early."
 ];
 
 export const homeKnowledgeSections: ReadonlyArray<HomeKnowledgeSection> = [
   {
     title: "1) What most teams need before using a calculator",
     paragraphs: [
-      "In tax work, people often ask for a number when they actually need a decision they can defend. A number without context may look useful at first, but it rarely survives serious review. Leadership wants to know what assumptions were used. Advisers want to know whether facts were complete. Audit teams want to see where each input came from. If those questions are unanswered, even a correct formula can lead to a weak outcome.",
-      "The most common breakdown is not arithmetic. It is sequencing. Teams collect documents too late, merge fields that should stay separate, or treat one screen result as final when it is only a first pass. For example, a company might estimate Nigeria exposure from revenue alone and skip sector analysis, or a mobility team might discuss UK eligibility before confirming a full ten-year residency record. In both cases, the risk comes from process gaps rather than difficult math.",
-      "A useful tax tool should therefore do three things clearly. It should apply a stable rule set. It should expose the branch logic in plain language. It should make the next action obvious. When a case appears straightforward, the next action is documentation and archiving. When a case is unclear, the next action is escalation with evidence. This guide follows that same pattern so you can move from question to action without guesswork."
+      "Most teams ask for one number. What they really need is a decision they can defend. A number without context fails in review.",
+      "The usual problem is process, not math. Teams use the wrong inputs. They mix fields that should stay separate. They treat a first-pass result as final.",
+      "A good tool should do three things. It should apply clear rules. It should show why a branch was chosen. It should tell you the next action."
     ],
     bullets: [
       "Be clear about the decision you need today.",
@@ -42,9 +42,9 @@ export const homeKnowledgeSections: ReadonlyArray<HomeKnowledgeSection> = [
   {
     title: "2) Nigeria corporate screening in practical terms",
     paragraphs: [
-      "Nigeria corporate screening is often discussed in headline form, but day-to-day compliance is more specific. In this suite, the first branch checks whether annual turnover is at or below NGN 100 million and whether the business is outside Professional Services. If both conditions are true, the result shows eligibility for the zero-percent CIT screening branch. If turnover is above NGN 100 million, the tool moves to development levy estimation using assessable profit.",
-      "That distinction matters because many teams combine turnover and assessable profit in one spreadsheet narrative. They are related, but they do different jobs in this model. Turnover determines branch direction. Assessable profit determines levy size once the high-turnover branch is active. Keeping those fields separate makes the output easier to explain and less likely to be challenged later.",
-      "Classification quality is just as important as numeric accuracy. If commercial activity changes during the year, a classification that once made sense may no longer fit. Advisory-heavy contracts, bundled services, and mixed revenue streams deserve extra care. The practical answer is to rerun screening when business facts change, not only at year-end. That turns compliance into an ongoing control, rather than a last-minute scramble before filing."
+      "Nigeria screening is simple in this model. First, check turnover. Then check sector. If turnover is at or below NGN 100 million and sector is not Professional Services, the tool returns the zero-CIT screening branch.",
+      "If turnover is above NGN 100 million, the tool moves to levy estimation. It uses assessable profit for the levy number. Turnover picks the branch. Assessable profit sets the amount.",
+      "Re-run the screen when business facts change. Do not wait for year-end. This keeps your file clean and avoids surprise corrections."
     ],
     bullets: [
       "Use turnover to select the correct branch.",
