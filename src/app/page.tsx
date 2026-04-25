@@ -17,9 +17,9 @@ import { externalReferences } from "@/content/references";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "2026 Global Mobility Tax Suite for Nigeria and UK Compliance",
+  title: "UK & Nigeria Tax Compliance Tools | London and Lagos",
   description:
-    "2026 Global Mobility & Tax Suite homepage with access to the Nigeria Zero-Tax Auditor and UK FIG Regime Eligibility Tool.",
+    "Tax compliance tools for London, Manchester, Birmingham, Lagos, Abuja, and Port Harcourt teams. Run UK FIG and Nigeria CIT checks in minutes.",
   alternates: {
     canonical: siteConfig.siteUrl
   }
@@ -195,6 +195,19 @@ const ukWorkedExamples: ReadonlyArray<UkWorkedExample> = [
   }
 ];
 
+const serviceAreaCities = [
+  "London",
+  "Manchester",
+  "Birmingham",
+  "Leeds",
+  "Bristol",
+  "Lagos",
+  "Abuja",
+  "Port Harcourt",
+  "Kano",
+  "Ibadan"
+] as const;
+
 function slugify(value: string): string {
   return value
     .toLowerCase()
@@ -259,7 +272,7 @@ export default function HomePage(): React.JSX.Element {
           <div>
             <p className="section-kicker">Tax Help for Real Cases</p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight text-[#0e325f] sm:text-5xl">
-              2026 Global Mobility Tax Suite for Nigeria and UK Compliance
+              UK and Nigeria Tax Compliance Tools for London and Lagos Teams
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#233d5d]">
               Run fast tax checks for Nigeria and the UK in one place. Each tool shows clear rules, validates your
@@ -270,7 +283,7 @@ export default function HomePage(): React.JSX.Element {
                 href="/tools/nigeria-zero-tax-auditor"
                 className="inline-flex items-center justify-center rounded-md bg-[#12447d] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0f3968]"
               >
-                Try Tools
+                Start Free Tax Check in 60 Seconds
               </Link>
               <Link
                 href="/pricing"
@@ -285,6 +298,9 @@ export default function HomePage(): React.JSX.Element {
                 Book Demo
               </Link>
             </div>
+            <p className="mt-3 text-sm font-medium text-[#305178]">
+              Free first screening, no signup wall, and a shareable output for adviser review.
+            </p>
           </div>
           <div className="space-y-3 rounded-xl border border-[#d3e3f7] bg-white/85 p-4">
             {heroHighlights.map((item) => (
@@ -300,6 +316,27 @@ export default function HomePage(): React.JSX.Element {
             ))}
           </div>
         </div>
+      </section>
+
+      <section id="service-areas" className="surface-panel p-6 scroll-mt-28 sm:p-8">
+        <p className="text-sm uppercase tracking-[0.12em] text-[#3f5c84]">Areas We Serve</p>
+        <h2 className="mt-2 font-[var(--font-heading)] text-2xl font-semibold text-[#0f3364]">
+          UK and Nigeria Service Coverage
+        </h2>
+        <p className="mt-3 max-w-3xl leading-7 text-[#203754]">
+          We support founders and finance teams operating across the United Kingdom and Nigeria, with workflows often
+          centered on these cities.
+        </p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+          {serviceAreaCities.map((city) => (
+            <li
+              key={city}
+              className="rounded-md border border-[#d2e1f6] bg-[#f7fbff] px-3 py-2 text-sm font-medium text-[#173e73]"
+            >
+              {city}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="surface-panel-muted p-6 sm:p-8">
@@ -338,6 +375,12 @@ export default function HomePage(): React.JSX.Element {
             className="rounded-lg border border-[#d2e1f6] bg-white px-3 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eef5ff]"
           >
             Worked Cases
+          </a>
+          <a
+            href="#service-areas"
+            className="rounded-lg border border-[#d2e1f6] bg-white px-3 py-2 text-sm font-medium text-[#12447d] transition-colors hover:bg-[#eef5ff]"
+          >
+            Service Areas
           </a>
           <a
             href="#entity-directory"
@@ -780,9 +823,10 @@ export default function HomePage(): React.JSX.Element {
           <input type="hidden" name="type" value="question" />
           <input type="hidden" name="path" value="/" />
           <input type="hidden" name="tool" value="Homepage Quick Inquiry" />
-          <label className="flex flex-col gap-1 text-sm text-[#203754]">
-            Name
+          <label htmlFor="home-inquiry-name" className="flex flex-col gap-1 text-sm text-[#203754]">
+            Full Name
             <input
+              id="home-inquiry-name"
               type="text"
               name="name"
               autoComplete="name"
@@ -790,9 +834,10 @@ export default function HomePage(): React.JSX.Element {
               placeholder="Your full name"
             />
           </label>
-          <label className="flex flex-col gap-1 text-sm text-[#203754]">
-            Email
+          <label htmlFor="home-inquiry-email" className="flex flex-col gap-1 text-sm text-[#203754]">
+            Work Email
             <input
+              id="home-inquiry-email"
               type="email"
               name="email"
               autoComplete="email"
@@ -800,18 +845,20 @@ export default function HomePage(): React.JSX.Element {
               placeholder="you@example.com"
             />
           </label>
-          <label className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
+          <label htmlFor="home-inquiry-topic" className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
             Topic
             <input
+              id="home-inquiry-topic"
               type="text"
               name="title"
               className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"
               placeholder="What do you need help with?"
             />
           </label>
-          <label className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
+          <label htmlFor="home-inquiry-message" className="flex flex-col gap-1 text-sm text-[#203754] sm:col-span-2">
             Message
             <textarea
+              id="home-inquiry-message"
               name="details"
               rows={4}
               className="rounded-md border border-[#c8dbf4] bg-white px-3 py-2 text-sm text-[#0f3364]"

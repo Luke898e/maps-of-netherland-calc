@@ -1,6 +1,7 @@
 const localFallbackSiteUrl = "http://localhost:3001";
 const productionFallbackSiteUrl = "https://map-of-netherlands.co.uk";
 const fallbackContactEmail = "contact@map-of-netherlands.co.uk";
+const fallbackUkContactPhone = "+44 1632 960123";
 const fallbackGithubProfile = "https://github.com/LukmonIsiaq";
 const fallbackFacebookProfile = "https://www.facebook.com/lukmon.isiaq";
 const fallbackServiceName = "Global Tax Suite";
@@ -113,10 +114,16 @@ function normalizeOptionalProfile(rawValue: string | undefined): string | null {
 const normalizedSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const normalizedContactEmail = normalizeContactEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
 const allowCrossRegionPhone = process.env.NEXT_PUBLIC_ALLOW_CROSS_REGION_PHONE === "true";
-const normalizedPhone = normalizePhone(process.env.NEXT_PUBLIC_CONTACT_PHONE, {
+const useUkFallbackAddress = normalizedSiteUrl.endsWith(".co.uk");
+const normalizedConfiguredPhone = normalizePhone(process.env.NEXT_PUBLIC_CONTACT_PHONE, {
   siteUrl: normalizedSiteUrl,
   allowCrossRegionPhone
 });
+const normalizedUkFallbackPhone = normalizePhone(fallbackUkContactPhone, {
+  siteUrl: normalizedSiteUrl,
+  allowCrossRegionPhone: true
+});
+const normalizedPhone = normalizedConfiguredPhone ?? (useUkFallbackAddress ? normalizedUkFallbackPhone : null);
 const normalizedGithubProfile = normalizeGithubProfile(process.env.NEXT_PUBLIC_GITHUB_PROFILE);
 const normalizedXProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_X_PROFILE);
 const normalizedFacebookProfile =
@@ -124,7 +131,6 @@ const normalizedFacebookProfile =
 const normalizedLinkedInProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_LINKEDIN_PROFILE);
 const normalizedProfessionalProfile = normalizeOptionalProfile(process.env.NEXT_PUBLIC_PROFESSIONAL_PROFILE);
 const businessLegalName = normalizeNonEmpty(process.env.NEXT_PUBLIC_BUSINESS_LEGAL_NAME, fallbackServiceName);
-const useUkFallbackAddress = normalizedSiteUrl.endsWith(".co.uk");
 const fallbackLocality = useUkFallbackAddress ? "London" : "Lagos";
 const fallbackRegion = useUkFallbackAddress ? "England" : "Lagos";
 const fallbackCountryCode = useUkFallbackAddress ? "GB" : "NG";

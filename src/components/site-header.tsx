@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 
 import { SiteLogo } from "@/components/site-logo";
+import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const primaryNavItems = [
@@ -91,6 +92,19 @@ export function SiteHeader(): React.JSX.Element {
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
+
+        {siteConfig.contactPhone && siteConfig.contactPhoneDial ? (
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#cfe0f7] bg-[#f5f9ff] px-3 py-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#426188]">UK support line</p>
+            <Link
+              href={`tel:${siteConfig.contactPhoneDial}`}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0f3364] underline decoration-[#8ab0df] underline-offset-2 hover:text-[#0b2d55]"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              {siteConfig.contactPhone}
+            </Link>
+          </div>
+        ) : null}
 
         <nav aria-label="Main navigation" className="mt-3 hidden flex-wrap gap-2 lg:flex">
           {primaryNavItems.map((item) => {
