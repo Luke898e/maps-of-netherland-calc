@@ -2,6 +2,352 @@ import { blogMarkdownOverridesBatchApr21 } from "@/content/blog-markdown-overrid
 import { blogMarkdownOverridesBatchApr21Extra } from "@/content/blog-markdown-overrides-batch-apr21-extra";
 
 export const blogMarkdownOverrides: Readonly<Record<string, string>> = {
+  "uk-self-assessment-for-foreign-earners-2026": `# UK Self Assessment for Foreign Earners (Step-by-Step Filing Guide)
+
+If you live in the UK and money is still arriving from outside the UK, the filing problem usually starts with a false shortcut.
+
+People jump straight to the form. They ask whether they should use SA106, whether foreign tax can be credited, or whether the income can be ignored because it already suffered tax abroad.
+
+That is the wrong starting point.
+
+For a foreign earner, the first question is still residence for the relevant UK tax year. Only after that do the Self Assessment pages make sense. In 2026, that order matters even more because the UK has already moved into the post-6 April 2025 foreign income and gains framework.
+
+This guide is for the practical case: you are UK resident or may have become UK resident, you have non-UK income, and you want a filing path that does not collapse later under review.
+
+## Step 1: anchor the right year before touching the return
+
+UK Self Assessment follows the UK tax year, which runs from 6 April to 5 April.
+
+That sounds basic, but it is where many mistakes begin. A person who arrived in September 2025 and asks about "my 2026 income" may actually be dealing with the tax year ending 5 April 2026, plus a separate later year if the foreign income continued.
+
+Build a year-specific file first:
+
+* start date and end date for the UK tax year under review
+* travel timeline
+* work location timeline
+* list of foreign income streams in that same period
+* foreign tax paid, if any
+
+If the year boundary is wrong, the rest of the filing can look tidy and still be wrong.
+
+For the residence side, use [UK Statutory Residence Test Explained](/blog/uk-statutory-residence-test-explained-2026) before you finalise any foreign income entries.
+
+## Step 2: decide whether Self Assessment is required
+
+GOV.UK says you will usually need to complete a Self Assessment tax return if you are UK resident with foreign income or capital gains, subject to narrow exceptions. The official guidance also says that if you do not usually file, you generally need to tell HMRC by 5 October following the tax year in which you had the income.
+
+That is the point many new arrivals miss. They treat foreign income as something HMRC will eventually discover from the banking side. The actual requirement is more direct. If the income is reportable, the filing obligation does not wait for an enquiry letter.
+
+In practice, ask four questions:
+
+* Were you UK resident for the tax year or part of it under the statutory rules?
+* What type of foreign income did you receive: employment, self-employment, dividends, rent, interest, or gains?
+* Was the income within a relief regime such as the FIG framework for qualifying new residents?
+* Did foreign tax already arise on the same income?
+
+The answers decide not just whether you file, but how.
+
+## Step 3: do not confuse "foreign income" with "not taxable"
+
+This is one of the most expensive assumptions in cross-border filing.
+
+From 6 April 2025, the old remittance basis stopped applying for current years and the UK moved to a residence-based framework. HMRC's 2026 HS266 helpsheet explains that qualifying new residents may claim relief under the foreign income and gains, or FIG, regime for certain foreign income and gains during their first four years of UK residence after a sufficiently long period of non-UK residence.
+
+That does not mean all foreign income is ignored.
+
+It means you must test:
+
+* whether you are UK resident for the year
+* whether you qualify as a new resident for FIG purposes
+* which income streams qualify
+* whether a claim is actually being made in the return
+
+If you skip that sequence and simply assume "my income was earned abroad, so it is outside the UK return," the filing logic breaks immediately.
+
+For a broader policy overview, compare this guide with [Do You Pay UK Tax on Foreign Income?](/blog/do-you-pay-uk-tax-on-foreign-income-2026).
+
+## Step 4: know which return pages usually matter
+
+Most foreign earners should think in layers rather than one document.
+
+The core return is SA100. The foreign income pages are SA106. Residence-related issues and FIG-related claims can involve SA109.
+
+GOV.UK's SA106 page says those supplementary pages are used to record foreign income and gains on your main tax return. HMRC's HS266 guidance then explains that FIG claims are made through the residence and foreign income and gains pages, together with the relevant supplementary pages depending on the income type.
+
+The practical filing stack often looks like this:
+
+* SA100 for the main return
+* SA106 for foreign income and gains
+* SA109 where residence status or FIG-related boxes need to be completed
+* supporting calculations for foreign tax credit relief where relevant
+
+The point is not to memorise form numbers. The point is to realise that foreign earnings often require more than one page set, and those pages need to tell one coherent story.
+
+## Step 5: map each foreign income stream before entering any figures
+
+Do not throw all overseas money into one bucket.
+
+Build a small schedule for each stream:
+
+* who paid it
+* what the income was for
+* which dates it arose
+* which country taxed it first
+* whether it was employment, self-employment, dividends, rent, interest, or gains
+* what evidence supports it
+
+This step looks slow, but it is what prevents mixed treatment later. A taxpayer may have UK employment income, foreign freelance income, foreign dividends, and one overseas bank account producing interest. Those items do not always belong in the same place or receive the same relief.
+
+If your case also involves dual residence tension, read [Can You Be Tax Resident in Two Countries?](/blog/can-you-be-tax-resident-in-two-countries-nigeria-uk-2026) before relying on a simple one-country answer.
+
+## Step 6: separate filing from relief
+
+Foreign earners often collapse two different questions into one:
+
+* Do I have to report the income?
+* Will I still pay full UK tax on it?
+
+Those are not the same question.
+
+Income can be reportable even if:
+
+* foreign tax credit relief may reduce the UK tax
+* treaty rules may matter
+* FIG relief may be claimable
+* the final UK liability may be low
+
+The filing obligation comes first. Relief comes second.
+
+That is why "it was already taxed in another country" is not a filing strategy. It is only the start of a relief analysis.
+
+## Step 7: keep a defensible evidence pack, not just a return PDF
+
+The return itself is only the surface layer.
+
+A good file for a foreign earner usually includes:
+
+* residence analysis for the tax year
+* overseas payslips, dividend statements, rental statements, or invoices
+* foreign tax certificates or statements
+* exchange-rate workings where conversion was needed
+* a schedule showing how each return figure was built
+* a note explaining any claim under FIG or foreign tax relief rules
+
+This is where many filers underperform. They submit the return and assume the job is done. But when HMRC asks how the numbers were derived, the real quality of the filing becomes visible.
+
+## Step 8: watch the timeline traps
+
+Foreign earners are exposed to a few recurring timing mistakes:
+
+* counting calendar years instead of UK tax years
+* claiming residence conclusions without a day-count file
+* mixing pre-arrival and post-arrival income without testing split-year treatment
+* assuming foreign tax paid in one country and one year automatically aligns with the UK year
+
+The split-year point is particularly dangerous. A move into the UK halfway through a year can change the practical answer, but split-year treatment is not automatic. It has to be tested properly against the relevant case.
+
+## Step 9: what I would do in a real case
+
+If I were preparing a first UK Self Assessment for someone with foreign earnings, I would do it in this order:
+
+1. Fix the exact tax year.
+2. Complete the residence analysis first.
+3. Build one schedule per foreign income stream.
+4. Mark which streams are simply reportable and which may need relief analysis.
+5. Match the streams to the return pages.
+6. Assemble the evidence pack before submission, not after.
+
+That order prevents most of the common failures. It keeps the filing logic attached to facts rather than guesswork.
+
+## Final point
+
+The hard part of UK Self Assessment for foreign earners is usually not typing numbers into HMRC's system.
+
+The hard part is getting the sequence right:
+
+* residence first
+* income classification second
+* relief testing third
+* form completion fourth
+* evidence pack always
+
+People who reverse that order often end up amending returns or rebuilding files later.
+
+If you want the next layer after this guide, go straight to [UK Statutory Residence Test Explained](/blog/uk-statutory-residence-test-explained-2026) and then [Do You Pay UK Tax on Foreign Income?](/blog/do-you-pay-uk-tax-on-foreign-income-2026).`,
+
+  "how-to-legally-split-income-to-stay-within-tax-thresholds-in-nigeria-2026": `# How to Legally Split Income to Stay Within Tax Thresholds in Nigeria
+
+This topic attracts bad advice because the phrase "split income" sounds simple while the legal reality is not.
+
+Some people hear it and think of a harmless planning step. Others hear it and imagine an obvious audit problem. Both instincts can be right depending on what the taxpayer is actually doing.
+
+The clean version of income splitting is not fake allocation. It is lawful structuring where the person or entity that earns the income, controls the work, bears the risk, and owns the commercial arrangement is the one that reports it. The unsafe version is moving profits on paper after the fact just to push tax down.
+
+That distinction matters more in 2026 because Nigeria's reform direction is more documentation-heavy, more digital, and less tolerant of artificial transactions.
+
+## Start with the real question
+
+The useful question is not, "How can I divide money so I pay less tax?"
+
+The useful question is this:
+
+> Which person or entity is genuinely earning each income stream, and can that position survive review?
+
+If the answer is weak, the structure is weak.
+
+PwC's Nigeria 2025 reform summary says the current framework increases documentation demands, strengthens anti-avoidance rules, and gives authorities broader power to recharacterise artificial transactions. That means arrangements that look clever on a spreadsheet but have no commercial substance are exactly the ones that become fragile.
+
+## Why thresholds matter, but not by themselves
+
+Threshold planning is still real. The same PwC summary says that small companies are now described as those with annual turnover of NGN 50 million and below, with total fixed assets not exceeding NGN 250 million, and that those small companies can benefit from relief on corporate income tax, development levy, and withholding tax in the circumstances outlined.
+
+So yes, thresholds matter.
+
+But this does not mean you can just slice one business into several names with no operational difference and expect the law to respect it. A threshold is useful only when the underlying structure is commercially real.
+
+That means asking:
+
+* who owns the client relationship?
+* who signs the contract?
+* who delivers the work?
+* who controls the bank account?
+* who bears refund risk, staffing cost, and delivery failure?
+
+If the answers all point to one person while the invoices are being scattered elsewhere, the planning story becomes weak.
+
+## What legal income splitting can look like
+
+There are defensible patterns.
+
+### 1. Separate people doing separate work
+
+If a husband and wife each carry out real work, each has clients or assigned responsibilities, and each is paid on terms that match the commercial reality, the income can be split because the work is actually split.
+
+That is not a trick. It is just accurate reporting.
+
+### 2. Market-rate compensation inside a real business
+
+If a family business employs relatives who actually work in the business and who are paid at a defensible market rate, that can be lawful. The records must show:
+
+* role
+* work performed
+* pay basis
+* payroll trail
+* evidence that the remuneration was not invented after profit was known
+
+### 3. Separate business lines with separate control
+
+One person may run consulting. Another may own a distinct training line or digital product line. If those activities are genuinely separate and the records support the split, different taxpayers can report different income streams without strain.
+
+### 4. Company versus individual structuring
+
+Sometimes the lawful question is not whether to split income between people, but whether some income should arise through a properly structured company rather than stay at individual level. That has to be built around real contracts, bank flows, bookkeeping, and filing obligations.
+
+If you need the structure angle first, read [Best Business Structures for Nigerians Earning in USD/GBP](/blog/best-business-structures-for-nigerians-earning-in-usd-gbp-2026).
+
+## What illegal or unsafe splitting usually looks like
+
+The weak patterns are easier to spot than people think.
+
+### 1. Invoices moved after the money is earned
+
+If one person did the work, one account received the money, and the taxpayer later "allocates" part of the profit to another person with no pre-existing commercial basis, that looks artificial immediately.
+
+### 2. Spouse allocations with no real role
+
+Putting income into a spouse's name is not planning if the spouse performed no real function, bore no risk, and had no control over the activity.
+
+### 3. Multiple entities with one real business
+
+If the same staff, same customers, same account control, same management, and same delivery process all sit under one practical business, dividing billing across multiple names only to stay under thresholds can be challenged as artificial.
+
+### 4. Payments with no paper trail
+
+A structure is not saved by good intentions if there are no:
+
+* contracts
+* payroll records
+* board decisions
+* timesheets
+* invoices
+* transfer explanations
+
+In 2026 that weakness is more dangerous because Nigeria's compliance environment is moving toward more real-time transaction visibility.
+
+## Why e-invoicing changes the tone of this issue
+
+The FIRS notice introducing the national e-invoicing regime for large taxpayers states that the system is meant to improve transparency, efficiency, and real-time visibility into business transactions. The ATRS platform itself describes tax reporting in near real-time terms.
+
+Even where a smaller taxpayer is not yet under the exact same operational burden, the direction of travel is obvious: transaction evidence is becoming more central, not less.
+
+That matters for income splitting because artificial arrangements tend to break when transaction-level data, invoice identity, and bank behavior are compared.
+
+## A practical test before you split anything
+
+Run this five-point test.
+
+### 1. Substance test
+
+Would an independent reviewer agree that each recipient really earned the amount allocated?
+
+### 2. Control test
+
+Who actually controls the customer, work product, and payment instructions?
+
+### 3. Documentation test
+
+Would the file show contracts, invoices, payroll, approvals, and bank flows that match the story?
+
+### 4. Conduct test
+
+Did the parties behave consistently all year, or was the split invented after year-end?
+
+### 5. Threshold obsession test
+
+If the arrangement makes sense only because of the threshold and makes no commercial sense without it, that is a warning sign.
+
+## What I would document in a real family business
+
+If a Nigerian family business wanted to structure income lawfully, I would insist on these basics:
+
+* clear ownership records
+* role descriptions for working family members
+* separate contracts where separate services exist
+* a board or management memo explaining why profits were retained or distributed
+* payroll files for salaries
+* bank accounts that match the legal recipient
+* tax filings that follow the same structure the accounts show
+
+That last point matters. The tax return should not be the first place where the "split" appears.
+
+For audit sensitivity, compare this with [Tax Audit Triggers in Nigeria for SMEs](/blog/tax-audit-triggers-in-nigeria-for-smes-2026).
+
+## A realistic example
+
+Assume one founder runs a content studio and the spouse genuinely manages client operations, contract administration, and delivery coordination full-time. If the business pays the spouse through payroll at a rate that matches the role, keeps records, and reports consistently, that is a much stronger position than simply moving 40% of year-end profit to the spouse with no role description and no payroll trail.
+
+Same family. Very different defensibility.
+
+## Final point
+
+Legal income splitting in Nigeria is really a discipline problem, not a slogan problem.
+
+If the arrangement has:
+
+* real work
+* real ownership or remuneration logic
+* contemporaneous records
+* consistent invoicing and banking
+* filings that match the commercial reality
+
+then it may be defensible.
+
+If it exists only to drag numbers under a threshold, it is exactly the kind of structure that becomes hard to defend once documentation, e-invoicing, and anti-avoidance review start doing their job.
+
+That is the line to respect.
+
+For the next layer, read [How to Structure Your Business to Legally Reduce Tax in Nigeria](/blog/how-to-structure-your-business-to-legally-reduce-tax-in-nigeria-2026) and [Best Business Structures for Nigerians Earning in USD/GBP](/blog/best-business-structures-for-nigerians-earning-in-usd-gbp-2026).`,
+
   "how-to-pay-zero-tax-in-nigeria-legally-2026": `# How to Pay Zero Tax in Nigeria Legally (2026 Complete Guide for SMEs & Founders)
 
 ## Introduction

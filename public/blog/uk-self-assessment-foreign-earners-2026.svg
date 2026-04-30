@@ -1,0 +1,38 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F3F8FF"/>
+  <rect x="64" y="64" width="1472" height="772" rx="40" fill="url(#bg)"/>
+  <circle cx="1304" cy="212" r="160" fill="#EAF3FF"/>
+  <circle cx="1304" cy="212" r="96" fill="#C7DBF6"/>
+  <path d="M1304 124L1329.38 176.62L1387.44 185.059L1345.42 225.99L1355.34 283.821L1304 256.84L1252.66 283.821L1262.58 225.99L1220.56 185.059L1278.62 176.62L1304 124Z" fill="#0F3C73"/>
+  <rect x="144" y="144" width="820" height="612" rx="28" fill="white"/>
+  <rect x="190" y="198" width="416" height="26" rx="13" fill="#0F3C73"/>
+  <rect x="190" y="246" width="298" height="16" rx="8" fill="#79A6D8"/>
+  <rect x="190" y="312" width="54" height="54" rx="14" fill="#EAF3FF"/>
+  <path d="M208 341L226 357L258 323" stroke="#0F3C73" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="274" y="326" width="514" height="18" rx="9" fill="#A6C3E9"/>
+  <rect x="274" y="356" width="412" height="14" rx="7" fill="#D6E5F8"/>
+  <rect x="190" y="410" width="54" height="54" rx="14" fill="#EAF3FF"/>
+  <path d="M208 439L226 455L258 421" stroke="#0F3C73" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="274" y="424" width="470" height="18" rx="9" fill="#A6C3E9"/>
+  <rect x="274" y="454" width="548" height="14" rx="7" fill="#D6E5F8"/>
+  <rect x="190" y="508" width="54" height="54" rx="14" fill="#EAF3FF"/>
+  <path d="M208 537L226 553L258 519" stroke="#0F3C73" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="274" y="522" width="530" height="18" rx="9" fill="#A6C3E9"/>
+  <rect x="274" y="552" width="372" height="14" rx="7" fill="#D6E5F8"/>
+  <rect x="1028" y="430" width="396" height="250" rx="28" fill="#0F3C73"/>
+  <rect x="1074" y="486" width="304" height="24" rx="12" fill="#F3F8FF"/>
+  <rect x="1074" y="530" width="256" height="18" rx="9" fill="#A6C3E9"/>
+  <rect x="1074" y="568" width="290" height="18" rx="9" fill="#A6C3E9"/>
+  <text x="148" y="820" fill="#0F3C73" font-family="Georgia, serif" font-size="54" font-weight="700">
+    UK Self Assessment for Foreign Earners
+  </text>
+  <text x="148" y="866" fill="#325D93" font-family="Arial, sans-serif" font-size="28">
+    Residence first, foreign income next, relief after that
+  </text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="1536" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCEBFB"/>
+      <stop offset="1" stop-color="#F8FBFF"/>
+    </linearGradient>
+  </defs>
+</svg>

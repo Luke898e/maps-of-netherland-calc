@@ -1,0 +1,46 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F8F6F0"/>
+  <rect x="64" y="64" width="1472" height="772" rx="40" fill="url(#bg2)"/>
+  <rect x="124" y="142" width="580" height="486" rx="34" fill="#FFFDF8"/>
+  <rect x="176" y="200" width="210" height="210" rx="28" fill="#EADDBB"/>
+  <path d="M246 332C282 286 310 248 332 214C356 250 383 290 422 340" stroke="#5E4A16" stroke-width="24" stroke-linecap="round"/>
+  <path d="M247 330H424" stroke="#5E4A16" stroke-width="24" stroke-linecap="round"/>
+  <rect x="438" y="216" width="204" height="26" rx="13" fill="#5E4A16"/>
+  <rect x="438" y="262" width="168" height="16" rx="8" fill="#A1863A"/>
+  <rect x="438" y="332" width="160" height="78" rx="22" fill="#0F5D53"/>
+  <text x="481" y="382" fill="#F8F6F0" font-family="Arial, sans-serif" font-size="40" font-weight="700">
+    NGN
+  </text>
+  <rect x="176" y="466" width="466" height="22" rx="11" fill="#C7B37A"/>
+  <rect x="176" y="506" width="398" height="16" rx="8" fill="#E8D9AA"/>
+  <rect x="176" y="542" width="430" height="16" rx="8" fill="#E8D9AA"/>
+  <rect x="812" y="164" width="626" height="430" rx="34" fill="#0F5D53"/>
+  <rect x="874" y="222" width="502" height="58" rx="18" fill="#F7F3E8"/>
+  <text x="912" y="262" fill="#0F5D53" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    Real ownership
+  </text>
+  <rect x="874" y="308" width="502" height="58" rx="18" fill="#F7F3E8"/>
+  <text x="912" y="348" fill="#0F5D53" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    Real work
+  </text>
+  <rect x="874" y="394" width="502" height="58" rx="18" fill="#F7F3E8"/>
+  <text x="912" y="434" fill="#0F5D53" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    Real records
+  </text>
+  <rect x="874" y="480" width="502" height="58" rx="18" fill="#F7F3E8"/>
+  <text x="912" y="520" fill="#0F5D53" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    Real thresholds
+  </text>
+  <text x="126" y="784" fill="#5E4A16" font-family="Georgia, serif" font-size="54" font-weight="700">
+    How to Legally Split Income in Nigeria
+  </text>
+  <text x="126" y="830" fill="#7A6631" font-family="Arial, sans-serif" font-size="28">
+    Threshold planning only works when substance is real
+  </text>
+  <defs>
+    <linearGradient id="bg2" x1="64" y1="64" x2="1536" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2E8C8"/>
+      <stop offset="1" stop-color="#FBFAF5"/>
+    </linearGradient>
+  </defs>
+</svg>

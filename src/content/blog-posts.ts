@@ -2836,6 +2836,186 @@ export const blogPosts: ReadonlyArray<BlogPost> = [
         url: "https://www.gov.uk/guidance/check-if-you-can-claim-the-4-year-foreign-income-and-gains-regime"
       }
     ]
+  },
+  {
+    slug: "uk-self-assessment-for-foreign-earners-2026",
+    title: "UK Self Assessment for Foreign Earners (Step-by-Step Filing Guide)",
+    description:
+      "A practical 2026 filing guide for UK residents and new arrivals with foreign income, covering when Self Assessment is required, which forms matter, and how to keep a defensible record.",
+    publishedDate: "2026-04-29",
+    updatedDate: "2026-04-29",
+    publishedAt: "2026-04-29T09:00:00+01:00",
+    updatedAt: "2026-04-29T09:00:00+01:00",
+    readingTime: "13 min read",
+    category: "UK Tax",
+    tags: [
+      "UK Self Assessment foreign earners 2026",
+      "SA106 foreign income",
+      "SA109 FIG regime",
+      "UK foreign income filing guide",
+      "HMRC Self Assessment 2026"
+    ],
+    featuredImage: {
+      src: "/blog/uk-self-assessment-foreign-earners-2026.svg",
+      alt: "UK Self Assessment for foreign earners featured image"
+    },
+    sections: [
+      {
+        heading: "What this guide covers",
+        paragraphs: [
+          "This article explains the 2026 filing path for foreign earners using the current UK residence and foreign income rules. The full body is maintained as a markdown override so the filing sequence, examples, and FAQs stay easier to edit as HMRC guidance evolves."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do I need Self Assessment just because I have foreign income?",
+        answer:
+          "Often yes if you are UK resident and your foreign income is reportable, but the answer depends on the income type, amount, and whether a specific exception applies."
+      },
+      {
+        question: "Which pages usually matter for foreign earners?",
+        answer:
+          "The core return is SA100, with SA106 for foreign income and SA109 where residence or FIG-related claims need to be shown."
+      },
+      {
+        question: "Can foreign tax already paid remove the need to report income to HMRC?",
+        answer:
+          "No. Foreign tax paid may support relief, but it does not automatically remove the UK reporting obligation."
+      },
+      {
+        question: "What is the first filing mistake to avoid?",
+        answer:
+          "Do not start with forms before settling UK residence for the tax year. The residence answer drives the filing logic."
+      },
+      {
+        question: "What records should I keep?",
+        answer:
+          "Keep a year-specific pack with residence analysis, overseas statements, exchange-rate workings, foreign tax evidence, and a note explaining each income stream."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "UK Statutory Residence Test Explained",
+        url: "/blog/uk-statutory-residence-test-explained-2026"
+      },
+      {
+        label: "Do You Pay UK Tax on Foreign Income?",
+        url: "/blog/do-you-pay-uk-tax-on-foreign-income-2026"
+      },
+      {
+        label: "Can You Be Tax Resident in Two Countries?",
+        url: "/blog/can-you-be-tax-resident-in-two-countries-nigeria-uk-2026"
+      }
+    ],
+    references: [
+      {
+        label: "GOV.UK: Tax on foreign income - Reporting your foreign income",
+        url: "https://www.gov.uk/tax-foreign-income/paying-tax"
+      },
+      {
+        label: "GOV.UK: Help with foreign income on your Self Assessment tax return",
+        url: "https://www.gov.uk/guidance/help-with-foreign-income-on-your-self-assessment-tax-return"
+      },
+      {
+        label: "GOV.UK: Self Assessment: Foreign (SA106)",
+        url: "https://www.gov.uk/government/publications/self-assessment-foreign-sa106"
+      },
+      {
+        label: "HMRC helpsheet HS266 Foreign income and gains (FIG) regime (2026)",
+        url: "https://www.gov.uk/government/publications/foreign-income-and-gains-fig-regime-self-assessment-helpsheet-hs266/hs266-foreign-income-and-gains-fig-regime-2026"
+      }
+    ]
+  },
+  {
+    slug: "how-to-legally-split-income-to-stay-within-tax-thresholds-in-nigeria-2026",
+    title: "How to Legally Split Income to Stay Within Tax Thresholds in Nigeria",
+    description:
+      "A careful 2026 guide to lawful income structuring in Nigeria, focused on substance, documentation, small-business thresholds, and the line between defensible planning and artificial allocation.",
+    publishedDate: "2026-04-29",
+    updatedDate: "2026-04-29",
+    publishedAt: "2026-04-29T12:00:00+01:00",
+    updatedAt: "2026-04-29T12:00:00+01:00",
+    readingTime: "13 min read",
+    category: "Nigeria Tax",
+    tags: [
+      "Nigeria income splitting 2026",
+      "Nigeria tax thresholds small business",
+      "family business tax planning Nigeria",
+      "Nigeria tax reform 2026 documentation",
+      "artificial transactions Nigeria tax"
+    ],
+    featuredImage: {
+      src: "/blog/split-income-tax-thresholds-nigeria-2026.svg",
+      alt: "Nigeria income structuring featured image"
+    },
+    sections: [
+      {
+        heading: "What this guide covers",
+        paragraphs: [
+          "This article focuses on lawful income structuring under Nigeria's 2026 framework and keeps the long-form body in markdown so threshold details, anti-avoidance notes, and examples can be updated without expanding the registry file further."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is income splitting always legal in Nigeria?",
+        answer:
+          "No. It is only defensible where each person or entity has real ownership, real work, and records that support the allocation."
+      },
+      {
+        question: "Can I move profit to a spouse just to reduce tax?",
+        answer:
+          "Not safely. A spouse arrangement needs actual commercial substance, market-rate payments where relevant, and a record trail that matches reality."
+      },
+      {
+        question: "Why does documentation matter more in 2026?",
+        answer:
+          "Because the current reform direction increases scrutiny, mandates documentation for deductions and exemptions, and gives authorities stronger tools against artificial transactions."
+      },
+      {
+        question: "What threshold matters for small companies in 2026?",
+        answer:
+          "A widely cited reform summary says small companies are those with annual turnover of NGN 50 million and below and fixed assets not exceeding NGN 250 million, but exact application should be checked against the governing law and filings."
+      },
+      {
+        question: "What is the safest first step?",
+        answer:
+          "Map who really earns each income stream, then align contracts, invoicing, banking, payroll, and filings to that commercial reality."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "Best Business Structures for Nigerians Earning in USD/GBP",
+        url: "/blog/best-business-structures-for-nigerians-earning-in-usd-gbp-2026"
+      },
+      {
+        label: "How to Structure Your Business to Legally Reduce Tax in Nigeria",
+        url: "/blog/how-to-structure-your-business-to-legally-reduce-tax-in-nigeria-2026"
+      },
+      {
+        label: "Tax Audit Triggers in Nigeria for SMEs",
+        url: "/blog/tax-audit-triggers-in-nigeria-for-smes-2026"
+      }
+    ],
+    references: [
+      {
+        label: "PwC Nigeria Tax Summary: Individual significant developments",
+        url: "https://taxsummaries.pwc.com/nigeria/individual/significant-developments"
+      },
+      {
+        label: "PwC Nigeria Tax Summary: Individual taxes on personal income",
+        url: "https://taxsummaries.pwc.com/nigeria/individual/taxes-on-personal-income"
+      },
+      {
+        label: "Federal Inland Revenue Service notice on National E-Invoicing regime",
+        url: "https://www.firs.gov.ng/pdf/FIRS_adv.pdf"
+      },
+      {
+        label: "FIRS Automated Tax Remittance System",
+        url: "https://atrs.firs.gov.ng/"
+      }
+    ]
   }
 ] as const;
 
