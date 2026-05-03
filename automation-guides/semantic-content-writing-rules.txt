@@ -1,0 +1,483 @@
+Semantic Content Writing Rules
+1. Include more entities, and attribute values, as long as they are relevant to the macro
+context.
+2. Include a single macro context for every web page.
+3. Use factual sentence structures. (X is known for Y → X does Y)
+4. Use research and university studies to prove the point. (X provides Y →
+According to X University research from Z Department, on C Date, the P
+provides Y)
+5. Be concise, do not use fluff in the sentence. (X is the most common Y → X is Y
+with D%)
+6. Do not break the context across different paragraphs.
+7. Optimize discourse integration.
+8. Opt for the question and answer format. Remember Google converts all your headings
+into Questions so do it for them.
+9. Do not distance the question from the answer. Answer the question immediately then
+expand upon it. Not the other way around. A definitive answer should be given in the first
+sentence.
+10. Expand the evidence with variations.
+11. Do not break the information graph with complicated transitions. Follow a logical order in
+the declarations.
+12. Use shorter sentences as much as possible.
+13. Decrease the count of contextless words in the document.
+14. Delete all words that add nothing to the context . Delete all words that, if deleted don't
+change the meaning of the text.
+15. Give more information per web page, per section, per paragraph, and sentence.
+Especially unique information.
+16. Create a proper context vector from H1 to the last heading of the document. Remember
+contextual flow must ne linear!
+17. Always give consistent declarations and do not change opinion, or statements, from web
+page to web page. This extends to all your additional 1st part properties like videos and
+Socials, GBP etc and 2nd part properties like citations.
+18. Use a consistent style across the documents to show the brand identity of the document.
+19. Have unique n-grams, and phrase combinations to show the originality of the document.
+20. Including the same n-grams at the end of the web document and at the beginning is
+essential to reflect the contextual consistency and a proper contextual vector.
+21. Include multiple examples, data points, data sets, and percentages for each information
+point. Experts use numbers, statistics and evidence!
+22. Complete a single topic with every detail, even if it doesn’t appear in the queries, and the
+competitor documents. Less important inclusions can be added as lower order headings
+to signal this to Google.
+23. Use fewer links per document while adding more information.
+24. Do not promote the products while giving information about your topic. Information
+pages should be seen as unbiased and bipartisan.
+<aside> 💡 Personally I believe this is why we see local pages ranking with thin content.
+Because they support the thin money page with highly focused supporting pages on the topic
+rather than including that info on the money page. Also same reason Angi, BBB, HomeAdviser
+
+-- 1 of 14 --
+
+etc rank. Thin content but offering bipartisan opinions on 10 local companies backed up with
+info articles on the topic.
+</aside>
+1. Use ordered and unordered lists.
+2. For long form answers use definitions, entity signifiers and qualifiers. Mention concepts
+and connections.
+3. Keys terms used must be connected to the title and heading 1 and in turn they must be
+connected to the topical map. Context is vital. In other words do not break the context of
+the document that is governed by the vectors created by your title and primary heading.
+4. Stick to a 40 word limit per answer where possible. Helps trigger for snippets.
+5. Be certain: suns rises everyday. From NLP any sentence with “will, should, need to,
+have to”, those sentences are not valid for fact extraction.
+6. Cut the fluff out: delete all contextless words.
+<aside> 💡 From contextless words:
+“There is one more fact about electric cars that every driver should know, and it is electric
+charger capacity. Also, according to the electric charger type, the electric battery charging time
+might vary”.
+To context sentences:
+“Electric car charging time changes based on electric car charger type. For example, X type car
+charger is observed to be faster 5% compared to Y type of electric car charger”.
+</aside>
+1. Be sure that every word you are using has contextual relevance.
+2. Use numeric values: tell the exact number. Experts are specific.
+3. Qualify the instances: sometimes only numeric values are not good enough. Tell there
+are 6 severe symptoms of X disease, there are… There 9 rare symptoms… Experts are
+specific.
+4. Understand context of verbs: Determine predicates wisely.
+<aside> 💡 Increase signals health, improve signals skill+health, develop signals skill. Check
+verbs in Google autocomplete.
+</aside>
+1. Give examples after a plural noun. There are X different cryptocurrencies to trade in
+Coinbase including Bitcoin, Ethereum and Dogecoin.
+2. Use the same Part of Speech Tag (word role) in the first word of sentence for a
+listing.
+<aside> 💡 Ensure (verb) + noun. Clear (verb) + noun. Spend (verb) + noun. Absorb (verb) +
+noun. Follow the same PoST for all sentences.
+</aside>
+
+-- 2 of 14 --
+
+1. Optimize Subordinate Text first sentence.
+<aside> 💡 Heading: How to do X…
+Wrong Subordinate Text: X is…
+Correct Subordinate Text: To do X…
+Match Adjectives, Predicates, Nouns order between Questions and Answers.
+</aside>
+1. Put if statements in the second part of the sentence.
+<aside> 💡 Do X, if A becomes B First declaration, then the constraint.
+</aside>
+1. Do not delay the answer.
+<aside> 💡 Question: what are the benefits of vision boards for entrepreneurs?
+💡 Wrong Structure: Vision boards are the boards for… To prepare a vision board… benefits of
+vision boards….
+✅ Correct structure: There are X main benefits of a Vision board for an
+entrepreneur…
+Singularity and Plurality matter for microsemantics.
+</aside>
+1. Bold the answer, not the search term.
+<aside> 💡 Query: what is a penguin? Answer: A penguin is a flightless seabird. Signal the
+answer part, not the relevance.
+</aside>
+1. Never give your opinion in an article.
+2. Never use an “everyday language” in the articles.
+3. Don’t use analogies.
+4. Don’t use unnecessary words.
+5. Always use short sentences instead of long sentences.
+6. Always give answers directly and precisely.
+7. Always use a “source” as an authority before giving a statement.
+8. There are only two rules for content length.
+● Content should be as short as possible.
+● Content should be as long as necessary.
+<aside> 💡 Tell the same thing with lesser words but include the necessary entities and their
+connections in a descriptive and unique way
+
+-- 3 of 14 --
+
+If a sentence is too long, the dependency tree also will be long and the meaning between the
+word connections will be diluted
+Google also talks about using a “query language” and “document language” ranking for
+matching the highest possibility.
+</aside>
+Topical Map Codes with descriptions.
+● FS: Featured Snippet: 40 words, 320 character limit
+● PAA: People Also Ask: The definitive answer should be given in a single sentence. Be
+certain and direct.
+● Anchor Text: Word => URL:
+Word => Anchor Text, URL = Related Article + Hash Identifier (#)
+● Listing: List Items for FS: Introductory sentence, list elements, proper HTML List
+Marking, Heading and Introductory sentence harmony, list can be ordered or unordered
+(in the example, they can be only unordered)
+● Definitive Answer: Long-form mentioning answer: The long answer, including all
+concepts, should be given with context reinforcement. Use all the qualifiers and signifiers
+of an entity, while mentioning the connections and explaining everything.
+● "Term": Include the Term with Definition or Context: The relevant concept should be
+passed in the relevant section.
+● Instruction list: A list with commands.
+● List item: An item from a list, such as first or third.
+● List outro: A paragraph after the list tiems of listing.
+● Table Definition: A definition that defines the table with purpose.
+● Table: A table with the related dimensions, columns and headers.
+● Table Dimensions: Different columns, or rows and their names and
+● Table Outro: A paragraph that comments, or defines the situation
+● Unordered List: A list without a prominence order
+● Semantic closeness: using two related concepts with lexical semantics
+
+-- 4 of 14 --
+
+● Expansion of evidence: Evaluation of the fact with its effect, function, importance...
+● Factual Proposition: An indisputable fact proposition based on evidence
+● Synonym usage: A replacement word for another word. It is valuable
+● Annotation text: Words for improving the contextual sharpness. It w
+● Named Entity Recognition System: Entity qualifiers to make every entity explicit, and
+● Long Form Exact Definitive Answer: Explicitly used qualifiers to define the entity, its
+role
+● No Co-reference: Not using the pronouns to mention an entity
+● Sentiment System: Not using the power words, or words with strong f
+● Co-ocurrence Word Pairs: Words that exist together for different Contextual
+● Passive Preposition: Do not use a casual language answer questions with
+● Casual Language: Use daily language to give your opinion. Do it after
+● Comparisonal Proposition: Compare a fact, product, service, entity and its attributes
+● Headword: A word that should be defined. Use "" to define
+● Headword explanation: Headword explanation includes the definition, fund
+● Coreference with Parenthesis: Include the alternate name or the related term
+● Sequential Sentences with Premise: Make a premise, and follow it with senquenctial
+semantics
+● Similar Entities: Include the entities from same type or include the
+● Related Attributes: Include the related aatributes of an entity to answer
+● Criterias of Adjective: Include the criterias of an adjective from a proposition
+● Variable Portion of Proposition: Prepositions and the changeable related words with
+● Conditional Propositions: Make a proposition based on a condition or an op
+● Statistical evidence: Include a statitical value for a related entity or un
+● Entity type matching: What are the cat types ? Animal, biological creature
+● Title Terms: include the proper words from
+
+-- 5 of 14 --
+
+● Representative image: An image with the alt tag from heading
+● Unique Value Opportunity: Information gain score possibility with unique
+● Evidence repeating: Repeat a previous evidence based on the context
+● Knowledge Domain intersection: Connect two broader topics to each other based on
+● Contextual Domain based Terms: Process an entity and its attributes based on a con
+● Currency Usage: Include the currency of intended audience
+● Regional Signals: Include the locale names from different
+● Format: paragraph
+<aside> 💡 We always need to use the right format in the right spot: we don’t want to compete
+with our own answers. If you have a macro context match (internal link to another article) for a
+specific query network, use the correct format there, not everywhere.
+You don’t have to use the most comprehensive or directly correct format in the supplementary
+content area.
+</aside>
+● Head words in the format of listing. Whenever you use the word “X”, the Search
+Engine will take the html list to understand the context and the informativeness of the
+list. It is applicable to html tables too. Use specific context terms inside each list item too.
+An example to this is a "Declaration: Evidence" template.
+Don’t create an extra sentence if there is no logical
+reason.
+For Example:
+Question: How old is Tanjiro in demon slayer anime?
+Answer 1: Tanjiro is 25 years old. His birthdate is Dec 2, 2002.
+Answer 2: Tanjiro is 25 years old and his birthdate is Dec 2, 2002.
+Answer 3: Tanjiro is 25 years old. Tanjiro’s birthdate is Dec 2, 2002.
+Answer 2 is good to go, because with each new sentence search engines will use a new token.
+Both Ans 1, and 3 will require two tokens, but Ans 2 will require only 1 token.
+
+-- 6 of 14 --
+
+Adding perspective richness to the paragraph under
+heading.
+First give an overall factual answer to the question. Then, you can add the perspectives after
+that to increase the “perspective richness” of the content. The perspective could be diversified
+as well.
+For Example:
+Heading: How to learn English Fast?
+Paragraph: There are x ways of learning English faster. First…. Second…. Third…..
+To teach a child (teacher, parent, aunt).
+In the above example, the perspective would be richer based on teaching children from the
+perspective of teacher, parent and aunt. Please don’t overdo the perspectives in the above
+paragraph. If you overdo you’ll break your semantic structure and the prominence of other
+sections of the article.
+You can prioritize the use of perspectives based on two factors.
+1- Audience and their search behavior.
+2- Annotations in the queries. (In simple terms, analyzing from how people are searching the
+queries in Google, and with what perspective we can fulfill their intent.)
+Long-form question answering vs short-form question
+answering.
+“You should try to use short questions in your content.”
+Search engines are quite good at understanding short questions in the content.
+First of all the word count doesn’t define if the question is short form or long form.
+The concepts in the questions will define it.
+A long question might look like
+Question + Condition/declaration:
+What is the importance of life if we all die?
+● What is the importance* >— Question
+● If we all die* >—- Condition
+What is the effect of the moon on earth’s orbit despite it way being smaller compared to earth?
+
+-- 7 of 14 --
+
+● What is the effect of the moon on earth’s orbit >—-* Question
+despite it way being smaller compared to earth? >—- Declaration.
+Try to use shorter questions because longer questions might be confusing for search engines.
+If you still want to use longer questions try to use in the following way.
+H2: Grouper question- It should be short form
+H3: Put your questions, qualifiers (like “if”), statements, declarations, in the form of short form
+questions as a connected question.
+—-----------------------------------------------------------------------------------------------------------------
+Don’t copy questions from People also asks and
+competitors. Try to ask unique questions in the content.
+You can use question hub of Google to ask questions in your content
+—------------------------------------------------------------------------------------------------------------------------
+Don’t link out to citations while writing content.
+For example in this content
+(https://www.healthline.com/health/healthy-home-guide/benefits-of-indoor-plants), there are
+studies linked throughout the article, and at the bottom there are sources. But in this content
+(https://svalbardi.com/blogs/water/benefit), there is no link to citations. We will follow the 2nd
+example while mentioning research in the content.
+Healthline has given links throughout the content to scientific research but we will not do that in
+order to not pass link juice.
+Healthline has mentioned the related sources at the bottom of the content, and we will also not.
+—---------------------------------------------------------------------------------------------------------------------
+When you add table in content, always define with
+context what’s in the table
+In the image below you can see how the explanation is given to the reader about what’s
+included in the table and their context.
+https://lh7-us.googleusercontent.com/ICUJ3rtSrEfamJdgJsAjr2LcjFgkvNet-
+8xGejihai_D_CI1LOJdcfycFC8RJsUqB8fsy8UY4PGPEq6KP98SzkyOl7TjSO4bQfZOhIua3oDm
+v8desGiTUI4Cvw8JC9LjZDRSyUin73Od3LxQFp1rK9E
+
+-- 8 of 14 --
+
+If a word doesn’t change the meaning of the sentence,
+delete it.
+Algorithmic Authorship and Content Engineering (Writers Instruction)
+To make sentences more structured and the search engine (and people) understand the
+meaning of content better, you need to follow the following rules while planning and writing the
+content.
+Rule-1: Use the Proper Word Sequence Query-1: What is a Penguin? Answer-1: Penguin is a
+flightless seabird with flippers instead of wings that live almost exclusively below the equator.
+Answer-2: Penguin is a flightless seabird that lives almost exclusively below the equator.
+Answer-3: Penguin is a flightless seabird that lives almost exclusively below the equator and
+they have flippers instead of wings.
+#Correct Sentence Structure: Answer-1
+Query-2: Where does a Penguin live? Answer-1: Penguin is a flightless seabird with flippers
+instead of wings that live almost exclusively below the equator. Answer-2: Penguin is a flightless
+seabird that live almost exclusively below the equator. Answer-3: Penguin is a flightless seabird
+that live almost exclusively below the equator and they have flippers instead of wings.
+#Correct Sentence Structure: Answer-3
+Note In micro semantics, we just changed the word sequences and the word orders
+or the word compositionality (✅✅✅✅✅✅✅✅✅) and they play with the relevance. This is
+called relevance configuration.
+So, prioritizing the attributes and the context, if you have an interrogative
+(✅✅✅✅✅✅✅✅✅✅) term inside the query, you always have to understand that a specific
+type of entity, you will need to be using.
+Rule-2: Be Certain If it looks like a fact and if you say a sentence like “Sun will rise tomorrow”, it
+doesn’t mean that actually this is fact. Because you are using a wrong modality . Sun will rise
+tomorrow. This sentence is just your opinion.
+“Sun rises every day” is actually a fact. Don't use the wrong modality. These following words
+signal just opinion, not fact. -Will -Should -Have to -Need to
+Rule-3: Cut the Fluff Out Do not use context-less words. In the following sentence, yellow mark
+areas are contextless.
+There is one more fact about electric cars
+that every driver should know and it is the
+electric charger capacity. Also, according
+
+-- 9 of 14 --
+
+to the electric charger type, the electric
+battery charging time might vary.
+Whenever you use a paragraph, be sure that all the words that you are using, they always have
+a kind of contextual relevance. Look at the following paragraph’s green mark words. They
+actually have direct relevance configuration benefits for us. So try to configure the relevance by
+using contextual words.
+Electric charging times change based on
+electric car charger types. For example, X
+type of electric car charger is observed to
+be faster 5% compared to Y type of
+electric car charger.
+Rule-4: Use Numeric Values Do not write “there are many reasons exist”. Just write there are 5
+main reasons, 6 main reasons or 7. Just use a numeric value in your sentences.
+If I don’t see any number in a content, I will just understand that this doesn’t reflect any
+expertise at all.
+Rule-5: Qualify the instances Do not say "the symptoms of x disease…" But "there are 6 severe/
+rare symptoms of x disease, these are…"
+Rule-6: Understanding the Context of the Verbs “Increase” signal >> “health” “Improve” signal
+>> “skill” + “health” “Develop” signal >> “skill”.
+The verb “increase”, actually a verb that signals the health context. And the verb “improve”
+actually signals a context for health and skill. Verb “develop” signals actually just a skill.
+Note If you go to Google and if you check some of the verbs you will realize that every verb is
+connected to a different type of context according to these contextual zones, actually the
+relevance will be changing for them too.
+Rule-7: Give Examples After the Plural Noun. For instance, do not tell there are forty different
+crypto currencies in Coinbase. After telling that crypto currencies, tell what kinds of
+cryptocurrencies these are. And it is important to use these types of examples as much as
+possible as well.
+Rule-8: Use the Same Part of Speech Tag (Word Role) in the First Word Sentence for a Listing.
+Ensure (Verb) + Noun Clear (Verb) + Noun Spend (Verb) + Noun Absorb (Verb) + Noun Follow
+the same PoST for all sentences.
+
+-- 10 of 14 --
+
+For certain types of lists, I'm always actually using certain types of verbs or instructions as much
+as possible.
+Rule-9: Optimize the Subordinate Text First Sentence Sometimes the search engine processing
+systems don't check the entire content. If the subordinate text (which means that the sentence
+after heading) is not responsive enough, they might not check the rest of the article. That’s why
+giving the answer earlier as much as possible with the correct format is really important.
+Example Heading: How to do X….. Wrong Subordinate Text: X is a process….. Correct
+Subordinate Text: To do X….
+Match the adjective, predicates, nouns order between questions and answers. (This is a must)
+Rule-10: Put “if” statements in the second part of the sentence (First declaration, then the
+constraint) Another thing here is that, actually putting the if statements or because type of
+sentences to the second part of the sentence as well.
+Wrong: “If A becomes B, do X.” Correct: “Do X, if A becomes B.” First declaration, then
+constraint. But basically, do not write that “if A becomes B, do X”. Just write your instruction or
+your result or the declaration to give the condition after that.
+Rule-11: Match the Anchor Text with the Targeted Web Pages Titled. If you want to use “sleep
+efficiency” in your actual anchor text, be sure that it appears in the targeted web pages (link to)
+title and also the source pages (link from) heading as well. If you are able to match them by
+providing contextual relevance to, it will be providing actual best possible responsiveness as
+well.
+Targeted Web Page (link to) Title: 10 Ways to Improve Sleep Efficiency Source Web Page (link
+from) Tile: Sleep Quality Test Heading: What is Sleep Efficiency? Possible Anchor Text: Sleep
+Efficiency
+Must match anchor text and its context between source and target.
+Rule-12: Do not Delay the Answer If I ask you what are the benefits of the vision boards for
+entrepreneurs, do not define the vision boards there. Just tell me what is the benefit, how many
+benefits exist, which one is most important for what kinds of entrepreneurs. And in this case,
+you will need to think a lot or you can use it sometimes to get help from AI systems.
+Questions: What are the benefits of vision boards for entrepreneurs?
+Wrong Structure: Vision boards are the boards for….. To prepare a vision boards…… Benefits
+of the vision boards…. Correct Structure: There are X main benefits of vision boards for an
+entrepreneur…..
+Singularity and plurality matter for micro semantics.***
+Rule-13: Bolding to Answer not the Search Term. Query: What is a penguin? Answer (Wrong
+Bold): A penguin is a flightless seabird Answer (Correct Bold): A penguin is a flightless seabird
+Signal the answer part, not the relevance.
+
+-- 11 of 14 --
+
+Basically, if I ask “what is a penguin?”, do not bold the penguin, bold actually flightless seabird.
+Because it is the answer section. If you bold the answer format, you will be actually signaling the
+answer part of your text to the search engines.
+Few more techniques for writing the semantic content
+●The queries used to investigate the topic should be listed hierarchically in the single article.
+●The search-intent of these queries should be analyzed.
+●Entities such as persons, institutions, laws, countries, places, cities, and dates in the subject
+should be listed.
+●In order for the contents to be completely distinguishable from each other by Search Engine, it
+should be determined how much of which subject will be processed in which content.
+●It should be specified to the Search Engine with the meta tags, headings, keywords, and
+anchor texts of the URLs to be created, which content meets which Search Intent.
+●Main Content and Supplementary Content half in a URL should be done properly to avoid the
+Keyword Cannibalization problem.
+●The Layout, Functions, and Contents of competitor pages in the SERP of the most important
+queries and the historical ranking results in these queries should be examined.
+●The content should be created in a fully specialized language, to benefit the user and make
+sure that it is easily understood by the Search Engine."
+Good to know Rules:
+1. Have a concrete authorship authority for your own topic.
+2. Reformat the document in an infographic, audio, or video to create a better web surface
+coverage. Here I use the Google tabs at the top of the search bar to signify the most
+important modalities for my primary search query/queries
+3. Use the internal links to cover the same seed query’s subqueries with variations of the
+phrase taxonomies. This means to use internal links on your web page to connect your
+content to other relevant pages on your website.
+4. Use the FAQ and article structured data to consistently communicate with the search
+engine from every level and for every data extraction algorithm.
+5. Use branded CTAs by differentiating them from the main context and structure of the
+document. “By differentiating them from the main context and structure of the document"
+means that you should use call-to-action (CTA) buttons that are visually distinct from the
+surrounding text and design of your website or document.
+6. When linking from a page using anchor text use target page URL plus #identifier to jump
+straight to the section associated with the outbound link anchor text.
+7. Do not have any E-A-T negativity, have news about the brand with a physical address
+and facility.
+8. Be reviewed by the competitors or industry enthusiasts.
+
+-- 12 of 14 --
+
+9. Match Anchor text with the targeted webpage’s title. Match anchor text and its
+context between source page and target page.
+Writing Rules from a specific case study
+1. When you have a templatic phrase combination such as "X to Y", it means that there are
+other related candidates from the same type such as "X to Z", or "X to P".
+2. In your internal link structure, you should link these.
+3. If the Title is "Meters to Centimeters", "Meters to Miles", or "Meters to KM" types of
+pages should be linked.
+4. When you have a templatic phrase combination, you also have to link the antonym of it.
+In other words, "Meters to Centimeters" should link the "Centimeters to Meters", and the
+same structure should be followed.
+5. Explain how to use your calculator on the web pages. Use the lemmatized forms of the
+word "conversion", such as "converting", "convert", "converted", "convert
+6. Another point here is that you do not have to answer the questions, but if you can write
+the same question with different phrase combinations, it will help you for matching the
+search intent from different search behaviors. For example, the question, "How many
+centimeters are in a meter?" can be repeated as "How many centimeters are equal to 1
+meter". You can use quotation marks to state that this web page answers these
+questions.
+7. You can also use instructional phrases such as "Calculate X Centimeter in Y Meters".
+8. You can also use synonyms of the word "convert". Such as "transform", or "change".
+9. You can also use "0.1" types of numeric values. If you can use more sample rows in
+your tables, it is better.
+10. You can have some images on your web pages in the form of measurement scales. For
+example, you can include a scale with the conversion.
+11. Another thing is, that if you can have a dynamic calculator, it will increase the calculation
+per session count for your web pages. Instead of clicking and reloading the web page,
+you can use a JS Library for direct calculation.
+12. You can expand the sentences in your documents by repeating some quick calculations
+in the form of sentences. Not just "1 meter is equal to 100 cm", but you can continue to
+give those facts for 6-7 more sections.
+13. For every web page, you can include the definition, origin, and history of the specific
+length measurement unit.
+14. Include the measurement tools, or methods, to the readers for the specific numeric
+values and measurement units.
+15. About your Spanish web page, the problem there might be your source's overall
+relevance to a specific region or a language. If you do not have other Spanish queries in
+your impression portfolio, you might need further support from other queries. Try to
+translate your other web pages by creating a new hreflang set for Spanish. If they link
+each other, over time, you will have more queries and more impressions, and eventually,
+they will help you for further rankings.
+16. Your titles are not bad, but if you can make them richer, it is better. "Meters to
+Centimeters Conversion (m to cm)"-"Convert Meters to Centimeters (m to cm
+Conversion)" is more comprehensive.
+17. 1804 of your queries contain the word "convert" and the total search volume for these
+queries is 214,000.
+
+-- 13 of 14 --
+
+18. 1615 of your queries contain the word "conversion", and the total search volume for
+these queries is 229,000.
+19. You can include both of them in your title, and introductory area to take the advantage of
+their relevance further.
+
+-- 14 of 14 --

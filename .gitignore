@@ -11,5 +11,6 @@ pnpm-debug.log*
 .env.*.local
 .next-start.log
 tsconfig.tsbuildinfo
+published-urls.txt
 
 .vercel

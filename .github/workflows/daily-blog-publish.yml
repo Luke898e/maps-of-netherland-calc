@@ -1,0 +1,100 @@
+name: Daily blog publish
+
+on:
+  schedule:
+    - cron: "35 8 * * *"
+    - cron: "35 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-blog-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://map-of-netherlands.co.uk
+      GUIDE_TEXT_DIR: automation-guides
+      ARTICLE_COUNT: 1
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Check required secrets and guides
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY is required as a GitHub Actions secret."
+            exit 1
+          fi
+          test -s "$GUIDE_TEXT_DIR/semantic-content-writing-rules.txt"
+          test -s "$GUIDE_TEXT_DIR/micro-semantics-in-depth-seo-guide.txt"
+          test -s "$GUIDE_TEXT_DIR/holistic-seo-writing-system-koray.txt"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate next articles
+        run: node scripts/publish-daily-articles.mjs
+
+      - name: Detect generated changes
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify site build
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          npm run lint
+          npm run build
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/blog-posts.ts src/content/blog-markdown-overrides.ts public/blog
+          git commit -m "Publish daily blog articles"
+          git push
+
+      - name: Wait for Vercel production
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          for url in $(cat published-urls.txt); do
+            echo "Waiting for $url"
+            for attempt in {1..40}; do
+              status="$(curl -L -s -o /tmp/article.html -w "%{http_code}" "$url" || true)"
+              if [ "$status" = "200" ] && grep -qi "<article" /tmp/article.html; then
+                echo "Live: $url"
+                break
+              fi
+              if [ "$attempt" = "40" ]; then
+                echo "::error::$url did not become live after polling."
+                exit 1
+              fi
+              sleep 30
+            done
+          done
