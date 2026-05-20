@@ -1,7 +1,9 @@
+import { importedTaxMarkdownOverrides } from "@/content/blog-markdown-overrides-imported-tax-docs";
 import { blogMarkdownOverridesBatchApr21 } from "@/content/blog-markdown-overrides-batch-apr21";
 import { blogMarkdownOverridesBatchApr21Extra } from "@/content/blog-markdown-overrides-batch-apr21-extra";
 
 export const blogMarkdownOverrides: Readonly<Record<string, string>> = {
+  ...importedTaxMarkdownOverrides,
   "uk-self-assessment-for-foreign-earners-2026": `# UK Self Assessment for Foreign Earners (Step-by-Step Filing Guide)
 
 If you live in the UK and money is still arriving from outside the UK, the filing problem usually starts with a false shortcut.

@@ -1,3 +1,4 @@
+import { importedTaxBlogPosts } from "@/content/blog-imported-tax-docs";
 export interface BlogSection {
   heading: string;
   paragraphs: ReadonlyArray<string>;
@@ -37,6 +38,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: ReadonlyArray<BlogPost> = [
+  ...importedTaxBlogPosts,
   {
     slug: "nigeria-zero-cit-threshold-practical-guide-2026",
     title: "Nigeria 0% CIT Threshold 2026: Calculator, Rates, and Filing Rules",
