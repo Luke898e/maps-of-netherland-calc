@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="7 Legal Ways to Avoid Inheritance Tax on a Property in the UK (2025-2026 Guide)">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0f2f2d" offset="0"/>
+      <stop stop-color="#214f46" offset="0.55"/>
+      <stop stop-color="#f4c15d" offset="1"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="1060" cy="115" r="180" fill="rgba(255,255,255,.16)"/>
+  <circle cx="135" cy="560" r="150" fill="rgba(255,255,255,.12)"/>
+  <rect x="80" y="92" width="1040" height="491" rx="36" fill="rgba(255,255,255,.92)"/>
+  <text x="120" y="160" fill="#0f2f2d" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Map of Netherlands Tax Guides</text>
+  <foreignObject x="120" y="215" width="960" height="260">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Georgia, 'Times New Roman', serif; color:#10201d; font-size:58px; line-height:1.08; font-weight:800; letter-spacing:-1.5px;">7 Legal Ways to Avoid Inheritance Tax on a Property in the UK (2025-2026 Guide)</div>
+  </foreignObject>
+  <text x="120" y="535" fill="#315b52" font-family="Arial, sans-serif" font-size="28" font-weight="700">Exact guide imported from editorial Google Docs</text>
+</svg>

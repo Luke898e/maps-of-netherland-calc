@@ -1,5 +1,6 @@
 import { blogMarkdownOverridesBatchApr21 } from "@/content/blog-markdown-overrides-batch-apr21";
 import { blogMarkdownOverridesBatchApr21Extra } from "@/content/blog-markdown-overrides-batch-apr21-extra";
+import { importedTaxMarkdownOverrides } from "@/content/blog-markdown-overrides-imported-tax-docs";
 
 export const blogMarkdownOverrides: Readonly<Record<string, string>> = {
   "uk-self-assessment-for-foreign-earners-2026": `# UK Self Assessment for Foreign Earners (Step-by-Step Filing Guide)
@@ -6635,6 +6636,7 @@ That combination matters more than hunting for one magic rate.
 
 For the next layer, read [Do You Need to Register a Business to Receive Foreign Payments in Nigeria?](/blog/do-you-need-to-register-a-business-to-receive-foreign-payments-in-nigeria-2026) and [How to Declare PayPal, Payoneer, and Stripe Income in Nigeria](/blog/how-to-declare-paypal-payoneer-and-stripe-income-in-nigeria-2026).`,
   ...blogMarkdownOverridesBatchApr21,
-  ...blogMarkdownOverridesBatchApr21Extra
+  ...blogMarkdownOverridesBatchApr21Extra,
+  ...importedTaxMarkdownOverrides
 } as const;
 
