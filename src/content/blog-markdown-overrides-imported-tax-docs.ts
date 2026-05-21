@@ -1,6 +1,6 @@
 ﻿export const importedTaxMarkdownOverrides: Readonly<Record<string, string>> = {
   "how-to-avoid-inheritance-tax-in-the-uk-legal-methods-thresholds": `# How to Avoid Inheritance Tax in the UK: 7 Legal Methods and Thresholds Explained
-Inheritance tax (IHT) in the UK is charged at 40% on estates above Â£325,000. There are 7 legal methods to reduce or avoid it, including gifting, trusts, spousal transfers, and charitable donations. HMRC collected Â£7.1 billion in IHT receipts in 2022-23, making early planning essential.
+Inheritance tax (IHT) in the UK is charged at 40% on estates above £325,000. There are 7 legal methods to reduce or avoid it, including gifting, trusts, spousal transfers, and charitable donations. HMRC collected £7.1 billion in IHT receipts in 2022-23, making early planning essential.
 ________________
 
 
@@ -11,7 +11,7 @@ ________________
 
 
 ## What Is the Inheritance Tax Threshold in the UK?
-The standard nil-rate band is Â£325,000. Estates below this amount are not subject to IHT. 2 additional allowances can raise this threshold.
+The standard nil-rate band is £325,000. Estates below this amount are not subject to IHT. 2 additional allowances can raise this threshold.
 ## Allowance
 	Amount (GBP)
 	Condition
@@ -27,7 +27,7 @@ The standard nil-rate band is Â£325,000. Estates below this amount are not sub
 	Combined (married couple)
 	1,000,000
 	Both allowances transferred between spouses
-	Married couples and civil partners can transfer any unused nil-rate band to the surviving partner. This effectively doubles the threshold to Â£1,000,000 for qualifying estates.
+	Married couples and civil partners can transfer any unused nil-rate band to the surviving partner. This effectively doubles the threshold to £1,000,000 for qualifying estates.
 ________________
 
 
@@ -38,12 +38,12 @@ ________________
 
 1. Can Gifting Reduce Inheritance Tax?
 Yes. Gifting assets during your lifetime reduces the value of your estate. HMRC allows several tax-free gift categories each year.
-The annual gift exemption is Â£3,000 per tax year. Unused allowance from the previous year can be carried forward once, allowing a maximum of Â£6,000 in one year.
+The annual gift exemption is £3,000 per tax year. Unused allowance from the previous year can be carried forward once, allowing a maximum of £6,000 in one year.
 Additional exempt gifts include:
-* Â£250 per person, per year (small gifts exemption)
-* Â£5,000 to a child on marriage or civil partnership
-* Â£2,500 to a grandchild on marriage or civil partnership
-* Â£1,000 to any other person on marriage or civil partnership
+* £250 per person, per year (small gifts exemption)
+* £5,000 to a child on marriage or civil partnership
+* £2,500 to a grandchild on marriage or civil partnership
+* £1,000 to any other person on marriage or civil partnership
 Gifts from surplus income are also exempt, provided they are regular and do not reduce your standard of living. According to HMRC, this exemption applies when gifts form part of a normal expenditure pattern.
 ________________
 
@@ -65,7 +65,7 @@ If the donor dies within 7 years, taper relief applies to reduce the tax owed. T
 	8%
 	Over 7 years
 	0%
-	Taper relief only applies when the total value of gifts exceeds the Â£325,000 nil-rate band.
+	Taper relief only applies when the total value of gifts exceeds the £325,000 nil-rate band.
 ________________
 
 
@@ -78,7 +78,7 @@ ________________
 
 4. Can Charitable Donations Reduce Inheritance Tax?
 Yes. Gifts to registered UK charities are fully exempt from IHT. If you leave 10% or more of your net estate to charity, the IHT rate on the remainder is reduced from 40% to 36%.
-According to HMRC, this reduced rate can result in a significant saving on larger estates. For example, on a taxable estate of Â£500,000 above the nil-rate band, a 4% rate reduction saves Â£20,000 in tax.
+According to HMRC, this reduced rate can result in a significant saving on larger estates. For example, on a taxable estate of £500,000 above the nil-rate band, a 4% rate reduction saves £20,000 in tax.
 Qualifying organisations include registered charities, political parties, national museums, and housing associations.
 ________________
 
@@ -125,13 +125,13 @@ ________________
 
 
 ## How Much Can You Give Away Before Inheritance Tax?
-You can give away Â£3,000 per year tax-free under the annual exemption. Additional small gifts of Â£250 per recipient are also exempt. Gifts exceeding these amounts may be subject to IHT if death occurs within 7 years.
+You can give away £3,000 per year tax-free under the annual exemption. Additional small gifts of £250 per recipient are also exempt. Gifts exceeding these amounts may be subject to IHT if death occurs within 7 years.
 There is no limit on gifts to spouses, civil partners, or registered charities.
 ________________
 
 
 ## How to Avoid Inheritance Tax in the UK - Key Takeaways
-IHT is charged at 40% on UK estates above Â£325,000. There are 7 legal methods to reduce liability: annual gifting, the 7-year rule, spousal transfers, charitable donations, business property relief, trusts, and life insurance in trust. Combined nil-rate bands can shelter up to Â£1,000,000 for married couples. Early planning is the most effective way to reduce IHT exposure.
+IHT is charged at 40% on UK estates above £325,000. There are 7 legal methods to reduce liability: annual gifting, the 7-year rule, spousal transfers, charitable donations, business property relief, trusts, and life insurance in trust. Combined nil-rate bands can shelter up to £1,000,000 for married couples. Early planning is the most effective way to reduce IHT exposure.
 `,
   "how-to-change-name-on-council-tax": `# How to Change Name on Council Tax: 4 Reasons and Steps
 To change the name on a council tax bill, contact your local council directly - online, by email, or by post - and submit proof of your name change. Council tax is managed by local authorities and contributes to local services such as waste collection, police, and schools. Keeping your name accurate on the account prevents billing errors, discount issues, and mismatched records with HMRC.
@@ -259,7 +259,7 @@ ________________
 ## What Is the Single Person Council Tax Discount?
 The single person discount is the most widely claimed council tax discount in the UK. If you are the only adult aged 18 or over living in your property, you are entitled to a 25% reduction on your council tax bill.
 The full council tax bill assumes there are 2 adults living in a dwelling. If only one adult lives in the property, the bill is reduced by 25%.
-On an average Band D bill of Â£2,171 for 2026/27, the single person discount saves approximately Â£543 per year.
+On an average Band D bill of £2,171 for 2026/27, the single person discount saves approximately £543 per year.
 ________________
 
 
@@ -601,7 +601,7 @@ Most councils now offer online account portals where you can view your council t
 2. Select "My Account" or "Council Tax"
 3. Sign in using your registered email and password
 4. View the account overview page - the reference number appears here
-Local authorities in England collected Â£41.2 billion in council tax in 2024-25 across 19.0 million Band D equivalent dwellings. Most councils have moved billing and account management to digital portals to support this scale of administration.
+Local authorities in England collected £41.2 billion in council tax in 2024-25 across 19.0 million Band D equivalent dwellings. Most councils have moved billing and account management to digital portals to support this scale of administration.
 ## How Do You Find Your Council Tax Account Number in Emails?
 Search your email inbox for the phrase "council tax" and filter for messages from your local council. The account number appears in emails from the council about bills, as well as in Direct Debit confirmations.
 ________________
@@ -636,7 +636,7 @@ A council tax account reference is required for 5 purposes. These are:
 3. Setting up or amending a Direct Debit
 4. Applying for a discount, exemption, or council tax reduction
 5. Contacting the council about a bill, arrears, or change of circumstances
-The average Band D council tax set by local authorities in England for 2024-25 is Â£2,171, an increase of Â£106 or 5.1% on the 2023-24 figure. Accurate account identification ensures all payments are applied to the correct property record and prevents billing errors.
+The average Band D council tax set by local authorities in England for 2024-25 is £2,171, an increase of £106 or 5.1% on the 2023-24 figure. Accurate account identification ensures all payments are applied to the correct property record and prevents billing errors.
 ________________
 
 
@@ -702,9 +702,9 @@ ________________
 
 
 ## How Is Your Final Council Tax Bill Calculated?
-Your final council tax bill covers the period from the start of your billing cycle to your move-out date. Councils prorate bills daily. A Band D property in Manchester at Â£2,100 per year breaks down to approximately Â£5.75 per day.
+Your final council tax bill covers the period from the start of your billing cycle to your move-out date. Councils prorate bills daily. A Band D property in Manchester at £2,100 per year breaks down to approximately £5.75 per day.
 ## What Is the Average Council Tax Bill in the UK?
-According to GOV.UK data, over 23 million households in England pay council tax annually. The average Band D bill for 2024-2025 is Â£2,171 per year, a 4.99% increase from the previous year. Bills vary by local authority and property band, from Band A to Band H in England.
+According to GOV.UK data, over 23 million households in England pay council tax annually. The average Band D bill for 2024-2025 is £2,171 per year, a 4.99% increase from the previous year. Bills vary by local authority and property band, from Band A to Band H in England.
 ________________
 
 
@@ -835,7 +835,7 @@ Failure to update your council tax address results in continued billing at your 
 Not updating your address can result in:
 * Overpayment at your old address, which the council may take time to refund
 * Unpaid arrears accumulating at your new address
-* A Â£70 civil penalty for failing to provide occupancy information when requested
+* A £70 civil penalty for failing to provide occupancy information when requested
 * A liability order granted by the Magistrates Court for unpaid council tax
 According to Citizens Advice, council tax debt is one of the most serious forms of consumer debt in the UK. Councils hold stronger enforcement powers than most creditors, including the right to apply for bailiff action and, in extreme cases, committal to prison for up to 90 days.
 ## Does Redirecting Your Post Change Your Council Tax Address?
@@ -869,30 +869,30 @@ ________________
 Council tax amounts vary by local authority and property band. The table below shows average annual council tax rates by band in England for 2024-2025.
 ## Band
 	Property Value (1991)
-	Average Annual Rate (Â£)
+	Average Annual Rate (£)
 	A
-	Up to Â£40,000
+	Up to £40,000
 	1,444
 	B
-	Â£40,001 - Â£52,000
+	£40,001 - £52,000
 	1,685
 	C
-	Â£52,001 - Â£68,000
+	£52,001 - £68,000
 	1,926
 	D
-	Â£68,001 - Â£88,000
+	£68,001 - £88,000
 	2,171
 	E
-	Â£88,001 - Â£120,000
+	£88,001 - £120,000
 	2,657
 	F
-	Â£120,001 - Â£160,000
+	£120,001 - £160,000
 	3,142
 	G
-	Â£160,001 - Â£320,000
+	£160,001 - £320,000
 	3,627
 	H
-	Over Â£320,000
+	Over £320,000
 	4,342
 ## Source: UK Government Council Tax Statistics 2024-2025. Rates vary by local authority.
 ________________
@@ -974,13 +974,13 @@ Residents without an online account check their balance by calling the council's
 `,
   "how-to-report-a-car-with-no-tax-in-the-uk-dvla-guide": `# How to Report a Car with No Tax in the UK: 4-Step DVLA Guide (2025-2026)
 ## What Does It Mean for a Car to Have No Tax?
-A car with no tax is a vehicle driven or parked on a public road without a valid Vehicle Excise Duty (VED) licence. It is estimated that there are around 500,000 unlicensed vehicles in the UK, leading to an annual road tax revenue loss of approximately Â£100 million.
+A car with no tax is a vehicle driven or parked on a public road without a valid Vehicle Excise Duty (VED) licence. It is estimated that there are around 500,000 unlicensed vehicles in the UK, leading to an annual road tax revenue loss of approximately £100 million.
 VED is also referred to as vehicle tax, car tax, or road tax. It is a legal requirement for any vehicle used or kept on a public road in the UK.
 ________________
 
 
 ## What Is Vehicle Excise Duty (VED)?
-Vehicle Excise Duty is a tax charged on vehicles registered for use on UK public roads. VED must be paid on most vehicles registered in the UK. Any motorist caught driving without it could be fined up to Â£2,500. In 2025, more than 150,000 untaxed vehicles were clamped in the UK.
+Vehicle Excise Duty is a tax charged on vehicles registered for use on UK public roads. VED must be paid on most vehicles registered in the UK. Any motorist caught driving without it could be fined up to £2,500. In 2025, more than 150,000 untaxed vehicles were clamped in the UK.
 From April 2026, zero-emission vehicles including electric cars registered on or after 1 April 2025 are no longer exempt from Vehicle Excise Duty and must be taxed, with rates aligned to those for petrol and diesel vehicles.
 ________________
 
@@ -1043,10 +1043,10 @@ ________________
 
 ## What Are the Penalties for Driving a Car with No Tax?
 There are 4 levels of penalty for driving or keeping a vehicle without valid VED.
-1. Automated late licensing penalty letter: an Â£80 fine, reduced to Â£40 if paid within 33 days.
-2. Fine for keeping an untaxed vehicle on a public road without a SORN: Â£30 plus one and a half times the outstanding vehicle tax.
-3. Criminal offence for failure to pay: fines up to Â£1,000 or five times the amount of tax chargeable, whichever is greater.
-4. Driving without tax: a fine of up to Â£2,500.
+1. Automated late licensing penalty letter: an £80 fine, reduced to £40 if paid within 33 days.
+2. Fine for keeping an untaxed vehicle on a public road without a SORN: £30 plus one and a half times the outstanding vehicle tax.
+3. Criminal offence for failure to pay: fines up to £1,000 or five times the amount of tax chargeable, whichever is greater.
+4. Driving without tax: a fine of up to £2,500.
 Continued non-compliance results in court action, potential criminal conviction, vehicle seizure, and insurance invalidation.
 ________________
 
@@ -1074,7 +1074,7 @@ Yes. In 2025, more than 150,000 untaxed vehicles were clamped in the UK. The DVL
 ## Is It Illegal to Park a Car with No Tax on the Street?
 Yes. A vehicle without valid VED cannot be parked on a public road. It must either be taxed or declared as SORN and kept on private land.
 ## Do Electric Cars Need Road Tax in 2025?
-Yes. From April 2025, electric vehicles are required to pay Vehicle Excise Duty. The rate is Â£195 per year for most electric vehicle drivers. The same fines apply for non-payment as for petrol and diesel vehicles.
+Yes. From April 2025, electric vehicles are required to pay Vehicle Excise Duty. The rate is £195 per year for most electric vehicle drivers. The same fines apply for non-payment as for petrol and diesel vehicles.
 `,
   "how-to-tax-a-sorn-car": `# How to Tax a SORN Car: 3 Methods and What You Need
 Taxing a SORN car requires a valid MOT, active car insurance, and your V5C logbook or V11 reminder letter. You can tax it online at gov.uk, by phone, or at a Post Office. The SORN is cancelled automatically once payment is made.
@@ -1101,7 +1101,7 @@ There are 3 requirements to tax a SORN car:
 3. A V5C logbook or V11 reminder letter
 All 3 must be in place before the DVLA processes a tax application. Taxing a car without a valid MOT or insurance is a criminal offence under the Road Traffic Act 1988.
 ## What If You Do Not Have a V5C?
-If your V5C is lost or damaged, apply for a replacement at gov.uk/get-vehicle-information-from-dvla. The replacement fee is Â£25. Processing takes up to 6 weeks by post, but you can tax the car using the 11-digit reference number from a V11 reminder letter in the meantime.
+If your V5C is lost or damaged, apply for a replacement at gov.uk/get-vehicle-information-from-dvla. The replacement fee is £25. Processing takes up to 6 weeks by post, but you can tax the car using the 11-digit reference number from a V11 reminder letter in the meantime.
 ________________
 
 
@@ -1119,19 +1119,19 @@ Road tax rates for cars registered after April 2017 are based on CO2 emissions f
 ## Vehicle Type
 	Annual Rate (2024-2025)
 	Zero emission (electric)
-	Â£0 (until April 2025)
+	£0 (until April 2025)
 	Cars emitting 1-50g/km CO2
-	Â£10
+	£10
 	Cars emitting 51-75g/km CO2
-	Â£30
+	£30
 	Cars emitting 76-90g/km CO2
-	Â£135
+	£135
 	Cars emitting 91-100g/km CO2
-	Â£175
+	£175
 	Standard petrol or diesel
-	Â£190
-	Cars with a list price over Â£40,000
-	Additional Â£410 per year for 5 years
+	£190
+	Cars with a list price over £40,000
+	Additional £410 per year for 5 years
 	Rates for cars registered before April 2017 are based on engine size or CO2 emissions depending on registration date.
 ________________
 
@@ -1160,14 +1160,14 @@ ________________
 
 ## Can You Drive a SORN Car to an MOT Test?
 A SORN car can be driven to a pre-booked MOT test without road tax. This is one of the few legal exceptions under DVLA rules.
-The journey must be directly to and from the MOT testing station. Any deviation from this route is a legal offence and can result in a fixed penalty notice of Â£80.
+The journey must be directly to and from the MOT testing station. Any deviation from this route is a legal offence and can result in a fixed penalty notice of £80.
 ________________
 
 
 ## What Happens If You Drive a SORN Car Without Taxing It?
 Driving a SORN car on a public road without valid road tax is an offence under the Vehicle Excise and Registration Act 1994. Penalties include:
-* A fixed penalty of Â£80 (reduced to Â£40 if paid within 28 days)
-* Court prosecution and a fine of up to Â£1,000
+* A fixed penalty of £80 (reduced to £40 if paid within 28 days)
+* Court prosecution and a fine of up to £1,000
 * Vehicle clamping or impoundment by DVLA enforcement teams
 DVLA uses automatic number plate recognition (ANPR) cameras across the UK road network to detect untaxed vehicles. Detection rates have increased since the introduction of ANPR monitoring in 2013.
 ________________
@@ -1247,7 +1247,7 @@ You can tax a car without a V5C in 4 specific situations:
 2. You have the yellow V5C/3 reminder from the DVLA.
 3. You are taxing a vehicle for the first time after purchase.
 4. You have applied for a V5C replacement and hold a DVLA acknowledgement reference.
-Driving a vehicle without valid road tax carries a fine of up to Â£1,000, regardless of whether the V5C is missing.
+Driving a vehicle without valid road tax carries a fine of up to £1,000, regardless of whether the V5C is missing.
 ________________
 
 
@@ -1276,12 +1276,12 @@ ________________
 
 
 ## How Do You Apply for a V5C Replacement Before Taxing?
-If you have no V5C, V5C/2, or V5C/3, apply for a replacement V5C through the DVLA before taxing. The replacement costs Â£25 and is processed within 6 working days when applied online.
+If you have no V5C, V5C/2, or V5C/3, apply for a replacement V5C through the DVLA before taxing. The replacement costs £25 and is processed within 6 working days when applied online.
 ## How Do You Apply for a Replacement V5C?
 To apply for a replacement V5C:
 1. Visit gov.uk/get-vehicle-information-from-dvla.
 2. Complete form V62, available at DVLA offices and Post Offices.
-3. Pay the Â£25 fee online or by cheque.
+3. Pay the £25 fee online or by cheque.
 4. Wait up to 6 working days for the new certificate to arrive.
 You cannot tax a vehicle online while waiting for a replacement V5C unless you have a DVLA reference number from a pending application.
 ________________
@@ -1312,8 +1312,8 @@ ________________
 
 ## What Happens If You Drive Without Road Tax?
 Driving without road tax is a criminal offence under the Vehicle Excise and Registration Act 1994. The 3 main penalties are:
-1. An automatic Â£80 fixed penalty notice issued by the DVLA.
-2. A fine of up to Â£1,000 if taken to court.
+1. An automatic £80 fixed penalty notice issued by the DVLA.
+2. A fine of up to £1,000 if taken to court.
 3. Vehicle clamping, impounding, or crushing if the vehicle is found untaxed on a public road.
 The DVLA uses automatic number plate recognition (ANPR) cameras across the UK road network to detect untaxed vehicles. Detection is not limited to police checkpoints.
 ________________
@@ -1348,7 +1348,7 @@ ________________
 
 
 ## Summary: How to Tax Your Car Without a V5C
-You can tax a car without a V5C using a V5C/2, a V5C/3, or by applying for a replacement V5C from the DVLA for Â£25. New car buyers are taxed through the dealership. Driving untaxed risks fines of up to Â£1,000 and vehicle impoundment. Declare SORN immediately if the vehicle cannot be taxed while documents are being replaced.
+You can tax a car without a V5C using a V5C/2, a V5C/3, or by applying for a replacement V5C from the DVLA for £25. New car buyers are taxed through the dealership. Driving untaxed risks fines of up to £1,000 and vehicle impoundment. Declare SORN immediately if the vehicle cannot be taxed while documents are being replaced.
 `,
   "how-to-claim-back-a-car-tax-refund": `# How to Claim Back a Car Tax Refund: 6 Eligibility Conditions and Steps
 A car tax refund is a reimbursement of unused Vehicle Excise Duty (VED) paid in advance to the DVLA. You can claim it when you declare your car as sold, scrapped, or out of use. Refunds only cover complete months of unused tax - not partial months or individual days.
@@ -1403,7 +1403,7 @@ You can only claim a refund for complete months when you will not be using the v
 	11 months
 	0.9 months
 	0 months
-	Drivers who have a car or motorhome with a list price above Â£40,000 pay an extra Â£425 per year in road tax, which is factored into the refund calculation.
+	Drivers who have a car or motorhome with a list price above £40,000 pay an extra £425 per year in road tax, which is factored into the refund calculation.
 ________________
 
 
@@ -1436,7 +1436,7 @@ There are 4 common reasons refunds are delayed:
 3. Cheque issued with the wrong name
 4. Postal cancellation submitted instead of online
 A lot of refunds are delayed by outdated address details or a missing logbook. Cheques get lost in the post or returned to the DVLA because the V5C was not updated.
-Apply for a replacement V5C on GOV.UK before attempting to cancel. The replacement takes around 5 working days to arrive and costs Â£25.
+Apply for a replacement V5C on GOV.UK before attempting to cancel. The replacement takes around 5 working days to arrive and costs £25.
 ________________
 
 
@@ -1446,7 +1446,7 @@ Contact the DVLA through 3 channels:
 * Phone: 0300 790 6802 - Monday to Friday, 8am to 7pm; Saturday, 8am to 2pm
 * Online: complete the contact form at gov.uk/contact-dvla
 * Post: DVLA, Swansea, SA99 1AR
-The small claims track generally covers claims valued up to Â£10,000, making it a suitable route for disputes with the DVLA if a refund is refused.
+The small claims track generally covers claims valued up to £10,000, making it a suitable route for disputes with the DVLA if a refund is refused.
 ________________
 
 
@@ -1466,7 +1466,7 @@ ________________
 
 ## What Is Council Tax?
 Council tax is a local taxation system in the UK, levied on residential properties to fund local services such as waste collection, street cleaning, and education. The amount depends on your property's valuation band and your local council's rates.
-Properties are placed in bands A to H based on their estimated value. The average Band D council tax in England is approximately Â£2,171 per year.
+Properties are placed in bands A to H based on their estimated value. The average Band D council tax in England is approximately £2,171 per year.
 ________________
 
 
@@ -1495,7 +1495,7 @@ Once your form has been submitted, it may take up to 21 days to process your cha
 If you are relocating to another district, you will need to contact the new local authorities and have a new account created and your old one cancelled. Contact both councils separately - the old one to close your account, and the new one to register at your new address.
 ## What Happens to Your Final Bill?
 Once your old council processes your cancellation, they will send a final bill. This shows charges up to your move-out date and any overpayment, such as if you paid ahead via direct debit.
-Councils processed Â£1.2 billion in refunds in 2024 due to overpayments averaging Â£150 per household.
+Councils processed £1.2 billion in refunds in 2024 due to overpayments averaging £150 per household.
 ________________
 
 
@@ -1674,12 +1674,12 @@ ________________
 Sources: UK Government (gov.uk) council tax guidance, Valuation Office Agency, Local Government Finance Act 1992, local council billing portals.
 `,
   "how-to-change-your-tax-code-hmrc": `# How to Change Your Tax Code - 3 Methods, HMRC Contact Details, and Key Documents
-To change your tax code, contact HMRC online through your Personal Tax Account, by phone on 0300 200 3300, or by post. HMRC overcharged more than 5 million workers Â£3.5 billion in income tax in 2023-24 due to incorrect PAYE coding, according to analysis by accountancy group UHY Hacker Young. Checking and correcting a tax code takes under 5 minutes online.
+To change your tax code, contact HMRC online through your Personal Tax Account, by phone on 0300 200 3300, or by post. HMRC overcharged more than 5 million workers £3.5 billion in income tax in 2023-24 due to incorrect PAYE coding, according to analysis by accountancy group UHY Hacker Young. Checking and correcting a tax code takes under 5 minutes online.
 ________________
 
 
 ## What Is a Tax Code?
-A tax code is used by an employer or pension provider to calculate how much income tax to deduct from pay or pension. HMRC issues the code directly to the employer. The standard personal allowance tax code for the 2025-26 tax year is 1257L, representing a tax-free personal allowance of Â£12,570.
+A tax code is used by an employer or pension provider to calculate how much income tax to deduct from pay or pension. HMRC issues the code directly to the employer. The standard personal allowance tax code for the 2025-26 tax year is 1257L, representing a tax-free personal allowance of £12,570.
 Tax codes apply to all workers under the Pay As You Earn (PAYE) system. The Office for National Statistics estimates that coding notices affect approximately 30 million PAYE taxpayers annually.
 ## What Do Tax Code Letters Mean?
 Tax code letters indicate specific personal tax circumstances, such as whether a taxpayer is using the Marriage Allowance or pays the additional rate of 45%. Examples include:
@@ -1757,8 +1757,8 @@ ________________
 
 ## What Happens If Your Tax Code Is Wrong?
 A wrong tax code results in either overpayment or underpayment of income tax. HMRC will contact a taxpayer if their tax code changes. However, if HMRC holds incorrect income information, the taxpayer may carry an incorrect code without being notified.
-Approximately 5.6 million taxpayers were affected by incorrect tax codes in 2023-24, with an estimated Â£3.5 billion overpaid to HMRC. Many affected workers remain unaware of the issue, as the discrepancy appears within payroll deductions rather than as a separate tax demand.
-The average overpayment for a worker on the wrong tax code is Â£689, research shows.
+Approximately 5.6 million taxpayers were affected by incorrect tax codes in 2023-24, with an estimated £3.5 billion overpaid to HMRC. Many affected workers remain unaware of the issue, as the discrepancy appears within payroll deductions rather than as a separate tax demand.
+The average overpayment for a worker on the wrong tax code is £689, research shows.
 ## How Do You Claim a Refund From a Wrong Tax Code?
 Contact HMRC by phone on 0300 200 3300 or online after receiving a P800 letter to claim a refund. If you have overpaid tax, this will be repaid either through your next pay or at the end of the tax year when you receive your P800. Overpaid tax can be reclaimed for up to 4 prior tax years.
 ________________
@@ -1767,7 +1767,7 @@ ________________
 ## How Do You Check If Your Tax Code Is Correct?
 Check your tax code on your most recent payslip, P60, or through your Personal Tax Account at gov.uk. Cross-reference the code against your total income, personal allowance, and any active benefits or allowances.
 Use these 4 checks to verify your PAYE code:
-1. Confirm the personal allowance reflects Â£12,570 for 2024-25
+1. Confirm the personal allowance reflects £12,570 for 2024-25
 2. Check that all income sources, including second jobs and pensions, are recorded
 3. Verify that benefits in kind, such as a company car or private health insurance, are correctly reflected
 4. Confirm that Marriage Allowance is applied if eligible
@@ -1780,14 +1780,14 @@ There are 5 common tax code mistakes. Examples include:
 1. Carrying a previous employer's code into a new job without providing a P45
 2. Leaving an emergency code such as 0T or 1257L W1 uncorrected across multiple pay periods
 3. Failing to report the removal of a benefit in kind, such as a company car
-4. Not claiming Marriage Allowance, which is worth up to Â£252 per year
+4. Not claiming Marriage Allowance, which is worth up to £252 per year
 5. Ignoring a P800 letter, which results in an outstanding tax debt
 HMRC's coding assumptions often go unchecked because paper tax code notices are no longer routinely issued. This means millions of employees may be unaware that their tax code is wrong and that they are being overcharged.
 ________________
 
 
 ## How to Change Your Tax Code - Summary
-To change a tax code, use 1 of 3 methods: the HMRC Personal Tax Account at gov.uk, a phone call to 0300 200 3300, or a postal submission to HMRC PAYE, BX9 1AS. Online changes process within 2 working days. Incorrect PAYE codes affected 5.6 million UK workers in 2023-24, producing Â£3.5 billion in overpaid income tax. Workers can reclaim overpaid tax for up to 4 prior years after identifying a coding error.
+To change a tax code, use 1 of 3 methods: the HMRC Personal Tax Account at gov.uk, a phone call to 0300 200 3300, or a postal submission to HMRC PAYE, BX9 1AS. Online changes process within 2 working days. Incorrect PAYE codes affected 5.6 million UK workers in 2023-24, producing £3.5 billion in overpaid income tax. Workers can reclaim overpaid tax for up to 4 prior years after identifying a coding error.
 `,
   "how-to-pay-corporation-tax-to-hmrc": `# How to Pay Corporation Tax to HMRC: 5 Payment Methods, Rates, and Key Deadlines
 Corporation Tax is paid to HMRC on a company's taxable profits. The payment deadline is 9 months and 1 day after the accounting period ends. There are 5 accepted payment methods, including bank transfer, Direct Debit, and debit card.
@@ -1811,17 +1811,17 @@ ________________
 
 
 ## What Are the Current Corporation Tax Rates?
-The Corporation Tax rate depends on annual taxable profits. For the 2026/27 financial year, the main rate is 25% for profits over Â£250,000, while the small profits rate is 19% for profits under Â£50,000.
+The Corporation Tax rate depends on annual taxable profits. For the 2026/27 financial year, the main rate is 25% for profits over £250,000, while the small profits rate is 19% for profits under £50,000.
 Profit Level
 	Tax Rate
-	Up to Â£50,000
+	Up to £50,000
 	19% - Small Profits Rate
-	Â£50,001 to Â£250,000
+	£50,001 to £250,000
 	19% to 25% - Marginal Relief applies
-	Over Â£250,000
+	Over £250,000
 	25% - Main Rate
 ## What Is Marginal Relief on Corporation Tax?
-Marginal Relief reduces Corporation Tax for companies with profits between Â£50,000 and Â£250,000. HMRC's Marginal Relief calculator on gov.uk calculates the exact reduction based on profit level and accounting period length.
+Marginal Relief reduces Corporation Tax for companies with profits between £50,000 and £250,000. HMRC's Marginal Relief calculator on gov.uk calculates the exact reduction based on profit level and accounting period length.
 ________________
 
 
@@ -1832,7 +1832,7 @@ Companies can claim allowable deductions to reduce taxable profits before applyi
 * Travel and subsistence expenses
 * Professional fees, including accountancy and legal costs
 * Capital allowances on qualifying equipment and machinery
-HMRC's Annual Investment Allowance (AIA) permits 100% first-year deductions on qualifying plant and machinery, up to Â£1 million per accounting period. R&D Tax Credits reduce Corporation Tax further for companies investing in qualifying innovation activities.
+HMRC's Annual Investment Allowance (AIA) permits 100% first-year deductions on qualifying plant and machinery, up to £1 million per accounting period. R&D Tax Credits reduce Corporation Tax further for companies investing in qualifying innovation activities.
 ________________
 
 
@@ -1840,7 +1840,7 @@ ________________
 Corporation Tax is due 9 months and 1 day after the accounting period ends. This deadline is fixed regardless of whether the company tax return has been filed. For a company with a 31 March year-end, the payment deadline is 1 January the following year.
 Corporation Tax deadlines do not move if they fall on weekends or bank holidays. Payment must reach HMRC by the deadline regardless.
 ## When Do Large Companies Pay Corporation Tax?
-Companies with profits over Â£1.5 million must pay Corporation Tax in quarterly installments, starting 6 months and 13 days into the accounting period. Each installment covers 25% of the estimated annual liability.
+Companies with profits over £1.5 million must pay Corporation Tax in quarterly installments, starting 6 months and 13 days into the accounting period. Each installment covers 25% of the estimated annual liability.
 ________________
 
 
@@ -1869,12 +1869,12 @@ ________________
 ## How Do You File a Company Tax Return (CT600)?
 The Company Tax Return (CT600) must be submitted within 12 months of the accounting period ending. This means, for many companies, the tax payment falls due before the return is filed. File online using HMRC's Corporation Tax service or approved commercial software.
 ## What Are the Penalties for Late CT600 Filing?
-HMRC charges a Â£100 penalty for returns filed up to 3 months late. The penalty rises to Â£200 for returns filed more than 3 months late. A further tax-based penalty applies if the return is 18 months or more overdue.
+HMRC charges a £100 penalty for returns filed up to 3 months late. The penalty rises to £200 for returns filed more than 3 months late. A further tax-based penalty applies if the return is 18 months or more overdue.
 ________________
 
 
 ## What Happens If You Pay Corporation Tax Late?
-Late payment interest accrues from the day after the deadline at the Bank of England base rate plus 2.5%. As of 2025, this is approximately 7.25% per year. A Â£10,000 bill paid 30 days late costs approximately Â£60 in interest.
+Late payment interest accrues from the day after the deadline at the Bank of England base rate plus 2.5%. As of 2025, this is approximately 7.25% per year. A £10,000 bill paid 30 days late costs approximately £60 in interest.
 ## What Is a Time to Pay Arrangement with HMRC?
 If you cannot pay, call HMRC's Payment Support Service on 0300 200 3835 before the deadline. HMRC may agree a Time to Pay arrangement, allowing payments spread over up to 12 months. Interest continues to accrue on the outstanding balance during the arrangement.
 ________________
@@ -1948,35 +1948,35 @@ Registration requires 5 pieces of information:
 5. National Insurance number, required by some councils
 Some councils also request the names of all adults living in the property to assess discounts or exemptions accurately.
 ## How Much Is Council Tax in the UK?
-Council tax amounts vary by local authority and property band. In England for 2024-25, the average Band D council tax bill is Â£2,171 per year, according to the Department for Levelling Up, Housing and Communities.
+Council tax amounts vary by local authority and property band. In England for 2024-25, the average Band D council tax bill is £2,171 per year, according to the Department for Levelling Up, Housing and Communities.
 ## What Are the Council Tax Bands in England?
 Properties in England are assigned to 8 bands based on their April 1991 market value.
 ## Band
 	Property Value (1991)
 	Charge Relative to Band D
 	A
-	Up to Â£40,000
+	Up to £40,000
 	6/9 of Band D
 	B
-	Â£40,001 - Â£52,000
+	£40,001 - £52,000
 	7/9 of Band D
 	C
-	Â£52,001 - Â£68,000
+	£52,001 - £68,000
 	8/9 of Band D
 	D
-	Â£68,001 - Â£88,000
+	£68,001 - £88,000
 	Standard rate
 	E
-	Â£88,001 - Â£120,000
+	£88,001 - £120,000
 	11/9 of Band D
 	F
-	Â£120,001 - Â£160,000
+	£120,001 - £160,000
 	13/9 of Band D
 	G
-	Â£160,001 - Â£320,000
+	£160,001 - £320,000
 	15/9 of Band D
 	H
-	Over Â£320,000
+	Over £320,000
 	18/9 of Band D
 	Band D is the standard reference rate. Properties in Band A pay two-thirds of the Band D charge. Properties in Band H pay double the Band D rate.
 Scotland uses 8 bands with different thresholds. Wales uses 9 bands (A to I), as established under the Local Government Finance Act 1992.
@@ -2012,7 +2012,7 @@ The 5 most common exemptions include:
 5. Diplomatic premises covered under the Diplomatic Privileges Act 1964
 According to Gov.uk, councils have discretion to award additional local exemptions beyond these standard categories.
 ## What Happens If You Do Not Register for Council Tax?
-Failure to register for council tax is a legal offence under the Local Government Finance Act 1992. Councils can issue a penalty of Â£70 for refusing to provide information required to complete a council tax register entry.
+Failure to register for council tax is a legal offence under the Local Government Finance Act 1992. Councils can issue a penalty of £70 for refusing to provide information required to complete a council tax register entry.
 Persistent non-payment can result in:
 * A summons issued to the Magistrates Court
 * A liability order granted against the resident
@@ -2056,9 +2056,9 @@ ________________
 ## How Much Road Tax Can You Get Back?
 The refund amount is calculated on complete unused calendar months remaining on the tax period. Partial months are excluded.
 The table below shows refund amounts based on annual tax cost and months remaining.
-Annual Tax Cost (Â£)
+Annual Tax Cost (£)
 	Months Remaining
-	Refund Amount (Â£)
+	Refund Amount (£)
 	180
 	6
 	90
@@ -2148,41 +2148,41 @@ Retain the cancellation confirmation reference number before contacting the DVLA
 `,
   "legal-ways-to-avoid-inheritance-tax-on-a-property-in-the-uk": `# 7 Legal Ways to Avoid Inheritance Tax on a Property in the UK (2025-2026 Guide)
 ## What Is Inheritance Tax on a Property?
-Inheritance tax (IHT) is a tax on the estate of someone who has died, including all property, possessions, and money. The current standard rate is 40% on the value of the estate that exceeds the tax-free threshold of Â£325,000.
-HMRC collected Â£9 billion in IHT receipts in 2025/26 alone. The Office for Budget Responsibility forecasts this will rise to Â£14.5 billion by 2030/31, driven by frozen thresholds, increasing property values, and new rules that will bring pension assets into scope from 2027.
+Inheritance tax (IHT) is a tax on the estate of someone who has died, including all property, possessions, and money. The current standard rate is 40% on the value of the estate that exceeds the tax-free threshold of £325,000.
+HMRC collected £9 billion in IHT receipts in 2025/26 alone. The Office for Budget Responsibility forecasts this will rise to £14.5 billion by 2030/31, driven by frozen thresholds, increasing property values, and new rules that will bring pension assets into scope from 2027.
 ________________
 
 
 ## What Are the Current Inheritance Tax Thresholds?
-In the 2025/2026 tax year, everyone has a tax-free inheritance tax allowance of Â£325,000, known as the nil-rate band. If the estate is worth less than Â£325,000, no inheritance tax is payable. If it exceeds Â£325,000, the portion above that threshold is taxed at 40%.
+In the 2025/2026 tax year, everyone has a tax-free inheritance tax allowance of £325,000, known as the nil-rate band. If the estate is worth less than £325,000, no inheritance tax is payable. If it exceeds £325,000, the portion above that threshold is taxed at 40%.
 The table below outlines the 3 main allowances available in 2025/2026.
 ## Allowance Type
 	Amount
 ## Who Qualifies
 	Nil-rate band
-	Â£325,000 per person
+	£325,000 per person
 	All UK residents
 	Residence nil-rate band
-	Â£175,000 per person
+	£175,000 per person
 	Estates leaving home to direct descendants
 	Combined spousal allowance
-	Up to Â£1,000,000
+	Up to £1,000,000
 	Married couples and civil partners
-	The residence nil-rate band applies if the estate is worth less than Â£2 million. It means a couple could pass on up to Â£1 million in assets tax-free if the same conditions are met. Only direct descendants qualify - other relatives such as nieces and nephews do not.
+	The residence nil-rate band applies if the estate is worth less than £2 million. It means a couple could pass on up to £1 million in assets tax-free if the same conditions are met. Only direct descendants qualify - other relatives such as nieces and nephews do not.
 ________________
 
 
 ## How Can You Legally Avoid Inheritance Tax on a Property?
 There are 7 legal methods to reduce or avoid inheritance tax on a property. These are spousal transfer, the 7-year gift rule, annual gifting allowance, trusts, charitable giving, Business or Agricultural Property Relief, and life insurance written in trust.
 1. How Does Spousal Transfer Reduce Inheritance Tax?
-The simplest way to avoid inheritance tax is the spouse or civil partner exemption. This covers couples who are legally married or in a civil partnership. You can leave your entire estate to your spouse or civil partner and, even if its value exceeds the nil-rate band of Â£325,000, no inheritance tax is payable.
-If your spouse or civil partner dies before you, any unused portion of their nil-rate band transfers to you. Your total threshold could increase to up to Â£650,000.
+The simplest way to avoid inheritance tax is the spouse or civil partner exemption. This covers couples who are legally married or in a civil partnership. You can leave your entire estate to your spouse or civil partner and, even if its value exceeds the nil-rate band of £325,000, no inheritance tax is payable.
+If your spouse or civil partner dies before you, any unused portion of their nil-rate band transfers to you. Your total threshold could increase to up to £650,000.
 2. What Is the 7-Year Gift Rule for Property?
 The 7-year rule states that if you give away assets and survive for 7 years after making the gift, the gift becomes exempt from inheritance tax.
 If you die within 7 years of making a gift, it could be added back into the estate and become liable for IHT. If you gift an asset but continue to benefit from it - for example, continuing to live in a property you have given away - it may count as a gift with reservation and remain inside the estate for IHT purposes.
 Gifts given within 3 years before death are taxed at 40%. Gifts given between 3 and 7 years before death are taxed on a sliding scale known as taper relief.
 3. What Is the Annual Gifting Allowance?
-The Â£3,000 annual gifting allowance lets you give away up to Â£3,000 per year free of tax. You can also gift up to Â£5,000 for a child who is getting married, Â£2,500 for a grandchild, and Â£1,000 for someone else, such as a niece, nephew, or close friend. These sums immediately leave the estate and are not liable for IHT.
+The £3,000 annual gifting allowance lets you give away up to £3,000 per year free of tax. You can also gift up to £5,000 for a child who is getting married, £2,500 for a grandchild, and £1,000 for someone else, such as a niece, nephew, or close friend. These sums immediately leave the estate and are not liable for IHT.
 4. How Do Trusts Help Avoid Inheritance Tax on a Property?
 Trusts remain one of the most effective ways to manage, protect, and pass on assets while reducing inheritance tax exposure. They allow you to transfer assets out of your estate while retaining a degree of control over how and when they are used.
 There are 3 main trust types used for IHT planning. These are Bare Trusts, Discretionary Trusts, and Interest-in-Possession Trusts. Each carries different tax implications.
@@ -2190,7 +2190,7 @@ If you have a nil-rate band discretionary trust in your will, you may accidental
 5. How Does Charitable Giving Reduce Inheritance Tax?
 If you leave a gift to a qualifying charity in your will - whether money, property, or another asset - it is exempt from inheritance tax. This reduces the size of the estate and lowers the amount of IHT owed. Charitable gifts can also reduce the 40% rate of inheritance tax.
 6. What Is Business and Agricultural Property Relief?
-From April 2026, 100% relief applies only up to a Â£2.5 million allowance per person, combined across Agricultural Property Relief (APR) and Business Property Relief (BPR). Any value above Â£2.5 million qualifies for 50% relief only.
+From April 2026, 100% relief applies only up to a £2.5 million allowance per person, combined across Agricultural Property Relief (APR) and Business Property Relief (BPR). Any value above £2.5 million qualifies for 50% relief only.
 This relief suits farmers, landowners, and business property holders. It does not apply to standard residential property.
 7. How Does Life Insurance Written in Trust Help?
 Life insurance written in trust pays directly to the trust, giving beneficiaries immediate access to money that can be used to settle the inheritance tax bill. This prevents the need to sell property, shares, or other assets quickly at an unfavourable time. It provides certainty, liquidity, and peace of mind.
@@ -2200,7 +2200,7 @@ ________________
 
 ## What Are the Key Changes to Inheritance Tax Rules in 2025-2026?
 There are 3 significant changes affecting IHT planning from 2025 onwards.
-IHT thresholds are now frozen until April 2031. Pension funds will be brought into estates from April 2027. Business Property Relief and Agricultural Property Relief will be capped at Â£2.5 million for full relief from April 2026.
+IHT thresholds are now frozen until April 2031. Pension funds will be brought into estates from April 2027. Business Property Relief and Agricultural Property Relief will be capped at £2.5 million for full relief from April 2026.
 From April 2027, most pensions will become subject to IHT. Pre-75 deaths will no longer be automatically tax-free. Post-75 deaths will face both IHT and income tax, resulting in double taxation for beneficiaries. Many people previously relied on pensions to avoid IHT - this will no longer be the case.
 ________________
 
@@ -2224,7 +2224,7 @@ ________________
 ## Can You Avoid Inheritance Tax by Giving Your House to Your Children?
 Yes, but conditions apply. If you survive 7 years after gifting a property, it is generally exempt from IHT. If you continue to benefit from the property after giving it away, HMRC treats it as a gift with reservation and it remains part of the estate.
 ## What Is the Inheritance Tax Threshold for a Married Couple?
-A married couple who combine their allowances and leave their home to children or grandchildren can pass on estates of up to Â£1 million free of inheritance tax.
+A married couple who combine their allowances and leave their home to children or grandchildren can pass on estates of up to £1 million free of inheritance tax.
 ## Does Putting a Property in a Trust Avoid Inheritance Tax?
 Placing a property in a trust can reduce IHT exposure, but the type of trust and its structure determine the tax outcome. Seek advice from a qualified legal practitioner before proceeding.
 ________________
@@ -2250,13 +2250,13 @@ Taxpayer Type
 	Annual Allowance
 	Basic rate
 	20%
-	Â£1,000
+	£1,000
 	Higher rate
 	40%
-	Â£500
+	£500
 	Additional rate
 	45%
-	Â£0
+	£0
 	Interest earned within this allowance is not taxed. Interest above it is added to your taxable income and taxed at your marginal rate.
 ________________
 
@@ -2274,7 +2274,7 @@ ________________
 
 
 ## How Does a Cash ISA Help You Avoid Tax?
-A Cash ISA is a savings account where all interest is tax-free. The annual ISA allowance is Â£20,000 for the 2024-2025 tax year.
+A Cash ISA is a savings account where all interest is tax-free. The annual ISA allowance is £20,000 for the 2024-2025 tax year.
 Interest inside an ISA does not count toward your Personal Savings Allowance. This makes it one of the most efficient tools for savers who exceed the PSA threshold.
 ## What Types of ISA Are Available?
 Types of ISA include:
@@ -2282,49 +2282,49 @@ Types of ISA include:
 * Stocks and Shares ISA
 * Lifetime ISA
 * Innovative Finance ISA
-Each type has different rules. You can split the Â£20,000 allowance across multiple ISA types in one tax year, but the total cannot exceed Â£20,000.
+Each type has different rules. You can split the £20,000 allowance across multiple ISA types in one tax year, but the total cannot exceed £20,000.
 ________________
 
 
 ## How Do Pension Contributions Reduce Savings Tax?
 Pension contributions reduce taxable income. A lower taxable income means a lower tax band, which increases the PSA available to you.
-A higher rate taxpayer contributing enough to a pension to reduce their income to the basic rate band gains an additional Â£500 in tax-free savings interest annually. Tax relief on pension contributions is also applied at your marginal rate.
+A higher rate taxpayer contributing enough to a pension to reduce their income to the basic rate band gains an additional £500 in tax-free savings interest annually. Tax relief on pension contributions is also applied at your marginal rate.
 ## What Is the Annual Pension Allowance?
-The annual pension allowance is Â£60,000 for the 2024-2025 tax year. Contributions above this limit attract a tax charge. The money purchase annual allowance (MPAA) is Â£10,000 for those who have already accessed pension funds flexibly.
+The annual pension allowance is £60,000 for the 2024-2025 tax year. Contributions above this limit attract a tax charge. The money purchase annual allowance (MPAA) is £10,000 for those who have already accessed pension funds flexibly.
 According to a 2023 report by the Pensions Policy Institute, 38% of UK workers are not contributing enough to their pension to maximise available tax relief.
 ________________
 
 
 ## What Is the Starting Rate for Savings?
-The Starting Rate for Savings allows eligible individuals to earn up to Â£5,000 in savings interest at 0% tax. It applies when total non-savings income is below Â£17,570.
-For every Â£1 of non-savings income above the Personal Allowance of Â£12,570, the Starting Rate reduces by Â£1. A person with Â£12,570 in employment income qualifies for the full Â£5,000 Starting Rate.
+The Starting Rate for Savings allows eligible individuals to earn up to £5,000 in savings interest at 0% tax. It applies when total non-savings income is below £17,570.
+For every £1 of non-savings income above the Personal Allowance of £12,570, the Starting Rate reduces by £1. A person with £12,570 in employment income qualifies for the full £5,000 Starting Rate.
 ## Who Qualifies for the Starting Rate for Savings?
 Qualifying individuals include:
 * Retirees with low pension income
 * Part-time workers
 * Individuals taking a career break
-Combined with the PSA, a basic rate taxpayer in this bracket can earn up to Â£6,000 in savings interest tax-free each year.
+Combined with the PSA, a basic rate taxpayer in this bracket can earn up to £6,000 in savings interest tax-free each year.
 ________________
 
 
 ## How Does Transferring Savings to a Spouse Reduce Tax?
 Transferring savings to a spouse or civil partner with a lower income reduces the tax paid on interest. Each individual has a separate PSA and Personal Allowance.
-A spouse with no taxable income can earn up to Â£18,570 in savings interest tax-free. This combines the Â£12,570 Personal Allowance, Â£5,000 Starting Rate for Savings, and Â£1,000 PSA.
+A spouse with no taxable income can earn up to £18,570 in savings interest tax-free. This combines the £12,570 Personal Allowance, £5,000 Starting Rate for Savings, and £1,000 PSA.
 ## What Is the Marriage Allowance?
-The Marriage Allowance allows one partner to transfer Â£1,260 of their Personal Allowance to the other. This reduces the higher-earning partner's tax by up to Â£252 per year. Eligibility requires one partner to earn below Â£12,570 and the other to be a basic rate taxpayer.
+The Marriage Allowance allows one partner to transfer £1,260 of their Personal Allowance to the other. This reduces the higher-earning partner's tax by up to £252 per year. Eligibility requires one partner to earn below £12,570 and the other to be a basic rate taxpayer.
 ________________
 
 
 ## How Do Premium Bonds Help You Avoid Tax on Savings?
-Premium Bond prizes are entirely tax-free. Instead of earning interest, savers enter a monthly prize draw with prizes ranging from Â£25 to Â£1,000,000.
+Premium Bond prizes are entirely tax-free. Instead of earning interest, savers enter a monthly prize draw with prizes ranging from £25 to £1,000,000.
 The prize fund interest rate is 4.40% (2024). No Income Tax or Capital Gains Tax applies to any winnings, regardless of the prize amount.
 ## What Is the Maximum Investment in Premium Bonds?
-The maximum holding in Premium Bonds is Â£50,000 per person. NS&I, the government-backed provider, manages all Premium Bond accounts. Prizes are paid instantly via bank transfer or reinvestment.
+The maximum holding in Premium Bonds is £50,000 per person. NS&I, the government-backed provider, manages all Premium Bond accounts. Prizes are paid instantly via bank transfer or reinvestment.
 ________________
 
 
 ## How Does a Lifetime ISA Work?
-A Lifetime ISA (LISA) is available to individuals aged 18-39. The government adds a 25% bonus on contributions of up to Â£4,000 per year, giving a maximum annual bonus of Â£1,000.
+A Lifetime ISA (LISA) is available to individuals aged 18-39. The government adds a 25% bonus on contributions of up to £4,000 per year, giving a maximum annual bonus of £1,000.
 All interest and investment growth inside a LISA is tax-free. Funds can be used to purchase a first home or withdrawn from age 60. Withdrawals for other purposes before age 60 incur a 25% government charge, which effectively removes the bonus and a portion of your own contributions.
 ________________
 
@@ -2335,27 +2335,27 @@ Strategy
 	Annual Limit
 	Cash ISA
 	100% tax-free interest
-	Â£20,000
+	£20,000
 	Personal Savings Allowance
-	Tax-free up to Â£1,000
-	Â£1,000 or Â£500
+	Tax-free up to £1,000
+	£1,000 or £500
 	Lifetime ISA
 	25% government bonus
-	Â£4,000
+	£4,000
 	Premium Bonds
 	Tax-free prizes
-	Â£50,000 total holding
+	£50,000 total holding
 	Starting Rate for Savings
-	0% on up to Â£5,000
-	Â£5,000
+	0% on up to £5,000
+	£5,000
 	Pension contributions
 	Reduces taxable income band
-	Â£60,000
+	£60,000
 	________________
 
 
 ## What Are the 3 Common Mistakes to Avoid?
-1. Exceeding the ISA allowance - contributions above Â£20,000 in one tax year are subject to tax and HMRC will reclaim the excess.
+1. Exceeding the ISA allowance - contributions above £20,000 in one tax year are subject to tax and HMRC will reclaim the excess.
 2. Early LISA withdrawal for non-qualifying reasons - the 25% withdrawal charge reduces the account below your original contribution.
 3. Ignoring HMRC tax code adjustments - if savings interest exceeds your PSA, HMRC adjusts your PAYE tax code, which increases the tax deducted from employment income.
 ________________
@@ -2363,12 +2363,12 @@ ________________
 
 ## How Do You Report Savings Interest to HMRC?
 HMRC receives savings interest data directly from banks and building societies. If interest exceeds your PSA, HMRC adjusts your tax code automatically.
-Self-employed individuals and those filing a Self Assessment return must declare savings interest manually. The deadline for online Self Assessment submissions is 31 January each year. Failure to declare incurs a minimum Â£100 penalty and interest on unpaid tax.
+Self-employed individuals and those filing a Self Assessment return must declare savings interest manually. The deadline for online Self Assessment submissions is 31 January each year. Failure to declare incurs a minimum £100 penalty and interest on unpaid tax.
 ________________
 
 
 ## Can You Combine Multiple Strategies to Avoid Tax on Savings?
-Combining strategies maximises tax-free savings. A basic rate taxpayer with a low non-savings income can combine a Cash ISA (Â£20,000), Personal Savings Allowance (Â£1,000), Starting Rate for Savings (Â£5,000), and Premium Bonds (Â£50,000) to hold a significant amount of savings with zero tax on returns.
+Combining strategies maximises tax-free savings. A basic rate taxpayer with a low non-savings income can combine a Cash ISA (£20,000), Personal Savings Allowance (£1,000), Starting Rate for Savings (£5,000), and Premium Bonds (£50,000) to hold a significant amount of savings with zero tax on returns.
 HMRC does not restrict the use of multiple legal tax-free methods simultaneously. Consulting a qualified financial adviser ensures the correct strategies are applied based on individual income levels and savings goals.
 `,
   "how-to-avoid-paying-tax-on-rental-income": `# How to Avoid Paying Tax on Rental Income: 7 Legal Strategies

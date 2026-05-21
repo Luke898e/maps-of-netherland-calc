@@ -80,6 +80,216 @@ function renderTextWithLinks(text: string): React.ReactNode {
   return <>{parts}</>;
 }
 
+function isTableCellLine(line: string): boolean {
+  return /^\t+/.test(line);
+}
+
+function getMarkdownHeading(line: string): { level: number; text: string } | null {
+  const match = line.trim().match(/^(#{1,3})\s+(.+)$/);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    level: match[1].length,
+    text: match[2]
+  };
+}
+
+function hasTableCellsAhead(lines: string[], startIndex: number): boolean {
+  for (let index = startIndex; index < lines.length; index += 1) {
+    const line = lines[index];
+
+    if (line.trim().length === 0) {
+      continue;
+    }
+
+    if (isTableCellLine(line)) {
+      return true;
+    }
+
+    if (!getMarkdownHeading(line)) {
+      return false;
+    }
+  }
+
+  return false;
+}
+
+function inferColumnCount(headerText: string, cellCount: number): number {
+  const knownColumnCounts: Record<string, number> = {
+    "Allowance": 3,
+    "Allowance Type": 3,
+    "Band": 3,
+    "Document": 3,
+    "Empty Period": 2,
+    "Feature": 3,
+    "Information Required": 2,
+    "Method": 2,
+    "Months Remaining at Cancellation": 2,
+    "Notification Method": 3,
+    "Occupancy Situation": 2,
+    "Scenario": 3,
+    "Vehicle Type": 2,
+    "When It Applies": 3,
+    "Where to Look": 3,
+    "Years Before Death": 2
+  };
+
+  const known = knownColumnCounts[headerText];
+
+  if (known) {
+    return known;
+  }
+
+  for (const count of [4, 3, 2]) {
+    const headerTailCount = count - 1;
+    const dataCellCount = cellCount - headerTailCount;
+
+    if (dataCellCount >= count && (dataCellCount % count === 0 || (dataCellCount - 1) % count === 0)) {
+      return count;
+    }
+  }
+
+  return 2;
+}
+
+function buildTable(headers: string[], cells: string[]): { headers: string[]; rows: string[][]; note?: string } | null {
+  if (headers.length === 0 || cells.length === 0) {
+    return null;
+  }
+
+  let resolvedHeaders = [...headers];
+  let dataCells = [...cells];
+
+  if (resolvedHeaders.length === 1) {
+    const columnCount = inferColumnCount(resolvedHeaders[0], dataCells.length);
+    const headerTailCount = Math.max(columnCount - 1, 0);
+
+    resolvedHeaders = [resolvedHeaders[0], ...dataCells.slice(0, headerTailCount)];
+    dataCells = dataCells.slice(headerTailCount);
+  }
+
+  const columnCount = resolvedHeaders.length;
+  let note: string | undefined;
+
+  if (dataCells.length % columnCount === 1) {
+    note = dataCells[dataCells.length - 1];
+    dataCells = dataCells.slice(0, -1);
+  }
+
+  if (dataCells.length === 0 || dataCells.length % columnCount !== 0) {
+    return null;
+  }
+
+  const rows: string[][] = [];
+
+  for (let index = 0; index < dataCells.length; index += columnCount) {
+    rows.push(dataCells.slice(index, index + columnCount));
+  }
+
+  return {
+    headers: resolvedHeaders,
+    rows,
+    note
+  };
+}
+
+function readTableBlock(
+  lines: string[],
+  startIndex: number
+): { nextIndex: number; table: { headers: string[]; rows: string[][]; note?: string } } | null {
+  const firstHeading = getMarkdownHeading(lines[startIndex]);
+
+  if (!firstHeading || firstHeading.level !== 2 || !hasTableCellsAhead(lines, startIndex + 1)) {
+    return null;
+  }
+
+  const headers: string[] = [];
+  const cells: string[] = [];
+  let index = startIndex;
+
+  while (index < lines.length) {
+    const heading = getMarkdownHeading(lines[index]);
+
+    if (heading?.level === 2) {
+      headers.push(heading.text);
+      index += 1;
+      continue;
+    }
+
+    if (isTableCellLine(lines[index])) {
+      const tabCells: string[] = [];
+
+      while (index < lines.length && isTableCellLine(lines[index])) {
+        tabCells.push(lines[index].trim());
+        index += 1;
+      }
+
+      if (getMarkdownHeading(lines[index]) && hasTableCellsAhead(lines, index)) {
+        headers.push(...tabCells);
+        continue;
+      }
+
+      cells.push(...tabCells);
+      break;
+    }
+
+    break;
+  }
+
+  const table = buildTable(headers, cells);
+
+  if (!table) {
+    return null;
+  }
+
+  return {
+    nextIndex: index,
+    table
+  };
+}
+
+function renderTable(
+  table: { headers: string[]; rows: string[][]; note?: string },
+  keyPrefix: string
+): React.ReactNode {
+  return (
+    <div key={keyPrefix} className="my-6 overflow-hidden rounded-2xl border border-[#d7e5f7] bg-white shadow-sm">
+      <div className="overflow-x-auto">
+        <table className="min-w-full border-collapse text-left text-sm text-[#203754]">
+          <thead className="bg-[#eaf3ff] text-[#0f3364]">
+            <tr>
+              {table.headers.map((header, index) => (
+                <th key={`${keyPrefix}-head-${index}`} className="border-b border-[#d7e5f7] px-4 py-3 font-semibold">
+                  {renderTextWithLinks(header)}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, rowIndex) => (
+              <tr key={`${keyPrefix}-row-${rowIndex}`} className={rowIndex % 2 === 0 ? "bg-white" : "bg-[#f8fbff]"}>
+                {row.map((cell, cellIndex) => (
+                  <td key={`${keyPrefix}-cell-${rowIndex}-${cellIndex}`} className="border-b border-[#edf3fb] px-4 py-3 align-top">
+                    {renderTextWithLinks(cell)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {table.note ? (
+        <p className="border-t border-[#edf3fb] bg-[#fbfdff] px-4 py-3 text-sm leading-6 text-[#456179]">
+          {renderTextWithLinks(table.note)}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function renderMarkdownBody(markdown: string): React.ReactNode {
   const lines = markdown.split(/\r?\n/);
   const blocks: React.ReactNode[] = [];
@@ -102,7 +312,8 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
     bulletItems = [];
   };
 
-  for (const rawLine of lines) {
+  for (let index = 0; index < lines.length; index += 1) {
+    const rawLine = lines[index];
     const line = rawLine.trim();
 
     if (line.length === 0) {
@@ -116,6 +327,14 @@ function renderMarkdownBody(markdown: string): React.ReactNode {
     }
 
     flushBullets();
+
+    const tableBlock = readTableBlock(lines, index);
+
+    if (tableBlock) {
+      blocks.push(renderTable(tableBlock.table, `table-${blocks.length}`));
+      index = tableBlock.nextIndex - 1;
+      continue;
+    }
 
     if (line === "---") {
       continue;
